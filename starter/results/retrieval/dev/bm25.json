@@ -8,7 +8,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p10:fixed500-50:0",
-        "text": "To formalise, a large language model is a Transformer-based neural network trained on massive text corpora to predict the next token in a sequence and through this process acquires the ability to understand, generate and reason with human language.",
+        "text": "To formalise, a large language model is a Transformer-based neural network trained on massive text corpora to predict the next token in a sequence and through t…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 10,
@@ -22,11 +22,12 @@
         "score": 10.443375322448027,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 248
       },
       {
         "id": "ai-engineering-2025:p14:fixed500-50:1",
-        "text": "nsistently: models with more parameters, trained on broader data, produced more reliable, coherent and adaptable outputs. In practical terms, the “large” in large language model is what enables these capabilities.",
+        "text": "nsistently: models with more parameters, trained on broader data, produced more reliable, coherent and adaptable outputs. In practical terms, the “large” in lar…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 14,
@@ -40,11 +41,12 @@
         "score": 10.401342756226006,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 213
       },
       {
         "id": "ai-engineering-2025:p87:fixed500-50:2",
-        "text": "e an LLM has been pre-trained, it simply continues the sentence as if it is one long text in a book or an article. For instance, check this to understand how a pre-trained LLM behaves when prompted:",
+        "text": "e an LLM has been pre-trained, it simply continues the sentence as if it is one long text in a book or an article. For instance, check this to understand how a …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 87,
@@ -58,11 +60,12 @@
         "score": 10.001325716909864,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 198
       },
       {
         "id": "ai-engineering-2025:p13:fixed500-50:0",
-        "text": "What makes an LLM ‘large’ ? When we call a language model “large,” we are referring to its scale: ● Number of parameters it contains ● Amount of data it has been trained on ● Compute used to train it Parameters are the internal values that the model adjusts during training. Each parameter represents a small piece of the patterns the model has learned. Earlier language models were much smaller and could only capture surface-level text patterns. They could mimic style but struggled with tasks that",
+        "text": "What makes an LLM ‘large’ ? When we call a language model “large,” we are referring to its scale: ● Number of parameters it contains ● Amount of data it has bee…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 13,
@@ -76,7 +79,8 @@
         "score": 9.925606848524973,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p334:fixed500-50:1",
@@ -98,7 +102,7 @@
       },
       {
         "id": "ai-engineering-2025:p372:fixed500-50:0",
-        "text": "Once a model is deployed, its behavior is no longer defined only by its weights or the test set. Real users, prompts, edge cases and system interactions now shape how the application performs. At this stage, the core question shifts from “Is the model good?” to “What is actually happening inside the system?” That is the purpose of observability. Observability helps us see how the system behaves as it runs - ● What inputs does it receive? ● How does the model respond? ● Which components are trigg",
+        "text": "Once a model is deployed, its behavior is no longer defined only by its weights or the test set. Real users, prompts, edge cases and system interactions now sha…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 372,
@@ -112,11 +116,12 @@
         "score": 8.59707190411095,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p288:fixed500-50:0",
-        "text": "Common Pitfall: Tool Overload When LLMs gain access to many server tools, certain predictable issues appear: #1) Tool-name hallucinations The model may invent a tool that does not exist. This usually happens when the tool list is large or poorly named. #2) Confusion between similar tools If a server exposes several tools with overlapping responsibilities, the model may struggle to choose the correct one. #3) Degraded decision quality with large toolsets Presenting too many tools at once increase",
+        "text": "Common Pitfall: Tool Overload When LLMs gain access to many server tools, certain predictable issues appear: #1) Tool-name hallucinations The model may invent a…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 288,
@@ -130,11 +135,12 @@
         "score": 8.463100745443716,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p17:fixed500-50:1",
-        "text": " of sequence, enabling it to interpret ordered structures such as sentences, lists, or code. Parameters Inside the architecture are parameters - the values the model adjusts during training. A large LLM contains billions of these parameters. They store the patterns the model learns from text and form the basis for its ability to understand and generate language. Distributed Training Setup",
+        "text": " of sequence, enabling it to interpret ordered structures such as sentences, lists, or code. Parameters Inside the architecture are parameters - the values the …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 17,
@@ -148,11 +154,12 @@
         "score": 8.207390663088058,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 391
       },
       {
         "id": "ai-engineering-2025:p12:fixed500-50:0",
-        "text": "Language naturally encodes reasoning steps, factual knowledge, explanations and communication patterns. Training a model on large enough text collections allowed it to internalize these patterns and apply them across tasks. As a result, a single system could now answer questions, write code, analyze text and more simply by predicting the continuation of your input.",
+        "text": "Language naturally encodes reasoning steps, factual knowledge, explanations and communication patterns. Training a model on large enough text collections allowe…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 12,
@@ -166,11 +173,12 @@
         "score": 8.156661504853863,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 367
       },
       {
         "id": "ai-engineering-2025:p137:fixed500-50:0",
-        "text": "The idea is to train only the LoRA network and freeze the large model. Looking at the above visual, you might think: But the LoRA model has more neurons than the original model. How does that help? To understand this, you must make it clear that neurons don't have anything to do with the memory of the network. They are just used to illustrate the dimensionality transformation from one layer to another. It is the weight matrices (or the connections between two layers) that take up memory. Thus, w",
+        "text": "The idea is to train only the LoRA network and freeze the large model. Looking at the above visual, you might think: But the LoRA model has more neurons than th…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 137,
@@ -184,7 +192,8 @@
         "score": 8.100028149754872,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -208,7 +217,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p29:fixed500-50:0",
-        "text": "Now, temperature introduces the following tweak in the softmax function, which, in turn, influences the sampling process: Let's take a code example! ● At low temperature, probabilities concentrate around the most likely token, resulting in nearly greedy generation. ● At high temperature, probabilities become more uniform, producing highly random and stochastic outputs.",
+        "text": "Now, temperature introduces the following tweak in the softmax function, which, in turn, influences the sampling process: Let's take a code example! ● At low te…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 29,
@@ -222,11 +231,12 @@
         "score": 18.60191427600876,
         "rank": 1,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 371
       },
       {
         "id": "ai-engineering-2025:p31:fixed500-50:0",
-        "text": "This is a hard cap on how many tokens the model can generate in one response. Too low → truncated outputs; too high → could lead to wasted compute. 2) Temperature Governs randomness. Low temperature (~0) makes the model deterministic. Higher temperature (0.7–1.0) boosts creativity, diversity, but also noise. Use case: lower for QA/chatbots, higher for brainstorming/creative tasks. 3) Top-k The default way to generate the next token is to sample from all tokens, proportional to their probability.",
+        "text": "This is a hard cap on how many tokens the model can generate in one response. Too low → truncated outputs; too high → could lead to wasted compute. 2) Temperatu…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 31,
@@ -240,11 +250,12 @@
         "score": 15.178200946310298,
         "rank": 2,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p76:fixed500-50:0",
-        "text": "By keeping LoRA only in high-impact layers, LoRA-drop reduces training cost and speeds up fine-tuning with little to no loss in accuracy. Bonus: Quantized Low-Rank Adaptation (QLoRA) Quantized Low-Rank Adaptation (QLoRA) is an improvement on the LoRA technique discussed above, which further addresses the memory limitations associated with fine-tuning large models using LoRA. More specifically, if we recall what we discussed above in LoRA, we saw that we augment the network layers whose weights a",
+        "text": "By keeping LoRA only in high-impact layers, LoRA-drop reduces training cost and speeds up fine-tuning with little to no loss in accuracy. Bonus: Quantized Low-R…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 76,
@@ -258,11 +269,12 @@
         "score": 10.686464702684825,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p111:fixed500-50:1",
-        "text": "nderstand and generate it. So, once we have trained this model on a ridiculously large enough training corpus, it can be expected that the model will have a decent level of language understanding and generation capabilities. Thus, if we could figure out a way for LLMs to look up new information they were not trained on and use it in text generation (without training the model again), that would be great!",
+        "text": "nderstand and generate it. So, once we have trained this model on a ridiculously large enough training corpus, it can be expected that the model will have a dec…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 111,
@@ -276,11 +288,12 @@
         "score": 9.94323002688533,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 407
       },
       {
         "id": "ai-engineering-2025:p21:fixed500-50:0",
-        "text": "Now it can: ● Answer questions ● Summarize content ● Write code, etc. At this point, we have likely: ● Utilized the entire raw internet archive and knowledge. ● The budget for human-labeled instruction response data. So what can we do to further improve the model? We enter into the territory of Reinforcement Learning (RL). 3) Preference fine-tuning (PFT) You must have seen this screen on ChatGPT where it asks: Which response do you prefer?",
+        "text": "Now it can: ● Answer questions ● Summarize content ● Write code, etc. At this point, we have likely: ● Utilized the entire raw internet archive and knowledge. ●…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 21,
@@ -294,11 +307,12 @@
         "score": 9.796993294567297,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 443
       },
       {
         "id": "ai-engineering-2025:p32:fixed500-50:1",
-        "text": "rization (avoid redundancy) or poetry (intentional repetition). 6) Presence penalty Encourages the model to bring in new tokens not yet seen in the text. Higher values push for novelty, lower values make the model stick to known patterns. Handy for exploratory generation where diversity of ideas is valued.",
+        "text": "rization (avoid redundancy) or poetry (intentional repetition). 6) Presence penalty Encourages the model to bring in new tokens not yet seen in the text. Higher…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 32,
@@ -312,11 +326,12 @@
         "score": 9.749769971561262,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 307
       },
       {
         "id": "ai-engineering-2025:p335:fixed500-50:0",
-        "text": "Done! Next, invoke the score method to generate a score and a reason for that score. Below, we have a related context and output, which leads to a high score: However, with unrelated context and output, we get a low score as expected: Under the hood, G-Eval first uses the task introduction and evaluation criteria to",
+        "text": "Done! Next, invoke the score method to generate a score and a reason for that score. Below, we have a related context and output, which leads to a high score: H…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 335,
@@ -330,11 +345,12 @@
         "score": 9.699735900439553,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 317
       },
       {
         "id": "ai-engineering-2025:p53:fixed500-50:1",
-        "text": "oting over CoT) CoT is useful but not always consistent. If you prompt the same question multiple times, you might get different answers depending on the temperature setting (we covered temperature in LLMs here). Self-Consistency embraces this variation. You ask the LLM to generate multiple reasoning paths and then select the most common final answer.",
+        "text": "oting over CoT) CoT is useful but not always consistent. If you prompt the same question multiple times, you might get different answers depending on the temper…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 53,
@@ -348,11 +364,12 @@
         "score": 9.669689956861099,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 353
       },
       {
         "id": "ai-engineering-2025:p274:fixed500-50:1",
-        "text": " ● Prompts: Predefined prompt templates or workflows that the server can supply. Tools Tools are what they sound like: functions that do something on behalf of the AI model. These are typically operations that can have effects or require computation beyond the AI’s own capabilities. Importantly, tools are usually triggered by the AI model’s choice, which means the LLM (via the host) decides to call a tool when it determines it needs that functionality. Suppose we have a simple tool for weather. ",
+        "text": " ● Prompts: Predefined prompt templates or workflows that the server can supply. Tools Tools are what they sound like: functions that do something on behalf of …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 274,
@@ -366,11 +383,12 @@
         "score": 9.019003747536349,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p110:fixed500-50:0",
-        "text": "The purpose of vector databases in RAG At this point, one interesting thing to learn is how exactly LLMs take advantage of vector databases. The biggest confusion that people typically face is: Once we have trained our LLM, it will have some model weights for text generation. Where do vector databases fit in here? Let's understand this. To begin, we must understand that an LLM is deployed after learning from a static version of the corpus it was fed during training. For instance, if the model wa",
+        "text": "The purpose of vector databases in RAG At this point, one interesting thing to learn is how exactly LLMs take advantage of vector databases. The biggest confusi…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 110,
@@ -384,7 +402,8 @@
         "score": 9.016529054125812,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -408,7 +427,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p31:fixed500-50:1",
-        "text": "rom all tokens, proportional to their probability. This parameter restricts sampling to the top k most probable tokens. Example: k=5 → model only considers 5 most likely next tokens during sampling. Helps enforce focus, but overly small k may give repetitive outputs. 4) Top-p (nucleus sampling)",
+        "text": "rom all tokens, proportional to their probability. This parameter restricts sampling to the top k most probable tokens. Example: k=5 → model only considers 5 mo…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 31,
@@ -422,11 +441,12 @@
         "score": 24.02656948817481,
         "rank": 1,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 295
       },
       {
         "id": "ai-engineering-2025:p33:fixed500-50:1",
-        "text": "oks at the probability of the most likely token and only keeps tokens that are at least a certain fraction (say 10%) as likely. For instance, if your top token has 60% probability, then only a few options remain. But if it’s just 20%, many others can pass the threshold. Basically, it automatically tightens or loosens the sampling pool depending on how confident the model is about the most likely token, which helps you achieve coherence when the model is confident and diversity when it’s not that",
+        "text": "oks at the probability of the most likely token and only keeps tokens that are at least a certain fraction (say 10%) as likely. For instance, if your top token …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 33,
@@ -440,11 +460,12 @@
         "score": 19.672414560041094,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p32:fixed500-50:0",
-        "text": "Instead of picking from all tokens or top k tokens, model samples from a probability mass up to p. Example: top_p=0.9 → only the smallest set of tokens covering 90% probability are considered. More adaptive than top_k, useful when balancing coherence with diversity. 5) Frequency penalty Reduces likelihood of reusing tokens that have already appeared frequently. Positive values discourage repetition, negative values exaggerate it. Useful for summarization (avoid redundancy) or poetry (intentional",
+        "text": "Instead of picking from all tokens or top k tokens, model samples from a probability mass up to p. Example: top_p=0.9 → only the smallest set of tokens covering…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 32,
@@ -458,11 +479,12 @@
         "score": 19.125816597682242,
         "rank": 3,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p33:fixed500-50:0",
-        "text": "7) Stop sequences Custom list of tokens that immediately halt generation. Critical in structured outputs (e.g., JSON), preventing spillover text. Lets you enforce strict response boundaries without heavy prompt engineering. Bonus: min-p sampling min-p was introduced earlier this year. It’s similar to top-p sampling, but instead of keeping a fixed cumulative probability mass (say, 90%), it dynamically adjusts based on the model’s confidence. It looks at the probability of the most likely token an",
+        "text": "7) Stop sequences Custom list of tokens that immediately halt generation. Critical in structured outputs (e.g., JSON), preventing spillover text. Lets you enfor…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 33,
@@ -476,11 +498,12 @@
         "score": 13.158921862024348,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p26:fixed500-50:0",
-        "text": "This is a question of conditional probability: given the words that have come before, what is the most likely next word? To predict the next word, the model calculates the conditional probability for each possible next word, given the previous words (context). The word with the highest conditional probability is chosen as the prediction.",
+        "text": "This is a question of conditional probability: given the words that have come before, what is the most likely next word? To predict the next word, the model cal…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 26,
@@ -494,11 +517,12 @@
         "score": 12.831062688725238,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 339
       },
       {
         "id": "ai-engineering-2025:p28:fixed500-50:0",
-        "text": "This is where temperature comes into the picture. Let's understand what's going on.. To make LLMs more creative, instead of selecting the best token (for simplicity let's think of tokens as words), they \"sample\" the prediction. So even if “Token 1” has the highest score, it may not be chosen since we are sampling.",
+        "text": "This is where temperature comes into the picture. Let's understand what's going on.. To make LLMs more creative, instead of selecting the best token (for simpli…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 28,
@@ -512,11 +536,12 @@
         "score": 12.71199754425599,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 315
       },
       {
         "id": "ai-engineering-2025:p36:fixed500-50:1",
-        "text": " search This is a newer method that balances fluency with diversity. Essentially, it penalizes repetitive continuations by checking how similar a candidate token is to what’s already been generated to have more diversity in the output. At each step, the model considers candidate tokens. Applies a penalty if the token is too similar to what’s already been generated. Selects the token that balances probability and diversity. This way, it also prevents “stuck in a loop” problems while keeping coher",
+        "text": " search This is a newer method that balances fluency with diversity. Essentially, it penalizes repetitive continuations by checking how similar a candidate toke…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 36,
@@ -530,11 +555,12 @@
         "score": 11.335393485674226,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p47:fixed500-50:0",
-        "text": "● Transformer uses a feed-forward network. ● MoE uses experts, which are feed-forward networks but smaller compared to that in Transformer. During inference, a subset of experts are selected. This makes inference faster in MoE. Also, since the network has multiple decoder layers: ● the text passes through different experts across layers. ● the chosen experts also differ between tokens. But how does the model decide which experts should be ideal? The router does that. The router is like a multi-c",
+        "text": "● Transformer uses a feed-forward network. ● MoE uses experts, which are feed-forward networks but smaller compared to that in Transformer. During inference, a …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 47,
@@ -548,11 +574,12 @@
         "score": 10.41176112530855,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p35:fixed500-50:0",
-        "text": "The naive approach greedily chooses the word with the highest probability from the probability vector, and autoregresses. This is often not ideal since it leads to repetitive sentences. Approach 2: Multinomial sampling strategy Instead of always picking the top token, we can sample from the probability distribution available in the probability vector. The temperature parameter controls the randomness in the generation (covered in detail here). Approach 3: Beam search Both approach 1 and approach",
+        "text": "The naive approach greedily chooses the word with the highest probability from the probability vector, and autoregresses. This is often not ideal since it leads…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 35,
@@ -566,11 +593,12 @@
         "score": 10.306039611824357,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p62:fixed500-50:1",
-        "text": " much lower retention rate for direct prompting. Verbalized sampling’s gains are independent of other methods, meaning it can be combined with techniques like temperature scaling, top-p sampling to achieve further improvements in the diversity-quality trade-off. JSON prompting for LLMs When you give an LLM an open-ended instruction, it has to guess what “good output” looks like. Sometimes it adds extra commentary, sometimes it skips details, sometimes the formatting changes for no reason. The pr",
+        "text": " much lower retention rate for direct prompting. Verbalized sampling’s gains are independent of other methods, meaning it can be combined with techniques like t…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 62,
@@ -584,7 +612,8 @@
         "score": 9.581165391111766,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -608,7 +637,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p59:fixed500-50:0",
-        "text": "Verbalized Sampling Post-training alignment methods, such as RLHF, are designed to make LLMs helpful and safe. However, these methods unintentionally cause a significant drop in output diversity (called mode collapse). When an LLM collapses to a mode, it starts favoring a narrow set of predictable or stereotypical responses over other outputs. According to a paper, mode collapse happens because the human preference data used to train the LLM has a hidden flaw called typicality bias. Here’s how t",
+        "text": "Verbalized Sampling Post-training alignment methods, such as RLHF, are designed to make LLMs helpful and safe. However, these methods unintentionally cause a si…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 59,
@@ -622,11 +651,12 @@
         "score": 37.54924182980831,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p22:fixed500-50:0",
-        "text": "That’s not just for feedback, but it’s valuable human preference data. OpenAI uses this to fine-tune their models using preference fine-tuning. In PFT: The user chooses between 2 responses to produce human preference data. A reward model is then trained to predict human preference and the LLM is updated using RL.",
+        "text": "That’s not just for feedback, but it’s valuable human preference data. OpenAI uses this to fine-tune their models using preference fine-tuning. In PFT: The user…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 22,
@@ -640,11 +670,12 @@
         "score": 18.28739139304595,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 314
       },
       {
         "id": "ai-engineering-2025:p59:fixed500-50:1",
-        "text": "a hidden flaw called typicality bias. Here’s how this happens: Annotators are asked to rate different responses from an LLM, and later, the LLM is trained using a reward model that learns to mimic these human preferences.",
+        "text": "a hidden flaw called typicality bias. Here’s how this happens: Annotators are asked to rate different responses from an LLM, and later, the LLM is trained using…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 59,
@@ -658,11 +689,12 @@
         "score": 17.32059587032825,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 221
       },
       {
         "id": "ai-engineering-2025:p60:fixed500-50:2",
-        "text": "e response] Verbalized sampling (VS) solves this. It is a training-free prompting strategy introduced to circumvent mode collapse and recover the diverse distribution learned during pre-training.",
+        "text": "e response] Verbalized sampling (VS) solves this. It is a training-free prompting strategy introduced to circumvent mode collapse and recover the diverse distri…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 60,
@@ -676,11 +708,12 @@
         "score": 13.458271193999169,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 195
       },
       {
         "id": "ai-engineering-2025:p21:fixed500-50:0",
-        "text": "Now it can: ● Answer questions ● Summarize content ● Write code, etc. At this point, we have likely: ● Utilized the entire raw internet archive and knowledge. ● The budget for human-labeled instruction response data. So what can we do to further improve the model? We enter into the territory of Reinforcement Learning (RL). 3) Preference fine-tuning (PFT) You must have seen this screen on ChatGPT where it asks: Which response do you prefer?",
+        "text": "Now it can: ● Answer questions ● Summarize content ● Write code, etc. At this point, we have likely: ● Utilized the entire raw internet archive and knowledge. ●…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 21,
@@ -694,11 +727,12 @@
         "score": 11.448722890641239,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 443
       },
       {
         "id": "ai-engineering-2025:p328:fixed500-50:0",
-        "text": "To understand KV caching, we must know how LLMs output tokens. As shown in the visual above: ● Transformer produces hidden states for all tokens. ● Hidden states are projected to vocab space. ● Logits of the last token is used to generate the next token. ● Repeat for subsequent tokens. Thus, to generate a new token, we only need the hidden state of the most recent token. None of the other hidden states are required. Next, let's see how the last hidden state is computed within the transformer lay",
+        "text": "To understand KV caching, we must know how LLMs output tokens. As shown in the visual above: ● Transformer produces hidden states for all tokens. ● Hidden state…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 328,
@@ -712,11 +746,12 @@
         "score": 10.139458399748248,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p87:fixed500-50:2",
-        "text": "e an LLM has been pre-trained, it simply continues the sentence as if it is one long text in a book or an article. For instance, check this to understand how a pre-trained LLM behaves when prompted:",
+        "text": "e an LLM has been pre-trained, it simply continues the sentence as if it is one long text in a book or an article. For instance, check this to understand how a …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 87,
@@ -730,11 +765,12 @@
         "score": 8.52869120132209,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 198
       },
       {
         "id": "ai-engineering-2025:p158:fixed500-50:0",
-        "text": "1) Instructions This defines the who, why, and how: ● Who’s the agent? (PM, researcher, coding assistant) ● Why is it acting? (goal, motivation, outcome) ● How should it behave? (steps, tone, format, constraints) 2) Examples This shows what good and bad look like: ● This includes behavioral demos, structured examples, or even anti-patterns. ● Models learn patterns much better than plain rules 3) Knowledge This is where you feed it domain knowledge. ● From business processes and APIs to data mode",
+        "text": "1) Instructions This defines the who, why, and how: ● Who’s the agent? (PM, researcher, coding assistant) ● Why is it acting? (goal, motivation, outcome) ● How …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 158,
@@ -748,11 +784,12 @@
         "score": 8.070250474214289,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p60:fixed500-50:0",
-        "text": "However, it is observed that annotators naturally tend to favor answers that are more familiar, easy to read, and predictable. This is the typicality bias. So even if a new, creative answer is just as good (or correct) as a common one, the human’s preference often leans toward the common one. Due to this, the reward model boosts responses that the original (pre-aligned) model already considered likely. This aggressively sharpens the LLM’s probability distribution, collapsing the model’s creative",
+        "text": "However, it is observed that annotators naturally tend to favor answers that are more familiar, easy to read, and predictable. This is the typicality bias. So e…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 60,
@@ -766,11 +803,12 @@
         "score": 7.4575566596009475,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p96:fixed500-50:1",
-        "text": "the code to see how we can use GRPO to turn any model into a reasoning powerhouse without any labeled data or human intervention. We’ll use: ● UnslothAI for efficient fine-tuning.",
+        "text": "the code to see how we can use GRPO to turn any model into a reasoning powerhouse without any labeled data or human intervention. We’ll use: ● UnslothAI for eff…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 96,
@@ -784,7 +822,8 @@
         "score": 7.441851582171213,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 179
       }
     ],
     "context_ids": [
@@ -808,7 +847,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p51:fixed500-50:0",
-        "text": "What is Prompt Engineering? LLMs are powerful, but they don’t automatically know what you want. Prompt engineering is the simplest way to control them. Think of it as the steering wheel for the LLM. Small adjustments completely shift the direction of the output. You’re not changing weights (the learned parameters inside the model). You’re changing instructions and that changes everything. A good prompt helps the model: ● Think step-by-step ● Follow constraints ● Stay focused ● Avoid shallow answ",
+        "text": "What is Prompt Engineering? LLMs are powerful, but they don’t automatically know what you want. Prompt engineering is the simplest way to control them. Think of…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 51,
@@ -822,11 +861,12 @@
         "score": 15.350453399721342,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p126:fixed500-50:1",
-        "text": ": ● Use RAGs to generate outputs based on a custom knowledge base if the vocabulary & writing style of the LLM remains the same. ● Use fine-tuning to change the structure (behaviour) of the model than knowledge. ● Prompt engineering is sufficient if you don't have a custom knowledge base and don't want to change the behavior. ● And finally, if your application demands a custom knowledge base and a change in the model's behavior, use a hybrid (RAG + Fine-tuning) approach. That's it!",
+        "text": ": ● Use RAGs to generate outputs based on a custom knowledge base if the vocabulary & writing style of the LLM remains the same. ● Use fine-tuning to change the…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 126,
@@ -840,11 +880,12 @@
         "score": 13.808571605082573,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 486
       },
       {
         "id": "ai-engineering-2025:p309:fixed500-50:1",
-        "text": "arning model has acquired during training. This “knowledge” can be typically represented by the model’s parameters, learned patterns, and its ability to make predictions. Distillation: In this context, distillation means transferring or condensing knowledge from one model to another. It involves training the student model to mimic the behavior of the teacher model, effectively transferring the teacher's knowledge.",
+        "text": "arning model has acquired during training. This “knowledge” can be typically represented by the model’s parameters, learned patterns, and its ability to make pr…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 309,
@@ -858,11 +899,12 @@
         "score": 10.41745905540111,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 417
       },
       {
         "id": "ai-engineering-2025:p242:fixed500-50:0",
-        "text": "At the core, you have LLMs like GPT, DeepSeek, etc. Core concepts here: ● Tokenization & inference parameters: how text is broken into tokens and processed by the model. ● Prompt engineering: designing inputs to get better outputs. ● LLM APIs: programmatic interfaces to interact with the model. This is the engine that powers everything else. 2) AI Agents (built on LLMs) Agents wrap around LLMs to give them the ability to act autonomously. Key responsibilities: ● Tool usage & function calling: co",
+        "text": "At the core, you have LLMs like GPT, DeepSeek, etc. Core concepts here: ● Tokenization & inference parameters: how text is broken into tokens and processed by t…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 242,
@@ -876,11 +918,12 @@
         "score": 8.987944902405607,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p107:fixed500-50:0",
-        "text": "What is RAG? Up to this point, we have seen two ways to adapt an LLM to a task: ● Prompt Engineering - which steers the model at inference time ● Fine-tuning - which adjusts its internal parameters. Both approaches are powerful, but they share one fundamental limitation: the model can only use the knowledge it already contains. LLMs do not automatically know new information, private data, company documents, or anything that appeared after their training cutoff. Retraining them repeatedly to stay",
+        "text": "What is RAG? Up to this point, we have seen two ways to adapt an LLM to a task: ● Prompt Engineering - which steers the model at inference time ● Fine-tuning - …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 107,
@@ -894,11 +937,12 @@
         "score": 8.845692508416859,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p13:fixed500-50:0",
-        "text": "What makes an LLM ‘large’ ? When we call a language model “large,” we are referring to its scale: ● Number of parameters it contains ● Amount of data it has been trained on ● Compute used to train it Parameters are the internal values that the model adjusts during training. Each parameter represents a small piece of the patterns the model has learned. Earlier language models were much smaller and could only capture surface-level text patterns. They could mimic style but struggled with tasks that",
+        "text": "What makes an LLM ‘large’ ? When we call a language model “large,” we are referring to its scale: ● Number of parameters it contains ● Amount of data it has bee…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 13,
@@ -912,11 +956,12 @@
         "score": 8.759812255174912,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p277:fixed500-50:2",
-        "text": "I knowledge without handing over the keys to change anything. They’re the MCP equivalent of giving the model reference material when needed, which acts like a smarter, on-demand retrieval system integrated through the protocol. Prompts Prompts in the MCP context are a special concept: they are predefined prompt templates or conversation flows that can be injected to guide the AI’s behavior. Essentially, a Prompt capability provides a canned set of instructions or an example dialogue that can hel",
+        "text": "I knowledge without handing over the keys to change anything. They’re the MCP equivalent of giving the model reference material when needed, which acts like a s…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 277,
@@ -930,11 +975,12 @@
         "score": 8.496249473130401,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p149:fixed500-50:0",
-        "text": "Context engineering involves creating dynamic systems that offer: ● The right information ● The right tools ● In the right format This ensures the LLM can effectively complete the task. But why was traditional prompt engineering not enough? Prompt engineering primarily focuses on “magic words” with an expectation of getting a better response. But as AI applications grow complex, complete and structured context matters far more than clever phrasing. These are the 4 key components of a context eng",
+        "text": "Context engineering involves creating dynamic systems that offer: ● The right information ● The right tools ● In the right format This ensures the LLM can effec…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 149,
@@ -948,11 +994,12 @@
         "score": 8.397652827922464,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p310:fixed500-50:0",
-        "text": "This is a two-step process: ● Train the large model as you typically would. This is called the “teacher” model. ● Train a smaller model, which is intended to mimic the behavior of the larger model. This is also called the “student” model. The primary objective of knowledge distillation is to transfer the knowledge, or the learned insights, from the teacher to the student model. This allows the student model to achieve comparable performance with fewer parameters and reduced computational complex",
+        "text": "This is a two-step process: ● Train the large model as you typically would. This is called the “teacher” model. ● Train a smaller model, which is intended to mi…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 310,
@@ -966,11 +1013,12 @@
         "score": 8.31834501950599,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p87:fixed500-50:0",
-        "text": "and third fully connected layers (fc2, fc3) and lastly, return the final output of the last fully connected layer of the pre-trained model (fc4). Done! Now this MyNeuralNetworkwithLoRA model can be trained like any other neural network. We have ensured that the pre-trained model (model) does not update during fine-tuning and only weights in LoRAWeights class is learned. So far, we explored how to update model weights efficiently (LoRA and its variants). But fine-tuning also depends on what data ",
+        "text": "and third fully connected layers (fc2, fc3) and lastly, return the final output of the last fully connected layer of the pre-trained model (fc4). Done! Now this…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 87,
@@ -984,7 +1032,8 @@
         "score": 8.284594445973708,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -1008,7 +1057,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p92:fixed500-50:0",
-        "text": "That was simple, wasn’t it? This produces a dataset on which the LLM can be easily fine-tuned. So far, we’ve explored how to fine-tune a model efficiently using LoRA and its variants, and what kind of data is typically used through instruction fine-tuning. The next question is: how do different fine-tuning objectives actually change the learning process? Broadly, fine-tuning falls into two categories. ● Supervised Fine-Tuning (SFT) ● Reinforcement Fine-Tuning (RFT) Both update the model using Lo",
+        "text": "That was simple, wasn’t it? This produces a dataset on which the LLM can be easily fine-tuned. So far, we’ve explored how to fine-tune a model efficiently using…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 92,
@@ -1022,11 +1071,12 @@
         "score": 11.34726427655513,
         "rank": 1,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p87:fixed500-50:0",
-        "text": "and third fully connected layers (fc2, fc3) and lastly, return the final output of the last fully connected layer of the pre-trained model (fc4). Done! Now this MyNeuralNetworkwithLoRA model can be trained like any other neural network. We have ensured that the pre-trained model (model) does not update during fine-tuning and only weights in LoRAWeights class is learned. So far, we explored how to update model weights efficiently (LoRA and its variants). But fine-tuning also depends on what data ",
+        "text": "and third fully connected layers (fc2, fc3) and lastly, return the final output of the last fully connected layer of the pre-trained model (fc4). Done! Now this…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 87,
@@ -1040,11 +1090,12 @@
         "score": 10.876921670811399,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p87:fixed500-50:1",
-        "text": "iants). But fine-tuning also depends on what data you use to update the model. This brings us to instruction fine-tuning (IFT) - the process of teaching an LLM how to follow human instructions by training it on curated instruction–response pairs. IFT is the foundation of supervised fine-tuning (SFT), and most modern LLMs rely on some form of IFT during alignment.That was pretty simple, wasn't it? Generate Your Own LLM Fine-tuning Dataset(IFT) Once an LLM has been pre-trained, it simply continues",
+        "text": "iants). But fine-tuning also depends on what data you use to update the model. This brings us to instruction fine-tuning (IFT) - the process of teaching an LLM …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 87,
@@ -1058,11 +1109,12 @@
         "score": 10.226876379120624,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p136:fixed500-50:0",
-        "text": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. While this fine-tuning technique has been successfully used for a long time, problems arise when we use it on much larger models — LLMs, for instance, primarily because of: Their size. The cost involved in fine-tuning all weights. The cost involved in maintaining all large fine-tuned models. 2) LoRA fine-tuning LoRA fine-tuning addresses the limitations of traditional fine-tuning. The core ide",
+        "text": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. While this fine-tuning technique has been successfully u…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 136,
@@ -1076,11 +1128,12 @@
         "score": 9.834171242873587,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p69:fixed500-50:1",
-        "text": "ions of parameters. Consider the size difference between BERT-large and GPT-3: Fine-tuning BERT-large on a single GPU is easy with traditional fine-tuning. But it's impossible with GPT-3, which has 175B parameters. That's 350GB of memory just to store model weights (float16 precision). Imagine OpenAI used traditional fine-tuning within its fine-tuning API:",
+        "text": "ions of parameters. Consider the size difference between BERT-large and GPT-3: Fine-tuning BERT-large on a single GPU is easy with traditional fine-tuning. But …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 69,
@@ -1094,7 +1147,8 @@
         "score": 9.288126997045651,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 358
       },
       {
         "id": "ai-engineering-2025:p23:fixed500-50:2",
@@ -1116,7 +1170,7 @@
       },
       {
         "id": "ai-engineering-2025:p80:fixed500-50:2",
-        "text": "ons.But given that W already is huge, we must ensure that ΔW does not end up being of the same dimensions, as this will defeat the entire purpose of efficient fine-tuning. In other words, if we were to keep ΔW of the same dimensions as W, then it would have been better if we had fine-tuned the original model itself.",
+        "text": "ons.But given that W already is huge, we must ensure that ΔW does not end up being of the same dimensions, as this will defeat the entire purpose of efficient f…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 80,
@@ -1130,11 +1184,12 @@
         "score": 9.03867932585025,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 317
       },
       {
         "id": "ai-engineering-2025:p81:fixed500-50:0",
-        "text": "How does LoRA work? Now, you might be thinking... But how can we even add two matrics if both have different dimensions? It’s true, we can’t do that. More specifically, during fine-tuning, the weight matrix W is frozen, so it does not receive any gradient updates. Thus, all gradient updates are redirected to the ΔW matrix. But to ensure that ΔW and W remain additive to generate a final representation for the fine-tuned model, the ΔW matrix is split into a product of two low-rank matrices A and B",
+        "text": "How does LoRA work? Now, you might be thinking... But how can we even add two matrics if both have different dimensions? It’s true, we can’t do that. More speci…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 81,
@@ -1148,11 +1203,12 @@
         "score": 8.766505383388234,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p68:fixed500-50:0",
-        "text": "What is Fine-tuning? In the pre-LLM era, whenever someone open-sourced any high-utility model for public use, in most cases, practitioners would fine-tune that model to their specific task. Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. This is neatly depicted in the diagram below: When the model was developed, it was trained on a specific dataset that might not perfectly match the characteristics of the data a practitioner wants to use it",
+        "text": "What is Fine-tuning? In the pre-LLM era, whenever someone open-sourced any high-utility model for public use, in most cases, practitioners would fine-tune that …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 68,
@@ -1166,11 +1222,12 @@
         "score": 8.762724038777977,
         "rank": 9,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p19:fixed500-50:0",
-        "text": "How to train LLM from scratch? After the model is built, the next step is to train it so it can understand language and handle tasks that appear in real-world use cases. We’ll cover: ● Pre-training ● Instruction fine-tuning ● Preference fine-tuning ● Reasoning fine-tuning The visual provides a clear summary of how these stages fit together.",
+        "text": "How to train LLM from scratch? After the model is built, the next step is to train it so it can understand language and handle tasks that appear in real-world u…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 19,
@@ -1184,7 +1241,8 @@
         "score": 8.590232767318387,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 342
       }
     ],
     "context_ids": [
@@ -1208,7 +1266,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p69:fixed500-50:1",
-        "text": "ions of parameters. Consider the size difference between BERT-large and GPT-3: Fine-tuning BERT-large on a single GPU is easy with traditional fine-tuning. But it's impossible with GPT-3, which has 175B parameters. That's 350GB of memory just to store model weights (float16 precision). Imagine OpenAI used traditional fine-tuning within its fine-tuning API:",
+        "text": "ions of parameters. Consider the size difference between BERT-large and GPT-3: Fine-tuning BERT-large on a single GPU is easy with traditional fine-tuning. But …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 69,
@@ -1222,11 +1280,12 @@
         "score": 39.14119195887538,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 358
       },
       {
         "id": "ai-engineering-2025:p70:fixed500-50:0",
-        "text": "● If 10 users fine-tuned GPT-3 → 3500 GB to store weights. ● If 1000 users fine-tuned GPT-3 → 350k GB to store weights. ● If 100k users fine-tuned GPT-3 → 35M GB to store weights. And the problems don't end there: ● OpenAI bills solely based on usage. ○ What if someone fine-tunes the model for learning but never uses it? ● Since a request can come anytime, should they always keep the fine-tuned model in memory since loading 350GB is a heavy task? Traditional fine-tuning is just not practically f",
+        "text": "● If 10 users fine-tuned GPT-3 → 3500 GB to store weights. ● If 1000 users fine-tuned GPT-3 → 350k GB to store weights. ● If 100k users fine-tuned GPT-3 → 35M G…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 70,
@@ -1240,11 +1299,12 @@
         "score": 22.154130764510107,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p136:fixed500-50:0",
-        "text": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. While this fine-tuning technique has been successfully used for a long time, problems arise when we use it on much larger models — LLMs, for instance, primarily because of: Their size. The cost involved in fine-tuning all weights. The cost involved in maintaining all large fine-tuned models. 2) LoRA fine-tuning LoRA fine-tuning addresses the limitations of traditional fine-tuning. The core ide",
+        "text": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. While this fine-tuning technique has been successfully u…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 136,
@@ -1258,11 +1318,12 @@
         "score": 16.628091543008804,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p69:fixed500-50:0",
-        "text": "Thus, when using it on any downstream task, we can adjust the weights of the BERT model along with the augmented layers, so that it better aligns with the nuances and specificities of the new dataset. Issues with traditional fine-tuning However, a problem arises when we use the same traditional fine-tuning technique on much larger models - LLMs, for instance. This is because, as you may already know, these models are huge - billions or even trillions of parameters. Consider the size difference b",
+        "text": "Thus, when using it on any downstream task, we can adjust the weights of the BERT model along with the augmented layers, so that it better aligns with the nuanc…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 69,
@@ -1276,11 +1337,12 @@
         "score": 14.48893081851287,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p71:fixed500-50:0",
-        "text": "Additionally, maintaining the infrastructure to support fine-tuning requests from potentially thousands of customers simultaneously would be a huge task for them. 5 LLM Fine-tuning Techniques Traditional fine-tuning (depicted below) is infeasible with LLMs because these models have billions of parameters and are hundreds of GBs in size, and not everyone has access to such computing infrastructure. Thankfully, today, we have many optimal ways to fine-tune LLMs, and five such popular techniques ar",
+        "text": "Additionally, maintaining the infrastructure to support fine-tuning requests from potentially thousands of customers simultaneously would be a huge task for the…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 71,
@@ -1294,7 +1356,8 @@
         "score": 13.238342083840022,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p70:fixed500-50:1",
@@ -1316,7 +1379,7 @@
       },
       {
         "id": "ai-engineering-2025:p92:fixed500-50:0",
-        "text": "That was simple, wasn’t it? This produces a dataset on which the LLM can be easily fine-tuned. So far, we’ve explored how to fine-tune a model efficiently using LoRA and its variants, and what kind of data is typically used through instruction fine-tuning. The next question is: how do different fine-tuning objectives actually change the learning process? Broadly, fine-tuning falls into two categories. ● Supervised Fine-Tuning (SFT) ● Reinforcement Fine-Tuning (RFT) Both update the model using Lo",
+        "text": "That was simple, wasn’t it? This produces a dataset on which the LLM can be easily fine-tuned. So far, we’ve explored how to fine-tune a model efficiently using…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 92,
@@ -1330,11 +1393,12 @@
         "score": 12.327397270242498,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p68:fixed500-50:0",
-        "text": "What is Fine-tuning? In the pre-LLM era, whenever someone open-sourced any high-utility model for public use, in most cases, practitioners would fine-tune that model to their specific task. Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. This is neatly depicted in the diagram below: When the model was developed, it was trained on a specific dataset that might not perfectly match the characteristics of the data a practitioner wants to use it",
+        "text": "What is Fine-tuning? In the pre-LLM era, whenever someone open-sourced any high-utility model for public use, in most cases, practitioners would fine-tune that …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 68,
@@ -1348,11 +1412,12 @@
         "score": 11.672539745866123,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p98:fixed500-50:0",
-        "text": "#2) Define LoRA config We'll use LoRA to avoid fine-tuning the entire model weights. In this code, we use Unsloth's PEFT by specifying: ● The model ● LoRA low-rank (r) ● Modules for fine-tuning, etc. #3) Create the dataset We load the Open R1 Math dataset (a math problem dataset) and format it for reasoning.",
+        "text": "#2) Define LoRA config We'll use LoRA to avoid fine-tuning the entire model weights. In this code, we use Unsloth's PEFT by specifying: ● The model ● LoRA low-r…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 98,
@@ -1366,11 +1431,12 @@
         "score": 11.603945884635905,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 309
       },
       {
         "id": "ai-engineering-2025:p87:fixed500-50:1",
-        "text": "iants). But fine-tuning also depends on what data you use to update the model. This brings us to instruction fine-tuning (IFT) - the process of teaching an LLM how to follow human instructions by training it on curated instruction–response pairs. IFT is the foundation of supervised fine-tuning (SFT), and most modern LLMs rely on some form of IFT during alignment.That was pretty simple, wasn't it? Generate Your Own LLM Fine-tuning Dataset(IFT) Once an LLM has been pre-trained, it simply continues",
+        "text": "iants). But fine-tuning also depends on what data you use to update the model. This brings us to instruction fine-tuning (IFT) - the process of teaching an LLM …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 87,
@@ -1384,7 +1450,8 @@
         "score": 11.472589366792645,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -1408,7 +1475,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p107:fixed500-50:0",
-        "text": "What is RAG? Up to this point, we have seen two ways to adapt an LLM to a task: ● Prompt Engineering - which steers the model at inference time ● Fine-tuning - which adjusts its internal parameters. Both approaches are powerful, but they share one fundamental limitation: the model can only use the knowledge it already contains. LLMs do not automatically know new information, private data, company documents, or anything that appeared after their training cutoff. Retraining them repeatedly to stay",
+        "text": "What is RAG? Up to this point, we have seen two ways to adapt an LLM to a task: ● Prompt Engineering - which steers the model at inference time ● Fine-tuning - …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 107,
@@ -1422,11 +1489,12 @@
         "score": 18.369224643611112,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p125:fixed500-50:1",
-        "text": "ed apps, it is unlikely you can start using the model right away without adjustments. To maintain high utility, you either need: ● Prompt engineering ● Fine-tuning ● RAG ● Or a hybrid approach (RAG + fine-tuning) The following visual will help you decide which one is best for you:",
+        "text": "ed apps, it is unlikely you can start using the model right away without adjustments. To maintain high utility, you either need: ● Prompt engineering ● Fine-tun…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 125,
@@ -1440,11 +1508,12 @@
         "score": 17.921954407750896,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 281
       },
       {
         "id": "ai-engineering-2025:p126:fixed500-50:1",
-        "text": ": ● Use RAGs to generate outputs based on a custom knowledge base if the vocabulary & writing style of the LLM remains the same. ● Use fine-tuning to change the structure (behaviour) of the model than knowledge. ● Prompt engineering is sufficient if you don't have a custom knowledge base and don't want to change the behavior. ● And finally, if your application demands a custom knowledge base and a change in the model's behavior, use a hybrid (RAG + Fine-tuning) approach. That's it!",
+        "text": ": ● Use RAGs to generate outputs based on a custom knowledge base if the vocabulary & writing style of the LLM remains the same. ● Use fine-tuning to change the…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 126,
@@ -1458,11 +1527,12 @@
         "score": 14.812777703676039,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 486
       },
       {
         "id": "ai-engineering-2025:p135:fixed500-50:0",
-        "text": "But this comes at the cost of increased latency and more LLM usage. Full-model Fine-tuning vs. LoRA vs. RAG All three techniques are used to augment the knowledge of an existing model with additional data. 1) Full fine-tuning",
+        "text": "But this comes at the cost of increased latency and more LLM usage. Full-model Fine-tuning vs. LoRA vs. RAG All three techniques are used to augment the knowled…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 135,
@@ -1476,11 +1546,12 @@
         "score": 12.550989368083759,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 225
       },
       {
         "id": "ai-engineering-2025:p92:fixed500-50:0",
-        "text": "That was simple, wasn’t it? This produces a dataset on which the LLM can be easily fine-tuned. So far, we’ve explored how to fine-tune a model efficiently using LoRA and its variants, and what kind of data is typically used through instruction fine-tuning. The next question is: how do different fine-tuning objectives actually change the learning process? Broadly, fine-tuning falls into two categories. ● Supervised Fine-Tuning (SFT) ● Reinforcement Fine-Tuning (RFT) Both update the model using Lo",
+        "text": "That was simple, wasn’t it? This produces a dataset on which the LLM can be easily fine-tuned. So far, we’ve explored how to fine-tune a model efficiently using…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 92,
@@ -1494,11 +1565,12 @@
         "score": 12.36502980451787,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p51:fixed500-50:0",
-        "text": "What is Prompt Engineering? LLMs are powerful, but they don’t automatically know what you want. Prompt engineering is the simplest way to control them. Think of it as the steering wheel for the LLM. Small adjustments completely shift the direction of the output. You’re not changing weights (the learned parameters inside the model). You’re changing instructions and that changes everything. A good prompt helps the model: ● Think step-by-step ● Follow constraints ● Stay focused ● Avoid shallow answ",
+        "text": "What is Prompt Engineering? LLMs are powerful, but they don’t automatically know what you want. Prompt engineering is the simplest way to control them. Think of…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 51,
@@ -1512,11 +1584,12 @@
         "score": 11.592854814703115,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p87:fixed500-50:1",
-        "text": "iants). But fine-tuning also depends on what data you use to update the model. This brings us to instruction fine-tuning (IFT) - the process of teaching an LLM how to follow human instructions by training it on curated instruction–response pairs. IFT is the foundation of supervised fine-tuning (SFT), and most modern LLMs rely on some form of IFT during alignment.That was pretty simple, wasn't it? Generate Your Own LLM Fine-tuning Dataset(IFT) Once an LLM has been pre-trained, it simply continues",
+        "text": "iants). But fine-tuning also depends on what data you use to update the model. This brings us to instruction fine-tuning (IFT) - the process of teaching an LLM …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 87,
@@ -1530,11 +1603,12 @@
         "score": 11.516915629694244,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p136:fixed500-50:0",
-        "text": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. While this fine-tuning technique has been successfully used for a long time, problems arise when we use it on much larger models — LLMs, for instance, primarily because of: Their size. The cost involved in fine-tuning all weights. The cost involved in maintaining all large fine-tuned models. 2) LoRA fine-tuning LoRA fine-tuning addresses the limitations of traditional fine-tuning. The core ide",
+        "text": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. While this fine-tuning technique has been successfully u…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 136,
@@ -1548,11 +1622,12 @@
         "score": 10.844731053037943,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p69:fixed500-50:1",
-        "text": "ions of parameters. Consider the size difference between BERT-large and GPT-3: Fine-tuning BERT-large on a single GPU is easy with traditional fine-tuning. But it's impossible with GPT-3, which has 175B parameters. That's 350GB of memory just to store model weights (float16 precision). Imagine OpenAI used traditional fine-tuning within its fine-tuning API:",
+        "text": "ions of parameters. Consider the size difference between BERT-large and GPT-3: Fine-tuning BERT-large on a single GPU is easy with traditional fine-tuning. But …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 69,
@@ -1566,11 +1641,12 @@
         "score": 10.58835579530067,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 358
       },
       {
         "id": "ai-engineering-2025:p78:fixed500-50:1",
-        "text": ", full-precision model. QLoRA does employ some special techniques to preserve the information as much as possible, but there is definitely some trade-off involved. This somewhat lies along the lines of Quantization in Model compression, which we will cover ahead in the LLM optimization section. Bonus: DoRA DoRA (Weight-Decomposed Low-Rank Adaptation) represents a refined approach to fine-tuning large models by addressing a key limitation of LoRA (Low-Rank Adaptation) while preserving its efficie",
+        "text": ", full-precision model. QLoRA does employ some special techniques to preserve the information as much as possible, but there is definitely some trade-off involv…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 78,
@@ -1584,7 +1660,8 @@
         "score": 10.445200653847614,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -1608,7 +1685,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p116:fixed500-50:0",
-        "text": "Since these are “context embedding models” (not word embedding models), models like bi-encoders are highly relevant here. #3) Store embeddings in a vector database These embeddings are then stored in the vector database: This shows that a vector database acts as a memory for your RAG application since this is precisely where we store all the additional knowledge, using which, the user's query will be answered. A vector database also stores the metadata and original content along with the vector ",
+        "text": "Since these are “context embedding models” (not word embedding models), models like bi-encoders are highly relevant here. #3) Store embeddings in a vector datab…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 116,
@@ -1622,11 +1699,12 @@
         "score": 15.745288279938428,
         "rank": 1,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p112:fixed500-50:0",
-        "text": "One way could be to provide that information in the prompt itself. But since LLMs usually have a limit on the context window (number of words/tokens they can accept), the additional information can exceed that limit. Vector databases solve this problem. As discussed earlier, vector databases store information in the form of vectors, where each vector captures semantic information about the piece of text being encoded. Thus, we can maintain our available information in a vector database by encodi",
+        "text": "One way could be to provide that information in the prompt itself. But since LLMs usually have a limit on the context window (number of words/tokens they can ac…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 112,
@@ -1640,11 +1718,12 @@
         "score": 11.202264049206576,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p162:fixed500-50:0",
-        "text": "We use Tensorlake to convert the document into RAG-ready markdown chunks for each section. The extracted data can be directly embedded and stored in a vector DB without further processing. #3) Indexing and retrieval Now that we have RAG-ready chunks along with the metadata, it's time to store them in a self-hosted Milvus vector database. We retrieve the top-k most similar chunks to our query:",
+        "text": "We use Tensorlake to convert the document into RAG-ready markdown chunks for each section. The extracted data can be directly embedded and stored in a vector DB…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 162,
@@ -1658,11 +1737,12 @@
         "score": 10.698749669529874,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 395
       },
       {
         "id": "ai-engineering-2025:p108:fixed500-50:1",
-        "text": " its responses. To understand how RAG actually works in practice, we first need to understand vector databases - the storage layer that powers retrieval. What are vector databases? Simply put, a vector database stores unstructured data (text, images, audio, video, etc.) in the form of vector embeddings. Each data point, whether a word, a document, an image, or any other entity, is transformed into a numerical vector using ML techniques (which we shall see ahead). This numerical vector is called ",
+        "text": " its responses. To understand how RAG actually works in practice, we first need to understand vector databases - the storage layer that powers retrieval. What a…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 108,
@@ -1676,11 +1756,12 @@
         "score": 10.517776715586628,
         "rank": 4,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p112:fixed500-50:1",
-        "text": "ailable information in a vector database by encoding it into vectors using an embedding model. When the LLM needs to access this information, it can query the vector database using an approximate similarity search with the prompt vector to find content that is similar to the input query vector.",
+        "text": "ailable information in a vector database by encoding it into vectors using an embedding model. When the LLM needs to access this information, it can query the v…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 112,
@@ -1694,11 +1775,12 @@
         "score": 10.485474940742712,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 295
       },
       {
         "id": "ai-engineering-2025:p142:fixed500-50:0",
-        "text": "This way, the model processes just what matters and ignores the rest. Here's the step-by-step walkthrough: Step 1-2) Encode the docs and store them in a vector database. Step 3-5) Encode the full user query and find relevant chunks. Also, compute the token-level embeddings for both the query (step 7) and matching chunks. Step 6) Use a relevance policy (trained via RL) to select chunks to keep. Step 8) Concatenate the token-level representations of the input query with the token-level embedding o",
+        "text": "This way, the model processes just what matters and ignores the rest. Here's the step-by-step walkthrough: Step 1-2) Encode the docs and store them in a vector …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 142,
@@ -1712,11 +1794,12 @@
         "score": 10.078546213364683,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p139:fixed500-50:0",
-        "text": "embeddings into the vector database. There’s no need to repeat this again for the entire data) Step 3: Use the same embedding model to embed the user query. Step 4-5: Find the nearest neighbors in the vector database to the embedded query. Step 6-7: Provide the original query and the retrieved documents (for more context) to the LLM to get a response. In fact, even its name entirely justifies what we do with this technique: Retrieval: Accessing and retrieving information from a knowledge source,",
+        "text": "embeddings into the vector database. There’s no need to repeat this again for the entire data) Step 3: Use the same embedding model to embed the user query. Ste…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 139,
@@ -1730,11 +1813,12 @@
         "score": 9.667268806170565,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p134:fixed500-50:0",
-        "text": "Use an LLM to generate a hypothetical answer H for the query Q (this answer does not have to be entirely correct). Embed the answer using a contriever model to get E (Bi-encoders are famously used here). Use the embedding E to query the vector database and fetch relevant context (C). Pass the hypothetical answer H + retrieved-context C + query Q to the LLM to produce an answer. Done! Now, of course, the hypothetical generated will likely contain hallucinated details. But this does not severely a",
+        "text": "Use an LLM to generate a hypothetical answer H for the query Q (this answer does not have to be entirely correct). Embed the answer using a contriever model to …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 134,
@@ -1748,11 +1832,12 @@
         "score": 9.302653518281645,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p117:fixed500-50:0",
-        "text": "Next, the user inputs a query, a string representing the information they're seeking. #5) Embed the query This query is transformed into a vector using the same embedding model we used to embed the chunks earlier in Step 2. #6) Retrieve similar chunks The vectorized query is then compared against our existing vectors in the database to find the most similar information. The vector database returns the k (a pre-defined parameter) most similar documents/chunks (using approximate nearest neighbor s",
+        "text": "Next, the user inputs a query, a string representing the information they're seeking. #5) Embed the query This query is transformed into a vector using the same…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 117,
@@ -1766,11 +1851,12 @@
         "score": 8.292770655105205,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p116:fixed500-50:1",
-        "text": "tadata and original content along with the vector embeddings. With that, our vector database has been created and information has been added. More information can be added to this if needed. Now, we move to the query step. #4) User input query",
+        "text": "tadata and original content along with the vector embeddings. With that, our vector database has been created and information has been added. More information c…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 116,
@@ -1784,7 +1870,8 @@
         "score": 8.092560529492664,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 243
       }
     ],
     "context_ids": [
@@ -1808,7 +1895,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p120:fixed500-50:0",
-        "text": "Since the additional document(s) can be large, step 1 also involves chunking, wherein a large document is divided into smaller/manageable pieces. This step is crucial since it ensures the text fits the input size of the embedding model. Here are five chunking strategies for RAG: Let’s understand them! 1) Fixed-size chunking",
+        "text": "Since the additional document(s) can be large, step 1 also involves chunking, wherein a large document is divided into smaller/manageable pieces. This step is c…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 120,
@@ -1822,11 +1909,12 @@
         "score": 17.224589572096846,
         "rank": 1,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 325
       },
       {
         "id": "ai-engineering-2025:p121:fixed500-50:0",
-        "text": "Split the text into uniform segments based on a pre-defined number of characters, words, or tokens. Since a direct split can disrupt the semantic flow, it is recommended to maintain some overlap between two consecutive chunks (the blue part above). This is simple to implement. Also, since all chunks are of equal size, it simplifies batch processing. But this usually breaks sentences (or ideas) in between. Thus, important information will likely get distributed between chunks. 2) Semantic chunkin",
+        "text": "Split the text into uniform segments based on a pre-defined number of characters, words, or tokens. Since a direct split can disrupt the semantic flow, it is re…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 121,
@@ -1840,11 +1928,12 @@
         "score": 15.161435711957791,
         "rank": 2,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p123:fixed500-50:0",
-        "text": "As shown above: First, we define two chunks (the two paragraphs in purple). Next, paragraph 1 is further split into smaller chunks. Unlike fixed-size chunks, this approach also maintains the natural flow of language and preserves complete ideas. However, there is some extra overhead in terms of implementation and computational complexity. 4) Document structure-based chunking It utilizes the inherent structure of documents, like headings, sections, or paragraphs, to define chunk boundaries. This ",
+        "text": "As shown above: First, we define two chunks (the two paragraphs in purple). Next, paragraph 1 is further split into smaller chunks. Unlike fixed-size chunks, th…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 123,
@@ -1858,11 +1947,12 @@
         "score": 12.948254757289574,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p170:fixed500-50:1",
-        "text": "orts hundreds of skills without breaching context limits. Now let’s zoom into the main ideas behind Skills, because understanding what they are clarifies why this 3-layer system matters.",
+        "text": "orts hundreds of skills without breaching context limits. Now let’s zoom into the main ideas behind Skills, because understanding what they are clarifies why th…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 170,
@@ -1876,11 +1966,12 @@
         "score": 12.83394742081663,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 186
       },
       {
         "id": "ai-engineering-2025:p122:fixed500-50:1",
-        "text": "ine if cosine similarity has dropped significantly, which can vary from document to document. 3) Recursive chunking First, chunk based on inherent separators like paragraphs, or sections. Next, split each chunk into smaller chunks if the size exceeds a pre-defined chunk size limit. If, however, the chunk fits the chunk-size limit, no further splitting is done. Here’s what the output could look like:",
+        "text": "ine if cosine similarity has dropped significantly, which can vary from document to document. 3) Recursive chunking First, chunk based on inherent separators li…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 122,
@@ -1894,11 +1985,12 @@
         "score": 11.84406395070847,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 402
       },
       {
         "id": "ai-engineering-2025:p319:fixed500-50:2",
-        "text": "pecialized, high-performance LLM inference engines, like vLLM, LMCache, SGLang, and TensorRT LLM. Let’s understand these challenges today and how we solve them! Continuous batching Traditional models, like CNNs, have a fixed-size image input and a fixed-length output (like a label). This makes batching easy.",
+        "text": "pecialized, high-performance LLM inference engines, like vLLM, LMCache, SGLang, and TensorRT LLM. Let’s understand these challenges today and how we solve them!…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 319,
@@ -1912,11 +2004,12 @@
         "score": 10.83310943324689,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 309
       },
       {
         "id": "ai-engineering-2025:p122:fixed500-50:0",
-        "text": "This continues until cosine similarity drops significantly. The moment it does, we start a new chunk and repeat. Here’s what the output could look like: Unlike fixed-size chunks, this maintains the natural flow of language and preserves complete ideas. Since each chunk is richer, it improves the retrieval accuracy, which, in turn, produces more coherent and relevant responses by the LLM. A minor problem is that it depends on a threshold to determine if cosine similarity has dropped significantly",
+        "text": "This continues until cosine similarity drops significantly. The moment it does, we start a new chunk and repeat. Here’s what the output could look like: Unlike …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 122,
@@ -1930,11 +2023,12 @@
         "score": 10.464168413851617,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p261:fixed500-50:0",
-        "text": "AI Agent Deployment Strategies Deploying AI agents isn’t one-size-fits-all. The architecture you choose can make or break your agent’s performance, cost efficiency, and user experience. Here are the 4 main deployment patterns you need to know: 1) Batch deployment You can think of this as a scheduled automation.",
+        "text": "AI Agent Deployment Strategies Deploying AI agents isn’t one-size-fits-all. The architecture you choose can make or break your agent’s performance, cost efficie…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 261,
@@ -1948,11 +2042,12 @@
         "score": 8.564228516242448,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 312
       },
       {
         "id": "ai-engineering-2025:p307:fixed500-50:1",
-        "text": " accuracy. To meet these requirements, models must be optimized beyond their initial training. Model compression techniques help address this need. They reduce the model’s size and computational cost while preserving most of its performance, making the model practical for real-world deployment. Model Compression As the name suggests, model compression is a set of techniques used to reduce the size and computational complexity of a model while preserving or even improving its performance.",
+        "text": " accuracy. To meet these requirements, models must be optimized beyond their initial training. Model compression techniques help address this need. They reduce …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 307,
@@ -1966,11 +2061,12 @@
         "score": 8.52768040155608,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 492
       },
       {
         "id": "ai-engineering-2025:p200:fixed500-50:0",
-        "text": "● User Memory Each serves a unique purpose in helping agents “remember” and utilize past information. To simulate memory, the system has to manage context explicitly: choosing what to keep, what to discard, and what to retrieve before each new model call. This is why memory is not a property of the model itself. It is a system design problem. 5 Agentic AI Design Patterns Agentic behaviors allow LLMs to refine their output by incorporating self-evaluation, planning, and collaboration! The followi",
+        "text": "● User Memory Each serves a unique purpose in helping agents “remember” and utilize past information. To simulate memory, the system has to manage context expli…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 200,
@@ -1984,7 +2080,8 @@
         "score": 8.375397222207477,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -2008,7 +2105,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p132:fixed500-50:0",
-        "text": "Traditional RAG vs HyDE Another critical problem with the traditional RAG system is that questions are not semantically similar to their answers. As a result, several irrelevant contexts get retrieved during the retrieval step due to a higher cosine similarity than the documents actually containing the answer. HyDE solves this. The following visual depicts how it differs from traditional RAG and HyDE.",
+        "text": "Traditional RAG vs HyDE Another critical problem with the traditional RAG system is that questions are not semantically similar to their answers. As a result, s…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 132,
@@ -2022,7 +2119,8 @@
         "score": 24.476211314653135,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 404
       },
       {
         "id": "ai-engineering-2025:p134:fixed500-50:2",
@@ -2044,7 +2142,7 @@
       },
       {
         "id": "ai-engineering-2025:p131:fixed500-50:2",
-        "text": "w iterations until the system admits it cannot answer the query. This makes the RAG much more robust since, at every step, agentic behavior ensures that individual outcomes are aligned with the final goal. That said, it is also important to note that building RAG systems typically boils down to design preferences/choices. Apart from agentic approaches, another important improvement over traditional RAG comes from better retrieval itself - one popular method being HyDE.",
+        "text": "w iterations until the system admits it cannot answer the query. This makes the RAG much more robust since, at every step, agentic behavior ensures that individ…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 131,
@@ -2058,11 +2156,12 @@
         "score": 15.09398829603746,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 473
       },
       {
         "id": "ai-engineering-2025:p129:fixed500-50:1",
-        "text": " (ReAct, CoT), and memory to orchestrate retrieval from multiple sources. Best suited for complex workflows that require tool use, external APIs, or combining multiple RAG techniques. RAG vs Agentic RAG These are some issues with the traditional RAG system :",
+        "text": " (ReAct, CoT), and memory to orchestrate retrieval from multiple sources. Best suited for complex workflows that require tool use, external APIs, or combining m…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 129,
@@ -2076,11 +2175,12 @@
         "score": 13.635186829784974,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 258
       },
       {
         "id": "ai-engineering-2025:p130:fixed500-50:0",
-        "text": "These systems retrieve once and generate once. This means if the retrieved context isn't enough, the LLM can not dynamically search for more information. RAG systems may provide relevant context but don't reason through complex queries. If a query requires multiple retrieval steps, traditional RAG falls short. There's little adaptability. The LLM can't modify its strategy based on the problem at hand. Due to this, Agentic RAG is becoming increasingly popular. Let's understand this in more detail",
+        "text": "These systems retrieve once and generate once. This means if the retrieved context isn't enough, the LLM can not dynamically search for more information. RAG sy…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 130,
@@ -2094,11 +2194,12 @@
         "score": 11.819018498858348,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p148:fixed500-50:0",
-        "text": "What is Context Engineering? Context engineering is rapidly becoming a crucial skill for AI engineers. It's no longer just about clever prompting, it's about the systematic orchestration of context. Here’s the current problem: Most AI agents (or LLM apps) fail not because the models are bad, but because they lack the right context to succeed. For instance, a RAG workflow is typically 80% retrieval and 20% generation. Thus: ● Good retrieval could still work with a weak LLM. ● But bad retrieval ca",
+        "text": "What is Context Engineering? Context engineering is rapidly becoming a crucial skill for AI engineers. It's no longer just about clever prompting, it's about th…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 148,
@@ -2112,11 +2213,12 @@
         "score": 11.793365427309576,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p148:fixed500-50:1",
-        "text": "still work with a weak LLM. ● But bad retrieval can NEVER work even with the best of LLMs. If your RAG isn't working, most likely, it's a context retrieval issue. In the same way, LLMs aren't mind readers. They can only work with what you give them.",
+        "text": "still work with a weak LLM. ● But bad retrieval can NEVER work even with the best of LLMs. If your RAG isn't working, most likely, it's a context retrieval issu…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 148,
@@ -2130,11 +2232,12 @@
         "score": 11.24378882221018,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 249
       },
       {
         "id": "ai-engineering-2025:p145:fixed500-50:0",
-        "text": "RAG (2020-2023): ● Retrieve info once, generate response ● No decision-making, just fetch and answer ● Problem: Often retrieves irrelevant context Agentic RAG: ● Agent decides *if* retrieval is needed ● Agent picks *which* source to query ● Agent validates *if* results are useful ● Problem: Still read-only, can’t learn from interactions AI Memory: ● Reads AND writes to external knowledge ● Learns from past conversations",
+        "text": "RAG (2020-2023): ● Retrieve info once, generate response ● No decision-making, just fetch and answer ● Problem: Often retrieves irrelevant context Agentic RAG: …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 145,
@@ -2148,11 +2251,12 @@
         "score": 10.705159674942813,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 423
       },
       {
         "id": "ai-engineering-2025:p173:fixed500-50:0",
-        "text": "To understand better, consider this query: What’s blocking the Chicago office project, and when’s our next meeting about it? Answering this single query requires searching across sources like Linear (for blockers), Calendar (for meetings), Gmail (for emails), and Slack (for discussions). No naive RAG setup can handle this! To actually solve this problem, you’d need to think of it as building an Agentic context retrieval system with three critical layers: ● Ingestion layer: ○ Connect to apps with",
+        "text": "To understand better, consider this query: What’s blocking the Chicago office project, and when’s our next meeting about it? Answering this single query require…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 173,
@@ -2166,11 +2270,12 @@
         "score": 10.64028521481696,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p129:fixed500-50:0",
-        "text": "6) Hybrid RAG Combines dense vector retrieval with graph-based retrieval in a single pipeline. Useful when the task requires both unstructured text and structured relational data for richer answers. 7) Adaptive RAG Dynamically decides if a query requires a simple direct retrieval or a multi-step reasoning chain. Breaks complex queries into smaller sub-queries for better coverage and accuracy. 8) Agentic RAG Uses AI agents with planning, reasoning (ReAct, CoT), and memory to orchestrate retrieval",
+        "text": "6) Hybrid RAG Combines dense vector retrieval with graph-based retrieval in a single pipeline. Useful when the task requires both unstructured text and structur…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 129,
@@ -2184,7 +2289,8 @@
         "score": 10.346740617176085,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -2208,7 +2314,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p143:fixed500-50:0",
-        "text": "Every time a query comes in, the model often re-fetches the same context from the vector DB, which can be expensive, redundant, and slow. Cache-Augmented Generation (CAG) fixes this. It lets the model “remember” stable information by caching it directly in the model’s key-value memory. And you can take this one step ahead by fusing RAG and CAG as depicted below: Here’s how it works in simple terms: ● In a regular RAG setup, your query goes to the vector database, retrieves relevant chunks, and f",
+        "text": "Every time a query comes in, the model often re-fetches the same context from the vector DB, which can be expensive, redundant, and slow. Cache-Augmented Genera…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 143,
@@ -2222,11 +2328,12 @@
         "score": 21.894305285308523,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p107:fixed500-50:1",
-        "text": "raining cutoff. Retraining them repeatedly to stay updated is impractical and expensive. This is where Retrieval-Augmented Generation (RAG) comes in. Let’s break it down: ● Retrieval: Accessing and retrieving information from a knowledge source, such as a database or memory. ● Augmented: Enhancing or enriching something, in this case, the text generation process, with additional information or context. ● Generation: The process of creating or producing something, in this context, generating text",
+        "text": "raining cutoff. Retraining them repeatedly to stay updated is impractical and expensive. This is where Retrieval-Augmented Generation (RAG) comes in. Let’s brea…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 107,
@@ -2240,11 +2347,12 @@
         "score": 17.402534186075734,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p139:fixed500-50:1",
-        "text": "nd retrieving information from a knowledge source, such as a database or memory. Augmented: Enhancing or enriching something, in this case, the text generation process, with additional information or context. Generation: The process of creating or producing something, in this context, generating text or language. Of course, there are many problems with RAG too, such as:",
+        "text": "nd retrieving information from a knowledge source, such as a database or memory. Augmented: Enhancing or enriching something, in this case, the text generation …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 139,
@@ -2258,11 +2366,12 @@
         "score": 15.951836575902252,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 372
       },
       {
         "id": "ai-engineering-2025:p182:fixed500-50:0",
-        "text": "RAG (Retrieval-Augmented Generation) RAG enhances an LLM by retrieving external documents (from a vector DB, search engine, etc.) and feeding them into the LLM as context before generating a response. RAG makes the LLM aware of updated, relevant info without retraining. Agent An Agent adds autonomy to the mix. It doesn’t just answer a question—it decides what steps to take: Should it call a tool? Search the web? Summarize? Store info? An Agent uses an LLM, calls tools, makes decisions, and orche",
+        "text": "RAG (Retrieval-Augmented Generation) RAG enhances an LLM by retrieving external documents (from a vector DB, search engine, etc.) and feeding them into the LLM …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 182,
@@ -2276,11 +2385,12 @@
         "score": 12.157169944467192,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p142:fixed500-50:2",
-        "text": " fewer decoder tokens. ● leads to no accuracy loss across RAG, summarization, and multi-turn conversation tasks That means you can process 16x more context at 30x the speed, with the same accuracy. RAG vs CAG RAG changed how we build knowledge-grounded systems, but it still has a weakness.",
+        "text": " fewer decoder tokens. ● leads to no accuracy loss across RAG, summarization, and multi-turn conversation tasks That means you can process 16x more context at 3…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 142,
@@ -2294,11 +2404,12 @@
         "score": 11.625089419660716,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 290
       },
       {
         "id": "ai-engineering-2025:p361:fixed500-50:0",
-        "text": "● Immediately fills empty slots with new requests This keeps the GPU pipeline fully utilized without any code changes on your side. 2) PagedAttention We previously discussed how KV-cache grows with every token and how contiguous memory leads to fragmentation. vLLM avoids this by storing KV-cache in small non-contiguous pages rather than a single block. A lightweight lookup table tells the model where each page lives, allowing vLLM to: ● Support larger batch sizes ● Avoid fragmentation ● Serve lo",
+        "text": "● Immediately fills empty slots with new requests This keeps the GPU pipeline fully utilized without any code changes on your side. 2) PagedAttention We previou…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 361,
@@ -2312,11 +2423,12 @@
         "score": 11.146277962867826,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p242:fixed500-50:2",
-        "text": "ne multiple agents, you get agentic systems. Features: ● Inter-Agent communication: agents talking to each other, making use of protocols like ACP, A2A if needed. ● Routing & scheduling: deciding which agent handles what, and when. ● State coordination: ensuring consistency when multiple agents collaborate. ● Multi-Agent RAG: using retrieval-augmented generation across agents.",
+        "text": "ne multiple agents, you get agentic systems. Features: ● Inter-Agent communication: agents talking to each other, making use of protocols like ACP, A2A if neede…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 242,
@@ -2330,11 +2442,12 @@
         "score": 11.006793905794723,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 379
       },
       {
         "id": "ai-engineering-2025:p138:fixed500-50:0",
-        "text": "Looking at the above visual, it is pretty clear that the LoRA network has relatively very few connections. 3) RAG Retrieval augmented generation (RAG) is another pretty cool way to augment neural networks with additional information, without having to fine-tune the model. This is illustrated below: There are 7 steps, which are also marked in the above visual: Step 1-2: Take additional data, and dump it in a vector database after embedding. (This is only done once. If the data is evolving, just k",
+        "text": "Looking at the above visual, it is pretty clear that the LoRA network has relatively very few connections. 3) RAG Retrieval augmented generation (RAG) is anothe…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 138,
@@ -2348,11 +2461,12 @@
         "score": 10.742363059095798,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p144:fixed500-50:1",
-        "text": "change often. If you cache everything, you’ll hit context limits, so separating “cold” (cacheable) and “hot” (retrievable) data is what keeps this system reliable. You can also see this in practice above. Many APIs like OpenAI and Anthropic already support prompt caching, so you can start experimenting right away. RAG, Agentic RAG and AI Memory RAG was never the end goal. Memory in AI agents is where everything is heading. Let’s break down this evolution in the simplest way possible.",
+        "text": "change often. If you cache everything, you’ll hit context limits, so separating “cold” (cacheable) and “hot” (retrievable) data is what keeps this system reliab…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 144,
@@ -2366,11 +2480,12 @@
         "score": 10.021025832866796,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 488
       },
       {
         "id": "ai-engineering-2025:p322:fixed500-50:0",
-        "text": "In contrast, a standard ML model typically has a single, unified computation phase. GPU memory management + KV caching Generating a new token uses the key and value vectors of all previous tokens. To avoid recomputing these vectors for all tokens over and over, we cache them.",
+        "text": "In contrast, a standard ML model typically has a single, unified computation phase. GPU memory management + KV caching Generating a new token uses the key and v…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 322,
@@ -2384,7 +2499,8 @@
         "score": 9.219194265347886,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 276
       }
     ],
     "context_ids": [
@@ -2408,7 +2524,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p148:fixed500-50:1",
-        "text": "still work with a weak LLM. ● But bad retrieval can NEVER work even with the best of LLMs. If your RAG isn't working, most likely, it's a context retrieval issue. In the same way, LLMs aren't mind readers. They can only work with what you give them.",
+        "text": "still work with a weak LLM. ● But bad retrieval can NEVER work even with the best of LLMs. If your RAG isn't working, most likely, it's a context retrieval issu…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 148,
@@ -2422,11 +2538,12 @@
         "score": 14.398483991382935,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 249
       },
       {
         "id": "ai-engineering-2025:p114:fixed500-50:0",
-        "text": "Consequently, the LLM can easily incorporate this info while generating text because it now has the relevant details available in the prompt. Now that we understand the purpose, let's get into the technical details. Workflow of a RAG system To build a RAG system, it's crucial to understand the foundational components that go into it and how they interact. Thus, in this section, let's explore each element in detail. Here's an architecture diagram of a typical RAG setup:",
+        "text": "Consequently, the LLM can easily incorporate this info while generating text because it now has the relevant details available in the prompt. Now that we unders…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 114,
@@ -2440,7 +2557,8 @@
         "score": 13.935916594741004,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 473
       },
       {
         "id": "ai-engineering-2025:p231:fixed500-50:1",
@@ -2462,7 +2580,7 @@
       },
       {
         "id": "ai-engineering-2025:p129:fixed500-50:1",
-        "text": " (ReAct, CoT), and memory to orchestrate retrieval from multiple sources. Best suited for complex workflows that require tool use, external APIs, or combining multiple RAG techniques. RAG vs Agentic RAG These are some issues with the traditional RAG system :",
+        "text": " (ReAct, CoT), and memory to orchestrate retrieval from multiple sources. Best suited for complex workflows that require tool use, external APIs, or combining m…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 129,
@@ -2476,11 +2594,12 @@
         "score": 11.8637954786751,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 258
       },
       {
         "id": "ai-engineering-2025:p130:fixed500-50:1",
-        "text": "ngly popular. Let's understand this in more detail. Agentic RAG The workflow of agentic RAG is depicted below: Note: The diagram above is one of many blueprints that an agentic RAG system may possess. You can adapt it according to your specific use case. As shown above, the idea is to introduce agentic behaviors at each stage of RAG. Think of agents as someone who can actively think through a task - planning, adapting, and iterating until they arrive at the best solution, rather than just",
+        "text": "ngly popular. Let's understand this in more detail. Agentic RAG The workflow of agentic RAG is depicted below: Note: The diagram above is one of many blueprints…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 130,
@@ -2494,11 +2613,12 @@
         "score": 11.576190561375759,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 493
       },
       {
         "id": "ai-engineering-2025:p223:fixed500-50:0",
-        "text": "● system_prompt: the same ReAct system prompt we explored earlier (defining the behavior loop). Next, inside this function, we initialize the Agent and available tools: ● Create a new MyAgent instance, using the structured ReAct prompt. ● Define the dictionary of callable tools available to the agent. These names must match exactly what the agent uses in its Action: lines. Moving on, we defined some state variables:",
+        "text": "● system_prompt: the same ReAct system prompt we explored earlier (defining the behavior loop). Next, inside this function, we initialize the Agent and availabl…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 223,
@@ -2512,11 +2632,12 @@
         "score": 10.80129143100352,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 419
       },
       {
         "id": "ai-engineering-2025:p182:fixed500-50:0",
-        "text": "RAG (Retrieval-Augmented Generation) RAG enhances an LLM by retrieving external documents (from a vector DB, search engine, etc.) and feeding them into the LLM as context before generating a response. RAG makes the LLM aware of updated, relevant info without retraining. Agent An Agent adds autonomy to the mix. It doesn’t just answer a question—it decides what steps to take: Should it call a tool? Search the web? Summarize? Store info? An Agent uses an LLM, calls tools, makes decisions, and orche",
+        "text": "RAG (Retrieval-Augmented Generation) RAG enhances an LLM by retrieving external documents (from a vector DB, search engine, etc.) and feeding them into the LLM …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 182,
@@ -2530,11 +2651,12 @@
         "score": 10.552882643597508,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p125:fixed500-50:1",
-        "text": "ed apps, it is unlikely you can start using the model right away without adjustments. To maintain high utility, you either need: ● Prompt engineering ● Fine-tuning ● RAG ● Or a hybrid approach (RAG + fine-tuning) The following visual will help you decide which one is best for you:",
+        "text": "ed apps, it is unlikely you can start using the model right away without adjustments. To maintain high utility, you either need: ● Prompt engineering ● Fine-tun…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 125,
@@ -2548,11 +2670,12 @@
         "score": 10.17462829509397,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 281
       },
       {
         "id": "ai-engineering-2025:p194:fixed500-50:0",
-        "text": "4) Cooperation Multi-agent systems work best when agents collaborate and exchange feedback. Instead of one agent doing everything, a team of specialized agents can split tasks and improve each other’s outputs. Consider an AI-powered financial analysis system: ● One agent gathers data ● another assesses risk, ● a third builds strategy, ● and a fourth writes the report Collaboration leads to smarter, more accurate results. The best practice is to enable agent collaboration by designing workflows w",
+        "text": "4) Cooperation Multi-agent systems work best when agents collaborate and exchange feedback. Instead of one agent doing everything, a team of specialized agents …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 194,
@@ -2566,11 +2689,12 @@
         "score": 10.160913428890472,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p373:fixed500-50:0",
-        "text": "observability, since both play different roles in an LLM system. Evaluation measures how well the system performs on a defined set of tasks. ● It uses curated datasets, metrics and controlled tests to assess qualities such as correctness, relevance, factuality, and safety. ● It is typically done before deployment, or as part of a periodic offline benchmarking process. Observability focuses on how the system behaves as it runs.",
+        "text": "observability, since both play different roles in an LLM system. Evaluation measures how well the system performs on a defined set of tasks. ● It uses curated d…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 373,
@@ -2584,7 +2708,8 @@
         "score": 10.15096866750598,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 430
       }
     ],
     "context_ids": [
@@ -2608,7 +2733,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p150:fixed500-50:0",
-        "text": "Smart tool access: If your AI needs external information or actions, give it the right tools. Format the outputs so they're maximally digestible. Memory management: ● Short-term: Summarize long conversations ● Long-term: Remember user preferences across sessions Format optimization: A short, descriptive error message beats a massive JSON blob every time. The bottom line is... Context engineering is becoming the new core skill since it addresses the real bottleneck, which is not model capability,",
+        "text": "Smart tool access: If your AI needs external information or actions, give it the right tools. Format the outputs so they're maximally digestible. Memory managem…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 150,
@@ -2622,11 +2747,12 @@
         "score": 23.1444332344675,
         "rank": 1,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p155:fixed500-50:0",
-        "text": "You can do so by writing it to: ● Long-term memory (persists across sessions) ● Short-term memory (persists within a session) ● A state object 2) Read context Reading context means pulling it into the context window to help an agent perform a task. Now this context can be pulled from: ● A tool ● Memory ● Knowledge base (docs, vector DB) 3) Compressing context Compressing context means keeping only the tokens needed for a task.",
+        "text": "You can do so by writing it to: ● Long-term memory (persists across sessions) ● Short-term memory (persists within a session) ● A state object 2) Read context R…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 155,
@@ -2640,11 +2766,12 @@
         "score": 22.334581717569467,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 430
       },
       {
         "id": "ai-engineering-2025:p199:fixed500-50:0",
-        "text": "It doesn’t matter if the user told the Agent their name five seconds ago, it’s forgotten. If the Agent helped troubleshoot an issue in the last session, it won’t remember any of it now. With Memory, your Agent becomes context-aware and practically applicable. But Memory isn’t an abstract concept. If you dive deeper, it follows a structured and intuitive architecture with several types of Memory. ● Short-Term Memory ● Long-Term Memory ● Entity Memory ● Contextual Memory, and",
+        "text": "It doesn’t matter if the user told the Agent their name five seconds ago, it’s forgotten. If the Agent helped troubleshoot an issue in the last session, it won’…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 199,
@@ -2658,11 +2785,12 @@
         "score": 19.958934958882544,
         "rank": 3,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 478
       },
       {
         "id": "ai-engineering-2025:p239:fixed500-50:0",
-        "text": "Few-shot learning: Teaching an agent new behaviors or tasks with just a few examples. Hierarchical Agents: A multi-level agent structure where a supervisor agent delegates tasks to sub-agents. Short-term memory: Temporary context stored during a single session or conversation. Long-term memory: Persistent context stored across multiple sessions for continuity and learning (covered in detail here with code). Knowledge base: A structured repository of information that agents can use for reasoning ",
+        "text": "Few-shot learning: Teaching an agent new behaviors or tasks with just a few examples. Hierarchical Agents: A multi-level agent structure where a supervisor agen…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 239,
@@ -2676,11 +2804,12 @@
         "score": 19.35848850215443,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p196:fixed500-50:0",
-        "text": "Different types of memory in AI agents include: ● Short-term memory – Exists only during execution (e.g., recalling recent conversation history). ● Long-term memory – Persists after execution (e.g., remembering user preferences over multiple interactions). ● Entity memory – Stores information about key subjects discussed (e.g., tracking customer details in a CRM agent). For example, in an AI-powered tutoring system, memory allows the agent to recall past lessons, tailor feedback, and avoid repet",
+        "text": "Different types of memory in AI agents include: ● Short-term memory – Exists only during execution (e.g., recalling recent conversation history). ● Long-term me…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 196,
@@ -2694,11 +2823,12 @@
         "score": 18.789089843827202,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p196:fixed500-50:1",
-        "text": "all past lessons, tailor feedback, and avoid repetition. Memory Types in AI Agents Now, let us look at the memory types for AI agents in more detail. Just like humans, long-term memory in agents can be: ● Semantic → Stores facts and knowledge ● Episodic → Recalls past experiences or task completions ● Procedural → Learns how to do things (think: internalized prompts/instructions)",
+        "text": "all past lessons, tailor feedback, and avoid repetition. Memory Types in AI Agents Now, let us look at the memory types for AI agents in more detail. Just like …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 196,
@@ -2712,11 +2842,12 @@
         "score": 17.25784745255774,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 382
       },
       {
         "id": "ai-engineering-2025:p158:fixed500-50:1",
-        "text": "e. ● From business processes and APIs to data models and workflows ● This bridges the gap between text prediction and decision-making 4) Memory You want your Agent to remember what it did in the past. This layer gives it continuity across sessions. ● Short-term: current reasoning steps, chat history ● Long-term: facts, company knowledge, user preferences 5) Tools This layer extends the Agent’s power beyond language and takes real-world action. ● Each tool has parameters, inputs, and examples. ● ",
+        "text": "e. ● From business processes and APIs to data models and workflows ● This bridges the gap between text prediction and decision-making 4) Memory You want your Ag…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 158,
@@ -2730,11 +2861,12 @@
         "score": 15.969580465278451,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p156:fixed500-50:1",
-        "text": "ect So essentially, when you are building a context engineering workflow, you are engineering a “context” pipeline so that the LLM gets to see the right information, in the right format, at the right time. This is exactly how context engineering works!",
+        "text": "ect So essentially, when you are building a context engineering workflow, you are engineering a “context” pipeline so that the LLM gets to see the right informa…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 156,
@@ -2748,11 +2880,12 @@
         "score": 12.384764576111154,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 252
       },
       {
         "id": "ai-engineering-2025:p242:fixed500-50:1",
-        "text": "ponsibilities: ● Tool usage & function calling: connecting the LLM to external APIs/tools. ● Agent reasoning: reasoning methods like ReAct (reasoning + act) or Chain-of-Thought. ● Task planning & decomposition: breaking a big task into smaller ones. ● Memory management: keeping track of history, context, and long-term info. Agents are the brains that make LLMs useful in real-world workflows. 3) Agentic systems (multi-agent systems) When you combine multiple agents, you get agentic systems. Featu",
+        "text": "ponsibilities: ● Tool usage & function calling: connecting the LLM to external APIs/tools. ● Agent reasoning: reasoning methods like ReAct (reasoning + act) or …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 242,
@@ -2766,11 +2899,12 @@
         "score": 12.176714729409973,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p153:fixed500-50:0",
-        "text": "● If LLM is a CPU. ● Then the context window is the RAM. You're essentially programming the \"RAM\" with the perfect instructions for your AI. How do we do it? Context engineering can be broken down into 4 fundamental stages:",
+        "text": "● If LLM is a CPU. ● Then the context window is the RAM. You're essentially programming the \"RAM\" with the perfect instructions for your AI. How do we do it? Co…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 153,
@@ -2784,7 +2918,8 @@
         "score": 11.43330805225423,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 223
       }
     ],
     "context_ids": [
@@ -2808,7 +2943,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p196:fixed500-50:0",
-        "text": "Different types of memory in AI agents include: ● Short-term memory – Exists only during execution (e.g., recalling recent conversation history). ● Long-term memory – Persists after execution (e.g., remembering user preferences over multiple interactions). ● Entity memory – Stores information about key subjects discussed (e.g., tracking customer details in a CRM agent). For example, in an AI-powered tutoring system, memory allows the agent to recall past lessons, tailor feedback, and avoid repet",
+        "text": "Different types of memory in AI agents include: ● Short-term memory – Exists only during execution (e.g., recalling recent conversation history). ● Long-term me…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 196,
@@ -2822,11 +2957,12 @@
         "score": 23.116328685529233,
         "rank": 1,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p239:fixed500-50:0",
-        "text": "Few-shot learning: Teaching an agent new behaviors or tasks with just a few examples. Hierarchical Agents: A multi-level agent structure where a supervisor agent delegates tasks to sub-agents. Short-term memory: Temporary context stored during a single session or conversation. Long-term memory: Persistent context stored across multiple sessions for continuity and learning (covered in detail here with code). Knowledge base: A structured repository of information that agents can use for reasoning ",
+        "text": "Few-shot learning: Teaching an agent new behaviors or tasks with just a few examples. Hierarchical Agents: A multi-level agent structure where a supervisor agen…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 239,
@@ -2840,11 +2976,12 @@
         "score": 20.98040911231351,
         "rank": 2,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p196:fixed500-50:1",
-        "text": "all past lessons, tailor feedback, and avoid repetition. Memory Types in AI Agents Now, let us look at the memory types for AI agents in more detail. Just like humans, long-term memory in agents can be: ● Semantic → Stores facts and knowledge ● Episodic → Recalls past experiences or task completions ● Procedural → Learns how to do things (think: internalized prompts/instructions)",
+        "text": "all past lessons, tailor feedback, and avoid repetition. Memory Types in AI Agents Now, let us look at the memory types for AI agents in more detail. Just like …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 196,
@@ -2858,11 +2995,12 @@
         "score": 20.577535387154317,
         "rank": 3,
         "strategy": "bm25",
-        "hit": true
+        "hit": true,
+        "text_chars": 382
       },
       {
         "id": "ai-engineering-2025:p199:fixed500-50:0",
-        "text": "It doesn’t matter if the user told the Agent their name five seconds ago, it’s forgotten. If the Agent helped troubleshoot an issue in the last session, it won’t remember any of it now. With Memory, your Agent becomes context-aware and practically applicable. But Memory isn’t an abstract concept. If you dive deeper, it follows a structured and intuitive architecture with several types of Memory. ● Short-Term Memory ● Long-Term Memory ● Entity Memory ● Contextual Memory, and",
+        "text": "It doesn’t matter if the user told the Agent their name five seconds ago, it’s forgotten. If the Agent helped troubleshoot an issue in the last session, it won’…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 199,
@@ -2876,11 +3014,12 @@
         "score": 19.003868335453074,
         "rank": 4,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 478
       },
       {
         "id": "ai-engineering-2025:p195:fixed500-50:1",
-        "text": " or human reviewer can intervene. For example, an AI-powered legal assistant should avoid outdated laws or false claims - guardrails ensure that. 6) Memory Finally, we have memory, which is one of the most critical components of AI agents. Without memory, an agent would start fresh every time, losing all context from previous interactions. With memory, agents can improve over time, remember past actions, and create more cohesive responses.",
+        "text": " or human reviewer can intervene. For example, an AI-powered legal assistant should avoid outdated laws or false claims - guardrails ensure that. 6) Memory Fina…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 195,
@@ -2894,11 +3033,12 @@
         "score": 17.624529795181672,
         "rank": 5,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 443
       },
       {
         "id": "ai-engineering-2025:p155:fixed500-50:0",
-        "text": "You can do so by writing it to: ● Long-term memory (persists across sessions) ● Short-term memory (persists within a session) ● A state object 2) Read context Reading context means pulling it into the context window to help an agent perform a task. Now this context can be pulled from: ● A tool ● Memory ● Knowledge base (docs, vector DB) 3) Compressing context Compressing context means keeping only the tokens needed for a task.",
+        "text": "You can do so by writing it to: ● Long-term memory (persists across sessions) ● Short-term memory (persists within a session) ● A state object 2) Read context R…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 155,
@@ -2912,11 +3052,12 @@
         "score": 17.08314289716707,
         "rank": 6,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 430
       },
       {
         "id": "ai-engineering-2025:p242:fixed500-50:1",
-        "text": "ponsibilities: ● Tool usage & function calling: connecting the LLM to external APIs/tools. ● Agent reasoning: reasoning methods like ReAct (reasoning + act) or Chain-of-Thought. ● Task planning & decomposition: breaking a big task into smaller ones. ● Memory management: keeping track of history, context, and long-term info. Agents are the brains that make LLMs useful in real-world workflows. 3) Agentic systems (multi-agent systems) When you combine multiple agents, you get agentic systems. Featu",
+        "text": "ponsibilities: ● Tool usage & function calling: connecting the LLM to external APIs/tools. ● Agent reasoning: reasoning methods like ReAct (reasoning + act) or …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 242,
@@ -2930,11 +3071,12 @@
         "score": 15.747094592292795,
         "rank": 7,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p158:fixed500-50:1",
-        "text": "e. ● From business processes and APIs to data models and workflows ● This bridges the gap between text prediction and decision-making 4) Memory You want your Agent to remember what it did in the past. This layer gives it continuity across sessions. ● Short-term: current reasoning steps, chat history ● Long-term: facts, company knowledge, user preferences 5) Tools This layer extends the Agent’s power beyond language and takes real-world action. ● Each tool has parameters, inputs, and examples. ● ",
+        "text": "e. ● From business processes and APIs to data models and workflows ● This bridges the gap between text prediction and decision-making 4) Memory You want your Ag…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 158,
@@ -2948,11 +3090,12 @@
         "score": 15.364539548301918,
         "rank": 8,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p243:fixed500-50:2",
-        "text": " adds reliability, coordination, and governance over the inner layers. 7 Patterns in Multi-Agent Systems Monolithic agents (single LLMs stuffed with system prompts) didn’t sustain for too long. We soon realized that to build effective systems, we need multiple specialized agents that can collaborate and self-organize. To achieve this, several architectural patterns have emerged for AI agents.",
+        "text": " adds reliability, coordination, and governance over the inner layers. 7 Patterns in Multi-Agent Systems Monolithic agents (single LLMs stuffed with system prom…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 243,
@@ -2966,11 +3109,12 @@
         "score": 14.71767666754875,
         "rank": 9,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 395
       },
       {
         "id": "ai-engineering-2025:p150:fixed500-50:0",
-        "text": "Smart tool access: If your AI needs external information or actions, give it the right tools. Format the outputs so they're maximally digestible. Memory management: ● Short-term: Summarize long conversations ● Long-term: Remember user preferences across sessions Format optimization: A short, descriptive error message beats a massive JSON blob every time. The bottom line is... Context engineering is becoming the new core skill since it addresses the real bottleneck, which is not model capability,",
+        "text": "Smart tool access: If your AI needs external information or actions, give it the right tools. Format the outputs so they're maximally digestible. Memory managem…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 150,
@@ -2984,7 +3128,8 @@
         "score": 14.597806039898181,
         "rank": 10,
         "strategy": "bm25",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [

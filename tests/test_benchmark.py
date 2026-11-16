@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'starter'))
-from benchmark import check_absence, check_schema, load_questions
+from benchmark import EXCERPT_CHARS, check_absence, check_schema, excerpt, load_questions
 
 
 class BenchmarkFileTest(unittest.TestCase):
@@ -18,6 +18,15 @@ class BenchmarkFileTest(unittest.TestCase):
         qs = load_questions()
         dev = {q['question'].casefold() for q in qs if q['split'] == 'dev'}
         self.assertFalse(dev & {q['question'].casefold() for q in qs if q['split'] == 'test'})
+
+
+class ExcerptTest(unittest.TestCase):
+    def test_trace_keeps_only_excerpt_unless_full_text(self):
+        c = {'id': 'x', 'text': 'a' * (EXCERPT_CHARS + 50)}
+        self.assertEqual((len(excerpt(c)['text']), excerpt(c)['text_chars']), (EXCERPT_CHARS + 1, EXCERPT_CHARS + 50))
+        self.assertIs(excerpt(c, full_text=True), c)
+        short = {'id': 'y', 'text': 'short'}
+        self.assertIs(excerpt(short), short)
 
 
 class AbsenceCheckTest(unittest.TestCase):

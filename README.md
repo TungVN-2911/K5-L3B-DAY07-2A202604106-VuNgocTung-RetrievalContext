@@ -7,7 +7,7 @@
 | Corpus | *AI Engineering Guidebook* (2025), 343/384 trang, 621 chunk; nguồn và quyền dùng ở [data/manifest.json](data/manifest.json) (PDF không commit) |
 | Vector store | PostgreSQL 16 + pgvector 0.8.7 của Day 6, `nomic-embed-text` 768 chiều (Ollama) |
 | Retrieval | `dense`, `bm25`, `hybrid` (RRF), `rerank` (hybrid → cross-encoder MiniLM-L-12), `tfidf` (starter) |
-| Agent | `gemini-3.5-flash-lite`, function calling `search` / `answer` / `abstain` ([starter/agent.py](starter/agent.py)) |
+| Agent | `gemini-3.5-flash-lite` (Gemini API free tier, 0 USD), function calling `search` / `answer` / `abstain` ([starter/agent.py](starter/agent.py)) |
 | Benchmark | 26 câu: dev 15 + 3 thiếu evidence, test 5 + 3 ([data/questions.json](data/questions.json)) |
 | Báo cáo | [report/individual/2A202604106_VuNgocTung.md](report/individual/2A202604106_VuNgocTung.md) |
 | Kết quả | [starter/results/](starter/results/): retrieval (`dev`, `test`, thử nghiệm), agent (trace, nhãn, metrics) |

@@ -11,6 +11,8 @@ from baseline import hit, pack_context, validate
 from store import ROOT, STARTER
 
 QUESTIONS = ROOT / "data" / "questions.json"
+# Corpus has no open license: committed traces keep only an excerpt; full text is rebuilt by ingest.py.
+EXCERPT_CHARS = 160
 MINIMUM = {"dev": {"answerable": 15, "unanswerable": 2}, "test": {"answerable": 5, "unanswerable": 2}}
 
 
@@ -88,12 +90,18 @@ def run_check(args) -> None:
                      ensure_ascii=False, indent=2))
 
 
+def excerpt(chunk: dict, full_text: bool = False) -> dict:
+    if full_text or len(chunk["text"]) <= EXCERPT_CHARS:
+        return chunk
+    return {**chunk, "text": chunk["text"][:EXCERPT_CHARS] + "…", "text_chars": len(chunk["text"])}
+
+
 def first_hit(results: list[dict], gold: list[dict]) -> int | None:
     return next((r["rank"] for r in results if hit(r, gold)), None)
 
 
 def evaluate_retriever(retriever, questions: list[dict], *, use_filter: bool, depth: int, context_k: int,
-                       budget: int) -> tuple[list[dict], dict]:
+                       budget: int, full_text: bool = False) -> tuple[list[dict], dict]:
     traces = []
     for q in questions:
         filters = q.get("filter") if use_filter else None
@@ -103,7 +111,7 @@ def evaluate_retriever(retriever, questions: list[dict], *, use_filter: bool, de
         context, ids = pack_context(results[:context_k], budget=budget)
         rank = first_hit(results, q["gold"])
         traces.append({"query_id": q["id"], "split": q["split"], "type": q["type"], "question": q["question"],
-                       "filter": filters, "results": [{**r, "hit": hit(r, q["gold"])} for r in results],
+                       "filter": filters, "results": [{**excerpt(r, full_text), "hit": hit(r, q["gold"])} for r in results],
                        "context_ids": ids, "context_chars": len(context), "elapsed_ms": round(elapsed_ms, 1),
                        "first_hit_rank": rank, "hit1": rank == 1, "hit3": rank is not None and rank <= 3,
                        "context_hit": any(hit(r, q["gold"]) for r in results if r["id"] in ids)})
@@ -138,7 +146,7 @@ def run_retrieval(args) -> None:
             retriever.search("warm-up query", top_k=1)
             load_s = round(time.perf_counter() - start, 2)
             traces, summary = evaluate_retriever(retriever, questions, use_filter=args.use_filter, depth=args.depth,
-                                                 context_k=args.context_k, budget=args.budget)
+                                                 context_k=args.context_k, budget=args.budget, full_text=args.full_text)
             (out / f"{method}.json").write_text(json.dumps(traces, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             report["methods"][method] = {"info": retriever.info(), "load_s": load_s, **summary}
     finally:
@@ -211,6 +219,47 @@ def run_agent_eval(args) -> None:
               f"{r['tokens']['input']}/{r['tokens']['output']} | {r['median_elapsed_s']} |")
 
 
+def run_review(args) -> None:
+    questions = {q["id"]: q for q in load_questions(args.questions)}
+    chunks = {c["id"]: c for c in json.loads(args.chunks.read_text(encoding="utf-8"))}
+    for run in args.runs:
+        path = run / "reviews.json"
+        reviews = json.loads(path.read_text(encoding="utf-8"))
+        if args.confirm:
+            for r in reviews:
+                if not labeled(r):
+                    raise SystemExit(f"{run.name}/{r['query_id']}: còn nhãn trống, chưa thể xác nhận")
+                r["labeled_by"] = args.confirm
+            path.write_text(json.dumps(reviews, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print(f"{run.name}: đã ghi labeled_by={args.confirm!r} cho {len(reviews)} nhãn")
+            continue
+        traces = {t["query_id"]: t for t in json.loads((run / "traces.json").read_text(encoding="utf-8"))}
+        for r in reviews:
+            q, t = questions[r["query_id"]], traces[r["query_id"]]
+            label = r.get("answer_grade", r.get("abstention_correct"))
+            print(f"\n{'=' * 100}\n[{run.name}] {q['id']} ({q['type']}) status={t['status']} | NHÃN: {label} | {r['note']}")
+            print(f"Q: {q['question']}\nĐÁP ÁN CHUẨN: {q.get('expected_answer', q.get('absence_reason'))}")
+            if q["answerable"]:
+                print(f"GOLD: " + "; ".join(f"p{g['page']}: {g['evidence']}" for g in q["gold"]))
+            print(f"TRẢ LỜI: {t.get('model_answer') or t['answer']}")
+            print("SEARCH: " + " | ".join(f"{e['query']!r} filter={e['filter']}" for e in t["events"] if e["event"] == "search"))
+            for cid, ok in zip(r["citations"], r["citation_support"]):
+                c = chunks.get(cid, {"page": "?", "text": "(không có trong chunks.json)"})
+                print(f"  CITE p{c['page']} hỗ trợ={ok} [{cid}]\n    {c['text']}")
+    if args.context_labels:
+        labels = json.loads(args.context_labels.read_text(encoding="utf-8"))
+        if args.confirm:
+            for c in labels:
+                c["labeled_by"] = args.confirm
+            args.context_labels.write_text(json.dumps(labels, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print(f"{args.context_labels.name}: đã ghi labeled_by={args.confirm!r} cho {len(labels)} nhãn")
+        else:
+            for c in labels:
+                print(f"\n[context {c['method']}] {c['query_id']} điểm={c['context_score']} | {c['reason']}")
+                for cid in c["context_ids"]:
+                    print(f"  {'GOLD ' if cid in c['gold_in_context'] else '     '}[{cid}] {chunks.get(cid, {}).get('text', '?')[:220]}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Benchmark: kiểm tra bộ câu hỏi và đánh giá retrieval")
     parser.add_argument("--questions", type=Path, default=QUESTIONS)
@@ -229,12 +278,18 @@ def main():
     retrieval.add_argument("--rrf-k", type=int, default=60)
     retrieval.add_argument("--reranker", default="Xenova/ms-marco-MiniLM-L-12-v2")
     retrieval.add_argument("--output", type=Path, default=STARTER / "results" / "retrieval")
+    retrieval.add_argument("--full-text", action="store_true", help="ghi toàn văn chunk vào trace (mặc định chỉ trích đoạn)")
     agent = sub.add_parser("agent", help="Tool use, Context Evidence Rate của agent và tổng hợp nhãn chấm tay")
     agent.add_argument("runs", nargs="+", type=Path, help="thư mục chứa traces.json (+ reviews.json)")
     agent.add_argument("--chunks", type=Path, default=STARTER / "data" / "chunks.json")
     agent.add_argument("--output", type=Path, default=STARTER / "results" / "agent" / "eval.json")
+    review = sub.add_parser("review", help="In nhãn nháp kèm toàn văn chunk được cite để người chấm duyệt")
+    review.add_argument("runs", nargs="*", type=Path, help="thư mục chứa traces.json + reviews.json")
+    review.add_argument("--context-labels", type=Path, help="file context_labels.json của retrieval")
+    review.add_argument("--chunks", type=Path, default=STARTER / "data" / "chunks.json")
+    review.add_argument("--confirm", help="tên người chấm; chỉ dùng sau khi đã đọc và sửa xong nhãn")
     args = parser.parse_args()
-    {"check": run_check, "retrieval": run_retrieval, "agent": run_agent_eval}[args.command](args)
+    {"check": run_check, "retrieval": run_retrieval, "agent": run_agent_eval, "review": run_review}[args.command](args)
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p373:fixed500-50:0",
-        "text": "observability, since both play different roles in an LLM system. Evaluation measures how well the system performs on a defined set of tasks. ● It uses curated datasets, metrics and controlled tests to assess qualities such as correctness, relevance, factuality, and safety. ● It is typically done before deployment, or as part of a periodic offline benchmarking process. Observability focuses on how the system behaves as it runs.",
+        "text": "observability, since both play different roles in an LLM system. Evaluation measures how well the system performs on a defined set of tasks. ● It uses curated d…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 373,
@@ -36,11 +36,12 @@
         },
         "rank": 1,
         "strategy": "rerank",
-        "hit": true
+        "hit": true,
+        "text_chars": 430
       },
       {
         "id": "ai-engineering-2025:p374:fixed500-50:0",
-        "text": "● It captures real inputs, model outputs, retrieved context, latencies, costs and component-level traces. ● It helps identify regressions, bottlenecks, failure cases and shifts in user behavior after the system goes live. Evaluation ensures the system meets a defined standard of quality. Observability ensures the system continues to meet that standard under real operating conditions. Together, they provide complementary views of system behavior: evaluation establishes expectations, while observa",
+        "text": "● It captures real inputs, model outputs, retrieved context, latencies, costs and component-level traces. ● It helps identify regressions, bottlenecks, failure …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 374,
@@ -68,11 +69,12 @@
         },
         "rank": 2,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p374:fixed500-50:1",
-        "text": "evaluation establishes expectations, while observability reveals whether those expectations hold during operation. Implementation Now that we understand what observability means in an LLM system, the next step is to implement it in practice. For this, we will use Opik, an open-source framework that provides tracing and monitoring tools for LLM applications. Opik offers a lightweight way to capture prompts, model outputs and full execution traces. It helps debug pipelines whether simple function ",
+        "text": "evaluation establishes expectations, while observability reveals whether those expectations hold during operation. Implementation Now that we understand what ob…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 374,
@@ -100,11 +102,12 @@
         },
         "rank": 3,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p372:fixed500-50:1",
-        "text": "es the model respond? ● Which components are triggered? ● How long does each step take? ● Where do things break or drift over time? Without this visibility, even a well-evaluated model can become unreliable in production. Evaluation vs Observability Before we dive deeper, let’s understand the difference between evaluation and",
+        "text": "es the model respond? ● Which components are triggered? ● How long does each step take? ● Where do things break or drift over time? Without this visibility, eve…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 372,
@@ -132,11 +135,12 @@
         },
         "rank": 4,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 327
       },
       {
         "id": "ai-engineering-2025:p372:fixed500-50:0",
-        "text": "Once a model is deployed, its behavior is no longer defined only by its weights or the test set. Real users, prompts, edge cases and system interactions now shape how the application performs. At this stage, the core question shifts from “Is the model good?” to “What is actually happening inside the system?” That is the purpose of observability. Observability helps us see how the system behaves as it runs - ● What inputs does it receive? ● How does the model respond? ● Which components are trigg",
+        "text": "Once a model is deployed, its behavior is no longer defined only by its weights or the test set. Real users, prompts, edge cases and system interactions now sha…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 372,
@@ -164,11 +168,12 @@
         },
         "rank": 5,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p238:fixed500-50:0",
-        "text": "Evaluation: The process of assessing how well an agent performs against its intended goals (covered here with implementation). Orchestration: The coordination and control of multiple agents working together to achieve complex tasks. Multi-agent system: A group of agents collaborating to accomplish a final goal (implemented from scratch in pure Python here). Human-in-the-loop: A setup where humans intervene or guide the agent’s decision-making process. Reflection: The agent’s process of self-asse",
+        "text": "Evaluation: The process of assessing how well an agent performs against its intended goals (covered here with implementation). Orchestration: The coordination a…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 238,
@@ -192,11 +197,12 @@
         },
         "rank": 6,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p333:fixed500-50:0",
-        "text": "Optimizing a model makes it faster and cheaper but it doesn’t tell you whether the system is actually good. To understand that, we need evaluation. In practice, this means measuring how well the model reasons, follows instructions, uses tools, stays consistent across turns, and remains safe under adversarial pressure. To do that, we use techniques like LLM-as-a-judge scoring, arena comparisons, multi-turn evals, component-level tracing etc. Let’s walk through them. G-eval If you are building wit",
+        "text": "Optimizing a model makes it faster and cheaper but it doesn’t tell you whether the system is actually good. To understand that, we need evaluation. In practice,…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 333,
@@ -220,11 +226,12 @@
         },
         "rank": 7,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p336:fixed500-50:0",
-        "text": "outline an evaluation step. Next, these evaluation steps are combined with the task to return a single score. That said, you can easily self-host Opik, so your data stays where you want. It integrates with nearly all popular frameworks, including CrewAI, LlamaIndex, LangChain, and HayStack. G-Eval works well for single-output scoring, but it still treats each output in isolation. To compare models or prompts reliably, we need head-to-head evaluations. LLM Arena-as-a-Judge Typical LLM-powered eva",
+        "text": "outline an evaluation step. Next, these evaluation steps are combined with the task to return a single score. That said, you can easily self-host Opik, so your …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 336,
@@ -248,11 +255,12 @@
         },
         "rank": 8,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p338:fixed500-50:1",
-        "text": "f needed, you can specify an expected output as well for the given input test case and specify that in the evaluation parameters. Single-turn evaluation is not enough for assistants, agents, or chatbots. Conversations unfold across multiple messages, so the evaluation must too. Multi-turn Evals for LLM Apps Conversational systems need a different kind of evaluation.",
+        "text": "f needed, you can specify an expected output as well for the given input test case and specify that in the evaluation parameters. Single-turn evaluation is not …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 338,
@@ -280,11 +288,12 @@
         },
         "rank": 9,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 368
       },
       {
         "id": "ai-engineering-2025:p334:fixed500-50:0",
-        "text": "In fact, in many cases, it is also difficult to formalize an evaluation metric as a deterministic code. The solution G-Eval is a task-agnostic LLM as a Judge metric in Opik that solves this. The concept of LLM-as-a-judge involves using LLMs to evaluate and score various tasks and applications. It allows you to specify a set of criteria for your metric (in English), after which it will use a Chain of Thought prompting technique to create evaluation steps and return a score. Let’s look at a demo b",
+        "text": "In fact, in many cases, it is also difficult to formalize an evaluation metric as a deterministic code. The solution G-Eval is a task-agnostic LLM as a Judge me…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 334,
@@ -312,7 +321,8 @@
         },
         "rank": 10,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -336,7 +346,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p289:fixed500-50:0",
-        "text": "Instead of exposing every tool from every server at once - something that often leads to tool-name hallucinations, confusion between similar tools and degraded reasoning, the Server Manager keeps the agent’s active toolset intentionally narrow and context-driven. When enabled, the Server Manager: ● Loads tools dynamically, only when needed ● Discovers which server is appropriate for the task ● Keeps the active tool list small and focused, reducing model overwhelm ● Updates tools in real time as ",
+        "text": "Instead of exposing every tool from every server at once - something that often leads to tool-name hallucinations, confusion between similar tools and degraded …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 289,
@@ -364,11 +374,12 @@
         },
         "rank": 1,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p288:fixed500-50:0",
-        "text": "Common Pitfall: Tool Overload When LLMs gain access to many server tools, certain predictable issues appear: #1) Tool-name hallucinations The model may invent a tool that does not exist. This usually happens when the tool list is large or poorly named. #2) Confusion between similar tools If a server exposes several tools with overlapping responsibilities, the model may struggle to choose the correct one. #3) Degraded decision quality with large toolsets Presenting too many tools at once increase",
+        "text": "Common Pitfall: Tool Overload When LLMs gain access to many server tools, certain predictable issues appear: #1) Tool-name hallucinations The model may invent a…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 288,
@@ -396,11 +407,12 @@
         },
         "rank": 2,
         "strategy": "rerank",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p288:fixed500-50:1",
-        "text": "oolsets Presenting too many tools at once increases cognitive load for the LLM, leading to inconsistent tool selection or unnecessary calls. These issues arise from typical LLM behavior when exposed to large toolsets. Solution: The Server Manager mcp-use includes a built-in Server Manager, which directly addresses the common failure modes agents face when interacting with large or multi-server toolsets.",
+        "text": "oolsets Presenting too many tools at once increases cognitive load for the LLM, leading to inconsistent tool selection or unnecessary calls. These issues arise …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 288,
@@ -428,11 +440,12 @@
         },
         "rank": 3,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 406
       },
       {
         "id": "ai-engineering-2025:p290:fixed500-50:0",
-        "text": "With this, agents no longer need to juggle dozens of tools at once. The Server Manager becomes the orchestrator - deciding which server to activate, which tools to load, and when to surface them resulting in clearer tool selection and more stable agent behavior across multi-server environments. Creating MCP Client Within mcp-use, every agent embeds an MCP client. The client is the component responsible for all communication between the agent and any MCP server. It manages the transport layer and",
+        "text": "With this, agents no longer need to juggle dozens of tools at once. The Server Manager becomes the orchestrator - deciding which server to activate, which tools…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 290,
@@ -460,11 +473,12 @@
         },
         "rank": 4,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p287:fixed500-50:0",
-        "text": "Creating MCP Agents mcp-use makes it easy to build MCP-enabled agents without handling low-level protocol details yourself. It sets up the MCP client, connects to one or more servers, discovers available tools, and exposes them to the LLM in a structured way. This allows the agent to decide when to call a tool, while the framework manages capability loading and communication under the hood. We can build an mcp-enabled agent using mcp-use in just 6 lines of code: This creates an MCP client, conne",
+        "text": "Creating MCP Agents mcp-use makes it easy to build MCP-enabled agents without handling low-level protocol details yourself. It sets up the MCP client, connects …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 287,
@@ -492,11 +506,12 @@
         },
         "rank": 5,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p287:fixed500-50:1",
-        "text": "6 lines of code: This creates an MCP client, connects it to a server (Playwright in this example), wraps the server’s capabilities as tools, and passes them to an LLM-powered agent. From here, the LLM can request tool calls naturally during reasoning, while mcp-use handles execution and streaming.",
+        "text": "6 lines of code: This creates an MCP client, connects it to a server (Playwright in this example), wraps the server’s capabilities as tools, and passes them to …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 287,
@@ -520,11 +535,12 @@
         },
         "rank": 6,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 298
       },
       {
         "id": "ai-engineering-2025:p192:fixed500-50:1",
-        "text": "g tool (from server.py). Now, we use the discovered MCP tool in an agent: This agent is assigned the convert_currency tool from the remote server. It can now call the tool just like a locally defined one.",
+        "text": "g tool (from server.py). Now, we use the discovered MCP tool in an agent: This agent is assigned the convert_currency tool from the remote server. It can now ca…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 192,
@@ -548,11 +564,12 @@
         },
         "rank": 7,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 204
       },
       {
         "id": "ai-engineering-2025:p249:fixed500-50:0",
-        "text": "● Secure collaboration ● Task and state management ● Capability discovery ● Agents from different frameworks working together (LlamaIndex, CrewAI, etc.) Additionally, it can integrate with MCP. It's good to standardize Agent-to-Agent collaboration, similar to how MCP does for Agent-to-tool interaction. Agent-User Interaction Protocol(AG-UI) In the realm of Agents: ● MCP standardized Agent-to-Tool communication.",
+        "text": "● Secure collaboration ● Task and state management ● Capability discovery ● Agents from different frameworks working together (LlamaIndex, CrewAI, etc.) Additio…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 249,
@@ -580,11 +597,12 @@
         },
         "rank": 8,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 414
       },
       {
         "id": "ai-engineering-2025:p230:fixed500-50:0",
-        "text": "● If the tool name is valid, we call it like a Python function and capture the result. ● We format the output into Observation: ... so the agent can use it in the next step. ● If the tool doesn't exist, we ask the agent to retry. This mimics tool execution + response injection. Done! Now we can run this function as follows:",
+        "text": "● If the tool name is valid, we call it like a Python function and capture the result. ● We format the output into Observation: ... so the agent can use it in t…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 230,
@@ -612,11 +630,12 @@
         },
         "rank": 9,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 325
       },
       {
         "id": "ai-engineering-2025:p294:fixed500-50:0",
-        "text": "In mcp-use, tools are registered on the server using a simple declarative definition. Each tool includes a name, input parameters and a callback that returns content to the client. Here is a minimal tool example: This example defines a complete MCP server with a single tool: get_weather, which returns a basic weather response. Any MCP-compatible client can automatically discover and invoke this tool during capability negotiation. Resources Resources expose read-only content such as files or gene",
+        "text": "In mcp-use, tools are registered on the server using a simple declarative definition. Each tool includes a name, input parameters and a callback that returns co…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 294,
@@ -644,7 +663,8 @@
         },
         "rank": 10,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -668,7 +688,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p365:fixed500-50:0",
-        "text": "This distributes the model across 4 GPUs. #4) Load LoRA Adapters We can also support fine-tuned LoRA variants without loading separate models. This lets us serve multiple LoRA adapters from the same base model. #5) Benefit Automatically from Continuous Batching As requests come in, vLLM automatically batches them to maximize GPU utilization. No additional configuration is required for this. #6) Serve Multiple Models Together Finally, if our application requires more than one model, we can host t",
+        "text": "This distributes the model across 4 GPUs. #4) Load LoRA Adapters We can also support fine-tuned LoRA variants without loading separate models. This lets us serv…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 365,
@@ -696,11 +716,12 @@
         },
         "rank": 1,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p362:fixed500-50:0",
-        "text": "vLLM takes care of this through prefix-aware routing, which keeps prefix-sharing sequences on the same worker to avoid recomputing KV-cache. This reduces both compute and memory cost. 5) LoRA and Multi-Model Support Because LoRA adapters are lightweight, vLLM loads them once and applies them per-request without duplicating memory. It can also host multiple models inside one server, making it easy to support: ● Personalization ● A/B testing ● Multi-feature applications with minimal overhead. 6) F",
+        "text": "vLLM takes care of this through prefix-aware routing, which keeps prefix-sharing sequences on the same worker to avoid recomputing KV-cache. This reduces both c…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 362,
@@ -728,11 +749,12 @@
         },
         "rank": 2,
         "strategy": "rerank",
-        "hit": true
+        "hit": true,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p366:fixed500-50:0",
-        "text": "Each request simply specifies the model to use. LitServe With vLLM, we now have a reliable way to serve LLMs efficiently. It handles the core challenges of inference like batching, KV-cache management and routing while letting us expose a simple API endpoint. However, deployment often requires more than just running the model. Real systems usually need additional components such as: ● request validation ● preprocessing and postprocessing ● custom routing ● authentication ● logging and monitoring",
+        "text": "Each request simply specifies the model to use. LitServe With vLLM, we now have a reliable way to serve LLMs efficiently. It handles the core challenges of infe…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 366,
@@ -756,11 +778,12 @@
         },
         "rank": 3,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p360:fixed500-50:1",
-        "text": "yment strategy that can scale without forcing you to manually manage infrastructure. Let’s first understand why LLM deployment is uniquely challenging. Why is LLM Deployment Different? Traditional ML inference is simple: LLMs do not work like this. They introduce several challenges: 1) Continuous Batching Earlier, we saw how LLM requests finish at different times, leaving GPUs idle unless batching is managed carefully. vLLM solves this using continuous batching, which: ● Removes sequences as soo",
+        "text": "yment strategy that can scale without forcing you to manually manage infrastructure. Let’s first understand why LLM deployment is uniquely challenging. Why is L…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 360,
@@ -788,11 +811,12 @@
         },
         "rank": 4,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p364:fixed500-50:0",
-        "text": "Next, we connect to the server using the standard OpenAI client. We use the standard Chat Completions format and simply point the client to our vLLM server. At this point, our local deployment behaves like any hosted LLM endpoint. #3) Scale to Multiple GPUs If we need more throughput or want to serve a larger model, we can scale across multiple GPUs.",
+        "text": "Next, we connect to the server using the standard OpenAI client. We use the standard Chat Completions format and simply point the client to our vLLM server. At …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 364,
@@ -820,11 +844,12 @@
         },
         "rank": 5,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 352
       },
       {
         "id": "ai-engineering-2025:p43:fixed500-50:0",
-        "text": "2) LMStudio LMStudio can be installed as an app on your computer. The app does not collect data or monitor your actions. Your data stays local on your machine. It’s free for personal use. It offers a ChatGPT-like interface, allowing you to load and eject models as you chat. This video shows its usage: Just like Ollama, LMStudio supports several LLMs as well. 3) vLLM vLLM is a fast and easy-to-use library for LLM inference and serving(more details in LLM deployment section) With just a few lines ",
+        "text": "2) LMStudio LMStudio can be installed as an app on your computer. The app does not collect data or monitor your actions. Your data stays local on your machine. …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 43,
@@ -852,11 +877,12 @@
         },
         "rank": 6,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p362:fixed500-50:1",
-        "text": "i-feature applications with minimal overhead. 6) Familiar OpenAI-Compatible API Since vLLM exposes the same API structure as OpenAI’s Chat Completions API, migrating your application is often as simple as changing the base_url. So, no SDK migrations or code rewrites are required. All these challenges explain why specialized inference engines exist and why frameworks like vLLM, SGLang, TensorRT-LLM, and LMCache are necessary. In this chapter, we focus on vLLM, one of the simplest and fastest ways",
+        "text": "i-feature applications with minimal overhead. 6) Familiar OpenAI-Compatible API Since vLLM exposes the same API structure as OpenAI’s Chat Completions API, migr…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 362,
@@ -881,11 +907,12 @@
         },
         "rank": 7,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p362:fixed500-50:2",
-        "text": "ocus on vLLM, one of the simplest and fastest ways to serve LLMs in practice. vLLM: An LLM Inference Engine vLLM is an open-source inference engine designed specifically for large language models. It focuses on three goals:",
+        "text": "ocus on vLLM, one of the simplest and fastest ways to serve LLMs in practice. vLLM: An LLM Inference Engine vLLM is an open-source inference engine designed spe…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 362,
@@ -913,7 +940,8 @@
         },
         "rank": 8,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 223
       },
       {
         "id": "ai-engineering-2025:p43:fixed500-50:1",
@@ -949,7 +977,7 @@
       },
       {
         "id": "ai-engineering-2025:p78:fixed500-50:1",
-        "text": ", full-precision model. QLoRA does employ some special techniques to preserve the information as much as possible, but there is definitely some trade-off involved. This somewhat lies along the lines of Quantization in Model compression, which we will cover ahead in the LLM optimization section. Bonus: DoRA DoRA (Weight-Decomposed Low-Rank Adaptation) represents a refined approach to fine-tuning large models by addressing a key limitation of LoRA (Low-Rank Adaptation) while preserving its efficie",
+        "text": ", full-precision model. QLoRA does employ some special techniques to preserve the information as much as possible, but there is definitely some trade-off involv…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 78,
@@ -977,7 +1005,8 @@
         },
         "rank": 10,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       }
     ],
     "context_ids": [
@@ -1001,7 +1030,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p94:fixed500-50:1",
-        "text": "ure of the task. ● Start by checking whether you have labelled (ground-truth) data. ● If you don’t, the next question is whether the task is verifiable. ○ If not verifiable, you use RLHF, since humans must provide preference signals. ○ If verifiable, RFT works because correctness can be automatically checked. ● If you do have labelled data, the choice depends on how much you have:",
+        "text": "ure of the task. ● Start by checking whether you have labelled (ground-truth) data. ● If you don’t, the next question is whether the task is verifiable. ○ If no…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 94,
@@ -1029,11 +1058,12 @@
         },
         "rank": 1,
         "strategy": "rerank",
-        "hit": true
+        "hit": true,
+        "text_chars": 383
       },
       {
         "id": "ai-engineering-2025:p94:fixed500-50:0",
-        "text": "● RFT uses an online “reward” approach - no static labels required. ● The model explores different outputs, and a Reward Function scores their correctness. ● Over time, the model learns to generate higher-reward answers using GRPO. SFT uses static data and often memorizes answers. RFT, being online, learns from rewards and explores new strategies. This flowchart gives a quick guide on which fine-tuning method to use based on your data and the nature of the task. ● Start by checking whether you h",
+        "text": "● RFT uses an online “reward” approach - no static labels required. ● The model explores different outputs, and a Reward Function scores their correctness. ● Ov…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 94,
@@ -1058,11 +1088,12 @@
         },
         "rank": 2,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p23:fixed500-50:0",
-        "text": "The above process is called RLHF (Reinforcement Learning with Human Feedback), and the algorithm used to update model weights is called PPO. It teaches the LLM to align with humans even when there’s no \"correct\" answer. But we can improve the LLM even more. 4) Reasoning fine-tuning In reasoning tasks (maths, logic, etc.), there's usually just one correct response and a defined series of steps to obtain the answer. So we don’t need human preferences, and we can use correctness as the signal. This",
+        "text": "The above process is called RLHF (Reinforcement Learning with Human Feedback), and the algorithm used to update model weights is called PPO. It teaches the LLM …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 23,
@@ -1090,11 +1121,12 @@
         },
         "rank": 3,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p95:fixed500-50:0",
-        "text": "○ Large datasets → use SFT. ○ Tiny datasets → ask if reasoning (like CoT) helps. ■ If yes → RFT ■ If no → SFT Overall, this decision tree helps you quickly identify the most efficient and reliable fine-tuning strategy for your use case. Now that we understand when to use SFT or RFT, let's apply RFT in practice. For reasoning-heavy tasks like math or logic, GRPO (Group Relative Policy Optimization) is one of the most effective RFT methods available. Let’s walk through how to fine-tune a model usi",
+        "text": "○ Large datasets → use SFT. ○ Tiny datasets → ask if reasoning (like CoT) helps. ■ If yes → RFT ■ If no → SFT Overall, this decision tree helps you quickly iden…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 95,
@@ -1122,11 +1154,12 @@
         },
         "rank": 4,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p107:fixed500-50:0",
-        "text": "What is RAG? Up to this point, we have seen two ways to adapt an LLM to a task: ● Prompt Engineering - which steers the model at inference time ● Fine-tuning - which adjusts its internal parameters. Both approaches are powerful, but they share one fundamental limitation: the model can only use the knowledge it already contains. LLMs do not automatically know new information, private data, company documents, or anything that appeared after their training cutoff. Retraining them repeatedly to stay",
+        "text": "What is RAG? Up to this point, we have seen two ways to adapt an LLM to a task: ● Prompt Engineering - which steers the model at inference time ● Fine-tuning - …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 107,
@@ -1151,11 +1184,12 @@
         },
         "rank": 5,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p68:fixed500-50:1",
-        "text": "ristics of the data a practitioner wants to use it on. The original dataset might have had slightly different distributions, patterns, or levels of noise compared to the new dataset. Fine-tuning allows the model to adapt to these differences, learning from the new data and adjusting its parameters to improve its performance on the specific task at hand. For instance, consider BERT. It’s a Transformer-based language model, which is popularly used for text-to-embedding generation (92k+ citations o",
+        "text": "ristics of the data a practitioner wants to use it on. The original dataset might have had slightly different distributions, patterns, or levels of noise compar…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 68,
@@ -1183,11 +1217,12 @@
         },
         "rank": 6,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p23:fixed500-50:1",
-        "text": "es, and we can use correctness as the signal. This is called reasoning fine-tuning Steps: ● The model generates an answer to a prompt. ● The answer is compared to the known correct answer. ● Based on the correctness, we assign a reward. This is called Reinforcement Learning with Verifiable Rewards. GRPO by DeepSeek is a popular technique for this. Those were the 4 stages of training an LLM. ● Start with a randomly initialized model. ● Pre-train it on large-scale corpora. ● Use instruction fine-t",
+        "text": "es, and we can use correctness as the signal. This is called reasoning fine-tuning Steps: ● The model generates an answer to a prompt. ● The answer is compared …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 23,
@@ -1215,11 +1250,12 @@
         },
         "rank": 7,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p68:fixed500-50:0",
-        "text": "What is Fine-tuning? In the pre-LLM era, whenever someone open-sourced any high-utility model for public use, in most cases, practitioners would fine-tune that model to their specific task. Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance. This is neatly depicted in the diagram below: When the model was developed, it was trained on a specific dataset that might not perfectly match the characteristics of the data a practitioner wants to use it",
+        "text": "What is Fine-tuning? In the pre-LLM era, whenever someone open-sourced any high-utility model for public use, in most cases, practitioners would fine-tune that …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 68,
@@ -1243,11 +1279,12 @@
         },
         "rank": 8,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p69:fixed500-50:0",
-        "text": "Thus, when using it on any downstream task, we can adjust the weights of the BERT model along with the augmented layers, so that it better aligns with the nuances and specificities of the new dataset. Issues with traditional fine-tuning However, a problem arises when we use the same traditional fine-tuning technique on much larger models - LLMs, for instance. This is because, as you may already know, these models are huge - billions or even trillions of parameters. Consider the size difference b",
+        "text": "Thus, when using it on any downstream task, we can adjust the weights of the BERT model along with the augmented layers, so that it better aligns with the nuanc…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 69,
@@ -1271,11 +1308,12 @@
         },
         "rank": 9,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p21:fixed500-50:0",
-        "text": "Now it can: ● Answer questions ● Summarize content ● Write code, etc. At this point, we have likely: ● Utilized the entire raw internet archive and knowledge. ● The budget for human-labeled instruction response data. So what can we do to further improve the model? We enter into the territory of Reinforcement Learning (RL). 3) Preference fine-tuning (PFT) You must have seen this screen on ChatGPT where it asks: Which response do you prefer?",
+        "text": "Now it can: ● Answer questions ● Summarize content ● Write code, etc. At this point, we have likely: ● Utilized the entire raw internet archive and knowledge. ●…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 21,
@@ -1300,7 +1338,8 @@
         },
         "rank": 10,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 443
       }
     ],
     "context_ids": [
@@ -1324,7 +1363,7 @@
     "results": [
       {
         "id": "ai-engineering-2025:p327:fixed500-50:1",
-        "text": "ne to manage the dynamic flow of computation across the sharded expert pool. KV Caching in LLMs KV caching is a popular technique to speed up LLM inference. To get some perspective, look at the inference speed difference in the image below: ● with KV caching → 9 seconds ● without KV caching → 40 seconds (~4.5x slower, and this gap grows as more tokens are produced). Let’s visually understand how KV caching works.",
+        "text": "ne to manage the dynamic flow of computation across the sharded expert pool. KV Caching in LLMs KV caching is a popular technique to speed up LLM inference. To …",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 327,
@@ -1352,11 +1391,12 @@
         },
         "rank": 1,
         "strategy": "rerank",
-        "hit": true
+        "hit": true,
+        "text_chars": 416
       },
       {
         "id": "ai-engineering-2025:p143:fixed500-50:0",
-        "text": "Every time a query comes in, the model often re-fetches the same context from the vector DB, which can be expensive, redundant, and slow. Cache-Augmented Generation (CAG) fixes this. It lets the model “remember” stable information by caching it directly in the model’s key-value memory. And you can take this one step ahead by fusing RAG and CAG as depicted below: Here’s how it works in simple terms: ● In a regular RAG setup, your query goes to the vector database, retrieves relevant chunks, and f",
+        "text": "Every time a query comes in, the model often re-fetches the same context from the vector DB, which can be expensive, redundant, and slow. Cache-Augmented Genera…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 143,
@@ -1384,11 +1424,12 @@
         },
         "rank": 2,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p322:fixed500-50:0",
-        "text": "In contrast, a standard ML model typically has a single, unified computation phase. GPU memory management + KV caching Generating a new token uses the key and value vectors of all previous tokens. To avoid recomputing these vectors for all tokens over and over, we cache them.",
+        "text": "In contrast, a standard ML model typically has a single, unified computation phase. GPU memory management + KV caching Generating a new token uses the key and v…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 322,
@@ -1412,11 +1453,12 @@
         },
         "rank": 3,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 276
       },
       {
         "id": "ai-engineering-2025:p329:fixed500-50:0",
-        "text": "During attention, we first do the product of query and key matrices, and the last row involves the last token’s query vector and all key vectors: None of the other query vectors are needed during inference. Also, the last row of the final attention result involves the last query vector and all key & value vectors. Check this visual to understand better: The above insight suggests that to generate a new token, every attention operation in the network only needs: ● Query vector of the last token. ",
+        "text": "During attention, we first do the product of query and key matrices, and the last row involves the last token’s query vector and all key vectors: None of the ot…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 329,
@@ -1441,11 +1483,12 @@
         },
         "rank": 4,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p32:fixed500-50:1",
-        "text": "rization (avoid redundancy) or poetry (intentional repetition). 6) Presence penalty Encourages the model to bring in new tokens not yet seen in the text. Higher values push for novelty, lower values make the model stick to known patterns. Handy for exploratory generation where diversity of ideas is valued.",
+        "text": "rization (avoid redundancy) or poetry (intentional repetition). 6) Presence penalty Encourages the model to bring in new tokens not yet seen in the text. Higher…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 32,
@@ -1473,11 +1516,12 @@
         },
         "rank": 5,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 307
       },
       {
         "id": "ai-engineering-2025:p142:fixed500-50:2",
-        "text": " fewer decoder tokens. ● leads to no accuracy loss across RAG, summarization, and multi-turn conversation tasks That means you can process 16x more context at 30x the speed, with the same accuracy. RAG vs CAG RAG changed how we build knowledge-grounded systems, but it still has a weakness.",
+        "text": " fewer decoder tokens. ● leads to no accuracy loss across RAG, summarization, and multi-turn conversation tasks That means you can process 16x more context at 3…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 142,
@@ -1501,11 +1545,12 @@
         },
         "rank": 6,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 290
       },
       {
         "id": "ai-engineering-2025:p323:fixed500-50:0",
-        "text": "This KV Cache grows linearly with the total length of the conversation history. But in many workflows, inputs like the system prompts are shared across many requests. So we can avoid recomputing them by using these KV vectors across all chats: That said, KV cache takes up a significant memory since it’s stored in contiguous blocks. This wastes GPU memory and leads to memory fragmentation: Paged Attention solves this problem by storing KV caching in non-contiguous blocks and then using a lookup t",
+        "text": "This KV Cache grows linearly with the total length of the conversation history. But in many workflows, inputs like the system prompts are shared across many req…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 323,
@@ -1533,11 +1578,12 @@
         },
         "rank": 7,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p29:fixed500-50:0",
-        "text": "Now, temperature introduces the following tweak in the softmax function, which, in turn, influences the sampling process: Let's take a code example! ● At low temperature, probabilities concentrate around the most likely token, resulting in nearly greedy generation. ● At high temperature, probabilities become more uniform, producing highly random and stochastic outputs.",
+        "text": "Now, temperature introduces the following tweak in the softmax function, which, in turn, influences the sampling process: Let's take a code example! ● At low te…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 29,
@@ -1562,11 +1608,12 @@
         },
         "rank": 8,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 371
       },
       {
         "id": "ai-engineering-2025:p307:fixed500-50:0",
-        "text": "To illustrate this, consider the two models below. ● Model A is more accurate, but it is significantly slower and much larger. ● Model B is slightly less accurate but is faster, smaller, and far easier to deploy. In most real-world systems, Model B is the more suitable choice because it delivers a better user experience and is simpler to scale. This is why optimization matters. Production systems prioritize responsiveness and efficiency, not just accuracy. To meet these requirements, models must",
+        "text": "To illustrate this, consider the two models below. ● Model A is more accurate, but it is significantly slower and much larger. ● Model B is slightly less accura…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 307,
@@ -1591,11 +1638,12 @@
         },
         "rank": 9,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 500
       },
       {
         "id": "ai-engineering-2025:p144:fixed500-50:1",
-        "text": "change often. If you cache everything, you’ll hit context limits, so separating “cold” (cacheable) and “hot” (retrievable) data is what keeps this system reliable. You can also see this in practice above. Many APIs like OpenAI and Anthropic already support prompt caching, so you can start experimenting right away. RAG, Agentic RAG and AI Memory RAG was never the end goal. Memory in AI agents is where everything is heading. Let’s break down this evolution in the simplest way possible.",
+        "text": "change often. If you cache everything, you’ll hit context limits, so separating “cold” (cacheable) and “hot” (retrievable) data is what keeps this system reliab…",
         "source_id": "ai-engineering-2025",
         "source": "AI Engineering Guidebook.pdf",
         "page": 144,
@@ -1619,7 +1667,8 @@
         },
         "rank": 10,
         "strategy": "rerank",
-        "hit": false
+        "hit": false,
+        "text_chars": 488
       }
     ],
     "context_ids": [

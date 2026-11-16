@@ -78,7 +78,7 @@ Nhãn dev và test do Claude soạn nháp sau khi đọc đối chiếu chunk đ
   - Agent: [starter/results/agent/](../../starter/results/agent/) (`traces.json`, `reviews.json`, `summary.json`); tổng hợp ở `dev-eval.json`.
   - Token trung bình mỗi câu dev: rerank 2194 input / 104 output, dense 2348 / 99.
   - Thời gian trung vị mỗi câu: rerank 13.3 s, dense 6.7 s. Phần lớn là chờ API và retry 429 của free tier, câu nhanh nhất chỉ 2–3 s.
-  - Chi phí retrieval 0 USD. Chi phí Gemini: chưa có giá niêm yết cho `gemini-3.5-flash-lite` trong code, chỉ ghi token.
+  - Chi phí: **0 USD**. Retrieval, embedding và rerank chạy local; Gemini dùng **free tier** của Google AI Studio nên không phát sinh phí. Token vẫn được ghi để ước tính nếu chuyển sang gói trả phí: dev rerank 39 488 input / 1 865 output, test rerank 24 120 / 727. Đánh đổi của free tier: giới hạn tốc độ gây lỗi 429 và retry, làm thời gian trung vị mỗi câu tăng lên 6–25 s, trong khi câu không bị giới hạn chỉ mất 2–4 s.
 - **Lệnh tái lập test:**
   - `python starter/benchmark.py retrieval --split test --methods dense rerank`
   - `python starter/agent.py --split test --method rerank` (và `--method dense`)
