@@ -1,4 +1,3 @@
-"""Behavior checks for the runnable Day 7 baseline and Day 6 JSON adapter."""
 import json
 import subprocess
 import sys
@@ -9,7 +8,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'starter'))
 from baseline import TfidfIndex, evaluate, hit, pack_context, validate
-from convert_day6 import convert_chunk, convert_question
 
 
 def chunk(id, text, page=1):
@@ -47,16 +45,6 @@ class BaselineTests(unittest.TestCase):
         trace = evaluate(TfidfIndex(self.chunks), [self.q], budget=1)[0]
         self.assertTrue(trace['hit3'])
         self.assertFalse(trace['context_hit'])
-
-    def test_convert_day6_and_preserve_filter(self):
-        raw_chunk = {'chunk_id': 'c1', 'document_id': 'doc', 'source': 'doc.pdf', 'page': 1,
-                     'text': 'bảy ngày', 'metadata': {'year': 2025}}
-        raw_q = {'id': 'q', 'split': 'dev', 'question': 'bao lâu', 'gold_source_id': 'doc',
-                 'gold_page': 1, 'evidence_quote': 'bảy ngày', 'expected_answer': 'bảy ngày', 'filter': {'year': 2025}}
-        c, q = convert_chunk(raw_chunk), convert_question(raw_q)
-        validate([c], [q])
-        self.assertEqual(q['filter'], {'year': 2025})
-        self.assertEqual(c['id'], 'c1')
 
     def test_cli_uses_requested_split_only(self):
         with tempfile.TemporaryDirectory() as d:

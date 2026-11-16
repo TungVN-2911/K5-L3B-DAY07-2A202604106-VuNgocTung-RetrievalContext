@@ -1,4 +1,3 @@
-"""TF-IDF retrieval baseline for Day 7. Python 3.11+, standard library only."""
 import argparse
 import json
 import math

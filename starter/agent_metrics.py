@@ -1,16 +1,9 @@
-"""Aggregate agent traces with human labels; never infer grounding from citation IDs."""
 import argparse
 import json
 from pathlib import Path
 
 
 def aggregate(cases, traces, reviews):
-    """Cases: id/answerable; traces: query_id/status/events/citations.
-
-    Reviews: query_id, answer_grade (0..2 for answerable), citation_support
-    (one boolean per citation), and abstention_correct (boolean for unanswerable).
-    Provider errors are excluded and reported.
-    """
     if len({c['id'] for c in cases}) != len(cases):
         raise ValueError('case ID trùng')
     if len({r['query_id'] for r in traces}) != len(traces) or len({r['query_id'] for r in reviews}) != len(reviews):

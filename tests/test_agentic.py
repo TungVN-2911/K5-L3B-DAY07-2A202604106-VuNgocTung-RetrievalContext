@@ -1,4 +1,3 @@
-"""Offline behavioral checks only; fake adapters do not measure model quality."""
 import sys
 import unittest
 from pathlib import Path

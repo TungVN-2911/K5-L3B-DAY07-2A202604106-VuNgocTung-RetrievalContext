@@ -1,4 +1,3 @@
-"""Smoke check fixture contract; add tests for your implementation."""
 import json
 import unittest
 from pathlib import Path
