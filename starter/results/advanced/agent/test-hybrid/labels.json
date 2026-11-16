@@ -1,0 +1,242 @@
+[
+  {
+    "query_id": "at01",
+    "group": "table",
+    "status": "answered",
+    "passed": true,
+    "reason": "890 [640–1160] GtCO2 đúng ô C3/'2020 to net zero'; cite Table 3.1 p100.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at02",
+    "group": "table",
+    "status": "answered",
+    "passed": true,
+    "reason": "1.7 [1.5–1.8] và 1.4 [1.2–1.5] đúng cột C2. Câu biên về vùng: cite chunk text của p100 (text layer của Table 3.1, có bbox), không phải chunk vùng 'Table 3.1'; trang 100 chỉ chứa Table 3.1.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at03",
+    "group": "table",
+    "status": "answered",
+    "passed": true,
+    "reason": "59% [50–77] đúng ô C4/<2.0°C; cite Table 3.1.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at04",
+    "group": "table",
+    "status": "answered",
+    "passed": true,
+    "reason": "37% [21–59] đúng hàng 2°C/CO2, cột 2035; cite Table SPM.1 p37.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at05",
+    "group": "table",
+    "status": "answered",
+    "passed": true,
+    "reason": "4 và 7 GtCO2-eq/yr đúng; cite Table 2.2 p74.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at06",
+    "group": "table",
+    "status": "answered",
+    "passed": true,
+    "reason": "Observed virtually certain, human medium confidence đúng theo màu; cite Table 2.1 p63.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at07",
+    "group": "image",
+    "status": "answered",
+    "passed": true,
+    "reason": "High/High, tin cậy cao đúng; cite Figure SPM.7a p43.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at08",
+    "group": "image",
+    "status": "answered",
+    "passed": true,
+    "reason": "Climate services, including Early Warning Systems đúng; cite SPM.7a p43.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at09",
+    "group": "image",
+    "status": "answered",
+    "passed": true,
+    "reason": "SDG 6 Clean water and sanitation đúng; cite Figure 4.5 p125.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at10",
+    "group": "image",
+    "status": "answered",
+    "passed": true,
+    "reason": "Chuỗi socio-economic → emissions → climate → impacts/risks, nhánh phản hồi nét đứt, mitigation→emissions, adaptation→impacts/risks đúng; cite p81 panel a và caption p82.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at11",
+    "group": "image",
+    "status": "answered",
+    "passed": true,
+    "reason": "Đủ 5 điều kiện cản trở; cite Figure SPM.6 p41.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at12",
+    "group": "chart",
+    "status": "answered",
+    "passed": true,
+    "reason": "x14 / x28 đúng; cite Figure 4.6 p129.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at13",
+    "group": "chart",
+    "status": "answered",
+    "passed": true,
+    "reason": "AFOLU x10–x31 đúng; cite Figure 4.6.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at14",
+    "group": "chart",
+    "status": "answered",
+    "passed": true,
+    "reason": "410 ppm, 1866 ppb, 332 ppb đúng; cite Figure 2.1 panel b p59.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at15",
+    "group": "chart",
+    "status": "answered",
+    "passed": true,
+    "reason": "66% buildings, 67% land transport đúng; cite SPM.7 panel b p43 (thêm p44 text không mâu thuẫn).",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at16",
+    "group": "chart",
+    "status": "answered",
+    "passed": true,
+    "reason": "Câu biên. Nội dung đúng: existing vượt ngân sách 1.5°C, existing+planned ≈ ngân sách 2°C (83%). Cite p36 (SPM B.5.3) nói đúng nguyên văn và tham chiếu Figure 3.5; benchmark cho phép evidence text thay thế (p74, cùng phát biểu) nhưng danh sách thay thế không ghi p36. Nếu chỉ chấp nhận citation tới vùng Figure 3.5a thì câu này không đạt.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at17",
+    "group": "multihop",
+    "status": "abstain",
+    "passed": false,
+    "reason": "Từ chối nhầm: không truy được bảng ánh xạ C3 ↔ SSP1-2.6 (Cross-Section Box.2 Figure 1 panel b, p81) dù 4 lượt search.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at18",
+    "group": "multihop",
+    "status": "abstain",
+    "passed": false,
+    "reason": "Từ chối nhầm: không truy được chú thích 3 của Table 3.1 (p101, '55 [53–58] GtCO2-eq') nên không tính được 55 × 0.36 ≈ 20.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at19",
+    "group": "multihop",
+    "status": "answered",
+    "passed": false,
+    "reason": "Không tính phần nóng thêm (~0.5°C) mà câu hỏi yêu cầu; thêm khoảng [1.08–1.17]°C không có trong context.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at20",
+    "group": "multihop",
+    "status": "answered",
+    "passed": true,
+    "reason": "510 [330–710] so với 500 GtCO2, 'slightly higher' đúng; cite Table 3.1 và text ngân sách carbon p98.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at21",
+    "group": "text",
+    "status": "answered",
+    "passed": true,
+    "reason": "80% coal, 50% gas, 30% oil đúng; cite p74.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at22",
+    "group": "text",
+    "status": "answered",
+    "passed": true,
+    "reason": "3.7 [3.2–4.2] so với 1.3 [0.6–2.1] mm/yr đúng; cite SPM A.2.1 p21.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at23",
+    "group": "text",
+    "status": "answered",
+    "passed": true,
+    "reason": "1150 GtCO2 đúng; cite p35 (và p98).",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "at24",
+    "group": "text",
+    "status": "answered",
+    "passed": true,
+    "reason": "~42% (1000 ± 90 GtCO2) đúng; cite p60.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "au01",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": true,
+    "reason": "Từ chối đúng, không đưa số liệu Viet Nam.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "au02",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": true,
+    "reason": "Từ chối đúng, không đưa số liệu Jakarta.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "au03",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": true,
+    "reason": "Nêu phiên 58 phê duyệt SPM (có trong tài liệu) và nói không có số chính phủ; không khẳng định vô căn cứ.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "au04",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": true,
+    "reason": "Từ chối đúng, nêu lý do literature cutoff (có trong tài liệu, p27).",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "au05",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": true,
+    "reason": "Từ chối đúng, không lấy 1.1°C của 2011–2020 thay cho 2023.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  },
+  {
+    "query_id": "au06",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": true,
+    "reason": "Từ chối đúng, không có giá EU ETS.",
+    "labeled_by": "draft: Claude đối chiếu câu trả lời, citation và bản gốc; người làm bài cần xác nhận"
+  }
+]

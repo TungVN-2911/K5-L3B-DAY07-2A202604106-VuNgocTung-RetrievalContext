@@ -105,7 +105,7 @@ Nhãn dev và test do Claude soạn nháp sau khi đọc đối chiếu chunk đ
 
 ## Thử thách nâng cao (nếu thực hiện)
 
-> **Trạng thái:** đã xong tài liệu, index, benchmark và thử nghiệm trên dev. **Test chưa chạy.** Tỷ lệ đạt test và điều kiện bonus sẽ điền sau khi chạy cấu hình đã chốt một lần trên test.
+> **Kết quả:** cấu hình chốt trên dev (v7, dev 22/23) chạy **một lần** trên test: **27/30 = 90,0%**, 0 lỗi hệ thống. Kết quả đạt đúng ngưỡng nhưng **phụ thuộc vào câu biên at16** (xem bảng test). Nhãn do Claude soạn nháp; người làm bài cần xác nhận.
 
 - **Tài liệu, nguồn, quyền sử dụng, số trang và phiên bản:**
   - *IPCC AR6 Synthesis Report: Climate Change 2023* (Full Volume), 186 trang PDF, ISBN 978-92-9169-164-7, DOI 10.59327/IPCC/AR6-9789291691647.
@@ -154,21 +154,24 @@ Rerank kém và chậm vì chunk bảng/hình dài, MiniLM chỉ đọc khoảng
 | v4 | + ghi chú "tên màu trong mô tả là đoán" | 20/23 | ad02 lỗi 503; ad04; ad12 thiếu citation cho một ý |
 | v5 | Dòng màu ghi thẳng ý nghĩa chú giải; kiểm tra citation theo từng câu có số; retry 10 lần | 19/23 | ad04, ad05; ad13, ad14 không nêu quan hệ |
 | v6 | + mở rộng part anh em có màu; + quy tắc nêu quan hệ so sánh | 20/23 | ad02 thêm giá trị sai cho C1b; ad04, ad05 |
-| v7 (dang dở) | + trả màu chính xác kèm ảnh khi `view`; + "chỉ trả lời phần được hỏi" | 18/19 câu có đáp án đã chạy | ad05 (feasibility Low đọc thành Medium); 4 câu thiếu evidence chưa chạy |
+| **v7 (chốt)** | + trả màu chính xác kèm ảnh khi `view`; + "chỉ trả lời phần được hỏi" | **22/23** (18/19 có đáp án, 4/4 thiếu evidence) | ad05 (feasibility Low đọc thành Medium). 4 câu thiếu evidence chạy riêng (`dev-hybrid-v7-unanswerable`) sau khi lượt chính bị dừng |
 
-Bốn câu thiếu evidence của dev được từ chối đúng ở mọi lượt đã chạy đủ (v1, v3–v6). Lỗi còn lại chủ yếu là đọc ký hiệu và màu trong ma trận SPM.7.
+Bốn câu thiếu evidence của dev được từ chối đúng ở mọi lượt đã chạy đủ (v1, v3–v7). Lỗi còn lại chủ yếu là đọc ký hiệu và màu trong ma trận SPM.7.
 
-- **Cấu hình sẽ chốt (theo dev):** hybrid RRF (dense + BM25, 30 candidate) → top-5, tối đa 4 search, 3 lượt `view` (ảnh crop vùng gốc kèm màu vector), budget 12000 ký tự, mở rộng part anh em có màu, kiểm tra citation theo từng câu có số, retry 10 lần, temperature 0. Test sẽ chạy **một lần** với cấu hình này.
+- **Cấu hình đã chốt (v7, trước khi chạy test):** `gemini-3.5-flash-lite`, hybrid RRF (dense + BM25, 30 candidate) → top-5, tối đa 4 search, 3 lượt `view` (ảnh crop vùng gốc, kèm màu vector khi có), budget 12000 ký tự, mở rộng part anh em có màu, kiểm tra citation theo từng câu có số, retry 10 lần, temperature 0. Test chạy **một lần**, không chỉnh gì sau đó ([test-hybrid](../../starter/results/advanced/agent/test-hybrid/)).
 
 | Nhóm test | Đạt / tổng | Tỷ lệ | Lỗi / nhận xét |
 |---|---|---|---|
-| Bảng | chưa chạy | | |
-| Ảnh, sơ đồ | chưa chạy | | |
-| Biểu đồ | chưa chạy | | |
-| Multi-hop | chưa chạy | | |
-| Text | chưa chạy | | |
-| Thiếu bằng chứng | chưa chạy | | |
-| **Toàn bộ** | chưa chạy | | Cần ≥ 27/30 |
+| Bảng | 6/6 | 100% | at02 câu biên về vùng: cite chunk text của p100 (text layer Table 3.1, có bbox) thay vì chunk vùng "Table 3.1" |
+| Ảnh, sơ đồ | 5/5 | 100% | Ma trận SPM.7, Figure 4.5, sơ đồ Cross-Section Box.2, SPM.6 đều đúng |
+| Biểu đồ | 5/5 | 100% | **at16 câu biên:** đúng nội dung nhưng cite SPM B.5.3 (p36, cùng phát biểu, tham chiếu Figure 3.5) thay vì vùng Figure 3.5a; benchmark cho phép evidence text thay thế (p74) nhưng không liệt kê p36 |
+| Multi-hop | 1/4 | 25% | at17, at18 từ chối nhầm (không truy được bảng ánh xạ SSP p81 và chú thích 3 của Table 3.1 p101); at19 không tính phần nóng thêm và thêm khoảng [1.08–1.17] không có trong context |
+| Text | 4/4 | 100% | |
+| Thiếu bằng chứng | 6/6 | 100% | Không câu nào đưa số liệu suy đoán (Viet Nam, Jakarta, số chính phủ, COP28, 2023, EU ETS) |
+| **Toàn bộ** | **27/30** | **90,0%** | 0 lỗi hệ thống. Nếu không chấp nhận at16 thì còn 26/30 (86,7%), dưới ngưỡng |
+
+- **Test, thời gian và chi phí:** 118 lượt LLM, 21 lượt `view`, Context Evidence 21/24, token 446 544 input / 4 701 output, thời gian trung vị 8,8 giây/câu, 0 USD. Nhãn và lý do từng câu ở [test-hybrid/labels.json](../../starter/results/advanced/agent/test-hybrid/labels.json); tổng hợp ở `score.json`.
+- **Phân tích:** điểm yếu nằm ở multi-hop (1/4). Câu hỏi gộp hai nguồn khiến query của agent bám vào Table 3.1 và bỏ sót nguồn thứ hai (bảng ánh xạ SSP, chú thích bảng). Trên dev, multi-hop đạt 3/3 vì các nguồn thứ hai ở đó (Table 2.2, Figure 4.6) dễ truy hơn. Hướng cải thiện cho lần sau (không áp dụng vào test này): tách câu hỏi thành truy vấn con theo từng nguồn, và index chú thích bảng thành chunk riêng.
 
 - **Thời gian, chi phí, lỗi hệ thống:**
   - Index: vision 51 trang, khoảng 11 phút lần đầu (có cache), 75 605 token input / 31 046 output; embed 959 chunk khoảng 19 giây.

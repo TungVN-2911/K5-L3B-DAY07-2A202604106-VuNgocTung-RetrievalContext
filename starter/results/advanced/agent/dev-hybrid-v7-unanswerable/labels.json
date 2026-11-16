@@ -1,0 +1,30 @@
+[
+  {
+    "query_id": "ud01",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": null,
+    "reason": ""
+  },
+  {
+    "query_id": "ud02",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": null,
+    "reason": ""
+  },
+  {
+    "query_id": "ud03",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": null,
+    "reason": ""
+  },
+  {
+    "query_id": "ud04",
+    "group": "unanswerable",
+    "status": "abstain",
+    "passed": null,
+    "reason": ""
+  }
+]

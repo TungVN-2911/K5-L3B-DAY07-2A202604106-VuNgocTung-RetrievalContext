@@ -1,0 +1,23 @@
+{
+  "run": "test-hybrid",
+  "passed": 27,
+  "total": 30,
+  "rate": 0.9,
+  "meets_90_percent": true,
+  "system_errors": 0,
+  "by_group": {
+    "table": "6/6",
+    "image": "5/5",
+    "chart": "5/5",
+    "multihop": "1/4",
+    "text": "4/4",
+    "unanswerable": "6/6"
+  },
+  "tokens": {
+    "input": 446544,
+    "output": 4701,
+    "thinking": 0
+  },
+  "median_elapsed_s": 8.8,
+  "cost_usd": 0
+}
