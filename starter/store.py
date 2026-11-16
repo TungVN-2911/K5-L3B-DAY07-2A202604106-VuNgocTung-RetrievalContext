@@ -80,7 +80,9 @@ class PgVectorStore:
         if dimensions <= 0:
             raise ValueError(f"số chiều không hợp lệ: {dimensions}")
         self.dimensions = dimensions
-        self.conn = psycopg.connect(database_url or setting("DATABASE_URL"), connect_timeout=5)
+        # autocommit: each `with conn.transaction()` is a real transaction that commits on exit
+        # (without it a prior SELECT opens an implicit transaction and close() rolls the upsert back).
+        self.conn = psycopg.connect(database_url or setting("DATABASE_URL"), connect_timeout=5, autocommit=True)
 
     def close(self) -> None:
         self.conn.close()

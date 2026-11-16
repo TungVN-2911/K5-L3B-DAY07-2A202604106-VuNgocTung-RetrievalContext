@@ -1,0 +1,1484 @@
+[
+  {
+    "query_id": "ad01",
+    "group": "table",
+    "first_cover_rank": 6,
+    "elapsed_ms": 5174.0,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p108:text:4",
+        "page": 108,
+        "kind": "text",
+        "label": null,
+        "score": 8.050823211669922
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p109:text:0",
+        "page": 109,
+        "kind": "text",
+        "label": null,
+        "score": 6.814382553100586
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p37:text:1",
+        "page": 37,
+        "kind": "text",
+        "label": null,
+        "score": 6.554819583892822
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p37:text:0",
+        "page": 37,
+        "kind": "text",
+        "label": null,
+        "score": 6.408374786376953
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:3",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 5.992590427398682
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p37:table:0",
+        "page": 37,
+        "kind": "table",
+        "label": "Table SPM.1",
+        "score": 5.730571746826172
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p111:text:1",
+        "page": 111,
+        "kind": "text",
+        "label": null,
+        "score": 5.547736644744873
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p36:text:3",
+        "page": 36,
+        "kind": "text",
+        "label": null,
+        "score": 5.51101016998291
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p39:text:3",
+        "page": 39,
+        "kind": "text",
+        "label": null,
+        "score": 5.255009651184082
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p75:text:1",
+        "page": 75,
+        "kind": "text",
+        "label": null,
+        "score": 4.986598968505859
+      }
+    ]
+  },
+  {
+    "query_id": "ad02",
+    "group": "table",
+    "first_cover_rank": 9,
+    "elapsed_ms": 5231.2,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p100:text:2",
+        "page": 100,
+        "kind": "text",
+        "label": null,
+        "score": 5.651017189025879
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p36:text:2",
+        "page": 36,
+        "kind": "text",
+        "label": null,
+        "score": 5.498315811157227
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p102:text:1",
+        "page": 102,
+        "kind": "text",
+        "label": null,
+        "score": 5.438485145568848
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p36:text:3",
+        "page": 36,
+        "kind": "text",
+        "label": null,
+        "score": 5.41154146194458
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p39:text:1",
+        "page": 39,
+        "kind": "text",
+        "label": null,
+        "score": 5.357639312744141
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p101:text:2",
+        "page": 101,
+        "kind": "text",
+        "label": null,
+        "score": 5.152172565460205
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p37:text:2",
+        "page": 37,
+        "kind": "text",
+        "label": null,
+        "score": 4.951894760131836
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:text:5",
+        "page": 100,
+        "kind": "text",
+        "label": null,
+        "score": 4.657899856567383
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "kind": "table",
+        "label": "Table 3.1",
+        "score": 4.606453895568848
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+        "page": 100,
+        "kind": "table",
+        "label": "Table 3.1",
+        "score": 4.540500640869141
+      }
+    ]
+  },
+  {
+    "query_id": "ad03",
+    "group": "table",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5017.7,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p74:table:0",
+        "page": 74,
+        "kind": "table",
+        "label": "Table 2.2",
+        "score": 5.790090560913086
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:3",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 5.745200157165527
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p75:text:2",
+        "page": 75,
+        "kind": "text",
+        "label": null,
+        "score": 3.9112181663513184
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:1",
+        "page": 27,
+        "kind": "text",
+        "label": null,
+        "score": 3.517801284790039
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p74:text:1",
+        "page": 74,
+        "kind": "text",
+        "label": null,
+        "score": 3.4895684719085693
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:6",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 3.408482074737549
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p74:text:3",
+        "page": 74,
+        "kind": "text",
+        "label": null,
+        "score": 2.873349666595459
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:7",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 2.547583818435669
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p108:text:4",
+        "page": 108,
+        "kind": "text",
+        "label": null,
+        "score": 2.435624599456787
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p74:text:2",
+        "page": 74,
+        "kind": "text",
+        "label": null,
+        "score": 1.9760258197784424
+      }
+    ]
+  },
+  {
+    "query_id": "ad04",
+    "group": "table",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5314.3,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p63:table:0.2",
+        "page": 63,
+        "kind": "table",
+        "label": "Table 2.1",
+        "score": 5.976295471191406
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "kind": "table",
+        "label": "Table 2.1",
+        "score": 5.520744800567627
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p63:text:0",
+        "page": 63,
+        "kind": "text",
+        "label": null,
+        "score": 4.303253650665283
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p62:text:3",
+        "page": 62,
+        "kind": "text",
+        "label": null,
+        "score": 3.8312246799468994
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p21:text:3",
+        "page": 21,
+        "kind": "text",
+        "label": null,
+        "score": 1.7793983221054077
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p64:text:0",
+        "page": 64,
+        "kind": "text",
+        "label": null,
+        "score": 1.6683943271636963
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p64:diagram:0",
+        "page": 64,
+        "kind": "diagram",
+        "label": "Figure SPM.3 panel a (top)",
+        "score": 1.4754557609558105
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p64:diagram:1",
+        "page": 64,
+        "kind": "diagram",
+        "label": "Figure SPM.3 panel a (middle)",
+        "score": 0.6228204965591431
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p63:text:1",
+        "page": 63,
+        "kind": "text",
+        "label": null,
+        "score": -0.03672046214342117
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p66:text:6",
+        "page": 66,
+        "kind": "text",
+        "label": null,
+        "score": -0.056778132915496826
+      }
+    ]
+  },
+  {
+    "query_id": "ad05",
+    "group": "image",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5115.6,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.1",
+        "page": 43,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel a",
+        "score": 5.8674468994140625
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p119:chart:0",
+        "page": 119,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel a",
+        "score": 5.4499616622924805
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p120:text:1",
+        "page": 120,
+        "kind": "text",
+        "label": null,
+        "score": 5.2237958908081055
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p43:text:0",
+        "page": 43,
+        "kind": "text",
+        "label": null,
+        "score": 4.947841167449951
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p125:text:1",
+        "page": 125,
+        "kind": "text",
+        "label": null,
+        "score": 4.8876848220825195
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+        "page": 43,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel a",
+        "score": 4.730401992797852
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p44:text:1",
+        "page": 44,
+        "kind": "text",
+        "label": null,
+        "score": 4.157312870025635
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p112:text:3",
+        "page": 112,
+        "kind": "text",
+        "label": null,
+        "score": 3.3811514377593994
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p125:diagram:0",
+        "page": 125,
+        "kind": "diagram",
+        "label": "Figure 4.5",
+        "score": 3.334548234939575
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p119:text:0",
+        "page": 119,
+        "kind": "text",
+        "label": null,
+        "score": 2.9695777893066406
+      }
+    ]
+  },
+  {
+    "query_id": "ad06",
+    "group": "image",
+    "first_cover_rank": 2,
+    "elapsed_ms": 4871.5,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p81:diagram:2",
+        "page": 81,
+        "kind": "diagram",
+        "label": "Figure SPM.3 panel c",
+        "score": 4.579889297485352
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p82:diagram:0",
+        "page": 82,
+        "kind": "diagram",
+        "label": "Cross-Section Box.2 Figure 1",
+        "score": 2.858914852142334
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p82:text:1",
+        "page": 82,
+        "kind": "text",
+        "label": null,
+        "score": 2.7569456100463867
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p93:diagram:0.1",
+        "page": 93,
+        "kind": "diagram",
+        "label": "Figure 3.3",
+        "score": -0.39131656289100647
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p79:text:0",
+        "page": 79,
+        "kind": "text",
+        "label": null,
+        "score": -0.7333118915557861
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p116:diagram:2",
+        "page": 116,
+        "kind": "diagram",
+        "label": "Figure SPM.X panel c",
+        "score": -1.7985568046569824
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p81:diagram:0",
+        "page": 81,
+        "kind": "diagram",
+        "label": "Figure SPM.3 panel a",
+        "score": -2.0850863456726074
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p80:text:1",
+        "page": 80,
+        "kind": "text",
+        "label": null,
+        "score": -2.4214863777160645
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p93:text:1",
+        "page": 93,
+        "kind": "text",
+        "label": null,
+        "score": -2.643281936645508
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p117:text:1",
+        "page": 117,
+        "kind": "text",
+        "label": null,
+        "score": -2.839107036590576
+      }
+    ]
+  },
+  {
+    "query_id": "ad07",
+    "group": "image",
+    "first_cover_rank": 1,
+    "elapsed_ms": 4913.1,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p55:diagram:0",
+        "page": 55,
+        "kind": "diagram",
+        "label": "Figure 1.1",
+        "score": 8.11031723022461
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p55:text:0",
+        "page": 55,
+        "kind": "text",
+        "label": null,
+        "score": 6.76373291015625
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p54:text:7",
+        "page": 54,
+        "kind": "text",
+        "label": null,
+        "score": 2.898184299468994
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p16:text:0",
+        "page": 16,
+        "kind": "text",
+        "label": null,
+        "score": -0.6736787557601929
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p136:text:0",
+        "page": 136,
+        "kind": "text",
+        "label": null,
+        "score": -1.9337995052337646
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p25:text:2",
+        "page": 25,
+        "kind": "text",
+        "label": null,
+        "score": -5.001159191131592
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p9:text:4",
+        "page": 9,
+        "kind": "text",
+        "label": null,
+        "score": -5.2589287757873535
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p9:text:0",
+        "page": 9,
+        "kind": "text",
+        "label": null,
+        "score": -5.315480709075928
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p16:text:1",
+        "page": 16,
+        "kind": "text",
+        "label": null,
+        "score": -6.27455997467041
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p54:text:0",
+        "page": 54,
+        "kind": "text",
+        "label": null,
+        "score": -6.3237175941467285
+      }
+    ]
+  },
+  {
+    "query_id": "ad08",
+    "group": "image",
+    "first_cover_rank": 3,
+    "elapsed_ms": 4883.1,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p41:text:1",
+        "page": 41,
+        "kind": "text",
+        "label": null,
+        "score": 8.038374900817871
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p113:text:2",
+        "page": 113,
+        "kind": "text",
+        "label": null,
+        "score": 7.028594970703125
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p41:diagram:0",
+        "page": 41,
+        "kind": "diagram",
+        "label": "Figure SPM.6",
+        "score": 6.282241344451904
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p113:diagram:0.1",
+        "page": 113,
+        "kind": "diagram",
+        "label": "Figure 4.2",
+        "score": 6.123556613922119
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p113:diagram:0.2",
+        "page": 113,
+        "kind": "diagram",
+        "label": "Figure 4.2",
+        "score": 2.6352498531341553
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p112:text:1",
+        "page": 112,
+        "kind": "text",
+        "label": null,
+        "score": 2.5006723403930664
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p41:text:4",
+        "page": 41,
+        "kind": "text",
+        "label": null,
+        "score": 2.3454275131225586
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p112:text:0",
+        "page": 112,
+        "kind": "text",
+        "label": null,
+        "score": 1.5574959516525269
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p40:text:3",
+        "page": 40,
+        "kind": "text",
+        "label": null,
+        "score": 1.175598382949829
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p88:text:0",
+        "page": 88,
+        "kind": "text",
+        "label": null,
+        "score": 1.1303311586380005
+      }
+    ]
+  },
+  {
+    "query_id": "ad09",
+    "group": "chart",
+    "first_cover_rank": 2,
+    "elapsed_ms": 4903.9,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p129:text:4",
+        "page": 129,
+        "kind": "text",
+        "label": null,
+        "score": 7.985588073730469
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p129:chart:0",
+        "page": 129,
+        "kind": "chart",
+        "label": "Figure 4.6",
+        "score": 6.250256538391113
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p129:text:2",
+        "page": 129,
+        "kind": "text",
+        "label": null,
+        "score": 5.086639404296875
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p49:text:2",
+        "page": 49,
+        "kind": "text",
+        "label": null,
+        "score": 3.6175954341888428
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p78:text:3",
+        "page": 78,
+        "kind": "text",
+        "label": null,
+        "score": 0.9525424242019653
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p127:text:3",
+        "page": 127,
+        "kind": "text",
+        "label": null,
+        "score": 0.061155885457992554
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p70:text:1",
+        "page": 70,
+        "kind": "text",
+        "label": null,
+        "score": -1.947555661201477
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p44:text:1",
+        "page": 44,
+        "kind": "text",
+        "label": null,
+        "score": -2.3084025382995605
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p69:text:5",
+        "page": 69,
+        "kind": "text",
+        "label": null,
+        "score": -2.6610469818115234
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p120:text:1",
+        "page": 120,
+        "kind": "text",
+        "label": null,
+        "score": -2.686180591583252
+      }
+    ]
+  },
+  {
+    "query_id": "ad10",
+    "group": "chart",
+    "first_cover_rank": 1,
+    "elapsed_ms": 4859.5,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p43:chart:1",
+        "page": 43,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel b",
+        "score": 6.941027641296387
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p119:chart:1",
+        "page": 119,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel b",
+        "score": 6.828464031219482
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p118:text:5",
+        "page": 118,
+        "kind": "text",
+        "label": null,
+        "score": 4.389813423156738
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p43:text:4",
+        "page": 43,
+        "kind": "text",
+        "label": null,
+        "score": 3.1544363498687744
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p119:text:3",
+        "page": 119,
+        "kind": "text",
+        "label": null,
+        "score": 2.7267026901245117
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p44:text:1",
+        "page": 44,
+        "kind": "text",
+        "label": null,
+        "score": 1.9319934844970703
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p37:text:2",
+        "page": 37,
+        "kind": "text",
+        "label": null,
+        "score": 1.5819467306137085
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.1",
+        "page": 43,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel a",
+        "score": 0.3311442732810974
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p119:chart:0",
+        "page": 119,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel a",
+        "score": 0.0659913644194603
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p122:text:1",
+        "page": 122,
+        "kind": "text",
+        "label": null,
+        "score": -0.050740279257297516
+      }
+    ]
+  },
+  {
+    "query_id": "ad11",
+    "group": "chart",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5003.2,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p70:chart:1",
+        "page": 70,
+        "kind": "chart",
+        "label": "Figure 2.4 panel b",
+        "score": 6.407146453857422
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p70:text:1",
+        "page": 70,
+        "kind": "text",
+        "label": null,
+        "score": 1.128037452697754
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:2",
+        "page": 27,
+        "kind": "text",
+        "label": null,
+        "score": 0.6557215452194214
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p69:text:2",
+        "page": 69,
+        "kind": "text",
+        "label": null,
+        "score": -1.5181257724761963
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:0",
+        "page": 27,
+        "kind": "text",
+        "label": null,
+        "score": -1.6168828010559082
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p70:text:0",
+        "page": 70,
+        "kind": "text",
+        "label": null,
+        "score": -2.401299476623535
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p70:chart:0",
+        "page": 70,
+        "kind": "chart",
+        "label": "Figure 2.4 panel a",
+        "score": -2.568026304244995
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p69:text:6",
+        "page": 69,
+        "kind": "text",
+        "label": null,
+        "score": -4.285518646240234
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p118:text:5",
+        "page": 118,
+        "kind": "text",
+        "label": null,
+        "score": -4.99505090713501
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p14:text:4",
+        "page": 14,
+        "kind": "text",
+        "label": null,
+        "score": -5.420513153076172
+      }
+    ]
+  },
+  {
+    "query_id": "ad12",
+    "group": "multihop",
+    "first_cover_rank": null,
+    "elapsed_ms": 5261.8,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p81:text:2",
+        "page": 81,
+        "kind": "text",
+        "label": null,
+        "score": 5.44067907333374
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p28:text:5",
+        "page": 28,
+        "kind": "text",
+        "label": null,
+        "score": 5.041055679321289
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p81:table:1",
+        "page": 81,
+        "kind": "table",
+        "label": "Figure SPM.3 panel b",
+        "score": 4.519763946533203
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p84:text:5",
+        "page": 84,
+        "kind": "text",
+        "label": null,
+        "score": 4.200088024139404
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p25:text:4",
+        "page": 25,
+        "kind": "text",
+        "label": null,
+        "score": 4.17506217956543
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+        "page": 100,
+        "kind": "table",
+        "label": "Table 3.1",
+        "score": 4.120081424713135
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p82:text:1",
+        "page": 82,
+        "kind": "text",
+        "label": null,
+        "score": 3.9239954948425293
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p79:text:7",
+        "page": 79,
+        "kind": "text",
+        "label": null,
+        "score": 3.7670655250549316
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p81:text:0",
+        "page": 81,
+        "kind": "text",
+        "label": null,
+        "score": 3.668476104736328
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p82:diagram:0",
+        "page": 82,
+        "kind": "diagram",
+        "label": "Cross-Section Box.2 Figure 1",
+        "score": 3.6327712535858154
+      }
+    ]
+  },
+  {
+    "query_id": "ad13",
+    "group": "multihop",
+    "first_cover_rank": null,
+    "elapsed_ms": 5421.4,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:7",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 8.89125919342041
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:2",
+        "page": 27,
+        "kind": "text",
+        "label": null,
+        "score": 6.995838165283203
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p74:table:0",
+        "page": 74,
+        "kind": "table",
+        "label": "Table 2.2",
+        "score": 6.807948112487793
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:6",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 6.019053936004639
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p74:text:1",
+        "page": 74,
+        "kind": "text",
+        "label": null,
+        "score": 4.774379253387451
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p75:text:1",
+        "page": 75,
+        "kind": "text",
+        "label": null,
+        "score": 4.7293596267700195
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p84:text:3",
+        "page": 84,
+        "kind": "text",
+        "label": null,
+        "score": 4.286111831665039
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:3",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 4.183358192443848
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p74:text:2",
+        "page": 74,
+        "kind": "text",
+        "label": null,
+        "score": 4.068079948425293
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p75:text:0",
+        "page": 75,
+        "kind": "text",
+        "label": null,
+        "score": 3.6260323524475098
+      }
+    ]
+  },
+  {
+    "query_id": "ad14",
+    "group": "multihop",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5198.2,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p129:chart:0",
+        "page": 129,
+        "kind": "chart",
+        "label": "Figure 4.6",
+        "score": 4.847777366638184
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p49:text:2",
+        "page": 49,
+        "kind": "text",
+        "label": null,
+        "score": 2.593721389770508
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p129:text:4",
+        "page": 129,
+        "kind": "text",
+        "label": null,
+        "score": 2.495710611343384
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p129:text:2",
+        "page": 129,
+        "kind": "text",
+        "label": null,
+        "score": 2.4135231971740723
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p78:text:3",
+        "page": 78,
+        "kind": "text",
+        "label": null,
+        "score": -0.8746351003646851
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p104:text:5",
+        "page": 104,
+        "kind": "text",
+        "label": null,
+        "score": -1.3915741443634033
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p128:text:2",
+        "page": 128,
+        "kind": "text",
+        "label": null,
+        "score": -1.954160451889038
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p42:text:2",
+        "page": 42,
+        "kind": "text",
+        "label": null,
+        "score": -2.302267551422119
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p127:text:3",
+        "page": 127,
+        "kind": "text",
+        "label": null,
+        "score": -2.5956294536590576
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p129:text:1",
+        "page": 129,
+        "kind": "text",
+        "label": null,
+        "score": -2.6852214336395264
+      }
+    ]
+  },
+  {
+    "query_id": "ad15",
+    "group": "text",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5186.1,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p36:text:2",
+        "page": 36,
+        "kind": "text",
+        "label": null,
+        "score": 9.253194808959961
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p101:text:2",
+        "page": 101,
+        "kind": "text",
+        "label": null,
+        "score": 8.939013481140137
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p36:text:3",
+        "page": 36,
+        "kind": "text",
+        "label": null,
+        "score": 8.105188369750977
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p37:text:1",
+        "page": 37,
+        "kind": "text",
+        "label": null,
+        "score": 7.924132823944092
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p111:text:1",
+        "page": 111,
+        "kind": "text",
+        "label": null,
+        "score": 7.87437629699707
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p102:diagram:2",
+        "page": 102,
+        "kind": "diagram",
+        "label": "Figure SPM.7 panel c",
+        "score": 7.473016262054443
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p102:chart:0",
+        "page": 102,
+        "kind": "chart",
+        "label": "Figure SPM.7 panel a",
+        "score": 7.448907375335693
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p109:text:0",
+        "page": 109,
+        "kind": "text",
+        "label": null,
+        "score": 7.390946388244629
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:1",
+        "page": 27,
+        "kind": "text",
+        "label": null,
+        "score": 7.347668647766113
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p109:text:1",
+        "page": 109,
+        "kind": "text",
+        "label": null,
+        "score": 7.294003963470459
+      }
+    ]
+  },
+  {
+    "query_id": "ad16",
+    "group": "text",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5066.8,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p21:text:4",
+        "page": 21,
+        "kind": "text",
+        "label": null,
+        "score": 10.326032638549805
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p117:text:4",
+        "page": 117,
+        "kind": "text",
+        "label": null,
+        "score": 9.415547370910645
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p67:text:5",
+        "page": 67,
+        "kind": "text",
+        "label": null,
+        "score": 7.227886199951172
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p87:text:6",
+        "page": 87,
+        "kind": "text",
+        "label": null,
+        "score": 3.6982343196868896
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p66:diagram:0.2",
+        "page": 66,
+        "kind": "diagram",
+        "label": "Figure 2.3 panel a",
+        "score": 2.4183273315429688
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p66:text:6",
+        "page": 66,
+        "kind": "text",
+        "label": null,
+        "score": 2.0540390014648438
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p47:text:4",
+        "page": 47,
+        "kind": "text",
+        "label": null,
+        "score": 1.7447046041488647
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p21:text:2",
+        "page": 21,
+        "kind": "text",
+        "label": null,
+        "score": 0.9734373092651367
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p114:text:2",
+        "page": 114,
+        "kind": "text",
+        "label": null,
+        "score": 0.7787955403327942
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p117:text:1",
+        "page": 117,
+        "kind": "text",
+        "label": null,
+        "score": 0.5819607973098755
+      }
+    ]
+  },
+  {
+    "query_id": "ad17",
+    "group": "text",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5557.9,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p109:text:0",
+        "page": 109,
+        "kind": "text",
+        "label": null,
+        "score": 8.608642578125
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p108:text:4",
+        "page": 108,
+        "kind": "text",
+        "label": null,
+        "score": 8.142640113830566
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p36:text:2",
+        "page": 36,
+        "kind": "text",
+        "label": null,
+        "score": 8.108505249023438
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p103:text:3",
+        "page": 103,
+        "kind": "text",
+        "label": null,
+        "score": 7.823235511779785
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:1",
+        "page": 27,
+        "kind": "text",
+        "label": null,
+        "score": 7.685115337371826
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p74:text:0",
+        "page": 74,
+        "kind": "text",
+        "label": null,
+        "score": 7.642975330352783
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p111:text:1",
+        "page": 111,
+        "kind": "text",
+        "label": null,
+        "score": 7.622648239135742
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p37:text:1",
+        "page": 37,
+        "kind": "text",
+        "label": null,
+        "score": 7.524040222167969
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p39:text:3",
+        "page": 39,
+        "kind": "text",
+        "label": null,
+        "score": 7.431215286254883
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p111:diagram:0",
+        "page": 111,
+        "kind": "diagram",
+        "label": "Figure 4.1",
+        "score": 7.264813423156738
+      }
+    ]
+  },
+  {
+    "query_id": "ad18",
+    "group": "text",
+    "first_cover_rank": 1,
+    "elapsed_ms": 5329.4,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:3",
+        "page": 27,
+        "kind": "text",
+        "label": null,
+        "score": 5.9326653480529785
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p78:text:3",
+        "page": 78,
+        "kind": "text",
+        "label": null,
+        "score": 5.247845649719238
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p128:text:3",
+        "page": 128,
+        "kind": "text",
+        "label": null,
+        "score": 2.037544012069702
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p128:text:5",
+        "page": 128,
+        "kind": "text",
+        "label": null,
+        "score": 1.7870856523513794
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p68:text:2",
+        "page": 68,
+        "kind": "text",
+        "label": null,
+        "score": 1.5544697046279907
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p49:text:5",
+        "page": 49,
+        "kind": "text",
+        "label": null,
+        "score": -1.1142032146453857
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p69:text:5",
+        "page": 69,
+        "kind": "text",
+        "label": null,
+        "score": -1.330549716949463
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p138:text:3",
+        "page": 138,
+        "kind": "text",
+        "label": null,
+        "score": -1.7035951614379883
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p26:text:1",
+        "page": 26,
+        "kind": "text",
+        "label": null,
+        "score": -3.426382064819336
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p68:text:4",
+        "page": 68,
+        "kind": "text",
+        "label": null,
+        "score": -3.5944347381591797
+      }
+    ]
+  },
+  {
+    "query_id": "ad19",
+    "group": "table",
+    "first_cover_rank": 7,
+    "elapsed_ms": 5326.1,
+    "results": [
+      {
+        "id": "ipcc-ar6-syr-2023:p73:text:5",
+        "page": 73,
+        "kind": "text",
+        "label": null,
+        "score": 5.481043815612793
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p79:text:4",
+        "page": 79,
+        "kind": "text",
+        "label": null,
+        "score": 4.656811714172363
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p28:text:5",
+        "page": 28,
+        "kind": "text",
+        "label": null,
+        "score": 4.3651838302612305
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p108:text:4",
+        "page": 108,
+        "kind": "text",
+        "label": null,
+        "score": 4.261497497558594
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p36:text:2",
+        "page": 36,
+        "kind": "text",
+        "label": null,
+        "score": 3.8799564838409424
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:text:5",
+        "page": 100,
+        "kind": "text",
+        "label": null,
+        "score": 3.8390655517578125
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "kind": "table",
+        "label": "Table 3.1",
+        "score": 3.808668851852417
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+        "page": 100,
+        "kind": "table",
+        "label": "Table 3.1",
+        "score": 3.717334747314453
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+        "page": 100,
+        "kind": "table",
+        "label": "Table 3.1",
+        "score": 3.713198184967041
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p75:text:2",
+        "page": 75,
+        "kind": "text",
+        "label": null,
+        "score": 3.484391927719116
+      }
+    ]
+  }
+]

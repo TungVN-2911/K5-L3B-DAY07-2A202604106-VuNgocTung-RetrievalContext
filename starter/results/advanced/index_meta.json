@@ -1,0 +1,123 @@
+{
+  "source_id": "ipcc-ar6-syr-2023",
+  "pdf_pages": 186,
+  "text_chunks": 804,
+  "visual_chunks": 107,
+  "rows_in_pgvector": 911,
+  "pgvector_strategy": "ipcc",
+  "pages_without_text_chunks": [
+    {
+      "page": 2,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 5,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 6,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 8,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 12,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 18,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 52,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 53,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 56,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 57,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 83,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 106,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 107,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 132,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 133,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 134,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 150,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 151,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 158,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 159,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 175,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    },
+    {
+      "page": 179,
+      "reason": "dưới 80 ký tự text (trang trắng, bìa hoặc chỉ có hình)"
+    }
+  ],
+  "vision": {
+    "model": "gemini-3.5-flash-lite",
+    "pages": 51,
+    "elements": {
+      "diagram": 23,
+      "chart": 42,
+      "table": 8,
+      "map": 25
+    },
+    "decorative": 1,
+    "errors": [],
+    "usage": {
+      "input": 75605,
+      "output": 31046,
+      "thinking": 0
+    }
+  },
+  "embedding_model": "nomic-embed-text",
+  "dimensions": 768,
+  "seconds": {
+    "total": 19.9,
+    "embed": 13.2
+  },
+  "cost_usd": 0,
+  "billing": "Gemini free tier + local embedding"
+}

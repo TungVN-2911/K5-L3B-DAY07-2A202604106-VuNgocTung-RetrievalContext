@@ -63,9 +63,27 @@ class GeminiClient:
         self.max_retries, self._last = max_retries, 0.0
 
     def generate(self, system: str, contents: list, tools: list, allowed: list[str]) -> dict[str, Any]:
-        body = {"systemInstruction": {"parts": [{"text": system}]}, "contents": contents, "tools": tools,
-                "toolConfig": {"functionCallingConfig": {"mode": "ANY", "allowedFunctionNames": allowed}},
-                "generationConfig": {"temperature": 0, **({"thinkingConfig": self.thinking} if self.thinking else {})}}
+        return self._post({"systemInstruction": {"parts": [{"text": system}]}, "contents": contents, "tools": tools,
+                           "toolConfig": {"functionCallingConfig": {"mode": "ANY", "allowedFunctionNames": allowed}},
+                           "generationConfig": {"temperature": 0, **({"thinkingConfig": self.thinking} if self.thinking else {})}})
+
+    def generate_json(self, parts: list[dict[str, Any]], system: str | None = None,
+                      max_output_tokens: int = 32768) -> tuple[Any, dict[str, int]]:
+        body = {"contents": [{"role": "user", "parts": parts}],
+                "generationConfig": {"temperature": 0, "responseMimeType": "application/json",
+                                     "maxOutputTokens": max_output_tokens,
+                                     **({"thinkingConfig": self.thinking} if self.thinking else {})}}
+        if system:
+            body["systemInstruction"] = {"parts": [{"text": system}]}
+        response = self._post(body)
+        candidates = response.get("candidates") or []
+        text = "".join(p.get("text", "") for p in (candidates[0].get("content") or {}).get("parts", [])) if candidates else ""
+        try:
+            return json.loads(text), usage_of(response)
+        except json.JSONDecodeError as error:
+            raise ProviderError(f"Gemini trả JSON không hợp lệ: {text[:200]!r}") from error
+
+    def _post(self, body: dict[str, Any]) -> dict[str, Any]:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent"
         data = json.dumps(body).encode("utf-8")
         for attempt in range(self.max_retries + 1):
@@ -110,13 +128,17 @@ def function_calls(response: dict[str, Any]) -> tuple[dict[str, Any], list[dict[
 
 class Agent:
     def __init__(self, llm, retriever, *, chapters: list[str], max_searches: int = 3, top_k: int = 4,
-                 budget: int = 6000, fixed_filter: dict[str, Any] | None = None) -> None:
+                 budget: int = 6000, fixed_filter: dict[str, Any] | None = None, system_prompt: str | None = None,
+                 extra_tools: dict[str, tuple[dict[str, Any], Any]] | None = None) -> None:
         if max_searches < 1 or top_k < 1 or budget < 1:
             raise ValueError("max_searches, top_k, budget phải >= 1")
         self.llm, self.retriever, self.chapters = llm, retriever, chapters
         self.max_searches, self.top_k, self.budget, self.fixed_filter = max_searches, top_k, budget, fixed_filter
+        # extra_tools: name -> (function declaration, handler(args, refs, events, state) -> list of reply parts)
+        self.extra_tools = extra_tools or {}
         self.tools = tool_declarations(chapters)
-        self.system = SYSTEM_PROMPT.format(max_searches=max_searches)
+        self.tools[0]["functionDeclarations"].extend(decl for decl, _ in self.extra_tools.values())
+        self.system = (system_prompt or SYSTEM_PROMPT).format(max_searches=max_searches)
 
     def run(self, question: str) -> dict[str, Any]:
         if not question.strip():
@@ -137,7 +159,7 @@ class Agent:
         try:
             while True:
                 searches = sum(e["event"] == "search" for e in events)
-                allowed = ["search", "answer", "abstain"] if searches < self.max_searches else ["answer", "abstain"]
+                allowed = (["search"] if searches < self.max_searches else []) + list(self.extra_tools) + ["answer", "abstain"]
                 response = self.llm.generate(self.system, contents, self.tools, allowed)
                 state["calls"] += 1
                 for k, v in usage_of(response).items():
@@ -159,7 +181,8 @@ class Agent:
                             text = expand_refs(args["answer"], refs)
                             events.append({"event": "answer", "refs": args["citations"]})
                             return finish("answered", text, [refs[r]["id"] for r in args["citations"]],
-                                          model_answer=args["answer"])
+                                          model_answer=args["answer"],
+                                          citations_detail=[citation_detail(refs[r]) for r in args["citations"]])
                         events.append({"event": "invalid_answer", "problem": problem, "args": args})
                         if state["retried"]:
                             return finish("abstain", ABSTAIN_TEXT, [], model_answer=args.get("answer", ""))
@@ -167,6 +190,8 @@ class Agent:
                         replies.append({"functionResponse": {"name": "answer", "response": {
                             "error": f"{problem}. Cite only refs returned by search: mark them in the answer text "
                                      "like [C1] or [C1, C2] and list the same refs in citations."}}})
+                    elif name in self.extra_tools:
+                        replies.extend(self.extra_tools[name][1](args, refs, events, state))
                     else:
                         replies.append({"functionResponse": {"name": name or "unknown", "response": {
                             "error": "search limit reached; call answer or abstain"}}})
@@ -193,7 +218,8 @@ class Agent:
                 ref = f"C{len(refs) + 1}"
                 by_id[r["id"]], refs[ref] = ref, r
                 state["chars"] += len(r["text"])
-            shown.append({"ref": ref, "page": r["page"], "chapter": r["metadata"].get("chapter"),
+            extra = {k: r["metadata"][k] for k in ("kind", "label") if r["metadata"].get(k)}
+            shown.append({"ref": ref, "page": r["page"], "chapter": r["metadata"].get("chapter"), **extra,
                           **({"text": r["text"]} if new else {"note": "already shown above"})})
             logged.append({"ref": ref, "id": r["id"], "page": r["page"], "rank": r["rank"], "score": r["score"], "new": new})
         events.append({"event": "search", "query": query, "filter": filters, "model_chapter": chapter,
@@ -218,6 +244,12 @@ class Agent:
             return f"refs {missing} not marked in answer text"
         stray = [r for r in marked if r not in citations]
         return f"refs {stray} in text but not in citations" if stray else None
+
+
+def citation_detail(chunk: dict[str, Any]) -> dict[str, Any]:
+    m = chunk["metadata"]
+    return {"id": chunk["id"], "page": chunk["page"], "printed_page": m.get("printed_page"),
+            "kind": m.get("kind", "text"), "region": m.get("label"), "bbox": m.get("bbox")}
 
 
 def text_refs(text: str) -> list[str]:

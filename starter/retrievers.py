@@ -46,19 +46,24 @@ def load_chunks(path: Path = CHUNKS) -> list[dict[str, Any]]:
 class DenseRetriever:
     name = "dense"
 
-    def __init__(self, strategy: str = DEFAULT_STRATEGY, *, embedder=None, store=None) -> None:
+    def __init__(self, strategy: str = DEFAULT_STRATEGY, *, embedder=None, store=None,
+                 catalog: dict[str, dict[str, Any]] | None = None) -> None:
         if embedder is None or store is None:
             from store import OllamaEmbedder, PgVectorStore
             embedder = embedder or OllamaEmbedder()
             store = store or PgVectorStore(embedder.dimensions)
         if store.dimensions != embedder.dimensions:
             raise RuntimeError(f"store {store.dimensions} chiều, embedder {embedder.dimensions} chiều")
-        self.embedder, self.store, self.strategy = embedder, store, strategy
+        # catalog: chunk id -> full record (kind, label, bbox, crop) not stored in pgvector columns.
+        self.embedder, self.store, self.strategy, self.catalog = embedder, store, strategy, catalog
 
     def search(self, query: str, *, filters: dict[str, Any] | None = None, top_k: int = 3) -> list[dict[str, Any]]:
         check_request(query, top_k, filters)
         rows = self.store.search(self.strategy, self.embedder.embed_query(query), top_k, filters)
-        return ranked([to_record(r) for r in rows], self.name)
+        records = [to_record(r) for r in rows]
+        if self.catalog is not None:
+            records = [{**self.catalog[r["id"]], "score": r["score"]} if r["id"] in self.catalog else r for r in records]
+        return ranked(records, self.name)
 
     def info(self) -> dict[str, Any]:
         return {"retriever": self.name, "index_strategy": self.strategy,
@@ -187,20 +192,22 @@ METHODS = ("dense", "bm25", "tfidf", "hybrid", "rerank")
 
 class Retrievers:
     def __init__(self, chunks: list[dict[str, Any]] | None = None, *, candidates: int = 20,
-                 rrf_k: int = 60, reranker: str = DEFAULT_RERANKER) -> None:
+                 rrf_k: int = 60, reranker: str = DEFAULT_RERANKER, chunks_path: Path = CHUNKS,
+                 strategy: str = DEFAULT_STRATEGY, catalog: bool = False) -> None:
         self._chunks, self.candidates, self.rrf_k, self.reranker = chunks, candidates, rrf_k, reranker
+        self.chunks_path, self.strategy, self.use_catalog = chunks_path, strategy, catalog
         self._cache: dict[str, Any] = {}
 
     def chunks(self) -> list[dict[str, Any]]:
         if self._chunks is None:
-            self._chunks = load_chunks()
+            self._chunks = load_chunks(self.chunks_path)
         return self._chunks
 
     def get(self, method: str):
         if method in self._cache:
             return self._cache[method]
         if method == "dense":
-            r = DenseRetriever()
+            r = DenseRetriever(self.strategy, catalog={c["id"]: c for c in self.chunks()} if self.use_catalog else None)
         elif method == "bm25":
             r = BM25Retriever(self.chunks())
         elif method == "tfidf":

@@ -4,3 +4,5 @@ pypdf>=5,<7
 python-dotenv>=1,<2
 # Cross-encoder reranker (ONNX, no torch)
 fastembed==0.9.1
+# Advanced challenge: PDF rendering, text blocks, crops
+pymupdf==2.1
