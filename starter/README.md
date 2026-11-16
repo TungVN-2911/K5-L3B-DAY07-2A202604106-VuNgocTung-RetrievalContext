@@ -10,6 +10,7 @@
 | `benchmark.py` | `check`: kiểm tra `data/questions.json`; `retrieval`: Hit@1, Evidence Hit@3, Context Evidence Rate, MRR theo phương pháp |
 | `retrievers.py` | `dense` (pgvector), `bm25`, `tfidf` (bọc baseline), `hybrid` (RRF dense + BM25), `rerank` (cross-encoder trên candidate hybrid); chạy trực tiếp để thử một query |
 | `agent.py` | Agent Gemini (REST, function calling): tool `search` / `answer` / `abstain`, citation `[C#]` map về chunk ID, trace từng câu |
+| `multimodal.py` | Thử thách nâng cao (IPCC AR6 SYR): `index` (text + Gemini vision + màu vector + pgvector), `retrieval`, `run` (agent có tool `view` ảnh vùng gốc), `score` |
 
 ## 0. Kết nối dữ liệu và vector store Day 6
 

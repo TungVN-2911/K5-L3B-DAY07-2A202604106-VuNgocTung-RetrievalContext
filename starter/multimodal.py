@@ -59,7 +59,9 @@ Rules:
 3. Answer only with facts shown in retrieved chunks or viewed images. Keep exact numbers, units, ranges in brackets, scenario/category, year and condition. When the question needs a calculation, show it.
 4. Cite every claim with refs such as [C2] (the ref of the table/figure/text that shows it) and list every cited ref in citations.
 5. If the report does not contain the requested information (for example country- or city-specific values, events after 2021, or a different variable than the one shown), call abstain. Never use outside knowledge and never guess.
-6. Answer in 1-3 sentences, in the language of the question."""
+6. For comparison questions, state the relationship explicitly (higher, lower, similar, within/outside a range) and by how much.
+7. Answer only what is asked; do not add values for other categories, sub-categories or years that the question did not ask about.
+8. Answer in 1-3 sentences, in the language of the question."""
 
 
 def norm(text: str) -> str:
@@ -385,6 +387,36 @@ def load_questions(split: str | None = None) -> list[dict]:
     return [q for q in qs if split is None or q["split"] == split]
 
 
+class SiblingRetriever:
+    # A long visual region is split into parts; when one part is retrieved, also return the parts of the
+    # same region that carry exact colour fills, so colour-coded cells are not lost to the split.
+    def __init__(self, base, chunks: list[dict]) -> None:
+        self.base, self.name = base, f"{base.name}+siblings"
+        self.parts: dict[str, list[dict]] = {}
+        for c in chunks:
+            if c["metadata"]["kind"] != "text" and re.search(r":\d+\.\d+$", c["id"]):
+                self.parts.setdefault(c["id"].rsplit(".", 1)[0], []).append(c)
+
+    def search(self, query, *, filters=None, top_k=3):
+        results = self.base.search(query, filters=filters, top_k=top_k)
+        seen, out = {r["id"] for r in results}, []
+        for r in results:
+            out.append(r)
+            for s in self.parts.get(r["id"].rsplit(".", 1)[0], []):
+                if s["id"] not in seen and "- row '" in s["text"]:
+                    seen.add(s["id"])
+                    out.append({**s, "score": r["score"], "rank": r["rank"], "strategy": self.name,
+                                "metadata": {**s["metadata"], "sibling_of": r["id"]}})
+        return out
+
+    def info(self):
+        return {"retriever": self.name, "base": self.base.info()}
+
+    def close(self):
+        if hasattr(self.base, "close"):
+            self.base.close()
+
+
 def retrievers_for_advanced(**kw):
     from retrievers import Retrievers
     return Retrievers(chunks_path=CHUNKS, strategy=STRATEGY, catalog=True, **kw)
@@ -427,8 +459,15 @@ def run_retrieval(args) -> None:
 
 # ---------- agent ----------
 
-def view_tool(doc, max_views: int):
+def view_tool(doc, max_views: int, chunks: list[dict] | None = None):
     import pymupdf
+    # Exact colour cells of each region (all parts), returned next to the image so the model does not
+    # judge similar shades by eye.
+    colour_lines: dict[str, list[str]] = {}
+    for ch in chunks or []:
+        cells = [l for l in ch["text"].splitlines() if l.startswith("- row '") or l.startswith("NOTE: colour names")]
+        if cells and ch["metadata"]["kind"] != "text":
+            colour_lines.setdefault(ch["id"].rsplit(".", 1)[0], []).extend(l for l in cells if l not in colour_lines.get(ch["id"].rsplit(".", 1)[0], []))
     # A 'zoom' argument was tried on dev and removed: the model zoomed repeatedly, exhausted the view
     # budget and abstained (see report). The handler still accepts it for reproducibility.
     decl = {"name": "view", "description": "Show the original page image of a retrieved ref (its table/figure region, or the page for text).",
@@ -461,8 +500,14 @@ def view_tool(doc, max_views: int):
             png = page.get_pixmap(dpi=130, clip=base).tobytes("png")
         events.append({"event": "view", "ref": ref, "id": c["id"], "page": c["page"], "region": m.get("label"),
                        "zoom": zoom, "bytes": len(png)})
-        return [{"functionResponse": {"name": "view", "response": {"ref": ref, "page": c["page"], "printed_page": m.get("printed_page"),
-                                                                  "region": m.get("label") or "page text", "note": "image follows"}}},
+        response = {"ref": ref, "page": c["page"], "printed_page": m.get("printed_page"),
+                    "region": m.get("label") or "page text", "note": "image follows"}
+        exact = colour_lines.get(c["id"].rsplit(".", 1)[0]) if re.search(r":\d+\.\d+$", c["id"]) else colour_lines.get(c["id"])
+        if exact:
+            response["exact_colour_cells"] = exact
+            response["note"] = ("image follows; colour categories of cells in this region are given EXACTLY in "
+                                "exact_colour_cells (hex -> legend meaning) — use them, not the visual shade")
+        return [{"functionResponse": {"name": "view", "response": response}},
                 {"inlineData": {"mimeType": "image/png", "data": base64.b64encode(png).decode()}}]
     return decl, handler
 
@@ -479,15 +524,17 @@ def run_agent(args) -> None:
         questions = [q for q in questions if q["id"] in args.ids]
     config = {"model": llm.model, "method": args.method, "max_searches": args.max_searches, "top_k": args.top_k,
               "budget_chars": args.budget, "max_views": args.max_views, "candidates": args.candidates,
-              "view_tool": args.max_views > 0, "temperature": 0}
+              "view_tool": args.max_views > 0, "siblings": args.siblings, "temperature": 0}
     traces = []
     out = args.output or RESULTS / "agent" / f"{args.split}-{args.method}"
     out.mkdir(parents=True, exist_ok=True)
     try:
         retriever = retrievers.get(args.method)
+        if args.siblings:
+            retriever = SiblingRetriever(retriever, retrievers.chunks())
         chapters = chapters_of(retrievers.chunks())
         for q in questions:
-            tools = {"view": view_tool(doc, args.max_views)} if args.max_views > 0 else {}
+            tools = {"view": view_tool(doc, args.max_views, retrievers.chunks())} if args.max_views > 0 else {}
             agent = Agent(llm, retriever, chapters=chapters, max_searches=args.max_searches, top_k=args.top_k,
                           budget=args.budget, system_prompt=SYSTEM_PROMPT, extra_tools=tools,
                           claim_citations=True)
@@ -560,6 +607,7 @@ def main():
     p.add_argument("--top-k", type=int, default=5)
     p.add_argument("--budget", type=int, default=12000)
     p.add_argument("--max-views", type=int, default=3)
+    p.add_argument("--no-siblings", dest="siblings", action="store_false", help="tắt mở rộng part anh em có màu fill")
     p.add_argument("--candidates", type=int, default=30)
     p.add_argument("--model")
     p.add_argument("--output", type=Path)

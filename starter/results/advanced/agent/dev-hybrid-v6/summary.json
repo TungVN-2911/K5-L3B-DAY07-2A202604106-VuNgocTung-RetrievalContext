@@ -1,0 +1,30 @@
+{
+  "config": {
+    "model": "gemini-3.5-flash-lite",
+    "method": "hybrid",
+    "max_searches": 4,
+    "top_k": 5,
+    "budget_chars": 12000,
+    "max_views": 3,
+    "candidates": 30,
+    "view_tool": true,
+    "siblings": true,
+    "temperature": 0
+  },
+  "questions": 23,
+  "status": {
+    "answered": 19,
+    "abstain": 4
+  },
+  "context_evidence": "17/19",
+  "views": 14,
+  "llm_calls": 96,
+  "usage_tokens": {
+    "input": 352604,
+    "output": 4216,
+    "thinking": 0
+  },
+  "cost_usd": 0,
+  "billing": "Gemini free tier",
+  "median_elapsed_s": 11.0
+}

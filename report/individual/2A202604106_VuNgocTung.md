@@ -105,4 +105,88 @@ Nhãn dev và test do Claude soạn nháp sau khi đọc đối chiếu chunk đ
 
 ## Thử thách nâng cao (nếu thực hiện)
 
-Chưa thực hiện.
+> **Trạng thái:** đã xong tài liệu, index, benchmark và thử nghiệm trên dev. **Test chưa chạy.** Tỷ lệ đạt test và điều kiện bonus sẽ điền sau khi chạy cấu hình đã chốt một lần trên test.
+
+- **Tài liệu, nguồn, quyền sử dụng, số trang và phiên bản:**
+  - *IPCC AR6 Synthesis Report: Climate Change 2023* (Full Volume), 186 trang PDF, ISBN 978-92-9169-164-7, DOI 10.59327/IPCC/AR6-9789291691647.
+  - Trang ii ghi: *"Short extracts from this publication may be reproduced without authorization provided that complete source is clearly indicated."* PDF không commit; cách lấy file và sha256 ở [data/advanced/manifest.json](../../data/advanced/manifest.json).
+  - Đã thử trước *OECD Economic Surveys: Viet Nam 2025* (139 trang, CC BY 4.0) nhưng bỏ: mọi hình đánh số đều là biểu đồ, ảnh duy nhất là 4 ảnh bìa trang trí, nên không đủ nhóm "Ảnh, sơ đồ".
+- **Cách xử lý text, bảng, ảnh, biểu đồ** ([starter/multimodal.py](../../starter/multimodal.py)):
+  - *Text:* các block của PyMuPDF (bỏ header/footer) được gom thành chunk ≤ 900 ký tự, giữ bbox. Kết quả: 804 chunk.
+  - *Trang có hình/bảng (51 trang):* chọn khi trang có caption "Figure/Table…" (kể cả "Table 2.2 Projected…" không có dấu ":"), có > 40 nét vector, hoặc có ảnh lớn. Mỗi trang được render 150 dpi và gửi Gemini vision (`gemini-3.5-flash-lite`). Vision trả JSON gồm loại phần tử (table/chart/diagram/map/image/decorative), nhãn, tiêu đề, `box_2d` và mô tả có cấu trúc (bảng chép thành markdown, biểu đồ ghi trục/chú giải/giá trị, sơ đồ ghi hộp/mũi tên/ký hiệu).
+  - *Kết quả:* 98 phần tử (42 biểu đồ, 25 bản đồ, 23 sơ đồ, 8 bảng), 1 ảnh trang trí bị loại. Mỗi phần tử lưu bbox, ảnh crop 150 dpi và text PDF trong vùng. Mô tả dài được tách thành part có cùng nhãn, ra 155 chunk trực quan; tổng index 959 chunk trong pgvector (strategy `ipcc`, `nomic-embed-text`).
+  - *Sửa nhãn vùng:* 41 phần tử bị vision gán nhầm nhãn (thường đoán "Figure SPM.x" khi caption nằm ở trang kế bên). Nhãn được đặt lại theo caption thật trong text layer (cùng trang, trang sau, trang sau nữa, trang trước); nhãn gốc lưu ở `vision_label`.
+  - *Màu chính xác từ vector:* 53 vùng có màu ô được chú giải bằng ô mẫu. Mỗi ô ghi `hàng | cột -> #hex (ý nghĩa chú giải)`, đọc thẳng từ fill của PDF.
+- **Phần chưa xử lý và ảnh hưởng:**
+  - p39 (Figure SPM.5): vision trả `finishReason: RECITATION`; thử lại với prompt rút gọn và prompt diễn đạt lại vẫn ra rỗng. Chỉ còn caption/text được index. Benchmark không hỏi hình này.
+  - 22 trang không có chunk text (bìa, trang trắng, trang chỉ có hình). Các trang chỉ có hình đã được phủ bằng vision.
+  - Chấm chấm biểu thị độ tin cậy (•/••/•••) trong SPM.7 không được trích tự động; agent phải đọc từ ảnh.
+- **Kiểm tra trích xuất với bản gốc:**
+  - Table 2.2: 12/12 ô khớp ảnh trang.
+  - Table 3.1: 5 ô dùng trong benchmark khớp (890 [640–1160], 510 [330–710], 1.7 [1.5–1.8], 59 [50–77], 20 [13–41]).
+  - Table 2.1: mô tả vision **sai** ô human contribution của "Ocean heat content" (ghi orange/very likely; gốc là đỏ cam/extremely likely). Đây là lý do thêm bước trích màu vector. Màu vector của các hàng Ocean heat content, Greenland (Table 2.1) và Efficient livestock systems, Forest-based adaptation (SPM.7) đều khớp bản gốc.
+- **Cách chia benchmark, schema evidence:** [data/advanced/questions.json](../../data/advanced/questions.json), commit `59dc17a` **trước** mọi thử nghiệm.
+  - Test 30 câu: bảng 6, ảnh/sơ đồ 5, biểu đồ 5, multi-hop 4, text 4, thiếu evidence 6. Dev 23 câu: 19 có đáp án, phủ 5 nhóm, cộng 4 câu thiếu evidence.
+  - Mỗi câu có nhóm, đáp án, đơn vị, điều kiện, phép tính và evidence (trang PDF và trang in, vùng như "Table 3.1" / "Figure SPM.7 panel a", vị trí hàng/cột, giá trị). Có thêm evidence thay thế (ví dụ SPM.7 ↔ Figure 4.4, SPM.6 ↔ Figure 4.2) và lý do chọn câu.
+  - Gold đọc từ text layer hoặc ảnh trang gốc, không lấy từ pipeline. Text evidence được kiểm tự động bằng so khớp nguyên văn; câu thiếu evidence được kiểm bằng pattern trên toàn bộ 186 trang (giới hạn: chữ trong ảnh raster).
+  - Dev và test không hỏi cùng một ô/giá trị.
+
+**Retrieval trên dev** (19 câu có đáp án, index cuối). Một kết quả tính là trúng khi cùng trang và cùng vùng Table/Figure với evidence trực quan, hoặc cùng trang và chứa trích dẫn với evidence text. Multi-hop phải trúng đủ mọi evidence.
+
+| Phương pháp | Hit@1 | Hit@3 | Hit@5 | Hit@10 | Bảng (Hit@5) | Multi-hop (Hit@5) | ms/query |
+|---|---|---|---|---|---|---|---|
+| BM25 | 11/19 | 16/19 | 16/19 | 17/19 | 4/5 | 1/3 | 4 |
+| Dense | 12/19 | 14/19 | 16/19 | 17/19 | 4/5 | 1/3 | 50 |
+| **Hybrid RRF** | **14/19** | **16/19** | 16/19 | **18/19** | 4/5 | 1/3 | 27 |
+| Hybrid + rerank MiniLM | 11/19 | 14/19 | 14/19 | 18/19 | 2/5 | 1/3 | 5961 |
+
+Rerank kém và chậm vì chunk bảng/hình dài, MiniLM chỉ đọc khoảng 512 token đầu. Multi-hop một lượt chỉ đạt 1/3, nên agent tìm nhiều lượt cho từng phần.
+
+**Agent trên dev** (`gemini-3.5-flash-lite`, retriever hybrid). Nhãn đạt/không đạt do Claude soạn nháp theo tiêu chí của ADVANCED.md: đúng và đủ, citation đúng trang và vùng, không thêm khẳng định sai. Từ v5 trở đi chấm chặt câu so sánh (phải nêu quan hệ). Trace ở [starter/results/advanced/agent/](../../starter/results/advanced/agent/).
+
+| Lượt | Thay đổi / giả thuyết | Kết quả dev | Lỗi chính |
+|---|---|---|---|
+| quota-error | Cấu hình đầu: view ảnh vùng gốc | 13 trả lời, 10 lỗi 429 | Hết 500 request/ngày của free tier, không tính chất lượng |
+| (flash) | Thử `gemini-3.5-flash` | 5 câu rồi dừng | Free tier chỉ 20 request/ngày |
+| v1 | Như trên, đủ quota | 21/23 | ad04, ad05 đọc nhầm sắc độ màu |
+| v2 | + sửa nhãn vùng, + màu vector, + tool `zoom` 300 dpi | ~18/23 | Zoom liên tục, hết lượt view, từ chối nhầm 4 câu: **bỏ zoom** |
+| v3 | Bỏ zoom; chỉ ghi màu khi có chú giải khớp (Table 3.1 hết nhiễu) | 21/23 | ad04; ad13 chưa nêu quan hệ so sánh |
+| v4 | + ghi chú "tên màu trong mô tả là đoán" | 20/23 | ad02 lỗi 503; ad04; ad12 thiếu citation cho một ý |
+| v5 | Dòng màu ghi thẳng ý nghĩa chú giải; kiểm tra citation theo từng câu có số; retry 10 lần | 19/23 | ad04, ad05; ad13, ad14 không nêu quan hệ |
+| v6 | + mở rộng part anh em có màu; + quy tắc nêu quan hệ so sánh | 20/23 | ad02 thêm giá trị sai cho C1b; ad04, ad05 |
+| v7 (dang dở) | + trả màu chính xác kèm ảnh khi `view`; + "chỉ trả lời phần được hỏi" | 18/19 câu có đáp án đã chạy | ad05 (feasibility Low đọc thành Medium); 4 câu thiếu evidence chưa chạy |
+
+Bốn câu thiếu evidence của dev được từ chối đúng ở mọi lượt đã chạy đủ (v1, v3–v6). Lỗi còn lại chủ yếu là đọc ký hiệu và màu trong ma trận SPM.7.
+
+- **Cấu hình sẽ chốt (theo dev):** hybrid RRF (dense + BM25, 30 candidate) → top-5, tối đa 4 search, 3 lượt `view` (ảnh crop vùng gốc kèm màu vector), budget 12000 ký tự, mở rộng part anh em có màu, kiểm tra citation theo từng câu có số, retry 10 lần, temperature 0. Test sẽ chạy **một lần** với cấu hình này.
+
+| Nhóm test | Đạt / tổng | Tỷ lệ | Lỗi / nhận xét |
+|---|---|---|---|
+| Bảng | chưa chạy | | |
+| Ảnh, sơ đồ | chưa chạy | | |
+| Biểu đồ | chưa chạy | | |
+| Multi-hop | chưa chạy | | |
+| Text | chưa chạy | | |
+| Thiếu bằng chứng | chưa chạy | | |
+| **Toàn bộ** | chưa chạy | | Cần ≥ 27/30 |
+
+- **Thời gian, chi phí, lỗi hệ thống:**
+  - Index: vision 51 trang, khoảng 11 phút lần đầu (có cache), 75 605 token input / 31 046 output; embed 959 chunk khoảng 19 giây.
+  - Agent dev: 4–50 giây mỗi câu khi không bị giới hạn tốc độ.
+  - Chi phí 0 USD (Gemini free tier, embedding/rerank local).
+  - Free tier giới hạn 500 request/ngày cho `flash-lite`. Các lượt chạy phải chia nhiều phiên và có lúc đổi sang API key khác; lỗi 429/503 được retry và ghi vào trace.
+- **Giới hạn:**
+  - `flash-lite` đọc sắc độ gần nhau và số chấm không ổn định giữa các lần chạy (ad05 đúng ở v3, v4, sai ở v5–v7).
+  - Nhãn chấm là bản nháp, cần người làm bài xác nhận.
+  - Dev nhỏ (19 câu có đáp án), mỗi câu tương ứng khoảng 5 điểm phần trăm.
+- **Tái lập:**
+
+```bash
+.venv/Scripts/python -m pip install -r requirements.txt     # có pymupdf
+# PDF tại data/advanced/IPCC_AR6_SYR_FullVolume.pdf (xem manifest), GEMINI_API_KEY trong starter/.env
+.venv/Scripts/python starter/multimodal.py index                      # text + vision + màu vector + pgvector (cache vision ở starter/data/advanced/vision)
+.venv/Scripts/python starter/multimodal.py retrieval --split dev
+.venv/Scripts/python starter/multimodal.py run --split dev --method hybrid
+.venv/Scripts/python starter/multimodal.py run --split test --method hybrid   # một lần, sau khi chốt
+.venv/Scripts/python starter/multimodal.py score starter/results/advanced/agent/test-hybrid   # sau khi chấm labels.json
+```

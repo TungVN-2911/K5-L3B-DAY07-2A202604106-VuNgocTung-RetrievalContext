@@ -20,3 +20,14 @@ Không đưa `gold` hoặc nhãn đáp án vào model và retrieval tool. Ghi ng
 - **q01–q20** chuyển từ `source_questions.jsonl` (benchmark Day 6), giữ nguyên split. Test Day 6 chỉ dùng để báo kết quả sau khi chốt chunking, chưa dùng để chỉnh agent Day 7. Hai chỗ sửa ghi trong trường `note`: q11 bỏ trang 133 (evidence chỉ ở p132); q13 rút evidence về câu cốt lõi vì đoạn gốc vắt qua hai chunk fixed500-50.
 - **u01–u06** là câu gần chủ đề nhưng thiếu evidence. `absence_check.absent_patterns` được dò trên text NFKC của toàn bộ 384 trang PDF; `related_pages` là trang nói về chủ đề gần nhất. Giới hạn: chữ nằm trong ảnh chưa OCR nên không kiểm được tự động.
 - Kiểm tra: `python starter/benchmark.py` (schema, số câu tối thiểu, gold nằm trọn trong chunk đúng trang, absence).
+
+## Benchmark thử thách nâng cao
+
+[advanced/questions.json](advanced/questions.json): IPCC AR6 SYR (nguồn và quyền trong [advanced/manifest.json](advanced/manifest.json)), commit trước mọi thử nghiệm.
+
+| Split | Bảng | Ảnh, sơ đồ | Biểu đồ | Multi-hop | Text | Thiếu evidence | Tổng |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| dev | 5 | 4 | 3 | 3 | 4 | 4 | 23 |
+| test | 6 | 5 | 5 | 4 | 4 | 6 | 30 |
+
+Mỗi câu có `group`, `expected_answer`, `unit`, `condition`, `computation`, `evidence` (trang PDF + trang in, vùng, vị trí hàng/cột, giá trị, loại), `alternative_evidence` (bản lặp SPM ↔ longer report), `evidence_required` (`all` cho multi-hop), `reason`. Câu thiếu evidence có `absence_check` (pattern dò trên toàn bộ 186 trang, trang liên quan, ghi chú kiểm tra hình).

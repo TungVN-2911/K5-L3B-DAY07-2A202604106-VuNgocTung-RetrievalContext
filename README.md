@@ -9,6 +9,7 @@
 | Retrieval | `dense`, `bm25`, `hybrid` (RRF), `rerank` (hybrid → cross-encoder MiniLM-L-12), `tfidf` (starter) |
 | Agent | `gemini-3.5-flash-lite` (Gemini API free tier, 0 USD), function calling `search` / `answer` / `abstain` ([starter/agent.py](starter/agent.py)) |
 | Benchmark | 26 câu: dev 15 + 3 thiếu evidence, test 5 + 3 ([data/questions.json](data/questions.json)) |
+| Thử thách nâng cao | IPCC AR6 SYR 186 trang: index text + vision (bảng, biểu đồ, sơ đồ, bản đồ) + màu vector, benchmark dev 23 / test 30 ([data/advanced/](data/advanced/), [starter/multimodal.py](starter/multimodal.py)); test chưa chạy |
 | Báo cáo | [report/individual/2A202604106_VuNgocTung.md](report/individual/2A202604106_VuNgocTung.md) |
 | Kết quả | [starter/results/](starter/results/): retrieval (`dev`, `test`, thử nghiệm), agent (trace, nhãn, metrics) |
 
