@@ -1,0 +1,66 @@
+{
+  "config": {
+    "split": "dev",
+    "questions": 15,
+    "use_filter": false,
+    "depth": 10,
+    "context": "top-3, budget 2000 ký tự (gồm header nguồn), pack_context của baseline",
+    "candidates": 20,
+    "rrf_k": 60
+  },
+  "methods": {
+    "rerank": {
+      "info": {
+        "retriever": "rerank",
+        "reranker": "BAAI/bge-reranker-base",
+        "candidates": 20,
+        "first_stage": {
+          "retriever": "hybrid",
+          "fusion": "RRF, score = sum 1/(60 + rank)",
+          "candidates_per_retriever": 20,
+          "components": [
+            {
+              "retriever": "dense",
+              "index_strategy": "A",
+              "embedding_model": "nomic-embed-text",
+              "dimensions": 768,
+              "metric": "cosine, score = 1 - distance",
+              "search": "exact (pgvector, no ANN index)"
+            },
+            {
+              "retriever": "bm25",
+              "k1": 1.5,
+              "b": 0.75,
+              "chunks": 621,
+              "tokenizer": "regex \\w+, NFC, casefold, không stopword/stemming"
+            }
+          ]
+        }
+      },
+      "load_s": 64.33,
+      "hit1": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.933
+      },
+      "hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_evidence": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "mrr@10": 0.967,
+      "recall@10": {
+        "n": 15,
+        "N": 15
+      },
+      "median_ms": 1968.6,
+      "mean_context_chars": 1529,
+      "cost_usd": 0
+    }
+  }
+}

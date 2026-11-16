@@ -6,10 +6,11 @@
       "ai-engineering-2025:p10:fixed500-50:0"
     ],
     "citation_support": [
-      null
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Khớp nguyên văn định nghĩa p10.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q02",
@@ -19,11 +20,12 @@
       "ai-engineering-2025:p31:fixed500-50:0"
     ],
     "citation_support": [
-      null,
-      null
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "p29 hỗ trợ greedy/uniform/random, p31 hỗ trợ deterministic/creativity/diversity/noise. Không nêu ngưỡng ~0 và 0.7–1.0 nhưng câu hỏi không yêu cầu giá trị.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q03",
@@ -32,10 +34,11 @@
       "ai-engineering-2025:p32:fixed500-50:0"
     ],
     "citation_support": [
-      null
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Top-p, khớp p32.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q04",
@@ -45,11 +48,12 @@
       "ai-engineering-2025:p60:fixed500-50:0"
     ],
     "citation_support": [
-      null,
-      null
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Typicality bias (p59); giải thích annotator ở p60 đúng.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q05",
@@ -59,11 +63,12 @@
       "ai-engineering-2025:p107:fixed500-50:0"
     ],
     "citation_support": [
-      null,
-      null
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "p51: không đổi weights, chỉ đổi instruction; p107: steers at inference time.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q06",
@@ -73,11 +78,12 @@
       "ai-engineering-2025:p68:fixed500-50:1"
     ],
     "citation_support": [
-      null,
-      null
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Định nghĩa p68 c0; phần adapt distributions ở p68 c1.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q07",
@@ -86,10 +92,11 @@
       "ai-engineering-2025:p69:fixed500-50:1"
     ],
     "citation_support": [
-      null
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "175B tham số, 350GB float16 (p69).",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q08",
@@ -98,10 +105,11 @@
       "ai-engineering-2025:p107:fixed500-50:0"
     ],
     "citation_support": [
-      null
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Khớp p107.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q09",
@@ -112,12 +120,13 @@
       "ai-engineering-2025:p116:fixed500-50:0"
     ],
     "citation_support": [
-      null,
-      null,
-      null
+      true,
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "p108 định nghĩa; p112 semantic information; p116 metadata và original content.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q10",
@@ -126,10 +135,11 @@
       "ai-engineering-2025:p121:fixed500-50:0"
     ],
     "citation_support": [
-      null
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Cả lý do overlap và nhược điểm đều ở p121.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q11",
@@ -138,10 +148,11 @@
       "ai-engineering-2025:p132:fixed500-50:0"
     ],
     "citation_support": [
-      null
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Khớp p132.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q12",
@@ -151,11 +162,12 @@
       "ai-engineering-2025:p143:fixed500-50:1"
     ],
     "citation_support": [
-      null,
-      null
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "KV memory, remember stable info (p143 c0); static data cached once (p143 c1).",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q13",
@@ -166,12 +178,13 @@
       "ai-engineering-2025:p148:fixed500-50:0"
     ],
     "citation_support": [
-      null,
-      null,
-      null
+      true,
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Ý chính đúng (p148). Ý thêm về traditional RAG retrieve once được p130 hỗ trợ nhưng hơi lan man.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q14",
@@ -181,11 +194,12 @@
       "ai-engineering-2025:p158:fixed500-50:1"
     ],
     "citation_support": [
-      null,
-      null
+      true,
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Đúng p150; thêm danh sách memory ở p158 (cùng chương), không mâu thuẫn.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "q15",
@@ -194,33 +208,37 @@
       "ai-engineering-2025:p196:fixed500-50:1"
     ],
     "citation_support": [
-      null
+      true
     ],
-    "answer_grade": null,
-    "note": ""
+    "answer_grade": 2,
+    "note": "Semantic/episodic/procedural (p196).",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "u01",
     "status": "abstain",
     "citations": [],
     "citation_support": [],
-    "abstention_correct": null,
-    "note": ""
+    "abstention_correct": true,
+    "note": "Từ chối sau 3 lượt search (BM25, k1, b); không khẳng định thêm.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "u02",
     "status": "abstain",
     "citations": [],
     "citation_support": [],
-    "abstention_correct": null,
-    "note": ""
+    "abstention_correct": true,
+    "note": "Từ chối sau 3 lượt search HNSW/ef_search.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   },
   {
     "query_id": "u03",
     "status": "abstain",
     "citations": [],
     "citation_support": [],
-    "abstention_correct": null,
-    "note": ""
+    "abstention_correct": true,
+    "note": "Từ chối sau 3 lượt search MMLU; không bịa điểm.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
   }
 ]

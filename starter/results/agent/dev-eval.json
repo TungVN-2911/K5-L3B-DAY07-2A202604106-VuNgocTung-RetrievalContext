@@ -1,0 +1,201 @@
+[
+  {
+    "run": "dev-dense-v0",
+    "split": "dev",
+    "questions": 18,
+    "status": {
+      "answered": 10,
+      "abstain": 8,
+      "error": 0
+    },
+    "tool_use": {
+      "n": 18,
+      "N": 18
+    },
+    "searches": {
+      "1": 13,
+      "2": 1,
+      "3": 4
+    },
+    "llm_calls_mean": 2.78,
+    "context_evidence": {
+      "n": 14,
+      "N": 15
+    },
+    "citation_has_gold_auto": {
+      "n": 10,
+      "N": 10
+    },
+    "tokens": {
+      "input": 46745,
+      "output": 2067,
+      "thinking": 0
+    },
+    "median_elapsed_s": 15.9,
+    "human_labels": "chưa chấm: 18"
+  },
+  {
+    "run": "dev-rerank-v0",
+    "split": "dev",
+    "questions": 18,
+    "status": {
+      "answered": 9,
+      "abstain": 9,
+      "error": 0
+    },
+    "tool_use": {
+      "n": 18,
+      "N": 18
+    },
+    "searches": {
+      "1": 14,
+      "3": 4
+    },
+    "llm_calls_mean": 2.89,
+    "context_evidence": {
+      "n": 15,
+      "N": 15
+    },
+    "citation_has_gold_auto": {
+      "n": 9,
+      "N": 9
+    },
+    "tokens": {
+      "input": 50014,
+      "output": 2430,
+      "thinking": 0
+    },
+    "median_elapsed_s": 4.6,
+    "human_labels": "chưa chấm: 18"
+  },
+  {
+    "run": "dev-dense",
+    "split": "dev",
+    "questions": 18,
+    "status": {
+      "answered": 15,
+      "abstain": 3,
+      "error": 0
+    },
+    "tool_use": {
+      "n": 18,
+      "N": 18
+    },
+    "searches": {
+      "1": 13,
+      "2": 1,
+      "3": 4
+    },
+    "llm_calls_mean": 2.56,
+    "context_evidence": {
+      "n": 15,
+      "N": 15
+    },
+    "citation_has_gold_auto": {
+      "n": 15,
+      "N": 15
+    },
+    "tokens": {
+      "input": 42258,
+      "output": 1787,
+      "thinking": 0
+    },
+    "median_elapsed_s": 6.7,
+    "human_labels": {
+      "cases": 18,
+      "provider_errors": 0,
+      "tool_use": {
+        "n": 18,
+        "N": 18
+      },
+      "grounded_answer": {
+        "0": 0,
+        "1": 1,
+        "2": 14,
+        "N": 15,
+        "mean": 1.9333333333333333
+      },
+      "citation_validity": {
+        "n": 22,
+        "N": 22
+      },
+      "answer_citation_coverage": {
+        "n": 15,
+        "N": 15
+      },
+      "abstention": {
+        "n": 3,
+        "N": 3
+      },
+      "false_abstention": {
+        "n": 0,
+        "N": 15
+      }
+    }
+  },
+  {
+    "run": "dev-rerank",
+    "split": "dev",
+    "questions": 18,
+    "status": {
+      "answered": 15,
+      "abstain": 3,
+      "error": 0
+    },
+    "tool_use": {
+      "n": 18,
+      "N": 18
+    },
+    "searches": {
+      "1": 14,
+      "2": 1,
+      "3": 3
+    },
+    "llm_calls_mean": 2.44,
+    "context_evidence": {
+      "n": 15,
+      "N": 15
+    },
+    "citation_has_gold_auto": {
+      "n": 15,
+      "N": 15
+    },
+    "tokens": {
+      "input": 39488,
+      "output": 1865,
+      "thinking": 0
+    },
+    "median_elapsed_s": 13.3,
+    "human_labels": {
+      "cases": 18,
+      "provider_errors": 0,
+      "tool_use": {
+        "n": 18,
+        "N": 18
+      },
+      "grounded_answer": {
+        "0": 0,
+        "1": 0,
+        "2": 15,
+        "N": 15,
+        "mean": 2.0
+      },
+      "citation_validity": {
+        "n": 25,
+        "N": 25
+      },
+      "answer_citation_coverage": {
+        "n": 15,
+        "N": 15
+      },
+      "abstention": {
+        "n": 3,
+        "N": 3
+      },
+      "false_abstention": {
+        "n": 0,
+        "N": 15
+      }
+    }
+  }
+]

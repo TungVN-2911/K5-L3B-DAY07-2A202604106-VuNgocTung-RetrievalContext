@@ -152,6 +152,65 @@ def run_retrieval(args) -> None:
               f"{m[f'mrr@{args.depth}']:.3f} | {m['median_ms']} | {m['load_s']} |")
 
 
+def labeled(review: dict) -> bool:
+    keys = ["citation_support"] + [k for k in ("answer_grade", "abstention_correct") if k in review]
+    return all(review[k] is not None for k in keys) and None not in review["citation_support"]
+
+
+def evaluate_agent_run(run: Path, questions: list[dict], chunks: dict[str, dict]) -> dict:
+    from agent_metrics import aggregate
+    traces = json.loads((run / "traces.json").read_text(encoding="utf-8"))
+    by_q = {q["id"]: q for q in questions}
+    ok = [t for t in traces if t["status"] != "error"]
+    gold_q = [t for t in ok if by_q[t["query_id"]]["answerable"]]
+
+    def gold_hit(ids, q):
+        return any(i in chunks and hit(chunks[i], q["gold"]) for i in ids)
+
+    out = {"run": run.name, "split": traces[0]["split"], "questions": len(traces),
+           "status": {s: sum(t["status"] == s for t in traces) for s in ("answered", "abstain", "error")},
+           "tool_use": {"n": sum(t["searches"] > 0 for t in ok), "N": len(ok)},
+           "searches": dict(sorted(Counter(str(t["searches"]) for t in ok).items())),
+           "llm_calls_mean": round(statistics.mean(t["llm_calls"] for t in ok), 2) if ok else None,
+           "context_evidence": {"n": sum(gold_hit(t["context_ids"], by_q[t["query_id"]]) for t in gold_q), "N": len(gold_q)},
+           "citation_has_gold_auto": {"n": sum(gold_hit(t["citations"], by_q[t["query_id"]]) for t in gold_q
+                                               if t["status"] == "answered"),
+                                      "N": sum(t["status"] == "answered" for t in gold_q)},
+           "tokens": {k: sum(t["usage"][k] for t in traces) for k in ("input", "output", "thinking")},
+           "median_elapsed_s": round(statistics.median(t["elapsed_s"] for t in traces), 1)}
+    reviews_path = run / "reviews.json"
+    reviews = json.loads(reviews_path.read_text(encoding="utf-8")) if reviews_path.exists() else []
+    pending = [r["query_id"] for r in reviews if not labeled(r)]
+    if reviews and not pending:
+        cases = [{"id": q["id"], "answerable": q["answerable"]} for q in questions if q["id"] in {t["query_id"] for t in traces}]
+        out["human_labels"] = aggregate(cases, traces, reviews)
+    else:
+        out["human_labels"] = f"chưa chấm: {len(pending) if reviews else 'không có reviews.json'}"
+    return out
+
+
+def run_agent_eval(args) -> None:
+    questions = load_questions(args.questions)
+    chunks = {c["id"]: c for c in json.loads(args.chunks.read_text(encoding="utf-8"))}
+    reports = [evaluate_agent_run(run, questions, chunks) for run in args.runs]
+    (args.output).parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(reports, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    f = lambda x: f"{x['n']}/{x['N']}"
+    print("| Run | answered/abstain/error | Tool use | Searches | Context Evidence | Citation có gold (auto) | Grounded 0/1/2 (mean) | Citation hợp lệ | Abstention đúng | Từ chối nhầm | tokens in/out | median s |")
+    print("|---|---|---|---|---|---|---|---|---|---|---|---|")
+    for r in reports:
+        h = r["human_labels"]
+        if isinstance(h, dict):
+            g = h["grounded_answer"]
+            human = (f"{g['0']}/{g['1']}/{g['2']} ({g['mean']:.2f})", f(h["citation_validity"]), f(h["abstention"]), f(h["false_abstention"]))
+        else:
+            human = (h, "", "", "")
+        s = r["status"]
+        print(f"| {r['run']} | {s['answered']}/{s['abstain']}/{s['error']} | {f(r['tool_use'])} | {r['searches']} | "
+              f"{f(r['context_evidence'])} | {f(r['citation_has_gold_auto'])} | {' | '.join(human)} | "
+              f"{r['tokens']['input']}/{r['tokens']['output']} | {r['median_elapsed_s']} |")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Benchmark: kiểm tra bộ câu hỏi và đánh giá retrieval")
     parser.add_argument("--questions", type=Path, default=QUESTIONS)
@@ -170,8 +229,12 @@ def main():
     retrieval.add_argument("--rrf-k", type=int, default=60)
     retrieval.add_argument("--reranker", default="Xenova/ms-marco-MiniLM-L-12-v2")
     retrieval.add_argument("--output", type=Path, default=STARTER / "results" / "retrieval")
+    agent = sub.add_parser("agent", help="Tool use, Context Evidence Rate của agent và tổng hợp nhãn chấm tay")
+    agent.add_argument("runs", nargs="+", type=Path, help="thư mục chứa traces.json (+ reviews.json)")
+    agent.add_argument("--chunks", type=Path, default=STARTER / "data" / "chunks.json")
+    agent.add_argument("--output", type=Path, default=STARTER / "results" / "agent" / "eval.json")
     args = parser.parse_args()
-    run_check(args) if args.command == "check" else run_retrieval(args)
+    {"check": run_check, "retrieval": run_retrieval, "agent": run_agent_eval}[args.command](args)
 
 
 if __name__ == "__main__":

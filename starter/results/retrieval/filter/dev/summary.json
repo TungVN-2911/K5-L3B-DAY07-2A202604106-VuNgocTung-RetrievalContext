@@ -1,0 +1,181 @@
+{
+  "config": {
+    "split": "dev",
+    "questions": 15,
+    "use_filter": true,
+    "depth": 10,
+    "context": "top-3, budget 2000 ký tự (gồm header nguồn), pack_context của baseline",
+    "candidates": 20,
+    "rrf_k": 60
+  },
+  "methods": {
+    "bm25": {
+      "info": {
+        "retriever": "bm25",
+        "k1": 1.5,
+        "b": 0.75,
+        "chunks": 621,
+        "tokenizer": "regex \\w+, NFC, casefold, không stopword/stemming"
+      },
+      "load_s": 0.02,
+      "hit1": {
+        "n": 9,
+        "N": 15,
+        "rate": 0.6
+      },
+      "hit3": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.867
+      },
+      "context_evidence": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.867
+      },
+      "mrr@10": 0.735,
+      "recall@10": {
+        "n": 15,
+        "N": 15
+      },
+      "median_ms": 1.2,
+      "mean_context_chars": 1493,
+      "cost_usd": 0
+    },
+    "dense": {
+      "info": {
+        "retriever": "dense",
+        "index_strategy": "A",
+        "embedding_model": "nomic-embed-text",
+        "dimensions": 768,
+        "metric": "cosine, score = 1 - distance",
+        "search": "exact (pgvector, no ANN index)"
+      },
+      "load_s": 0.39,
+      "hit1": {
+        "n": 11,
+        "N": 15,
+        "rate": 0.733
+      },
+      "hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_evidence": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "mrr@10": 0.844,
+      "recall@10": {
+        "n": 15,
+        "N": 15
+      },
+      "median_ms": 55.5,
+      "mean_context_chars": 1507,
+      "cost_usd": 0
+    },
+    "hybrid": {
+      "info": {
+        "retriever": "hybrid",
+        "fusion": "RRF, score = sum 1/(60 + rank)",
+        "candidates_per_retriever": 20,
+        "components": [
+          {
+            "retriever": "dense",
+            "index_strategy": "A",
+            "embedding_model": "nomic-embed-text",
+            "dimensions": 768,
+            "metric": "cosine, score = 1 - distance",
+            "search": "exact (pgvector, no ANN index)"
+          },
+          {
+            "retriever": "bm25",
+            "k1": 1.5,
+            "b": 0.75,
+            "chunks": 621,
+            "tokenizer": "regex \\w+, NFC, casefold, không stopword/stemming"
+          }
+        ]
+      },
+      "load_s": 0.03,
+      "hit1": {
+        "n": 9,
+        "N": 15,
+        "rate": 0.6
+      },
+      "hit3": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.933
+      },
+      "context_evidence": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.933
+      },
+      "mrr@10": 0.761,
+      "recall@10": {
+        "n": 15,
+        "N": 15
+      },
+      "median_ms": 20.2,
+      "mean_context_chars": 1525,
+      "cost_usd": 0
+    },
+    "rerank": {
+      "info": {
+        "retriever": "rerank",
+        "reranker": "Xenova/ms-marco-MiniLM-L-12-v2",
+        "candidates": 20,
+        "first_stage": {
+          "retriever": "hybrid",
+          "fusion": "RRF, score = sum 1/(60 + rank)",
+          "candidates_per_retriever": 20,
+          "components": [
+            {
+              "retriever": "dense",
+              "index_strategy": "A",
+              "embedding_model": "nomic-embed-text",
+              "dimensions": 768,
+              "metric": "cosine, score = 1 - distance",
+              "search": "exact (pgvector, no ANN index)"
+            },
+            {
+              "retriever": "bm25",
+              "k1": 1.5,
+              "b": 0.75,
+              "chunks": 621,
+              "tokenizer": "regex \\w+, NFC, casefold, không stopword/stemming"
+            }
+          ]
+        }
+      },
+      "load_s": 1.91,
+      "hit1": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.933
+      },
+      "hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_evidence": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "mrr@10": 0.967,
+      "recall@10": {
+        "n": 15,
+        "N": 15
+      },
+      "median_ms": 637.8,
+      "mean_context_chars": 1526,
+      "cost_usd": 0
+    }
+  }
+}

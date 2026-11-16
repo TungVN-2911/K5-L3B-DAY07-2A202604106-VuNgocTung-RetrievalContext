@@ -1,0 +1,114 @@
+{
+  "config": {
+    "split": "dev",
+    "questions": 15,
+    "use_filter": false,
+    "depth": 10,
+    "context": "top-3, budget 2000 ký tự (gồm header nguồn), pack_context của baseline",
+    "candidates": 50,
+    "rrf_k": 60
+  },
+  "methods": {
+    "hybrid": {
+      "info": {
+        "retriever": "hybrid",
+        "fusion": "RRF, score = sum 1/(60 + rank)",
+        "candidates_per_retriever": 50,
+        "components": [
+          {
+            "retriever": "dense",
+            "index_strategy": "A",
+            "embedding_model": "nomic-embed-text",
+            "dimensions": 768,
+            "metric": "cosine, score = 1 - distance",
+            "search": "exact (pgvector, no ANN index)"
+          },
+          {
+            "retriever": "bm25",
+            "k1": 1.5,
+            "b": 0.75,
+            "chunks": 621,
+            "tokenizer": "regex \\w+, NFC, casefold, không stopword/stemming"
+          }
+        ]
+      },
+      "load_s": 0.41,
+      "hit1": {
+        "n": 9,
+        "N": 15,
+        "rate": 0.6
+      },
+      "hit3": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.933
+      },
+      "context_evidence": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.933
+      },
+      "mrr@10": 0.761,
+      "recall@10": {
+        "n": 15,
+        "N": 15
+      },
+      "median_ms": 51.2,
+      "mean_context_chars": 1542,
+      "cost_usd": 0
+    },
+    "rerank": {
+      "info": {
+        "retriever": "rerank",
+        "reranker": "Xenova/ms-marco-MiniLM-L-12-v2",
+        "candidates": 50,
+        "first_stage": {
+          "retriever": "hybrid",
+          "fusion": "RRF, score = sum 1/(60 + rank)",
+          "candidates_per_retriever": 50,
+          "components": [
+            {
+              "retriever": "dense",
+              "index_strategy": "A",
+              "embedding_model": "nomic-embed-text",
+              "dimensions": 768,
+              "metric": "cosine, score = 1 - distance",
+              "search": "exact (pgvector, no ANN index)"
+            },
+            {
+              "retriever": "bm25",
+              "k1": 1.5,
+              "b": 0.75,
+              "chunks": 621,
+              "tokenizer": "regex \\w+, NFC, casefold, không stopword/stemming"
+            }
+          ]
+        }
+      },
+      "load_s": 2.47,
+      "hit1": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.933
+      },
+      "hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_evidence": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "mrr@10": 0.967,
+      "recall@10": {
+        "n": 15,
+        "N": 15
+      },
+      "median_ms": 1653.4,
+      "mean_context_chars": 1553,
+      "cost_usd": 0
+    }
+  }
+}
