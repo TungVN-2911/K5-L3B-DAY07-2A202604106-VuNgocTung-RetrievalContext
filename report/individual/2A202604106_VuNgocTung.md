@@ -105,7 +105,7 @@ Nhãn dev và test do Claude soạn nháp sau khi đọc đối chiếu chunk đ
 
 ## Thử thách nâng cao (nếu thực hiện)
 
-> **Kết quả:** cấu hình chốt trên dev (v7, dev 22/23) chạy **một lần** trên test: **27/30 = 90,0%**, 0 lỗi hệ thống. Kết quả đạt đúng ngưỡng nhưng **phụ thuộc vào câu biên at16** (xem bảng test). Nhãn do Claude soạn nháp; người làm bài cần xác nhận.
+> **Kết quả:** cấu hình chốt trên dev (v7, dev 22/23) chạy **một lần** trên test: **27/30 = 90,0%**, 0 lỗi hệ thống. Kết quả đạt đúng ngưỡng nhưng **phụ thuộc vào câu biên at16** (xem bảng test). Nhãn do Claude chấm rồi tự kiểm lại lần 2 (số liệu cốt lõi, trang cite, nguyên văn chunk được cite) theo yêu cầu của người làm bài; lần kiểm lại không đổi nhãn nào. Không có người chấm độc lập, nên người chấm cần đối chiếu lại, nhất là at16 và at02.
 
 - **Tài liệu, nguồn, quyền sử dụng, số trang và phiên bản:**
   - *IPCC AR6 Synthesis Report: Climate Change 2023* (Full Volume), 186 trang PDF, ISBN 978-92-9169-164-7, DOI 10.59327/IPCC/AR6-9789291691647.
