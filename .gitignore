@@ -12,3 +12,6 @@ starter/results/
 
 # Corpus PDF: no open license, see data/manifest.json
 data/*.pdf
+
+# Label review printouts
+review*.txt

@@ -2,6 +2,7 @@ import argparse
 import json
 import re
 import statistics
+import sys
 import time
 import unicodedata
 from collections import Counter
@@ -220,6 +221,8 @@ def run_agent_eval(args) -> None:
 
 
 def run_review(args) -> None:
+    if args.output and not args.confirm:
+        sys.stdout = args.output.open("w", encoding="utf-8")
     questions = {q["id"]: q for q in load_questions(args.questions)}
     chunks = {c["id"]: c for c in json.loads(args.chunks.read_text(encoding="utf-8"))}
     for run in args.runs:
@@ -261,6 +264,9 @@ def run_review(args) -> None:
 
 
 def main():
+    # Windows consoles default to a legacy code page; force UTF-8 so Vietnamese text survives.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Benchmark: kiểm tra bộ câu hỏi và đánh giá retrieval")
     parser.add_argument("--questions", type=Path, default=QUESTIONS)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -288,6 +294,7 @@ def main():
     review.add_argument("--context-labels", type=Path, help="file context_labels.json của retrieval")
     review.add_argument("--chunks", type=Path, default=STARTER / "data" / "chunks.json")
     review.add_argument("--confirm", help="tên người chấm; chỉ dùng sau khi đã đọc và sửa xong nhãn")
+    review.add_argument("--output", type=Path, help="ghi ra file UTF-8 thay vì in ra màn hình")
     args = parser.parse_args()
     {"check": run_check, "retrieval": run_retrieval, "agent": run_agent_eval, "review": run_review}[args.command](args)
 
