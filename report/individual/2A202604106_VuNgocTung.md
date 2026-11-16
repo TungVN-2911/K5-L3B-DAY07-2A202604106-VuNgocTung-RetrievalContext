@@ -60,6 +60,10 @@ Nhãn dev do Claude soạn nháp sau khi đọc đối chiếu chunk được ci
 
 | Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
 |---|---|---|---|---|
+| q06 (rerank, dev) | Có evidence | `search("fine-tuning definition mean")` → C1 = p68 c0 (hạng 1, có gold), C3 = p68 c1 | "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset … [p68 c0][p68 c1]" | 2, citation 2/2 đúng. Dense+BM25 (hybrid) để chunk này ở hạng 4; rerank kéo lên hạng 1 |
+| q12 (dense, dev) | Có evidence, có filter | 2 search, model tự đặt `chapter=rag` vì câu hỏi nêu "In the RAG chapter" → p143 c0 (gold), p143 c1 | "…caching it directly in the model's key-value memory. By dividing knowledge into static … and dynamic data … [p143 c0][p143 c1]" | 1: ý chính đúng, nhưng "dynamic data" chỉ có ở p144 c0, không nằm trong context |
+| u01 (rerank, dev) | Thiếu evidence | 3 search: "BM25 parameters k1 b hybrid retrieval…", "BM25 k1 b hybrid search", "BM25" → không có chunk nào nói BM25 | `abstain`: "The retrieved chunks do not contain any information about BM25 parameters…" | Từ chối đúng, không đưa giá trị k1/b nào |
+| q05 (rerank-v0, dev) | Lỗi | 1 search → C1 = p51 (gold) | Model trả lời đúng nhưng ghi `[C1, C3]`; validator v0 chỉ nhận `[C1]` nên từ chối hai lần, kết quả là `abstain` | Lỗi 1: từ chối nhầm do parser. Sau khi sửa: trả lời, chấm 2 |
 
 - **Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí:**
   - Retrieval: [starter/results/retrieval/](../../starter/results/retrieval/) (`dev`, `filter`, `cand50`, `bge`).
