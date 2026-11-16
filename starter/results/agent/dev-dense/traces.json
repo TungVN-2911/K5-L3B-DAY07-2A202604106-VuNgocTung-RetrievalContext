@@ -1,0 +1,1870 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "question": "How does the book formally define a large language model?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "A large language model is formally defined as a Transformer-based neural network trained on massive text corpora to predict the next token in a sequence, which enables it to understand, generate, and reason with human language [ai-engineering-2025:p10:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p10:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "large language model formally define",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p10:fixed500-50:0",
+            "page": 10,
+            "rank": 1,
+            "score": 0.8907984760641696,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p13:fixed500-50:0",
+            "page": 13,
+            "rank": 2,
+            "score": 0.8158516373944459,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p14:fixed500-50:1",
+            "page": 14,
+            "rank": 3,
+            "score": 0.8115365522409312,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p17:fixed500-50:1",
+            "page": 17,
+            "rank": 4,
+            "score": 0.712256303371503,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 56.0
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p10:fixed500-50:0",
+      "ai-engineering-2025:p13:fixed500-50:0",
+      "ai-engineering-2025:p14:fixed500-50:1",
+      "ai-engineering-2025:p17:fixed500-50:1"
+    ],
+    "context_chars": 1352,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1415,
+      "output": 83,
+      "thinking": 0
+    },
+    "elapsed_s": 2.02,
+    "model_answer": "A large language model is formally defined as a Transformer-based neural network trained on massive text corpora to predict the next token in a sequence, which enables it to understand, generate, and reason with human language [C1].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "type": "direct",
+    "question": "What effect do low and high temperature values have on LLM generation?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "A low temperature (around 0) concentrates probabilities around the most likely token, making the model deterministic or nearly greedy (suitable for QA and chatbots) [ai-engineering-2025:p31:fixed500-50:0][ai-engineering-2025:p29:fixed500-50:0]. A high temperature (0.7–1.0) makes probabilities more uniform, producing highly random, stochastic outputs that boost creativity and diversity, though it also introduces noise [ai-engineering-2025:p31:fixed500-50:0][ai-engineering-2025:p29:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p31:fixed500-50:0",
+      "ai-engineering-2025:p29:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "temperature low high effect LLM generation",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p31:fixed500-50:0",
+            "page": 31,
+            "rank": 1,
+            "score": 0.6874362677184229,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p360:fixed500-50:1",
+            "page": 360,
+            "rank": 2,
+            "score": 0.6388470795519208,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p30:fixed500-50:0",
+            "page": 30,
+            "rank": 3,
+            "score": 0.6386712789535568,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p29:fixed500-50:0",
+            "page": 29,
+            "rank": 4,
+            "score": 0.6340301473104778,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 54.2
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C4"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p31:fixed500-50:0",
+      "ai-engineering-2025:p360:fixed500-50:1",
+      "ai-engineering-2025:p30:fixed500-50:0",
+      "ai-engineering-2025:p29:fixed500-50:0"
+    ],
+    "context_chars": 1658,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1517,
+      "output": 123,
+      "thinking": 0
+    },
+    "elapsed_s": 3.97,
+    "model_answer": "A low temperature (around 0) concentrates probabilities around the most likely token, making the model deterministic or nearly greedy (suitable for QA and chatbots) [C1, C4]. A high temperature (0.7–1.0) makes probabilities more uniform, producing highly random, stochastic outputs that boost creativity and diversity, though it also introduces noise [C1, C4].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Which sampling setting only considers the smallest group of tokens whose combined probability reaches a chosen threshold?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Top-p (nucleus sampling) only considers the smallest set of tokens covering a probability mass up to p [ai-engineering-2025:p32:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p32:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "sampling smallest group of tokens combined probability threshold",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p33:fixed500-50:1",
+            "page": 33,
+            "rank": 1,
+            "score": 0.7654091649462613,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p32:fixed500-50:0",
+            "page": 32,
+            "rank": 2,
+            "score": 0.7582744648129871,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p31:fixed500-50:1",
+            "page": 31,
+            "rank": 3,
+            "score": 0.7576298506083776,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p33:fixed500-50:0",
+            "page": 33,
+            "rank": 4,
+            "score": 0.7358616151892503,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 68.9
+      },
+      {
+        "event": "invalid_answer",
+        "problem": "refs ['C2'] not marked in answer text",
+        "args": {
+          "answer": "Top-p (nucleus sampling) considers only the smallest set of tokens whose cumulative probability covers a chosen threshold (probability mass up to $p$).",
+          "citations": [
+            "C2"
+          ]
+        }
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p33:fixed500-50:1",
+      "ai-engineering-2025:p32:fixed500-50:0",
+      "ai-engineering-2025:p31:fixed500-50:1",
+      "ai-engineering-2025:p33:fixed500-50:0"
+    ],
+    "context_chars": 1795,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 2687,
+      "output": 115,
+      "thinking": 0
+    },
+    "elapsed_s": 27.98,
+    "model_answer": "Top-p (nucleus sampling) only considers the smallest set of tokens covering a probability mass up to p [C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "type": "direct",
+    "question": "According to the book, what hidden flaw in human preference data causes mode collapse?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "According to the book, the hidden flaw in human preference data that causes mode collapse is typicality bias, which occurs because annotators naturally tend to favor answers that are familiar, easy to read, and predictable [ai-engineering-2025:p59:fixed500-50:0][ai-engineering-2025:p60:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p59:fixed500-50:0",
+      "ai-engineering-2025:p60:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "hidden flaw in human preference data mode collapse",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p59:fixed500-50:0",
+            "page": 59,
+            "rank": 1,
+            "score": 0.7320245169350962,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p22:fixed500-50:0",
+            "page": 22,
+            "rank": 2,
+            "score": 0.675755601488896,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p59:fixed500-50:1",
+            "page": 59,
+            "rank": 3,
+            "score": 0.6574377442319345,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p60:fixed500-50:0",
+            "page": 60,
+            "rank": 4,
+            "score": 0.6368150091283727,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 65.9
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C4"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p59:fixed500-50:0",
+      "ai-engineering-2025:p22:fixed500-50:0",
+      "ai-engineering-2025:p59:fixed500-50:1",
+      "ai-engineering-2025:p60:fixed500-50:0"
+    ],
+    "context_chars": 1535,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1501,
+      "output": 94,
+      "thinking": 0
+    },
+    "elapsed_s": 6.66,
+    "model_answer": "According to the book, the hidden flaw in human preference data that causes mode collapse is typicality bias, which occurs because annotators naturally tend to favor answers that are familiar, easy to read, and predictable [C1, C4].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "type": "condition",
+    "question": "Does prompt engineering change the model's learned parameters?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "No, prompt engineering does not change the learned parameters (weights) inside the model; instead, it steers the model at inference time by changing the instructions [ai-engineering-2025:p51:fixed500-50:0][ai-engineering-2025:p107:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p51:fixed500-50:0",
+      "ai-engineering-2025:p107:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "prompt engineering change model learned parameters",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p51:fixed500-50:0",
+            "page": 51,
+            "rank": 1,
+            "score": 0.7380345307609487,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p107:fixed500-50:0",
+            "page": 107,
+            "rank": 2,
+            "score": 0.6962417779113231,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p126:fixed500-50:1",
+            "page": 126,
+            "rank": 3,
+            "score": 0.6939687364064338,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p126:fixed500-50:0",
+            "page": 126,
+            "rank": 4,
+            "score": 0.6773369744630673,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 52.9
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p51:fixed500-50:0",
+      "ai-engineering-2025:p107:fixed500-50:0",
+      "ai-engineering-2025:p126:fixed500-50:1",
+      "ai-engineering-2025:p126:fixed500-50:0"
+    ],
+    "context_chars": 1986,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1577,
+      "output": 81,
+      "thinking": 0
+    },
+    "elapsed_s": 2.16,
+    "model_answer": "No, prompt engineering does not change the learned parameters (weights) inside the model; instead, it steers the model at inference time by changing the instructions [C1, C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "type": "direct",
+    "question": "What does fine-tuning mean?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset to achieve better performance [ai-engineering-2025:p68:fixed500-50:0][ai-engineering-2025:p136:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p68:fixed500-50:0",
+      "ai-engineering-2025:p136:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "what does fine-tuning mean",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p68:fixed500-50:0",
+            "page": 68,
+            "rank": 1,
+            "score": 0.8496007993222477,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p136:fixed500-50:0",
+            "page": 136,
+            "rank": 2,
+            "score": 0.839862986815335,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p70:fixed500-50:1",
+            "page": 70,
+            "rank": 3,
+            "score": 0.7716597694134011,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p87:fixed500-50:1",
+            "page": 87,
+            "rank": 4,
+            "score": 0.7505222334057813,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 75.2
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p68:fixed500-50:0",
+      "ai-engineering-2025:p136:fixed500-50:0",
+      "ai-engineering-2025:p70:fixed500-50:1",
+      "ai-engineering-2025:p87:fixed500-50:1"
+    ],
+    "context_chars": 1650,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1518,
+      "output": 72,
+      "thinking": 0
+    },
+    "elapsed_s": 5.6,
+    "model_answer": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset to achieve better performance [C1, C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "type": "condition",
+    "question": "Why is traditional fine-tuning on a single GPU impossible for GPT-3?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Traditional fine-tuning of GPT-3 on a single GPU is impossible because the model has 175 billion parameters, which requires 350 GB of memory just to store the model weights in float16 precision [ai-engineering-2025:p69:fixed500-50:1].",
+    "citations": [
+      "ai-engineering-2025:p69:fixed500-50:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "traditional fine tuning single GPU impossible GPT 3",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p69:fixed500-50:1",
+            "page": 69,
+            "rank": 1,
+            "score": 0.7255175002690486,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p70:fixed500-50:1",
+            "page": 70,
+            "rank": 2,
+            "score": 0.6463551833919502,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p70:fixed500-50:0",
+            "page": 70,
+            "rank": 3,
+            "score": 0.6448596735424579,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p92:fixed500-50:1",
+            "page": 92,
+            "rank": 4,
+            "score": 0.6051614605612199,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 77.9
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p69:fixed500-50:1",
+      "ai-engineering-2025:p70:fixed500-50:1",
+      "ai-engineering-2025:p70:fixed500-50:0",
+      "ai-engineering-2025:p92:fixed500-50:1"
+    ],
+    "context_chars": 1143,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1479,
+      "output": 91,
+      "thinking": 0
+    },
+    "elapsed_s": 2.57,
+    "model_answer": "Traditional fine-tuning of GPT-3 on a single GPU is impossible because the model has 175 billion parameters, which requires 350 GB of memory just to store the model weights in float16 precision [C1].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What shared limitation of prompt engineering and fine-tuning motivates RAG?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Both prompt engineering and fine-tuning share the fundamental limitation that the model can only use the knowledge it already contains, meaning they do not automatically know new information, private data, company documents, or post-training cutoff information [ai-engineering-2025:p107:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p107:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "prompt engineering fine tuning limitation motivates RAG",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p126:fixed500-50:1",
+            "page": 126,
+            "rank": 1,
+            "score": 0.7992109534303692,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p107:fixed500-50:0",
+            "page": 107,
+            "rank": 2,
+            "score": 0.7868788799283682,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p125:fixed500-50:1",
+            "page": 125,
+            "rank": 3,
+            "score": 0.7501197979604096,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p118:fixed500-50:1",
+            "page": 118,
+            "rank": 4,
+            "score": 0.7124785683908726,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 64.2
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p126:fixed500-50:1",
+      "ai-engineering-2025:p107:fixed500-50:0",
+      "ai-engineering-2025:p125:fixed500-50:1",
+      "ai-engineering-2025:p118:fixed500-50:1"
+    ],
+    "context_chars": 1616,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1516,
+      "output": 89,
+      "thinking": 0
+    },
+    "elapsed_s": 23.01,
+    "model_answer": "Both prompt engineering and fine-tuning share the fundamental limitation that the model can only use the knowledge it already contains, meaning they do not automatically know new information, private data, company documents, or post-training cutoff information [C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "type": "direct",
+    "question": "What does a vector database store?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "A vector database stores unstructured data (such as text, images, audio, and video) in the form of vector embeddings, along with their metadata and original content [ai-engineering-2025:p116:fixed500-50:0][ai-engineering-2025:p108:fixed500-50:1].",
+    "citations": [
+      "ai-engineering-2025:p116:fixed500-50:0",
+      "ai-engineering-2025:p108:fixed500-50:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "vector database store",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p116:fixed500-50:0",
+            "page": 116,
+            "rank": 1,
+            "score": 0.7195267248435794,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p108:fixed500-50:1",
+            "page": 108,
+            "rank": 2,
+            "score": 0.7139074121879312,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p112:fixed500-50:0",
+            "page": 112,
+            "rank": 3,
+            "score": 0.7068966770995153,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p116:fixed500-50:1",
+            "page": 116,
+            "rank": 4,
+            "score": 0.670645633147498,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 60.3
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p116:fixed500-50:0",
+      "ai-engineering-2025:p108:fixed500-50:1",
+      "ai-engineering-2025:p112:fixed500-50:0",
+      "ai-engineering-2025:p116:fixed500-50:1"
+    ],
+    "context_chars": 1743,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1496,
+      "output": 80,
+      "thinking": 0
+    },
+    "elapsed_s": 23.81,
+    "model_answer": "A vector database stores unstructured data (such as text, images, audio, and video) in the form of vector embeddings, along with their metadata and original content [C1, C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "type": "condition",
+    "question": "Why is overlap recommended in fixed-size chunking, and what is its main drawback?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Overlap is recommended in fixed-size chunking because a direct split can disrupt the semantic flow [ai-engineering-2025:p121:fixed500-50:0]. Its main drawback is that it usually breaks sentences or ideas in between, causing important information to likely get distributed across chunks [ai-engineering-2025:p121:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p121:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "overlap fixed-size chunking drawback",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p122:fixed500-50:1",
+            "page": 122,
+            "rank": 1,
+            "score": 0.6692754227354882,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p120:fixed500-50:0",
+            "page": 120,
+            "rank": 2,
+            "score": 0.6587425862993364,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p122:fixed500-50:0",
+            "page": 122,
+            "rank": 3,
+            "score": 0.6547192150689154,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p36:fixed500-50:1",
+            "page": 36,
+            "rank": 4,
+            "score": 0.6374459594359483,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 56.3
+      },
+      {
+        "event": "search",
+        "query": "fixed-size chunking overlap drawback",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p122:fixed500-50:1",
+            "page": 122,
+            "rank": 1,
+            "score": 0.6773740034030682,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p122:fixed500-50:0",
+            "page": 122,
+            "rank": 2,
+            "score": 0.670706231425707,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p120:fixed500-50:0",
+            "page": 120,
+            "rank": 3,
+            "score": 0.670325835327765,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p36:fixed500-50:1",
+            "page": 36,
+            "rank": 4,
+            "score": 0.6417469551262021,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 66.8
+      },
+      {
+        "event": "search",
+        "query": "overlap chunking",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p121:fixed500-50:0",
+            "page": 121,
+            "rank": 1,
+            "score": 0.6773532571685735,
+            "new": true
+          },
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p122:fixed500-50:1",
+            "page": 122,
+            "rank": 2,
+            "score": 0.6700337916512026,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p121:fixed500-50:1",
+            "page": 121,
+            "rank": 3,
+            "score": 0.6670641104618145,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p120:fixed500-50:0",
+            "page": 120,
+            "rank": 4,
+            "score": 0.6611971864944061,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 66.2
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C5"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p122:fixed500-50:1",
+      "ai-engineering-2025:p120:fixed500-50:0",
+      "ai-engineering-2025:p122:fixed500-50:0",
+      "ai-engineering-2025:p36:fixed500-50:1",
+      "ai-engineering-2025:p121:fixed500-50:0",
+      "ai-engineering-2025:p121:fixed500-50:1"
+    ],
+    "context_chars": 2601,
+    "llm_calls": 4,
+    "searches": 3,
+    "usage": {
+      "input": 4110,
+      "output": 125,
+      "thinking": 0
+    },
+    "elapsed_s": 51.59,
+    "model_answer": "Overlap is recommended in fixed-size chunking because a direct split can disrupt the semantic flow [C5]. Its main drawback is that it usually breaks sentences or ideas in between, causing important information to likely get distributed across chunks [C5].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What problem with traditional RAG retrieval does HyDE address?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "HyDE addresses the problem in traditional RAG where questions are not semantically similar to their answers, which often causes the retrieval step to pull irrelevant contexts that happen to have a higher cosine similarity than the documents actually containing the answer [ai-engineering-2025:p132:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p132:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "HyDE HyDE addresses problem traditional RAG retrieval",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p132:fixed500-50:0",
+            "page": 132,
+            "rank": 1,
+            "score": 0.826544744935742,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p131:fixed500-50:2",
+            "page": 131,
+            "rank": 2,
+            "score": 0.7610176632968911,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p134:fixed500-50:2",
+            "page": 134,
+            "rank": 3,
+            "score": 0.744573728867287,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p128:fixed500-50:0",
+            "page": 128,
+            "rank": 4,
+            "score": 0.7395900357502754,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 66.3
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p132:fixed500-50:0",
+      "ai-engineering-2025:p131:fixed500-50:2",
+      "ai-engineering-2025:p134:fixed500-50:2",
+      "ai-engineering-2025:p128:fixed500-50:0"
+    ],
+    "context_chars": 1509,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1452,
+      "output": 92,
+      "thinking": 0
+    },
+    "elapsed_s": 24.35,
+    "model_answer": "HyDE addresses the problem in traditional RAG where questions are not semantically similar to their answers, which often causes the retrieval step to pull irrelevant contexts that happen to have a higher cosine similarity than the documents actually containing the answer [C1].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "type": "filter",
+    "question": "In the RAG chapter, how does Cache-Augmented Generation avoid re-fetching the same context?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Cache-Augmented Generation (CAG) avoids re-fetching stable information by caching it directly in the model's key-value memory. By dividing knowledge into static, rarely changing data that gets cached once and dynamic data, it allows the model to \"remember\" the information rather than repeatedly querying a vector database. [ai-engineering-2025:p143:fixed500-50:0][ai-engineering-2025:p143:fixed500-50:1]",
+    "citations": [
+      "ai-engineering-2025:p143:fixed500-50:0",
+      "ai-engineering-2025:p143:fixed500-50:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Cache-Augmented Generation avoid re-fetching context",
+        "filter": {
+          "chapter": "rag"
+        },
+        "model_chapter": "rag",
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p143:fixed500-50:0",
+            "page": 143,
+            "rank": 1,
+            "score": 0.7746942295348533,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p144:fixed500-50:1",
+            "page": 144,
+            "rank": 2,
+            "score": 0.6948916467443014,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p139:fixed500-50:1",
+            "page": 139,
+            "rank": 3,
+            "score": 0.6584695737216871,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p107:fixed500-50:1",
+            "page": 107,
+            "rank": 4,
+            "score": 0.6567035691031802,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 51.9
+      },
+      {
+        "event": "search",
+        "query": "Cache-Augmented Generation CAG key-value memory",
+        "filter": {
+          "chapter": "rag"
+        },
+        "model_chapter": "rag",
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p143:fixed500-50:0",
+            "page": 143,
+            "rank": 1,
+            "score": 0.7907133324229729,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p144:fixed500-50:1",
+            "page": 144,
+            "rank": 2,
+            "score": 0.6671657762425578,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p143:fixed500-50:1",
+            "page": 143,
+            "rank": 3,
+            "score": 0.6230971696339476,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p107:fixed500-50:1",
+            "page": 107,
+            "rank": 4,
+            "score": 0.6045227646827741,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 60.9
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C5"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p143:fixed500-50:0",
+      "ai-engineering-2025:p144:fixed500-50:1",
+      "ai-engineering-2025:p139:fixed500-50:1",
+      "ai-engineering-2025:p107:fixed500-50:1",
+      "ai-engineering-2025:p143:fixed500-50:1"
+    ],
+    "context_chars": 2120,
+    "llm_calls": 3,
+    "searches": 2,
+    "usage": {
+      "input": 2855,
+      "output": 153,
+      "thinking": 0
+    },
+    "elapsed_s": 4.49,
+    "model_answer": "Cache-Augmented Generation (CAG) avoids re-fetching stable information by caching it directly in the model's key-value memory. By dividing knowledge into static, rarely changing data that gets cached once and dynamic data, it allows the model to \"remember\" the information rather than repeatedly querying a vector database. [C1, C5]",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Why can a RAG system fail even when it uses the best available LLM?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "A RAG system can fail even with the best LLM because of a context retrieval issue; bad retrieval can never work regardless of how powerful the LLM is [ai-engineering-2025:p148:fixed500-50:1]. Additionally, traditional RAG systems retrieve and generate only once, meaning they lack adaptability and cannot dynamically search for more information if the retrieved context is insufficient [ai-engineering-2025:p130:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p148:fixed500-50:1",
+      "ai-engineering-2025:p130:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "RAG system fail best available LLM",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p107:fixed500-50:0",
+            "page": 107,
+            "rank": 1,
+            "score": 0.7042615061118465,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p148:fixed500-50:1",
+            "page": 148,
+            "rank": 2,
+            "score": 0.7034686306482014,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p130:fixed500-50:0",
+            "page": 130,
+            "rank": 3,
+            "score": 0.6979868107994939,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p140:fixed500-50:1",
+            "page": 140,
+            "rank": 4,
+            "score": 0.6918388878819123,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 72.7
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2",
+          "C3"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p107:fixed500-50:0",
+      "ai-engineering-2025:p148:fixed500-50:1",
+      "ai-engineering-2025:p130:fixed500-50:0",
+      "ai-engineering-2025:p140:fixed500-50:1"
+    ],
+    "context_chars": 1749,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1570,
+      "output": 115,
+      "thinking": 0
+    },
+    "elapsed_s": 3.09,
+    "model_answer": "A RAG system can fail even with the best LLM because of a context retrieval issue; bad retrieval can never work regardless of how powerful the LLM is [C2]. Additionally, traditional RAG systems retrieve and generate only once, meaning they lack adaptability and cannot dynamically search for more information if the retrieved context is insufficient [C3].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "type": "filter_disambiguation",
+    "question": "In the context engineering chapter, how should short-term and long-term memory be managed?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In the context engineering chapter, short-term memory is managed by summarizing long conversations, while long-term memory is managed by remembering user preferences across sessions [ai-engineering-2025:p150:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p150:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "short term long term memory managed context engineering",
+        "filter": {
+          "chapter": "context_engineering"
+        },
+        "model_chapter": "context_engineering",
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p150:fixed500-50:0",
+            "page": 150,
+            "rank": 1,
+            "score": 0.6985312018758935,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p150:fixed500-50:1",
+            "page": 150,
+            "rank": 2,
+            "score": 0.6882743784878385,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p148:fixed500-50:0",
+            "page": 148,
+            "rank": 3,
+            "score": 0.6861902545178858,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p153:fixed500-50:0",
+            "page": 153,
+            "rank": 4,
+            "score": 0.6835670644690683,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 59.5
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p150:fixed500-50:0",
+      "ai-engineering-2025:p150:fixed500-50:1",
+      "ai-engineering-2025:p148:fixed500-50:0",
+      "ai-engineering-2025:p153:fixed500-50:0"
+    ],
+    "context_chars": 1623,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1536,
+      "output": 83,
+      "thinking": 0
+    },
+    "elapsed_s": 3.71,
+    "model_answer": "In the context engineering chapter, short-term memory is managed by summarizing long conversations, while long-term memory is managed by remembering user preferences across sessions [C1].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "type": "filter_disambiguation",
+    "question": "In the AI agents chapter, what kinds of long-term memory can an agent have?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "According to the AI agents chapter, long-term memory in agents can be classified into semantic memory (storing facts and knowledge), episodic memory (recalling past experiences or task completions), and procedural memory (learning how to do things, such as internalized prompts and instructions). [ai-engineering-2025:p196:fixed500-50:1]",
+    "citations": [
+      "ai-engineering-2025:p196:fixed500-50:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "long term memory kinds agent",
+        "filter": {
+          "chapter": "ai_agents"
+        },
+        "model_chapter": "ai_agents",
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p196:fixed500-50:1",
+            "page": 196,
+            "rank": 1,
+            "score": 0.8020694494864469,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p196:fixed500-50:0",
+            "page": 196,
+            "rank": 2,
+            "score": 0.7724510986285145,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p181:fixed500-50:0",
+            "page": 181,
+            "rank": 3,
+            "score": 0.7171429576192956,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p199:fixed500-50:0",
+            "page": 199,
+            "rank": 4,
+            "score": 0.7029264279980743,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 73.8
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p196:fixed500-50:1",
+      "ai-engineering-2025:p196:fixed500-50:0",
+      "ai-engineering-2025:p181:fixed500-50:0",
+      "ai-engineering-2025:p199:fixed500-50:0"
+    ],
+    "context_chars": 1846,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1606,
+      "output": 104,
+      "thinking": 0
+    },
+    "elapsed_s": 8.76,
+    "model_answer": "According to the AI agents chapter, long-term memory in agents can be classified into semantic memory (storing facts and knowledge), episodic memory (recalling past experiences or task completions), and procedural memory (learning how to do things, such as internalized prompts and instructions). [C1]",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "u01",
+    "split": "dev",
+    "type": "unanswerable",
+    "question": "Which values of the BM25 parameters k1 and b does the book recommend when adding keyword search to vector search in a hybrid retrieval setup?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "BM25 parameters k1 b hybrid retrieval vector search",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p129:fixed500-50:0",
+            "page": 129,
+            "rank": 1,
+            "score": 0.6505262600120635,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p162:fixed500-50:0",
+            "page": 162,
+            "rank": 2,
+            "score": 0.62902680808471,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p117:fixed500-50:0",
+            "page": 117,
+            "rank": 3,
+            "score": 0.6238232260596127,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p139:fixed500-50:0",
+            "page": 139,
+            "rank": 4,
+            "score": 0.6200745105744113,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 60.2
+      },
+      {
+        "event": "search",
+        "query": "BM25 k1 b hybrid retrieval",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p129:fixed500-50:0",
+            "page": 129,
+            "rank": 1,
+            "score": 0.6109402080071344,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p128:fixed500-50:0",
+            "page": 128,
+            "rank": 2,
+            "score": 0.5828492120341381,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p162:fixed500-50:0",
+            "page": 162,
+            "rank": 3,
+            "score": 0.5815582947530096,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p174:fixed500-50:1",
+            "page": 174,
+            "rank": 4,
+            "score": 0.5767224672287622,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 62.8
+      },
+      {
+        "event": "search",
+        "query": "BM25",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C7",
+            "id": "ai-engineering-2025:p77:fixed500-50:0",
+            "page": 77,
+            "rank": 1,
+            "score": 0.5057192417530436,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ai-engineering-2025:p49:fixed500-50:1",
+            "page": 49,
+            "rank": 2,
+            "score": 0.49928653265728307,
+            "new": true
+          },
+          {
+            "ref": "C9",
+            "id": "ai-engineering-2025:p319:fixed500-50:2",
+            "page": 319,
+            "rank": 3,
+            "score": 0.4845818308744996,
+            "new": true
+          },
+          {
+            "ref": "C10",
+            "id": "ai-engineering-2025:p322:fixed500-50:0",
+            "page": 322,
+            "rank": 4,
+            "score": 0.48139376113646437,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 61.0
+      },
+      {
+        "event": "abstain",
+        "reason": "The retrieved chunks do not contain any information about BM25 parameters k1 and b or their recommended values in a hybrid retrieval setup."
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p129:fixed500-50:0",
+      "ai-engineering-2025:p162:fixed500-50:0",
+      "ai-engineering-2025:p117:fixed500-50:0",
+      "ai-engineering-2025:p139:fixed500-50:0",
+      "ai-engineering-2025:p128:fixed500-50:0",
+      "ai-engineering-2025:p174:fixed500-50:1",
+      "ai-engineering-2025:p77:fixed500-50:0",
+      "ai-engineering-2025:p49:fixed500-50:1",
+      "ai-engineering-2025:p319:fixed500-50:2",
+      "ai-engineering-2025:p322:fixed500-50:0"
+    ],
+    "context_chars": 4241,
+    "llm_calls": 4,
+    "searches": 3,
+    "usage": {
+      "input": 4875,
+      "output": 102,
+      "thinking": 0
+    },
+    "elapsed_s": 43.69,
+    "model_answer": "The retrieved chunks do not contain any information about BM25 parameters k1 and b or their recommended values in a hybrid retrieval setup.",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "u02",
+    "split": "dev",
+    "type": "unanswerable",
+    "question": "Which HNSW index parameters, such as M or ef_search, does the book recommend tuning in a vector database?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "HNSW index parameters M ef_search vector database",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p113:fixed500-50:0",
+            "page": 113,
+            "rank": 1,
+            "score": 0.6128505295542751,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p117:fixed500-50:0",
+            "page": 117,
+            "rank": 2,
+            "score": 0.610380617062639,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p112:fixed500-50:0",
+            "page": 112,
+            "rank": 3,
+            "score": 0.6083287258932628,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p162:fixed500-50:0",
+            "page": 162,
+            "rank": 4,
+            "score": 0.6076965905140082,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 66.6
+      },
+      {
+        "event": "search",
+        "query": "HNSW M ef_search",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p174:fixed500-50:1",
+            "page": 174,
+            "rank": 1,
+            "score": 0.5485836362788055,
+            "new": true
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p128:fixed500-50:0",
+            "page": 128,
+            "rank": 2,
+            "score": 0.5391853954350044,
+            "new": true
+          },
+          {
+            "ref": "C7",
+            "id": "ai-engineering-2025:p176:fixed500-50:0",
+            "page": 176,
+            "rank": 3,
+            "score": 0.5368793794872312,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ai-engineering-2025:p118:fixed500-50:1",
+            "page": 118,
+            "rank": 4,
+            "score": 0.5322413204148029,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 62.2
+      },
+      {
+        "event": "search",
+        "query": "HNSW",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C9",
+            "id": "ai-engineering-2025:p252:fixed500-50:0",
+            "page": 252,
+            "rank": 1,
+            "score": 0.5056952978049332,
+            "new": true
+          },
+          {
+            "ref": "C10",
+            "id": "ai-engineering-2025:p63:fixed500-50:0",
+            "page": 63,
+            "rank": 2,
+            "score": 0.4956280710753913,
+            "new": true
+          },
+          {
+            "ref": "C11",
+            "id": "ai-engineering-2025:p253:fixed500-50:0",
+            "page": 253,
+            "rank": 3,
+            "score": 0.49562433231602077,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p174:fixed500-50:1",
+            "page": 174,
+            "rank": 4,
+            "score": 0.4937095804224927,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 65.6
+      },
+      {
+        "event": "abstain",
+        "reason": "The retrieved chunks do not contain any information about HNSW index parameters such as M or ef_search."
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p113:fixed500-50:0",
+      "ai-engineering-2025:p117:fixed500-50:0",
+      "ai-engineering-2025:p112:fixed500-50:0",
+      "ai-engineering-2025:p162:fixed500-50:0",
+      "ai-engineering-2025:p174:fixed500-50:1",
+      "ai-engineering-2025:p128:fixed500-50:0",
+      "ai-engineering-2025:p176:fixed500-50:0",
+      "ai-engineering-2025:p118:fixed500-50:1",
+      "ai-engineering-2025:p252:fixed500-50:0",
+      "ai-engineering-2025:p63:fixed500-50:0",
+      "ai-engineering-2025:p253:fixed500-50:0"
+    ],
+    "context_chars": 4766,
+    "llm_calls": 4,
+    "searches": 3,
+    "usage": {
+      "input": 4983,
+      "output": 92,
+      "thinking": 0
+    },
+    "elapsed_s": 48.61,
+    "model_answer": "The retrieved chunks do not contain any information about HNSW index parameters such as M or ef_search.",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "u03",
+    "split": "dev",
+    "type": "unanswerable",
+    "question": "What MMLU benchmark score does the book report for the Llama 3 model?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "MMLU benchmark score Llama 3",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p331:fixed500-50:1",
+            "page": 331,
+            "rank": 1,
+            "score": 0.6498811274979495,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p368:fixed500-50:0",
+            "page": 368,
+            "rank": 2,
+            "score": 0.6196585154940512,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p142:fixed500-50:1",
+            "page": 142,
+            "rank": 3,
+            "score": 0.5997974634653417,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p49:fixed500-50:1",
+            "page": 49,
+            "rank": 4,
+            "score": 0.5896310806274582,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 64.4
+      },
+      {
+        "event": "search",
+        "query": "MMLU Llama",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p331:fixed500-50:1",
+            "page": 331,
+            "rank": 1,
+            "score": 0.5848755982740654,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p49:fixed500-50:1",
+            "page": 49,
+            "rank": 2,
+            "score": 0.5771786570549176,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p41:fixed500-50:0",
+            "page": 41,
+            "rank": 3,
+            "score": 0.5718374081898633,
+            "new": true
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p43:fixed500-50:0",
+            "page": 43,
+            "rank": 4,
+            "score": 0.5667177359202263,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 52.5
+      },
+      {
+        "event": "search",
+        "query": "MMLU",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "dense",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C7",
+            "id": "ai-engineering-2025:p322:fixed500-50:0",
+            "page": 322,
+            "rank": 1,
+            "score": 0.5794405686521962,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ai-engineering-2025:p56:fixed500-50:1",
+            "page": 56,
+            "rank": 2,
+            "score": 0.5762619972229045,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p49:fixed500-50:1",
+            "page": 49,
+            "rank": 3,
+            "score": 0.5726753218576596,
+            "new": false
+          },
+          {
+            "ref": "C9",
+            "id": "ai-engineering-2025:p162:fixed500-50:0",
+            "page": 162,
+            "rank": 4,
+            "score": 0.557647452915326,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 55.5
+      },
+      {
+        "event": "abstain",
+        "reason": "The retrieved chunks do not contain any information about the MMLU benchmark score for the Llama 3 model."
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p331:fixed500-50:1",
+      "ai-engineering-2025:p368:fixed500-50:0",
+      "ai-engineering-2025:p142:fixed500-50:1",
+      "ai-engineering-2025:p49:fixed500-50:1",
+      "ai-engineering-2025:p41:fixed500-50:0",
+      "ai-engineering-2025:p43:fixed500-50:0",
+      "ai-engineering-2025:p322:fixed500-50:0",
+      "ai-engineering-2025:p56:fixed500-50:1",
+      "ai-engineering-2025:p162:fixed500-50:0"
+    ],
+    "context_chars": 3053,
+    "llm_calls": 4,
+    "searches": 3,
+    "usage": {
+      "input": 4565,
+      "output": 93,
+      "thinking": 0
+    },
+    "elapsed_s": 6.73,
+    "model_answer": "The retrieved chunks do not contain any information about the MMLU benchmark score for the Llama 3 model.",
+    "cost_usd_list_price": null
+  }
+]

@@ -9,6 +9,7 @@
 | `ingest.py` | Đọc PDF, chunking (fixed / paragraph), embed + upsert, xuất `starter/data/chunks.json` |
 | `benchmark.py` | `check`: kiểm tra `data/questions.json`; `retrieval`: Hit@1, Evidence Hit@3, Context Evidence Rate, MRR theo phương pháp |
 | `retrievers.py` | `dense` (pgvector), `bm25`, `tfidf` (bọc baseline), `hybrid` (RRF dense + BM25), `rerank` (cross-encoder trên candidate hybrid); chạy trực tiếp để thử một query |
+| `agent.py` | Agent Gemini (REST, function calling): tool `search` / `answer` / `abstain`, citation `[C#]` map về chunk ID, trace từng câu |
 
 ## 0. Kết nối dữ liệu và vector store Day 6
 
@@ -25,6 +26,26 @@ ollama pull nomic-embed-text
 .venv/Scripts/python starter/benchmark.py check                              # kiểm tra benchmark
 .venv/Scripts/python starter/benchmark.py retrieval --split dev --methods tfidf bm25 dense hybrid rerank
 ```
+
+### Agent (Gemini API)
+
+Đặt `GEMINI_API_KEY` trong `starter/.env` (không commit). Model mặc định `gemini-3.5-flash-lite`, temperature 0; đổi bằng `GEMINI_MODEL`.
+
+```bash
+.venv/Scripts/python starter/agent.py --question "What is RAG?"                 # một câu
+.venv/Scripts/python starter/agent.py --split dev --method rerank               # cả split -> starter/results/agent/dev-rerank/
+.venv/Scripts/python starter/agent.py --split dev --method dense                # baseline dense
+```
+
+| Thành phần | Thiết kế |
+|---|---|
+| Tool | `search(query, chapter?)`, `answer(answer, citations)`, `abstain(reason)`; `mode: ANY` nên mỗi lượt model bắt buộc gọi một tool |
+| Filter | Model chỉ đặt `chapter` khi câu hỏi nêu tên chương (giá trị nằm trong enum lấy từ metadata); `--use-filter` dùng filter người dùng ghi sẵn |
+| Context | Mỗi search lấy top-4; chunk mới được gán mã `C#`, chunk đã thấy chỉ nhắc lại mã; tổng chunk mới ≤ 6000 ký tự |
+| Dừng | Model gọi `answer`/`abstain`; hết 3 lượt search thì chỉ còn `answer`/`abstain` |
+| Citation | Mã phải có trong context và xuất hiện trong text (`[C1]` hoặc `[C1, C2]`); sai thì phản hồi cho sửa 1 lần, sai tiếp thì abstain |
+| Lỗi | HTTP 429/5xx retry có backoff (đọc `retryDelay`); hết retry thì `status: "error"`, không thay bằng kết quả giả |
+| Output | `traces.json` (tool call, kết quả, context, câu trả lời, citation, token, thời gian), `summary.json`, `reviews.json` (mẫu nhãn để chấm tay, không ghi đè) |
 
 Starter **chưa phải solution hoàn chỉnh**. Bạn phải nối model và vector store thật, triển khai ít nhất 3 phương pháp retrieval do bạn chọn, gồm dense trên vector store Day 6. Mock chỉ dùng để test code.
 
