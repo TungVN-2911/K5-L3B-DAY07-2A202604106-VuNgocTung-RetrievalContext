@@ -32,7 +32,7 @@ def setting(name: str, default: str | None = None) -> str:
 class OllamaEmbedder:
     def __init__(self, model_name: str | None = None, host: str | None = None, batch_size: int = 32) -> None:
         self.model_name = model_name or setting("OLLAMA_EMBED_MODEL")
-        self.host = (host or setting("OLLAMA_HOST", "http://localhost:11434")).rstrip("/")
+        self.host = (host or setting("OLLAMA_HOST", "http://127.0.0.1:11434")).rstrip("/")
         self.batch_size = batch_size
         # Warm-up call: loads the model (cold start) and measures the real dimension.
         self.dimensions = len(self._embed([QUERY_PREFIX + "warm-up"])[0])

@@ -7,8 +7,8 @@
 | `agent_metrics.py` | Tổng hợp nhãn đánh giá do bạn tự chấm |
 | `store.py` | Đọc `.env`, embedder Ollama `nomic-embed-text`, pgvector store (dùng lại index Day 6) |
 | `ingest.py` | Đọc PDF, chunking (fixed / paragraph), embed + upsert, xuất `starter/data/chunks.json` |
-| `benchmark.py` | Kiểm tra `data/questions.json`: schema, số câu theo split, gold trong chunk, câu thiếu evidence |
-| `retrievers.py` | `DenseRetriever` trả schema Day 7 (`id`, `source_id`, `score`, `rank`); chạy trực tiếp để smoke check |
+| `benchmark.py` | `check`: kiểm tra `data/questions.json`; `retrieval`: Hit@1, Evidence Hit@3, Context Evidence Rate, MRR theo phương pháp |
+| `retrievers.py` | `dense` (pgvector), `bm25`, `tfidf` (bọc baseline), `hybrid` (RRF dense + BM25), `rerank` (cross-encoder trên candidate hybrid); chạy trực tiếp để thử một query |
 
 ## 0. Kết nối dữ liệu và vector store Day 6
 
@@ -21,8 +21,9 @@ cd starter && docker compose -p day6_student_starter up -d --wait && cd ..   # d
 ollama pull nomic-embed-text
 .venv/Scripts/python starter/ingest.py              # xuất chunks.json từ index có sẵn
 .venv/Scripts/python starter/ingest.py --reindex    # khi volume rỗng: đọc PDF + embed lại (~80 s, 0 USD)
-.venv/Scripts/python starter/retrievers.py          # smoke check dense
-.venv/Scripts/python starter/benchmark.py           # kiểm tra benchmark
+.venv/Scripts/python starter/retrievers.py --method rerank "What is RAG?"   # thử một retriever
+.venv/Scripts/python starter/benchmark.py check                              # kiểm tra benchmark
+.venv/Scripts/python starter/benchmark.py retrieval --split dev --methods tfidf bm25 dense hybrid rerank
 ```
 
 Starter **chưa phải solution hoàn chỉnh**. Bạn phải nối model và vector store thật, triển khai ít nhất 3 phương pháp retrieval do bạn chọn, gồm dense trên vector store Day 6. Mock chỉ dùng để test code.
