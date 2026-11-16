@@ -1,0 +1,1444 @@
+[
+  {
+    "id": "ad01",
+    "split": "dev",
+    "group": "table",
+    "tags": [],
+    "question": "According to Table SPM.1, by what percentage must global GHG emissions fall from 2019 levels by 2030 in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "43% (5–95th percentile range 34–60%) below 2019 levels.",
+    "unit": "% so với 2019",
+    "evidence": [
+      {
+        "page": 37,
+        "printed_page": "21",
+        "region": "Table SPM.1",
+        "locator": "row 'Limit warming to 1.5°C (>50%) with no or limited overshoot' / GHG, column 2030",
+        "value": "43 [34-60]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 'GHG emissions reductions from 2019 (%)' 2030, column C1",
+        "value": "43 [34-60]",
+        "kind": "table"
+      }
+    ],
+    "reason": "Tra một ô bảng, cần đúng hàng (1.5°C, GHG chứ không phải CO2) và cột 2030."
+  },
+  {
+    "id": "ad02",
+    "split": "dev",
+    "group": "table",
+    "tags": [],
+    "question": "In Table 3.1, when do pathways in category C1 reach net zero CO2 emissions, and what share of these pathways reach it?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Median 5-year interval 2050–2055, reached by 100% of C1 pathways (5–95th percentile range 2035–2070).",
+    "unit": "năm",
+    "evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 'Emissions milestones: Net zero CO2 (% net zero pathways)', column C1 (spans C1a, C1b)",
+        "value": "2050-2055 (100%) [2035-2070]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Ô gộp qua C1a/C1b; cần đọc cả phần trăm trong ngoặc tròn."
+  },
+  {
+    "id": "ad03",
+    "split": "dev",
+    "group": "table",
+    "tags": [],
+    "question": "According to Table 2.2, how large is the 2030 emissions gap between unconditional NDCs announced prior to COP26 and pathways that limit warming to 1.5°C (>50%) with no or limited overshoot with immediate action?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "19–26 GtCO2-eq/yr.",
+    "unit": "GtCO2-eq/yr",
+    "evidence": [
+      {
+        "page": 74,
+        "printed_page": "58",
+        "region": "Table 2.2",
+        "locator": "row 'Emissions gap between NDCs and pathways that limit warming to 1.5°C (>50%)…', column 'Unconditional elements'",
+        "value": "19–26",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Phân biệt cột unconditional với including conditional (16–23) và hàng 2°C (10–16)."
+  },
+  {
+    "id": "ad04",
+    "split": "dev",
+    "group": "table",
+    "tags": [],
+    "question": "In Table 2.1, how are the observed change and the human contribution assessed for the ocean heat content increase since the 1970s?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Observed change: virtually certain. Human contribution: extremely likely, human influence is the main driver.",
+    "evidence": [
+      {
+        "page": 63,
+        "printed_page": "47",
+        "region": "Table 2.1",
+        "locator": "row 'Ocean heat content increase since the 1970s'; colour of 'Observed change assessment' and 'Human contribution assessment' cells vs colour key",
+        "value": "observed = dark brown (virtually certain); human = red-orange (extremely likely), label 'Main driver'",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Mức tin cậy chỉ mã hoá bằng màu ô, phải đối chiếu bảng màu (key) dưới bảng."
+  },
+  {
+    "id": "ad05",
+    "split": "dev",
+    "group": "image",
+    "tags": [],
+    "question": "In the feasibility matrix of climate responses and adaptation options (Figure SPM.7a / Figure 4.4a), what are the potential feasibility up to 1.5°C and the synergies with mitigation for 'Efficient livestock systems', and with what confidence?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Feasibility: low (medium confidence, two dots). Synergies with mitigation: medium (medium confidence, two dots).",
+    "evidence": [
+      {
+        "page": 43,
+        "printed_page": "27",
+        "region": "Figure SPM.7 panel a",
+        "locator": "left matrix, group 'Land, water, food', row 'Efficient livestock systems'",
+        "value": "feasibility cell light (Low) ••; synergy cell purple (Medium) ••",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 119,
+        "printed_page": "103",
+        "region": "Figure 4.4 panel a",
+        "locator": "same row",
+        "value": "same",
+        "kind": "diagram"
+      }
+    ],
+    "reason": "Ma trận ký hiệu: màu ô = mức, số chấm = độ tin cậy; không có trong text layer dạng có cấu trúc."
+  },
+  {
+    "id": "ad06",
+    "split": "dev",
+    "group": "image",
+    "tags": [],
+    "question": "In the 'Determinants of risk' schematic (Cross-Section Box.2 Figure 1, panel c), which components interact to produce risk, and what drives the hazard?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Risk arises from the interaction of hazard, vulnerability, exposure and response; the hazard is driven by climatic impact-drivers.",
+    "evidence": [
+      {
+        "page": 81,
+        "printed_page": "65",
+        "region": "Cross-Section Box.2 Figure 1 panel c",
+        "locator": "diagram of overlapping shapes around 'Risk'",
+        "value": "Hazard, Vulnerability, Exposure, Response; Climatic Impact-Drivers",
+        "kind": "diagram"
+      },
+      {
+        "page": 82,
+        "printed_page": "66",
+        "region": "Cross-Section Box.2 Figure 1 caption",
+        "locator": "Panel (c)",
+        "value": "Illustration of risk arising from the interaction of hazard (driven by changes in climatic impact-drivers) with vulnerability, exposure and response to climate change",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "any",
+    "alternative_evidence": [],
+    "reason": "Sơ đồ khái niệm; caption ở trang sau xác nhận cách đọc."
+  },
+  {
+    "id": "ad07",
+    "split": "dev",
+    "group": "image",
+    "tags": [],
+    "question": "In the Synthesis Report figures key (Figure 1.1), what do the axis-label icons and the italicized annotations denote?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Axis-label icons denote GHG emissions (cloud), temperature (°C thermometer), cost or budget ($) and net zero (boxed 'net zero'); italicized annotations are simple explanations written in non-technical language to help non-experts navigate complex content.",
+    "evidence": [
+      {
+        "page": 55,
+        "printed_page": "39",
+        "region": "Figure 1.1",
+        "locator": "whole figure",
+        "value": "Axis labels: GHG emissions, Temperature, Cost or budget, Net zero; Italicized 'annotations': Simple explanations written in non-technical language",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Sơ đồ chú giải ký hiệu dùng xuyên suốt các hình."
+  },
+  {
+    "id": "ad08",
+    "split": "dev",
+    "group": "image",
+    "tags": [],
+    "question": "In Figure SPM.6, which outcomes characterise the development pathways with lower climate resilient development (red/orange)?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "High emissions, entrenched systems, adaptation limits, maladaptation, increasing climate risk, reduced options for development, and ecosystem degradation.",
+    "evidence": [
+      {
+        "page": 41,
+        "printed_page": "25",
+        "region": "Figure SPM.6",
+        "locator": "right panel, lower circle 'Outcomes characterising development pathways'",
+        "value": "High emissions; Entrenched systems; Adaptation limits; Maladaptation; Increasing climate risk; Reduced options for development; Ecosystem degradation",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 113,
+        "printed_page": "97",
+        "region": "Figure 4.2",
+        "locator": "same element",
+        "value": "same",
+        "kind": "diagram"
+      }
+    ],
+    "reason": "Sơ đồ lộ trình; cần phân biệt vòng tròn xanh (kết quả tốt) và cam/đỏ."
+  },
+  {
+    "id": "ad09",
+    "split": "dev",
+    "group": "chart",
+    "tags": [],
+    "question": "In Figure 4.6, by what factor must yearly mitigation investment flows for energy efficiency increase to meet average annual needs until 2030?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "By a factor of 2 (lower range) to 7 (upper range).",
+    "unit": "lần",
+    "evidence": [
+      {
+        "page": 129,
+        "printed_page": "113",
+        "region": "Figure 4.6",
+        "locator": "row 'Energy efficiency', columns 'Multiplication factors' lower/upper range",
+        "value": "x2 / x7",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Đọc cột hệ số nhân của biểu đồ thanh."
+  },
+  {
+    "id": "ad10",
+    "split": "dev",
+    "group": "chart",
+    "tags": [],
+    "question": "According to Figure SPM.7 panel b, what share of total GHG emissions in the food end-use sector could demand-side mitigation options reduce by 2050?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "About 44%.",
+    "unit": "%",
+    "evidence": [
+      {
+        "page": 43,
+        "printed_page": "27",
+        "region": "Figure SPM.7 panel b",
+        "locator": "row 'Food'",
+        "value": "44%",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 119,
+        "printed_page": "103",
+        "region": "Figure 4.4 panel b",
+        "locator": "row 'Food'",
+        "value": "44%",
+        "kind": "chart"
+      }
+    ],
+    "reason": "Đọc nhãn trên thanh của biểu đồ."
+  },
+  {
+    "id": "ad11",
+    "split": "dev",
+    "group": "chart",
+    "tags": [],
+    "question": "In Figure 2.4, which technology's adoption is measured in millions of vehicles, and approximately how many had been adopted by 2020?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Passenger electric vehicles (battery-electric vehicles); roughly 7 million by 2020 (curve ends just below 7 on a 0–8 million axis).",
+    "unit": "triệu xe",
+    "evidence": [
+      {
+        "page": 70,
+        "printed_page": "54",
+        "region": "Figure 2.4 panel b",
+        "locator": "right column 'Passenger electric vehicle', y-axis 'Adoption (millions of EVs)'",
+        "value": "≈7 million in 2020",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Giá trị đọc gần đúng từ đường cong; chấp nhận 6–8 triệu."
+  },
+  {
+    "id": "ad12",
+    "split": "dev",
+    "group": "multihop",
+    "tags": [],
+    "question": "Which SSP scenario corresponds to WGIII category C6, and what median global warming in 2100 does Table 3.1 project for that category?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "C6 (limit warming to 3°C, >50%) corresponds to SSP2-4.5 (intermediate, RCP4.5); Table 3.1 projects 2.7°C [2.4–2.9] in 2100.",
+    "unit": "°C so với 1850–1900",
+    "evidence": [
+      {
+        "page": 81,
+        "printed_page": "65",
+        "region": "Cross-Section Box.2 Figure 1 panel b",
+        "locator": "row C6",
+        "value": "limit warming to 3°C (>50%) – Intermediate (SSP2-4.5) – RCP 4.5",
+        "kind": "table"
+      },
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 'Global mean temperature changes 50% probability (°C)' 2100, column C6",
+        "value": "2.7 [2.4-2.9]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Phải nối bảng ánh xạ kịch bản (p81) với Table 3.1 (p100)."
+  },
+  {
+    "id": "ad13",
+    "split": "dev",
+    "group": "multihop",
+    "tags": [],
+    "question": "How do the 2030 global emissions implied by policies implemented by the end of 2020 (Table 2.2) compare with the estimated global net anthropogenic GHG emissions in 2019?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Policies imply a median of 57 [52–60] GtCO2-eq in 2030 versus 59 ± 6.6 GtCO2-eq in 2019, i.e. about 2 GtCO2-eq lower — roughly similar to 2019 levels.",
+    "unit": "GtCO2-eq",
+    "computation": "59 − 57 = 2",
+    "evidence": [
+      {
+        "page": 74,
+        "printed_page": "58",
+        "region": "Table 2.2",
+        "locator": "row 'Median projected global emissions', column 'Implied by policies implemented by the end of 2020'",
+        "value": "57 [52–60]",
+        "kind": "table"
+      },
+      {
+        "page": 60,
+        "printed_page": "44",
+        "region": "Section 2 text",
+        "locator": "paragraph on 2019 emissions",
+        "value": "Global net anthropogenic GHG emissions have been estimated to be 59±6.6 GtCO2-eq in 2019",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "So sánh số liệu từ bảng và đoạn văn ở hai trang."
+  },
+  {
+    "id": "ad14",
+    "split": "dev",
+    "group": "multihop",
+    "tags": [],
+    "question": "How does the required increase in mitigation investment for Eastern Asia (Figure 4.6) compare with the global factor by which current mitigation flows fall short?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Eastern Asia needs a 2× to 4× increase, at or below the global shortfall of a factor of three to six.",
+    "unit": "lần",
+    "evidence": [
+      {
+        "page": 129,
+        "printed_page": "113",
+        "region": "Figure 4.6",
+        "locator": "row 'Eastern Asia', multiplication factors",
+        "value": "x2 / x4",
+        "kind": "chart"
+      },
+      {
+        "page": 129,
+        "printed_page": "113",
+        "region": "Figure 4.6 footnote",
+        "locator": "'*Multiplication factors…'",
+        "value": "Globally, current mitigation financial flows are a factor of three to six below the average levels up to 2030",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 49,
+        "printed_page": "33",
+        "region": "SPM C.7 text",
+        "locator": "text",
+        "value": "a factor of three to six greater than current levels",
+        "kind": "text"
+      }
+    ],
+    "reason": "Kết hợp giá trị đọc từ hình và câu toàn cầu (cũng ở p49/p78/p127)."
+  },
+  {
+    "id": "ad15",
+    "split": "dev",
+    "group": "text",
+    "tags": [],
+    "question": "When are global net zero CO2 emissions reached in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, and in those that limit warming to 2°C (>67%)?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "In the early 2050s for 1.5°C pathways and around the early 2070s for 2°C (>67%) pathways.",
+    "evidence": [
+      {
+        "page": 101,
+        "printed_page": "85",
+        "region": "Section 3.3.2 text",
+        "locator": "paragraph 2",
+        "value": "Global net zero CO2 emissions are reached in the early 2050s in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, and around the early 2070s in pathways that limit warming to 2°C (>67%)",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 36,
+        "printed_page": "20",
+        "region": "SPM B.6",
+        "locator": "text",
+        "value": "in the early 2050s and around the early 2070s, respectively",
+        "kind": "text"
+      }
+    ],
+    "reason": "Câu có hai điều kiện song song."
+  },
+  {
+    "id": "ad16",
+    "split": "dev",
+    "group": "text",
+    "tags": [],
+    "question": "How many people live in contexts that are highly vulnerable to climate change?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Approximately 3.3 to 3.6 billion people.",
+    "unit": "người",
+    "evidence": [
+      {
+        "page": 21,
+        "printed_page": "5",
+        "region": "SPM A.2.2",
+        "locator": "text",
+        "value": "Approximately 3.3 to 3.6 billion people live in contexts that are highly vulnerable to climate change",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 67,
+        "printed_page": "51",
+        "region": "Section 2.1.2 text",
+        "locator": "text",
+        "value": "Approximately 3.3 to 3.6 billion people live in contexts that are highly vulnerable",
+        "kind": "text"
+      }
+    ],
+    "reason": "Số liệu text lặp ở nhiều trang."
+  },
+  {
+    "id": "ad17",
+    "split": "dev",
+    "group": "text",
+    "tags": [],
+    "question": "In pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, by how much are global methane emissions reduced below 2019 levels in 2040?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "By 44% (31–63%) below 2019 levels in 2040.",
+    "unit": "%",
+    "evidence": [
+      {
+        "page": 109,
+        "printed_page": "93",
+        "region": "Section 4 text",
+        "locator": "paragraph on CH4",
+        "value": "global CH4 (methane) emissions are reduced by 34 [21 to 57]% below 2019 levels by 2030 and by 44 [31 to 63]% in 2040",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Phải chọn mốc 2040 (không phải 2030) và kịch bản 1.5°C (không phải 2°C: 37%)."
+  },
+  {
+    "id": "ad18",
+    "split": "dev",
+    "group": "text",
+    "tags": [],
+    "question": "What collective climate finance goal under the UNFCCC and Paris Agreement were developed-to-developing country flows compared against, and were 2018 flows meeting it?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "The goal to mobilise USD 100 billion per year by 2020; in 2018, public and publicly mobilised private flows were below this goal (medium confidence).",
+    "evidence": [
+      {
+        "page": 27,
+        "printed_page": "11",
+        "region": "SPM A.4 text",
+        "locator": "text",
+        "value": "In 2018, public and publicly mobilised private climate finance flows from developed to developing countries were below the collective goal under the UNFCCC and Paris Agreement to mobilise USD 100 billion per year by 2020",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 78,
+        "printed_page": "62",
+        "region": "Section 2 text",
+        "locator": "text",
+        "value": "were below the collective goal under the UNFCCC and Paris Agreement to mobilise USD 100 billion per year by 2020",
+        "kind": "text"
+      }
+    ],
+    "reason": "Câu có điều kiện năm 2018."
+  },
+  {
+    "id": "ad19",
+    "split": "dev",
+    "group": "table",
+    "tags": [],
+    "question": "In Table 3.1, what is the median likelihood that peak global warming stays below 1.5°C for pathways in category C3 (limit warming to 2°C, >67%)?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "20% (range 13–41%).",
+    "unit": "%",
+    "evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 'Likelihood of peak global warming staying below (%)' <1.5°C, column C3",
+        "value": "20 [13-41]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Phải đúng hàng <1.5°C (không phải <2.0°C = 76) và cột C3 (không phải C3a/C3b)."
+  },
+  {
+    "id": "ud01",
+    "split": "dev",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "How much money was pledged to the Loss and Damage fund agreed at COP27?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo dừng ở NDC công bố trước COP26; không nhắc COP27 hay quỹ Loss and Damage (chỉ nói khái niệm losses and damages).",
+    "absence_check": {
+      "absent_patterns": [
+        "COP ?27",
+        "Loss and Damage fund"
+      ],
+      "related_pages": [
+        27,
+        52,
+        73
+      ],
+      "visual_check": "Đã xem các trang tài chính khí hậu p27, p78; không có số tiền quỹ."
+    }
+  },
+  {
+    "id": "ud02",
+    "split": "dev",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "What flooding projection does the report give for the Mekong Delta or Ho Chi Minh City by 2050?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo đánh giá ở quy mô toàn cầu/khu vực lớn; không nhắc Mekong, Ho Chi Minh hay Hanoi.",
+    "absence_check": {
+      "absent_patterns": [
+        "Mekong",
+        "Ho Chi Minh",
+        "Hanoi"
+      ],
+      "related_pages": [
+        29,
+        86,
+        96
+      ],
+      "visual_check": "Bản đồ SPM.2/3.1 theo lưới toàn cầu, không có nhãn địa danh Việt Nam."
+    }
+  },
+  {
+    "id": "ud03",
+    "split": "dev",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "What was the minimum Arctic sea ice extent in 2012, in million square kilometres, according to the report?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo nêu mất băng biển Bắc Cực (Table 2.1) và dự báo mùa hè không băng nhưng không có số diện tích theo năm.",
+    "absence_check": {
+      "absent_patterns": [
+        "Arctic sea ice.{0,60}million",
+        "million (km2|km²|square kilomet)"
+      ],
+      "related_pages": [
+        63,
+        86
+      ],
+      "visual_check": "Table 2.1 chỉ có mức tin cậy theo màu, không có diện tích."
+    }
+  },
+  {
+    "id": "ud04",
+    "split": "dev",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "According to the report, what was the levelised cost of electricity from nuclear power in 2020?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Figure 2.4 chỉ có LCOE của PV, gió trên bờ, gió ngoài khơi và pin; SPM.7 có 'Nuclear' nhưng là tiềm năng giảm phát thải theo nhóm chi phí USD/tCO2-eq, không phải LCOE USD/MWh.",
+    "absence_check": {
+      "absent_patterns": [
+        "nuclear.{0,80}(MWh|LCOE|levelised)",
+        "(LCOE|levelised cost).{0,80}nuclear"
+      ],
+      "related_pages": [
+        43,
+        70,
+        119
+      ],
+      "visual_check": "Bẫy: 'Nuclear' xuất hiện trong hình SPM.7 (không có trong text layer) nhưng không có LCOE."
+    }
+  },
+  {
+    "id": "at01",
+    "split": "test",
+    "group": "table",
+    "tags": [],
+    "question": "In Table 3.1, what are the median cumulative net CO2 emissions from 2020 until net zero CO2 for category C3 (limit warming to 2°C, >67%), with the 5–95th percentile range?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "890 GtCO2 (640–1160).",
+    "unit": "GtCO2",
+    "evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 'Cumulative CO2 emissions [Gt CO2]' '2020 to net zero CO2', column C3",
+        "value": "890 [640-1160]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Phân biệt hàng 'to net zero' với '2020–2100' (800) và cột C3 với C3a/C3b."
+  },
+  {
+    "id": "at02",
+    "split": "test",
+    "group": "table",
+    "tags": [],
+    "question": "According to Table 3.1, what median peak warming and what median warming in 2100 are projected for pathways that return warming to 1.5°C (>50%) after a high overshoot?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Peak warming 1.7°C (1.5–1.8); warming in 2100 1.4°C (1.2–1.5).",
+    "unit": "°C so với 1850–1900",
+    "evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "column C2, rows 'at peak warming' and '2100'",
+        "value": "1.7 [1.5-1.8]; 1.4 [1.2-1.5]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Cần biết C2 = return to 1.5°C after high overshoot và đọc hai hàng."
+  },
+  {
+    "id": "at03",
+    "split": "test",
+    "group": "table",
+    "tags": [],
+    "question": "In Table 3.1, what is the median likelihood that peak global warming stays below 2.0°C for category C4 pathways?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "59% (range 50–77%).",
+    "unit": "%",
+    "evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 'Likelihood…' <2.0°C, column C4",
+        "value": "59 [50-77]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Tra đúng hàng và cột."
+  },
+  {
+    "id": "at04",
+    "split": "test",
+    "group": "table",
+    "tags": [],
+    "question": "According to Table SPM.1, by how much must CO2 emissions be reduced from 2019 levels by 2035 in pathways that limit warming to 2°C (>67%)?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "37% (5–95th percentile 21–59%).",
+    "unit": "% so với 2019",
+    "evidence": [
+      {
+        "page": 37,
+        "printed_page": "21",
+        "region": "Table SPM.1",
+        "locator": "row 'Limit warming to 2°C (>67%)' / CO2, column 2035",
+        "value": "37 [21-59]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Cột 2035 chỉ có ở Table SPM.1; phân biệt CO2 với GHG (35)."
+  },
+  {
+    "id": "at05",
+    "split": "test",
+    "group": "table",
+    "tags": [],
+    "question": "Using Table 2.2, what is the implementation gap in 2030 between policies implemented by the end of 2020 and NDCs, for unconditional NDC elements and when including conditional elements?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "4 GtCO2-eq/yr for unconditional elements and 7 GtCO2-eq/yr including conditional elements (57 − 53 and 57 − 50).",
+    "unit": "GtCO2-eq/yr",
+    "computation": "57 − 53 = 4; 57 − 50 = 7",
+    "evidence": [
+      {
+        "page": 74,
+        "printed_page": "58",
+        "region": "Table 2.2",
+        "locator": "row 'Implementation gap between implemented policies and NDCs (median)'; row 'Median projected global emissions'",
+        "value": "4 / 7; 57, 53, 50",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Có thể đọc trực tiếp hoặc tính từ hàng median."
+  },
+  {
+    "id": "at06",
+    "split": "test",
+    "group": "table",
+    "tags": [],
+    "question": "In Table 2.1, how are the observed change and the human contribution assessed for Greenland ice sheet mass loss since the 1990s?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Observed change: virtually certain. Human contribution: medium confidence.",
+    "evidence": [
+      {
+        "page": 63,
+        "printed_page": "47",
+        "region": "Table 2.1",
+        "locator": "row 'Greenland ice sheet mass loss since 1990s'; cell colours vs key",
+        "value": "observed = dark brown (virtually certain); human = pale cream (medium confidence), no 'Main driver' label",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Mức tin cậy chỉ mã hoá bằng màu."
+  },
+  {
+    "id": "at07",
+    "split": "test",
+    "group": "image",
+    "tags": [],
+    "question": "In the feasibility matrix of Figure SPM.7a (Figure 4.4a), what potential feasibility and synergies with mitigation are shown for 'Forest-based adaptation', and with what confidence?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "High feasibility (high confidence, three dots) and high synergies with mitigation (high confidence, three dots).",
+    "evidence": [
+      {
+        "page": 43,
+        "printed_page": "27",
+        "region": "Figure SPM.7 panel a",
+        "locator": "group 'Land, water, food', row 'Forest-based adaptation'",
+        "value": "both cells dark navy (High) with •••",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 119,
+        "printed_page": "103",
+        "region": "Figure 4.4 panel a",
+        "locator": "same row",
+        "value": "same",
+        "kind": "diagram"
+      }
+    ],
+    "reason": "Ma trận ký hiệu màu + chấm."
+  },
+  {
+    "id": "at08",
+    "split": "test",
+    "group": "image",
+    "tags": [],
+    "question": "In Figure SPM.7a (Figure 4.4a), which climate response in the 'Society, livelihood and economy' group has insufficient evidence for its synergies with mitigation?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Climate services, including Early Warning Systems (white synergy cell = insufficient evidence; its feasibility is medium with high confidence).",
+    "evidence": [
+      {
+        "page": 43,
+        "printed_page": "27",
+        "region": "Figure SPM.7 panel a",
+        "locator": "group 'Society, livelihood and economy', synergy column",
+        "value": "white cell for 'Climate services, including Early Warning Systems'",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 119,
+        "printed_page": "103",
+        "region": "Figure 4.4 panel a",
+        "locator": "same",
+        "value": "same",
+        "kind": "diagram"
+      }
+    ],
+    "reason": "Phải nhận ra ô trắng theo chú giải 'Insufficient evidence'."
+  },
+  {
+    "id": "at09",
+    "split": "test",
+    "group": "image",
+    "tags": [],
+    "question": "In Figure 4.5, for mitigation options in energy systems, which Sustainable Development Goal shows a pure trade-off (solid orange) segment?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "SDG 6 – Clean water and sanitation.",
+    "evidence": [
+      {
+        "page": 125,
+        "printed_page": "109",
+        "region": "Figure 4.5",
+        "locator": "column 'Energy systems – Mitigation', row SDG 6 icon",
+        "value": "bar with blue, striped and solid orange segments",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Ma trận biểu tượng SDG; chỉ hàng SDG 6 có đoạn cam đặc trong cột này."
+  },
+  {
+    "id": "at10",
+    "split": "test",
+    "group": "image",
+    "tags": [],
+    "question": "In the AR6 integrated assessment framework schematic (Cross-Section Box.2 Figure 1a), how are socio-economic changes, emissions, climate and impacts/risks linked, and where do mitigation and adaptation policy act?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Socio-economic changes influence emissions, which change the climate, which drives impacts/risks; impacts/risks feed back (dashed: influence/shape socio-economic changes, not yet considered in AR6 scenarios). Mitigation policy acts on emissions; adaptation policy acts on impacts/risks.",
+    "evidence": [
+      {
+        "page": 81,
+        "printed_page": "65",
+        "region": "Cross-Section Box.2 Figure 1 panel a",
+        "locator": "top flow diagram",
+        "value": "Socio-economic changes → influence → Emissions → that change → Climate → which drives → Impacts / Risks; Mitigation Policy under Emissions; Adaptation Policy under Impacts/Risks",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Sơ đồ luồng có mũi tên và hộp chính sách."
+  },
+  {
+    "id": "at11",
+    "split": "test",
+    "group": "image",
+    "tags": [],
+    "question": "According to Figure SPM.6, which conditions constrain individual and collective actions for climate resilient development?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Poverty, inequity and injustice; economic, institutional, social and capacity barriers; siloed responses; lack of finance and barriers to finance and technology; and trade-offs with SDGs.",
+    "evidence": [
+      {
+        "page": 41,
+        "printed_page": "25",
+        "region": "Figure SPM.6",
+        "locator": "left panel box 'Conditions that constrain individual and collective actions'",
+        "value": "5 bullet items",
+        "kind": "diagram"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 113,
+        "printed_page": "97",
+        "region": "Figure 4.2",
+        "locator": "same box",
+        "value": "same",
+        "kind": "diagram"
+      }
+    ],
+    "reason": "Sơ đồ lộ trình; khác hộp 'Conditions that enable'."
+  },
+  {
+    "id": "at12",
+    "split": "test",
+    "group": "chart",
+    "tags": [],
+    "question": "In Figure 4.6, by what factor must yearly mitigation investment flows in the Middle East increase to meet average annual needs until 2030?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "By a factor of 14 (lower range) to 28 (upper range).",
+    "unit": "lần",
+    "evidence": [
+      {
+        "page": 129,
+        "printed_page": "113",
+        "region": "Figure 4.6",
+        "locator": "row 'Middle East', multiplication factors",
+        "value": "x14 / x28",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Đọc cột hệ số nhân."
+  },
+  {
+    "id": "at13",
+    "split": "test",
+    "group": "chart",
+    "tags": [],
+    "question": "In Figure 4.6, which sector needs the largest upper-range multiplication of mitigation investment flows, and what are its lower and upper factors?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Agriculture, forestry and other land use: x10 (lower) to x31 (upper).",
+    "unit": "lần",
+    "evidence": [
+      {
+        "page": 129,
+        "printed_page": "113",
+        "region": "Figure 4.6",
+        "locator": "'By sector' rows, multiplication factors",
+        "value": "AFOLU x10 / x31 (others: x7, x7, x5)",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "So sánh nhiều hàng."
+  },
+  {
+    "id": "at14",
+    "split": "test",
+    "group": "chart",
+    "tags": [],
+    "question": "According to Figure 2.1 panel b, what were the atmospheric concentrations of CO2, methane and nitrous oxide in 2019?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "CO2 410 ppm, CH4 1866 ppb, N2O 332 ppb.",
+    "unit": "ppm / ppb",
+    "evidence": [
+      {
+        "page": 59,
+        "printed_page": "43",
+        "region": "Figure 2.1 panel b",
+        "locator": "end labels of the three concentration curves",
+        "value": "410 ppm CO2; 1866 ppb CH4; 332 ppb N2O",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Nhãn số nằm trong hình, đơn vị khác nhau (ppm/ppb)."
+  },
+  {
+    "id": "at15",
+    "split": "test",
+    "group": "chart",
+    "tags": [],
+    "question": "In Figure SPM.7 panel b (Figure 4.4b), what share of 2050 emissions could demand-side options reduce in buildings and in land transport?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Buildings about 66%; land transport about 67%.",
+    "unit": "%",
+    "evidence": [
+      {
+        "page": 43,
+        "printed_page": "27",
+        "region": "Figure SPM.7 panel b",
+        "locator": "rows 'Buildings' and 'Land transport'",
+        "value": "66% / 67%",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 119,
+        "printed_page": "103",
+        "region": "Figure 4.4 panel b",
+        "locator": "same rows",
+        "value": "same",
+        "kind": "chart"
+      }
+    ],
+    "reason": "Hai nhãn sát nhau, dễ nhầm."
+  },
+  {
+    "id": "at16",
+    "split": "test",
+    "group": "chart",
+    "tags": [],
+    "question": "In Figure 3.5a, how do the lifetime CO2 emissions from existing and planned fossil fuel infrastructure compare with the remaining carbon budgets for 1.5°C (>50%) and 2°C (83%)?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "They exceed the 1.5°C (>50%) budget (≈500 GtCO2) and are roughly equal to the 2°C (83%) budget (≈850–900 GtCO2): the bar reaches about the dashed 2°C (83%) line.",
+    "unit": "GtCO2",
+    "evidence": [
+      {
+        "page": 99,
+        "printed_page": "83",
+        "region": "Figure 3.5 panel a",
+        "locator": "bars 'Existing and planned' vs 'Remaining carbon budgets' and dashed budget lines",
+        "value": "existing+planned ≈ 850 GtCO2; 1.5°C ≈ 500; 2°C (83%) ≈ 900",
+        "kind": "chart"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 74,
+        "printed_page": "58",
+        "region": "Section 2.3.1 text",
+        "locator": "text",
+        "value": "approximately equal to total cumulative net CO2 emissions in pathways that limit warming to 2°C with a likelihood of 83%",
+        "kind": "text"
+      }
+    ],
+    "reason": "So sánh độ dài thanh và đường tham chiếu; giá trị đọc gần đúng."
+  },
+  {
+    "id": "at17",
+    "split": "test",
+    "group": "multihop",
+    "tags": [],
+    "question": "Which SSP scenario corresponds to category C3, and what median warming in 2100 does Table 3.1 give for C3?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "C3 (limit warming to 2°C, >67%) corresponds to SSP1-2.6 (low, RCP2.6); Table 3.1 gives 1.6°C [1.5–1.8] in 2100.",
+    "unit": "°C",
+    "evidence": [
+      {
+        "page": 81,
+        "printed_page": "65",
+        "region": "Cross-Section Box.2 Figure 1 panel b",
+        "locator": "row C3",
+        "value": "limit warming to 2°C (>67%) – Low (SSP1-2.6) – RCP2.6",
+        "kind": "table"
+      },
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row '2100', column C3",
+        "value": "1.6 [1.5-1.8]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Nối bảng ánh xạ kịch bản và Table 3.1."
+  },
+  {
+    "id": "at18",
+    "split": "test",
+    "group": "multihop",
+    "tags": [],
+    "question": "Using Table SPM.1 and the modelled 2019 GHG emissions stated in the notes to Table 3.1, approximately what level would global GHG emissions reach in 2050 in pathways that limit warming to 2°C (>67%)?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "About 20 GtCO2-eq/yr: a 64% reduction from modelled 2019 emissions of 55 GtCO2-eq gives 55 × 0.36 ≈ 19.8.",
+    "unit": "GtCO2-eq/yr",
+    "computation": "55 × (1 − 0.64) = 19.8 ≈ 20",
+    "evidence": [
+      {
+        "page": 37,
+        "printed_page": "21",
+        "region": "Table SPM.1",
+        "locator": "row 2°C (>67%) GHG, column 2050",
+        "value": "64 [53-77]",
+        "kind": "table"
+      },
+      {
+        "page": 101,
+        "printed_page": "85",
+        "region": "Table 3.1 note 3",
+        "locator": "footnote text",
+        "value": "The modelled GHG emissions in 2019 are 55 [53–58] GtCO2-eq",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 2050 GHG reduction, column C3",
+        "value": "64 [53-77]",
+        "kind": "table"
+      }
+    ],
+    "reason": "Cần phép tính từ hai nguồn."
+  },
+  {
+    "id": "at19",
+    "split": "test",
+    "group": "multihop",
+    "tags": [],
+    "question": "Global surface temperature in 2011–2020 was how far above 1850–1900, and how much additional warming does the median C1 pathway imply at its peak (Table 3.1)?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1.1°C in 2011–2020; the median C1 peak warming is 1.6°C [1.4–1.6], i.e. about 0.5°C more.",
+    "unit": "°C",
+    "computation": "1.6 − 1.1 = 0.5",
+    "evidence": [
+      {
+        "page": 20,
+        "printed_page": "4",
+        "region": "SPM A.1",
+        "locator": "text",
+        "value": "global surface temperature reaching 1.1°C above 1850–1900 in 2011–2020",
+        "kind": "text"
+      },
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row 'at peak warming', column C1",
+        "value": "1.6 [1.4-1.6]",
+        "kind": "table"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [
+      {
+        "page": 59,
+        "printed_page": "43",
+        "region": "Figure 2.1 panel c",
+        "locator": "annotation",
+        "value": "Global surface temperature has increased by 1.1°C by 2011-2020 compared to 1850-1900",
+        "kind": "chart"
+      }
+    ],
+    "reason": "Kết hợp text và bảng, có phép trừ."
+  },
+  {
+    "id": "at20",
+    "split": "test",
+    "group": "multihop",
+    "tags": [],
+    "question": "How does the median cumulative net CO2 emission from 2020 until net zero in C1 pathways (Table 3.1) compare with the best-estimate remaining carbon budget for a 50% chance of limiting warming to 1.5°C?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Roughly equal: C1 median is 510 [330–710] GtCO2 versus a remaining budget of 500 GtCO2 from the beginning of 2020 — about 10 GtCO2 higher.",
+    "unit": "GtCO2",
+    "computation": "510 − 500 = 10",
+    "evidence": [
+      {
+        "page": 100,
+        "printed_page": "84",
+        "region": "Table 3.1",
+        "locator": "row '2020 to net zero CO2', column C1",
+        "value": "510 [330-710]",
+        "kind": "table"
+      },
+      {
+        "page": 35,
+        "printed_page": "19",
+        "region": "SPM B.5.2",
+        "locator": "text",
+        "value": "The best estimates of the remaining carbon budgets from the beginning of 2020 are 500 GtCO2 for a 50% likelihood of limiting global warming to 1.5°C",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "So sánh bảng và text."
+  },
+  {
+    "id": "at21",
+    "split": "test",
+    "group": "text",
+    "tags": [],
+    "question": "What shares of coal, gas and oil reserves cannot be burned and emitted if warming is limited to 2°C?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "About 80% of coal, 50% of gas and 30% of oil reserves (high confidence).",
+    "unit": "% trữ lượng",
+    "evidence": [
+      {
+        "page": 74,
+        "printed_page": "58",
+        "region": "Section 2.3.1 text",
+        "locator": "paragraph on stranded assets",
+        "value": "About 80% of coal, 50% of gas, and 30% of oil reserves cannot be burned and emitted if warming is limited to 2°C",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Ba con số trong một câu, điều kiện 2°C."
+  },
+  {
+    "id": "at22",
+    "split": "test",
+    "group": "text",
+    "tags": [],
+    "question": "What was the average rate of global mean sea level rise between 2006 and 2018, and how does it compare with 1901–1971?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "3.7 [3.2–4.2] mm/yr in 2006–2018, compared with 1.3 [0.6–2.1] mm/yr in 1901–1971.",
+    "unit": "mm/năm",
+    "evidence": [
+      {
+        "page": 21,
+        "printed_page": "5",
+        "region": "SPM A.2.1",
+        "locator": "text",
+        "value": "The average rate of sea level rise was 1.3 [0.6 to 2.1] mm … between 1901 and 1971 … further increasing to 3.7 [3.2 to 4.2] mm … between 2006 and 2018",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Phải chọn đúng giai đoạn (không phải 1971–2006: 1.9)."
+  },
+  {
+    "id": "at23",
+    "split": "test",
+    "group": "text",
+    "tags": [],
+    "question": "What is the best-estimate remaining carbon budget from the beginning of 2020 for a 67% likelihood of limiting warming to 2°C?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1150 GtCO2.",
+    "unit": "GtCO2",
+    "evidence": [
+      {
+        "page": 35,
+        "printed_page": "19",
+        "region": "SPM B.5.2",
+        "locator": "text",
+        "value": "1150 GtCO2 for a 67% likelihood of limiting warming to 2°C",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Phân biệt với 500 GtCO2 (1.5°C, 50%)."
+  },
+  {
+    "id": "at24",
+    "split": "test",
+    "group": "text",
+    "tags": [],
+    "question": "What share of historical cumulative net CO2 emissions from 1850 to 2019 occurred between 1990 and 2019?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "About 42% (1000 ± 90 GtCO2 of the 2400 ± 240 GtCO2 total).",
+    "unit": "%",
+    "evidence": [
+      {
+        "page": 60,
+        "printed_page": "44",
+        "region": "Section 2 text",
+        "locator": "paragraph on cumulative emissions",
+        "value": "Historical cumulative net CO2 emissions from 1850 to 2019 were 2400 ±240 GtCO2. Of these, more than half (58%) occurred between 1850 and 1989 [1400 ±195 GtCO2], and about 42% between 1990 and 2019 [1000 ±90 GtCO2]",
+        "kind": "text"
+      }
+    ],
+    "evidence_required": "all",
+    "alternative_evidence": [],
+    "reason": "Điều kiện giai đoạn 1990–2019."
+  },
+  {
+    "id": "au01",
+    "split": "test",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "According to the report, how much will Viet Nam warm by 2100 under SSP2-4.5?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo không có số liệu theo quốc gia; không nhắc Viet Nam.",
+    "absence_check": {
+      "absent_patterns": [
+        "Viet ?Nam",
+        "Vietnam"
+      ],
+      "related_pages": [
+        29,
+        86,
+        96
+      ],
+      "visual_check": "Bản đồ SPM.2/3.1 không có nhãn quốc gia."
+    }
+  },
+  {
+    "id": "au02",
+    "split": "test",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "How much sea level rise does the report project for Jakarta by 2100?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Chỉ có mực nước biển toàn cầu (SPM B.2, Figure 3.4); không có thành phố cụ thể.",
+    "absence_check": {
+      "absent_patterns": [
+        "Jakarta",
+        "Shanghai|Mumbai|Lagos"
+      ],
+      "related_pages": [
+        29,
+        96,
+        97
+      ],
+      "visual_check": "Figure 3.4 chỉ có đường toàn cầu."
+    }
+  },
+  {
+    "id": "au03",
+    "split": "test",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "How many member governments approved the Summary for Policymakers at the IPCC's 58th session?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "p10 nêu phiên họp thứ 58 (13–17/3/2023, Interlaken) phê duyệt SPM nhưng không nêu số chính phủ.",
+    "absence_check": {
+      "absent_patterns": [
+        "approved by \\d+",
+        "\\d+ (member )?governments (approved|adopted)",
+        "governments approved"
+      ],
+      "related_pages": [
+        4,
+        10
+      ],
+      "visual_check": "Bẫy: có thông tin phiên họp nhưng không có con số."
+    }
+  },
+  {
+    "id": "au04",
+    "split": "test",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "What 2030 global emissions are implied by the NDCs updated at COP28?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo chỉ đánh giá NDC công bố trước COP26 (literature cutoff 11/10/2021).",
+    "absence_check": {
+      "absent_patterns": [
+        "COP ?27",
+        "COP ?28"
+      ],
+      "related_pages": [
+        27,
+        73,
+        74
+      ],
+      "visual_check": "Bẫy: Table 2.2 có số liệu NDC nhưng là trước COP26."
+    }
+  },
+  {
+    "id": "au05",
+    "split": "test",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "What was the global mean surface temperature anomaly in the year 2023 according to the report?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Dữ liệu quan sát kết thúc ở 2020 (1.1°C cho 2011–2020); '2023' chỉ xuất hiện là năm xuất bản/phiên họp.",
+    "absence_check": {
+      "absent_patterns": [
+        "(in|during) 2023.{0,40}(°C|warm)",
+        "2023.{0,30}anomal"
+      ],
+      "related_pages": [
+        20,
+        59
+      ],
+      "visual_check": "Bẫy: có giá trị 2011–2020 nhưng không có 2023."
+    }
+  },
+  {
+    "id": "au06",
+    "split": "test",
+    "group": "unanswerable",
+    "tags": [],
+    "question": "What was the price of an EU Emissions Trading System allowance in 2022 according to the report?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo nói chung về carbon pricing (p48, p69) nhưng không có EU ETS hay giá cụ thể.",
+    "absence_check": {
+      "absent_patterns": [
+        "EU ETS",
+        "European Union Emissions Trading"
+      ],
+      "related_pages": [
+        48,
+        69,
+        126
+      ],
+      "visual_check": "Không có số giá carbon cụ thể."
+    }
+  }
+]

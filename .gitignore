@@ -15,3 +15,6 @@ data/*.pdf
 
 # Label review printouts
 review*.txt
+
+# Advanced challenge source PDFs (download per data/advanced/manifest)
+data/advanced/*.pdf

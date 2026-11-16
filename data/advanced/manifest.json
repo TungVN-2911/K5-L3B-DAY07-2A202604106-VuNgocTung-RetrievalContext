@@ -1,0 +1,38 @@
+{
+  "source_id": "ipcc-ar6-syr-2023",
+  "title": "Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change (Full Volume)",
+  "publisher": "Intergovernmental Panel on Climate Change (IPCC), Geneva, Switzerland",
+  "editors": "Core Writing Team, H. Lee and J. Romero (eds.)",
+  "isbn": "978-92-9169-164-7",
+  "doi": "10.59327/IPCC/AR6-9789291691647",
+  "landing_page": "https://www.ipcc.ch/report/ar6/syr/",
+  "file_name": "IPCC_AR6_SYR_FullVolume.pdf",
+  "committed_to_repo": false,
+  "how_to_obtain": "Tải 'Full Volume' trên trang landing_page bằng trình duyệt (host chặn tải tự động), lưu tại data/advanced/IPCC_AR6_SYR_FullVolume.pdf rồi đối chiếu sha256.",
+  "snapshot": {
+    "sha256": "f5258cf9434fd8887848e334197b6397ad6e107a6f06ddf21a00b2bce3f5dee6",
+    "bytes": 4913496,
+    "pdf_creation_date": "2023-07-15",
+    "pdf_mod_date": "2023-08-15",
+    "accessed_at": "2026-11-16"
+  },
+  "license_or_permission": "Trang ii (PDF p4): '© Intergovernmental Panel on Climate Change, 2023 ... Short extracts from this publication may be reproduced without authorization provided that complete source is clearly indicated.' Repo chỉ lưu trích đoạn ngắn kèm nguồn; PDF không commit.",
+  "physical_pages": 186,
+  "page_numbering": "pdf_page là số trang PDF 1-based; printed_page là nhãn in trên trang (PyMuPDF page.get_label()), ví dụ pdf_page 21 = printed 5.",
+  "sections": {
+    "front_matter": [1, 15],
+    "spm": [16, 50],
+    "section_1": [51, 56],
+    "section_2": [57, 82],
+    "section_3": [83, 106],
+    "section_4": [107, 132],
+    "annexes": [133, 186]
+  },
+  "content_inventory": {
+    "tables": ["Table SPM.1 (p37)", "Table 2.1 (p63)", "Table 2.2 (p74)", "Table 3.1", "Annex tables"],
+    "diagrams_infographics": ["Figure 1.1 figures key (p55)", "Figure 2.1 causal chain (p59)", "Figure SPM.7 / 4.4 feasibility infographic", "Figure 4.5 SDG synergies matrix (p125)", "Figure SPM.6 / 4.2 development pathways", "Figure SPM.3 / 3.2 burning embers"],
+    "charts": "khoảng 30 trang có biểu đồ vector (SPM.1–SPM.5, 2.x–4.x)",
+    "duplicates": "Nhiều hình SPM lặp lại hình của longer report (SPM.6 = 4.2, SPM.7 = 4.4, SPM.2 = 3.1, SPM.3 = 3.2). Benchmark không để dev và test cùng hỏi một hình; citation tới bản nào cũng hợp lệ.",
+    "decorative": "Ảnh bìa và ảnh trang trí (nếu có) không dùng làm câu hỏi."
+  }
+}
