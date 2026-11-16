@@ -1,0 +1,925 @@
+[
+  {
+    "query_id": "ad04",
+    "split": "dev",
+    "group": "table",
+    "question": "In Table 2.1, how are the observed change and the human contribution assessed for the ocean heat content increase since the 1970s?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In Table 2.1, the observed change for the ocean heat content increase since the 1970s is assessed as virtually certain (dark brown), and the human contribution assessment is assessed as very likely (orange) with the text \"Main driver\" [ipcc-ar6-syr-2023:p63:table:0.1].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p63:table:0.1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Table 2.1 ocean heat content since the 1970s observed change human contribution",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.2",
+            "page": 63,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+            "page": 63,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p63:text:1",
+            "page": 63,
+            "rank": 3,
+            "score": 0.03125763125763126,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p63:text:0",
+            "page": 63,
+            "rank": 4,
+            "score": 0.03125,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p62:text:3",
+            "page": 62,
+            "rank": 5,
+            "score": 0.031024531024531024,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 83.3
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "region": "Table 2.1",
+        "zoom": [
+          170,
+          10,
+          300,
+          990
+        ],
+        "bytes": 35664
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "region": "Table 2.1",
+        "zoom": [
+          20,
+          0,
+          500,
+          1000
+        ],
+        "bytes": 142493
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "region": "Table 2.1",
+        "zoom": [
+          0,
+          400,
+          1000,
+          1000
+        ],
+        "bytes": 132771
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "region": "Table 2.1",
+        "zoom": [
+          0,
+          400,
+          350,
+          1000
+        ],
+        "bytes": 50497
+      },
+      {
+        "event": "search",
+        "query": "\"Ocean heat content increase since the 1970s\" Table 2.1",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p62:text:3",
+            "page": 62,
+            "rank": 1,
+            "score": 0.032018442622950824,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p63:text:1",
+            "page": 63,
+            "rank": 2,
+            "score": 0.03200204813108039,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p21:text:3",
+            "page": 21,
+            "rank": 3,
+            "score": 0.031054405392392875,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+            "page": 63,
+            "rank": 4,
+            "score": 0.031024531024531024,
+            "new": false
+          },
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.2",
+            "page": 63,
+            "rank": 5,
+            "score": 0.03028233151183971,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 100.0
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p63:table:0.2",
+      "ipcc-ar6-syr-2023:p63:table:0.1",
+      "ipcc-ar6-syr-2023:p63:text:1",
+      "ipcc-ar6-syr-2023:p63:text:0",
+      "ipcc-ar6-syr-2023:p62:text:3",
+      "ipcc-ar6-syr-2023:p21:text:3"
+    ],
+    "context_chars": 8909,
+    "llm_calls": 8,
+    "searches": 2,
+    "usage": {
+      "input": 44912,
+      "output": 304,
+      "thinking": 0
+    },
+    "elapsed_s": 28.58,
+    "model_answer": "In Table 2.1, the observed change for the ocean heat content increase since the 1970s is assessed as virtually certain (dark brown), and the human contribution assessment is assessed as very likely (orange) with the text \"Main driver\" [C2].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "printed_page": "47",
+        "kind": "table",
+        "region": "Table 2.1",
+        "bbox": [
+          50.8,
+          105.3,
+          571.6,
+          544.1
+        ]
+      }
+    ],
+    "views": 4
+  },
+  {
+    "query_id": "ad05",
+    "split": "dev",
+    "group": "image",
+    "question": "In the feasibility matrix of climate responses and adaptation options (Figure SPM.7a / Figure 4.4a), what are the potential feasibility up to 1.5°C and the synergies with mitigation for 'Efficient livestock systems', and with what confidence?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In Figure SPM.7a (and Figure 4.4a), 'Efficient livestock systems' has a potential feasibility up to 1.5°C of **Medium** (medium blue box) and synergies with mitigation of **Medium** (medium blue box), with **Medium** confidence (two dots, `••`) for both [ipcc-ar6-syr-2023:p119:chart:0][ipcc-ar6-syr-2023:p43:chart:0.2].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p119:chart:0",
+      "ipcc-ar6-syr-2023:p43:chart:0.2"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Efficient livestock systems feasibility synergies mitigation Figure SPM.7a",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p119:chart:0",
+            "page": 119,
+            "rank": 1,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p125:text:1",
+            "page": 125,
+            "rank": 2,
+            "score": 0.03177805800756621,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+            "page": 43,
+            "rank": 3,
+            "score": 0.031099324975891997,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p126:text:1",
+            "page": 126,
+            "rank": 4,
+            "score": 0.031024531024531024,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.1",
+            "page": 43,
+            "rank": 5,
+            "score": 0.031009615384615385,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 43.0
+      },
+      {
+        "event": "view",
+        "ref": "C5",
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.1",
+        "page": 43,
+        "region": "Figure SPM.7 panel a",
+        "zoom": [
+          0,
+          0,
+          500,
+          1000
+        ],
+        "bytes": 230552
+      },
+      {
+        "event": "search",
+        "query": "\"Efficient livestock systems\" feasibility synergies confidence SPM.7",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p119:chart:0",
+            "page": 119,
+            "rank": 1,
+            "score": 0.0315136476426799,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.1",
+            "page": 43,
+            "rank": 2,
+            "score": 0.030776515151515152,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p126:text:1",
+            "page": 126,
+            "rank": 3,
+            "score": 0.03057889822595705,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+            "page": 43,
+            "rank": 4,
+            "score": 0.029906956136464335,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p44:text:1",
+            "rank": 5,
+            "score": 0.02815814850530376,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 71.1
+      },
+      {
+        "event": "view",
+        "ref": "C3",
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+        "page": 43,
+        "region": "Figure SPM.7 panel a",
+        "zoom": [
+          0,
+          0,
+          500,
+          1000
+        ],
+        "bytes": 230552
+      },
+      {
+        "event": "view",
+        "ref": "C3",
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+        "page": 43,
+        "region": "Figure SPM.7 panel a",
+        "zoom": [
+          200,
+          200,
+          300,
+          400
+        ],
+        "bytes": 13398
+      },
+      {
+        "event": "view",
+        "ref": "C3",
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+        "page": 43,
+        "region": "Figure SPM.7 panel a",
+        "zoom": [
+          200,
+          600,
+          300,
+          750
+        ],
+        "bytes": 8154
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C3"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p119:chart:0",
+      "ipcc-ar6-syr-2023:p125:text:1",
+      "ipcc-ar6-syr-2023:p43:chart:0.2",
+      "ipcc-ar6-syr-2023:p126:text:1",
+      "ipcc-ar6-syr-2023:p43:chart:0.1"
+    ],
+    "context_chars": 11004,
+    "llm_calls": 8,
+    "searches": 2,
+    "usage": {
+      "input": 43602,
+      "output": 307,
+      "thinking": 0
+    },
+    "elapsed_s": 21.35,
+    "model_answer": "In Figure SPM.7a (and Figure 4.4a), 'Efficient livestock systems' has a potential feasibility up to 1.5°C of **Medium** (medium blue box) and synergies with mitigation of **Medium** (medium blue box), with **Medium** confidence (two dots, `••`) for both [C1, C3].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p119:chart:0",
+        "page": 119,
+        "printed_page": "103",
+        "kind": "chart",
+        "region": "Figure 4.4 panel a",
+        "bbox": [
+          60.0,
+          85.5,
+          560.0,
+          613.8
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+        "page": 43,
+        "printed_page": "27",
+        "kind": "chart",
+        "region": "Figure SPM.7 panel a",
+        "bbox": [
+          80.2,
+          77.6,
+          536.1,
+          574.2
+        ]
+      }
+    ],
+    "views": 4
+  },
+  {
+    "query_id": "ad06",
+    "split": "dev",
+    "group": "image",
+    "question": "In the 'Determinants of risk' schematic (Cross-Section Box.2 Figure 1, panel c), which components interact to produce risk, and what drives the hazard?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In the 'Determinants of risk' schematic (Cross-Section Box.2 Figure 1, panel c), risk arises from the interaction of hazard with vulnerability, exposure, and response to climate change [ipcc-ar6-syr-2023:p82:diagram:0]. The hazard itself is driven by changes in climatic impact-drivers [ipcc-ar6-syr-2023:p82:diagram:0].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p82:diagram:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Determinants of risk Cross-Section Box 2 Figure 1 panel c hazard exposure vulnerability",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p81:diagram:2",
+            "page": 81,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p82:diagram:0",
+            "page": 82,
+            "rank": 2,
+            "score": 0.03021353930031804,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p82:text:1",
+            "page": 82,
+            "rank": 3,
+            "score": 0.030117753623188408,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p80:text:1",
+            "page": 80,
+            "rank": 4,
+            "score": 0.029571646010002173,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p93:text:1",
+            "page": 93,
+            "rank": 5,
+            "score": 0.026262626262626265,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 73.8
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p81:diagram:2",
+        "page": 81,
+        "region": "Cross-Section Box.2 Figure 1 panel c",
+        "zoom": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bytes": 42787
+      },
+      {
+        "event": "search",
+        "query": "\"Cross-Section Box.2\" \"Determinants of risk\" \"hazard\" \"vulnerability\" \"exposure\" \"response\"",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p81:diagram:2",
+            "page": 81,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p80:text:1",
+            "page": 80,
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p79:text:0",
+            "page": 79,
+            "rank": 3,
+            "score": 0.030017921146953404,
+            "new": true
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p84:text:6",
+            "page": 84,
+            "rank": 4,
+            "score": 0.029206349206349208,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p82:text:1",
+            "page": 82,
+            "rank": 5,
+            "score": 0.028309409888357256,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 105.2
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p81:diagram:2",
+      "ipcc-ar6-syr-2023:p82:diagram:0",
+      "ipcc-ar6-syr-2023:p82:text:1",
+      "ipcc-ar6-syr-2023:p80:text:1",
+      "ipcc-ar6-syr-2023:p93:text:1",
+      "ipcc-ar6-syr-2023:p79:text:0",
+      "ipcc-ar6-syr-2023:p84:text:6"
+    ],
+    "context_chars": 11451,
+    "llm_calls": 4,
+    "searches": 2,
+    "usage": {
+      "input": 14638,
+      "output": 182,
+      "thinking": 0
+    },
+    "elapsed_s": 15.56,
+    "model_answer": "In the 'Determinants of risk' schematic (Cross-Section Box.2 Figure 1, panel c), risk arises from the interaction of hazard with vulnerability, exposure, and response to climate change [C2]. The hazard itself is driven by changes in climatic impact-drivers [C2].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p82:diagram:0",
+        "page": 82,
+        "printed_page": "66",
+        "kind": "diagram",
+        "region": "Cross-Section Box.2 Figure 1",
+        "bbox": [
+          44.7,
+          52.3,
+          555.1,
+          205.9
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad12",
+    "split": "dev",
+    "group": "multihop",
+    "question": "Which SSP scenario corresponds to WGIII category C6, and what median global warming in 2100 does Table 3.1 project for that category?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "WGIII category C6 corresponds to the intermediate GHG emissions scenario SSP2-4.5 [ipcc-ar6-syr-2023:p26:table:0]. Table 3.1 projects a median global warming in 2100 of 2.1 [1.9–2.5]°C for category C6 [ipcc-ar6-syr-2023:p100:table:0.2].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p26:table:0",
+      "ipcc-ar6-syr-2023:p100:table:0.2"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "WGIII category C6 SSP scenario median global warming in 2100 Table 3.1",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p26:table:0",
+            "page": 26,
+            "rank": 1,
+            "score": 0.03055037313432836,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p81:table:1",
+            "page": 81,
+            "rank": 2,
+            "score": 0.030309988518943745,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p100:text:6",
+            "page": 100,
+            "rank": 3,
+            "score": 0.03028233151183971,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p26:text:0",
+            "page": 26,
+            "rank": 4,
+            "score": 0.030158730158730156,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p84:text:5",
+            "page": 84,
+            "rank": 5,
+            "score": 0.030117753623188408,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 93.4
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 C6 median global warming in 2100",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+            "page": 100,
+            "rank": 1,
+            "score": 0.03028233151183971,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "rank": 2,
+            "score": 0.029957522915269395,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "rank": 3,
+            "score": 0.029877369007803793,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p73:text:6",
+            "page": 73,
+            "rank": 4,
+            "score": 0.029411764705882353,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p74:table:0",
+            "rank": 5,
+            "score": 0.02904040404040404,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 76.8
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 category columns C6",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p26:table:0",
+            "page": 26,
+            "rank": 1,
+            "score": 0.03252247488101534,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p81:table:1",
+            "page": 81,
+            "rank": 2,
+            "score": 0.03252247488101534,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "rank": 3,
+            "score": 0.03076923076923077,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p26:text:0",
+            "page": 26,
+            "rank": 4,
+            "score": 0.02821869488536155,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p81:text:0",
+            "rank": 5,
+            "score": 0.027799227799227798,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 89.9
+      },
+      {
+        "event": "search",
+        "query": "\"Table 3.1\" categories C1 C2 C3 C4 C5 C6 C7 C8",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p26:table:0",
+            "page": 26,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p81:table:1",
+            "page": 81,
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "rank": 3,
+            "score": 0.03036576949620428,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p26:text:0",
+            "page": 26,
+            "rank": 4,
+            "score": 0.028693528693528692,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p81:text:0",
+            "rank": 5,
+            "score": 0.02668564312399929,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 95.2
+      },
+      {
+        "event": "view",
+        "ref": "C6",
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "region": "Table 3.1",
+        "zoom": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bytes": 667887
+      },
+      {
+        "event": "view",
+        "ref": "C6",
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "region": "Table 3.1",
+        "zoom": [
+          830,
+          920,
+          1000,
+          1000
+        ],
+        "bytes": 7493
+      },
+      {
+        "event": "view",
+        "ref": "C6",
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "region": "Table 3.1",
+        "zoom": [
+          650,
+          910,
+          810,
+          1000
+        ],
+        "bytes": 6932
+      },
+      {
+        "event": "view",
+        "ref": "C6",
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "region": "Table 3.1",
+        "zoom": [
+          500,
+          910,
+          700,
+          1000
+        ],
+        "bytes": 9921
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C6"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p26:table:0",
+      "ipcc-ar6-syr-2023:p81:table:1",
+      "ipcc-ar6-syr-2023:p100:text:6",
+      "ipcc-ar6-syr-2023:p26:text:0",
+      "ipcc-ar6-syr-2023:p84:text:5",
+      "ipcc-ar6-syr-2023:p100:table:0.2",
+      "ipcc-ar6-syr-2023:p73:text:6"
+    ],
+    "context_chars": 11118,
+    "llm_calls": 10,
+    "searches": 4,
+    "usage": {
+      "input": 63141,
+      "output": 376,
+      "thinking": 0
+    },
+    "elapsed_s": 30.81,
+    "model_answer": "WGIII category C6 corresponds to the intermediate GHG emissions scenario SSP2-4.5 [C1]. Table 3.1 projects a median global warming in 2100 of 2.1 [1.9–2.5]°C for category C6 [C6].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p26:table:0",
+        "page": 26,
+        "printed_page": "10",
+        "kind": "table",
+        "region": "Box SPM.1, Table 1",
+        "bbox": [
+          89.4,
+          91.9,
+          515.9,
+          247.9
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "printed_page": "84",
+        "kind": "table",
+        "region": "Table 3.1",
+        "bbox": [
+          45.3,
+          85.5,
+          555.7,
+          622.5
+        ]
+      }
+    ],
+    "views": 4
+  }
+]

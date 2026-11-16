@@ -1,0 +1,30 @@
+[
+  {
+    "query_id": "ad04",
+    "group": "table",
+    "status": "answered",
+    "passed": null,
+    "reason": ""
+  },
+  {
+    "query_id": "ad05",
+    "group": "image",
+    "status": "answered",
+    "passed": null,
+    "reason": ""
+  },
+  {
+    "query_id": "ad06",
+    "group": "image",
+    "status": "answered",
+    "passed": null,
+    "reason": ""
+  },
+  {
+    "query_id": "ad12",
+    "group": "multihop",
+    "status": "answered",
+    "passed": null,
+    "reason": ""
+  }
+]

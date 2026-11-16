@@ -48,6 +48,13 @@ class AgentTest(unittest.TestCase):
         self.assertEqual(out['status'], 'answered')
         self.assertEqual(out['answer'], 'A [doc:p1][doc:p2]. B [doc:p2].')
 
+    def test_claim_citations_require_marker_on_each_numeric_sentence(self):
+        a, _, _ = agent([call('search', query='q'), call('answer', answer='A is 5 [C1]. B is 7.', citations=['C1']),
+                         call('answer', answer='A is 5 [C1]. B is 7 [C2].', citations=['C1', 'C2'])], claim_citations=True)
+        out = a.run('q?')
+        self.assertEqual(out['status'], 'answered')
+        self.assertEqual([e['event'] for e in out['events']], ['search', 'invalid_answer', 'answer'])
+
     def test_chapter_filter_only_from_allowed_values(self):
         a, _, r = agent([call('search', query='x', chapter='mcp'), call('search', query='y', chapter='bogus'),
                          call('abstain', reason='none')])

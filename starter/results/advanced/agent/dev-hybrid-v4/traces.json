@@ -1,0 +1,4126 @@
+[
+  {
+    "query_id": "ad01",
+    "split": "dev",
+    "group": "table",
+    "question": "According to Table SPM.1, by what percentage must global GHG emissions fall from 2019 levels by 2030 in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "According to Table SPM.1, in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, global greenhouse gas (GHG) emissions must fall by 43 [34–60]% below 2019 levels by 2030 [ipcc-ar6-syr-2023:p37:table:0].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p37:table:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Table SPM.1 global GHG emissions fall 2019 levels 2030 pathways limit warming 1.5C no or limited overshoot",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p36:text:3",
+            "page": 36,
+            "rank": 1,
+            "score": 0.03252247488101534,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p108:text:4",
+            "page": 108,
+            "rank": 2,
+            "score": 0.03177805800756621,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p37:table:0",
+            "page": 37,
+            "rank": 3,
+            "score": 0.031024531024531024,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p109:text:0",
+            "page": 109,
+            "rank": 4,
+            "score": 0.030536130536130537,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p37:text:0",
+            "page": 37,
+            "rank": 5,
+            "score": 0.030117753623188408,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 55.9
+      },
+      {
+        "event": "view",
+        "ref": "C3",
+        "id": "ipcc-ar6-syr-2023:p37:table:0",
+        "page": 37,
+        "region": "Table SPM.1",
+        "zoom": null,
+        "bytes": 34974
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C3"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p36:text:3",
+      "ipcc-ar6-syr-2023:p108:text:4",
+      "ipcc-ar6-syr-2023:p37:table:0",
+      "ipcc-ar6-syr-2023:p109:text:0",
+      "ipcc-ar6-syr-2023:p37:text:0"
+    ],
+    "context_chars": 4867,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 8041,
+      "output": 146,
+      "thinking": 0
+    },
+    "elapsed_s": 4.49,
+    "model_answer": "According to Table SPM.1, in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, global greenhouse gas (GHG) emissions must fall by 43 [34–60]% below 2019 levels by 2030 [C3].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p37:table:0",
+        "page": 37,
+        "printed_page": "21",
+        "kind": "table",
+        "region": "Table SPM.1",
+        "bbox": [
+          79.6,
+          77.6,
+          537.9,
+          148.9
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad02",
+    "split": "dev",
+    "group": "table",
+    "question": "In Table 3.1, when do pathways in category C1 reach net zero CO2 emissions, and what share of these pathways reach it?",
+    "answerable": true,
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Table 3.1 C1 net zero CO2 emissions share",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "page": 100,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "page": 100,
+            "rank": 2,
+            "score": 0.0315136476426799,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p102:text:1",
+            "page": 102,
+            "rank": 3,
+            "score": 0.03149801587301587,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p102:diagram:2",
+            "page": 102,
+            "rank": 4,
+            "score": 0.030303030303030304,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+            "rank": 5,
+            "score": 0.029957522915269395,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 44.9
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+        "page": 100,
+        "region": "Table 3.1",
+        "zoom": null,
+        "bytes": 308575
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 C1a C1b net zero CO2 timing share",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p102:diagram:2",
+            "page": 102,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": false
+          },
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "page": 100,
+            "rank": 2,
+            "score": 0.032018442622950824,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p102:text:1",
+            "page": 102,
+            "rank": 3,
+            "score": 0.030798389007344232,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "page": 100,
+            "rank": 4,
+            "score": 0.030621785881252923,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p102:text:0",
+            "page": 102,
+            "rank": 5,
+            "score": 0.030330882352941176,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 78.8
+      },
+      {
+        "event": "error",
+        "error": "Gemini HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p100:table:0.1",
+      "ipcc-ar6-syr-2023:p100:table:0.3",
+      "ipcc-ar6-syr-2023:p102:text:1",
+      "ipcc-ar6-syr-2023:p102:diagram:2",
+      "ipcc-ar6-syr-2023:p102:text:0"
+    ],
+    "context_chars": 10979,
+    "llm_calls": 3,
+    "searches": 2,
+    "usage": {
+      "input": 12501,
+      "output": 87,
+      "thinking": 0
+    },
+    "elapsed_s": 150.54,
+    "error": "Gemini HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "views": 1
+  },
+  {
+    "query_id": "ad03",
+    "split": "dev",
+    "group": "table",
+    "question": "According to Table 2.2, how large is the 2030 emissions gap between unconditional NDCs announced prior to COP26 and pathways that limit warming to 1.5°C (>50%) with no or limited overshoot with immediate action?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "According to Table 2.2, the 2030 emissions gap between unconditional NDCs announced prior to COP26 and pathways that limit warming to 1.5°C (>50%) with no or limited overshoot with immediate action is 19–26 GtCO₂-eq/yr [ipcc-ar6-syr-2023:p74:table:0].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p74:table:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Table 2.2 2030 emissions gap unconditional NDCs COP26 pathways limit warming 1.5 C immediate action",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p74:table:0",
+            "page": 74,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p73:text:3",
+            "page": 73,
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p75:text:2",
+            "page": 75,
+            "rank": 3,
+            "score": 0.031754032258064516,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p27:text:1",
+            "page": 27,
+            "rank": 4,
+            "score": 0.03125763125763126,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p74:text:3",
+            "page": 74,
+            "rank": 5,
+            "score": 0.030798389007344232,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 77.0
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p74:table:0",
+        "page": 74,
+        "region": "Table 2.2",
+        "zoom": null,
+        "bytes": 67726
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p74:table:0",
+      "ipcc-ar6-syr-2023:p73:text:3",
+      "ipcc-ar6-syr-2023:p75:text:2",
+      "ipcc-ar6-syr-2023:p27:text:1",
+      "ipcc-ar6-syr-2023:p74:text:3"
+    ],
+    "context_chars": 5732,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 7360,
+      "output": 145,
+      "thinking": 0
+    },
+    "elapsed_s": 15.97,
+    "model_answer": "According to Table 2.2, the 2030 emissions gap between unconditional NDCs announced prior to COP26 and pathways that limit warming to 1.5°C (>50%) with no or limited overshoot with immediate action is 19–26 GtCO₂-eq/yr [C1].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p74:table:0",
+        "page": 74,
+        "printed_page": "58",
+        "kind": "table",
+        "region": "Table 2.2",
+        "bbox": [
+          40.4,
+          386.5,
+          527.5,
+          578.2
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad04",
+    "split": "dev",
+    "group": "table",
+    "question": "In Table 2.1, how are the observed change and the human contribution assessed for the ocean heat content increase since the 1970s?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In Table 2.1, the observed change for the ocean heat content increase since the 1970s is assessed as virtually certain (dark brown), and the human contribution assessment is assessed as very likely (orange) with human influence as the \"Main driver\" [ipcc-ar6-syr-2023:p63:table:0.1].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p63:table:0.1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Table 2.1 ocean heat content since the 1970s human contribution observed change",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.2",
+            "page": 63,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+            "page": 63,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p63:text:1",
+            "page": 63,
+            "rank": 3,
+            "score": 0.03125763125763126,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p63:text:0",
+            "page": 63,
+            "rank": 4,
+            "score": 0.03125,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p62:text:3",
+            "page": 62,
+            "rank": 5,
+            "score": 0.031024531024531024,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 76.4
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "region": "Table 2.1",
+        "zoom": null,
+        "bytes": 116961
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p63:table:0.2",
+      "ipcc-ar6-syr-2023:p63:table:0.1",
+      "ipcc-ar6-syr-2023:p63:text:1",
+      "ipcc-ar6-syr-2023:p63:text:0",
+      "ipcc-ar6-syr-2023:p62:text:3"
+    ],
+    "context_chars": 10535,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 9698,
+      "output": 127,
+      "thinking": 0
+    },
+    "elapsed_s": 10.52,
+    "model_answer": "In Table 2.1, the observed change for the ocean heat content increase since the 1970s is assessed as virtually certain (dark brown), and the human contribution assessment is assessed as very likely (orange) with human influence as the \"Main driver\" [C2].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p63:table:0.1",
+        "page": 63,
+        "printed_page": "47",
+        "kind": "table",
+        "region": "Table 2.1",
+        "bbox": [
+          50.8,
+          105.3,
+          571.6,
+          544.1
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad05",
+    "split": "dev",
+    "group": "image",
+    "question": "In the feasibility matrix of climate responses and adaptation options (Figure SPM.7a / Figure 4.4a), what are the potential feasibility up to 1.5°C and the synergies with mitigation for 'Efficient livestock systems', and with what confidence?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "For 'Efficient livestock systems', the potential feasibility up to 1.5°C is low and its synergies with mitigation are medium, with medium confidence in both [ipcc-ar6-syr-2023:p43:chart:0.2].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p43:chart:0.2"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Efficient livestock systems feasibility up to 1.5 synergies with mitigation confidence",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p119:chart:0.1",
+            "page": 119,
+            "rank": 1,
+            "score": 0.03177805800756621,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p44:text:1",
+            "page": 44,
+            "rank": 2,
+            "score": 0.029906956136464335,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+            "page": 43,
+            "rank": 3,
+            "score": 0.029709507042253523,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p120:text:1",
+            "rank": 4,
+            "score": 0.027071520029266508,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p124:text:1",
+            "rank": 5,
+            "score": 0.026754075124025514,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 90.3
+      },
+      {
+        "event": "view",
+        "ref": "C3",
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+        "page": 43,
+        "region": "Figure SPM.7 panel a",
+        "zoom": null,
+        "bytes": 202395
+      },
+      {
+        "event": "search",
+        "query": "Figure SPM.7 confidence level dots meaning",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p91:chart:7",
+            "page": 91,
+            "rank": 1,
+            "score": 0.031054405392392875,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p114:text:6",
+            "page": 114,
+            "rank": 2,
+            "score": 0.030886196246139225,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p66:diagram:0.1",
+            "rank": 3,
+            "score": 0.02878726010616578,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:text:6",
+            "rank": 4,
+            "score": 0.02638888888888889,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p116:map:1",
+            "rank": 5,
+            "score": 0.026333907056798625,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 67.7
+      },
+      {
+        "event": "search",
+        "query": "confidence level in potential feasibility and in synergies with mitigation high medium low dots",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.1",
+            "rank": 1,
+            "score": 0.03149801587301587,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p44:text:1",
+            "page": 44,
+            "rank": 2,
+            "score": 0.030834914611005692,
+            "new": false
+          },
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p119:chart:0.1",
+            "page": 119,
+            "rank": 3,
+            "score": 0.03055037313432836,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p77:text:2",
+            "rank": 4,
+            "score": 0.0288981288981289,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.6",
+            "rank": 5,
+            "score": 0.028205128205128206,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 73.9
+      },
+      {
+        "event": "search",
+        "query": "Efficient livestock systems potential feasibility synergies confidence SPM.7",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p119:chart:0.1",
+            "page": 119,
+            "rank": 1,
+            "score": 0.030017921146953404,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p44:text:1",
+            "page": 44,
+            "rank": 2,
+            "score": 0.02938045560996381,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.1",
+            "rank": 3,
+            "score": 0.02900988017658188,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+            "page": 43,
+            "rank": 4,
+            "score": 0.02886002886002886,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p126:text:1",
+            "rank": 5,
+            "score": 0.02857142857142857,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 95.6
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C3"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p119:chart:0.1",
+      "ipcc-ar6-syr-2023:p44:text:1",
+      "ipcc-ar6-syr-2023:p43:chart:0.2",
+      "ipcc-ar6-syr-2023:p91:chart:7",
+      "ipcc-ar6-syr-2023:p114:text:6"
+    ],
+    "context_chars": 11539,
+    "llm_calls": 6,
+    "searches": 4,
+    "usage": {
+      "input": 24258,
+      "output": 169,
+      "thinking": 0
+    },
+    "elapsed_s": 30.34,
+    "model_answer": "For 'Efficient livestock systems', the potential feasibility up to 1.5°C is low and its synergies with mitigation are medium, with medium confidence in both [C3].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+        "page": 43,
+        "printed_page": "27",
+        "kind": "chart",
+        "region": "Figure SPM.7 panel a",
+        "bbox": [
+          80.2,
+          77.6,
+          536.1,
+          574.2
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad06",
+    "split": "dev",
+    "group": "image",
+    "question": "In the 'Determinants of risk' schematic (Cross-Section Box.2 Figure 1, panel c), which components interact to produce risk, and what drives the hazard?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Risk arises from the interaction of hazard with vulnerability, exposure, and response to climate change [ipcc-ar6-syr-2023:p82:diagram:0]. The hazard itself is driven by changes in climatic impact-drivers [ipcc-ar6-syr-2023:p82:diagram:0].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p82:diagram:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Determinants of risk Cross-Section Box 2 Figure 1 panel c hazard exposure vulnerability",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p81:diagram:2",
+            "page": 81,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p82:diagram:0",
+            "page": 82,
+            "rank": 2,
+            "score": 0.03021353930031804,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p82:text:1",
+            "page": 82,
+            "rank": 3,
+            "score": 0.029910714285714284,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p80:text:1",
+            "page": 80,
+            "rank": 4,
+            "score": 0.029571646010002173,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p93:text:1",
+            "rank": 5,
+            "score": 0.02719970792259949,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 71.7
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p81:diagram:2",
+        "page": 81,
+        "region": "Cross-Section Box.2 Figure 1 panel c",
+        "zoom": null,
+        "bytes": 20228
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p81:diagram:2",
+      "ipcc-ar6-syr-2023:p82:diagram:0",
+      "ipcc-ar6-syr-2023:p82:text:1",
+      "ipcc-ar6-syr-2023:p80:text:1"
+    ],
+    "context_chars": 8246,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 8269,
+      "output": 103,
+      "thinking": 0
+    },
+    "elapsed_s": 4.38,
+    "model_answer": "Risk arises from the interaction of hazard with vulnerability, exposure, and response to climate change [C2]. The hazard itself is driven by changes in climatic impact-drivers [C2].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p82:diagram:0",
+        "page": 82,
+        "printed_page": "66",
+        "kind": "diagram",
+        "region": "Cross-Section Box.2 Figure 1",
+        "bbox": [
+          44.7,
+          52.3,
+          555.1,
+          205.9
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad07",
+    "split": "dev",
+    "group": "image",
+    "question": "In the Synthesis Report figures key (Figure 1.1), what do the axis-label icons and the italicized annotations denote?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In the Synthesis Report figures key (Figure 1.1), the axis-label icons denote GHG emissions (cloud-like icon), Temperature (thermometer and °C icon), Cost or budget ($ icon), and Net zero (net zero box) [ipcc-ar6-syr-2023:p55:diagram:0]. The italicized annotations denote simple explanations written in non-technical language designed to help non-experts navigate complex content [ipcc-ar6-syr-2023:p55:diagram:0].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p55:diagram:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Figure 1.1 axis-label icons italicized annotations denote",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p55:diagram:0",
+            "page": 55,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p55:text:0",
+            "page": 55,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p81:diagram:0.2",
+            "page": 81,
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p91:chart:0",
+            "page": 91,
+            "rank": 4,
+            "score": 0.015873015873015872,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p16:text:0",
+            "page": 16,
+            "rank": 5,
+            "score": 0.015625,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 96.6
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p55:diagram:0",
+        "page": 55,
+        "region": "Figure 1.1",
+        "zoom": null,
+        "bytes": 26318
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p55:diagram:0",
+      "ipcc-ar6-syr-2023:p55:text:0",
+      "ipcc-ar6-syr-2023:p81:diagram:0.2",
+      "ipcc-ar6-syr-2023:p91:chart:0",
+      "ipcc-ar6-syr-2023:p16:text:0"
+    ],
+    "context_chars": 5907,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 8329,
+      "output": 141,
+      "thinking": 0
+    },
+    "elapsed_s": 7.32,
+    "model_answer": "In the Synthesis Report figures key (Figure 1.1), the axis-label icons denote GHG emissions (cloud-like icon), Temperature (thermometer and °C icon), Cost or budget ($ icon), and Net zero (net zero box) [C1]. The italicized annotations denote simple explanations written in non-technical language designed to help non-experts navigate complex content [C1].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p55:diagram:0",
+        "page": 55,
+        "printed_page": "39",
+        "kind": "diagram",
+        "region": "Figure 1.1",
+        "bbox": [
+          50.8,
+          84.7,
+          515.9,
+          165.5
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad08",
+    "split": "dev",
+    "group": "image",
+    "question": "In Figure SPM.6, which outcomes characterise the development pathways with lower climate resilient development (red/orange)?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In Figure SPM.6, development pathways with lower climate resilient development (red/orange) are characterised by high emissions, entrenched systems, adaptation limits, maladaptation, increasing climate risk, reduced options for development, and ecosystem degradation [ipcc-ar6-syr-2023:p41:diagram:0.1].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p41:diagram:0.1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Figure SPM.6 development pathways lower climate resilient development red orange outcomes",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p113:diagram:0.1",
+            "page": 113,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p41:diagram:0.1",
+            "page": 41,
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p41:text:1",
+            "page": 41,
+            "rank": 3,
+            "score": 0.031544957774465976,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p113:text:2",
+            "page": 113,
+            "rank": 4,
+            "score": 0.0315136476426799,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p113:diagram:0.2",
+            "rank": 5,
+            "score": 0.031024531024531024,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 90.0
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p41:diagram:0.1",
+        "page": 41,
+        "region": "Figure SPM.6",
+        "zoom": null,
+        "bytes": 221167
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p113:diagram:0.1",
+      "ipcc-ar6-syr-2023:p41:diagram:0.1",
+      "ipcc-ar6-syr-2023:p41:text:1",
+      "ipcc-ar6-syr-2023:p113:text:2"
+    ],
+    "context_chars": 9962,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 8109,
+      "output": 111,
+      "thinking": 0
+    },
+    "elapsed_s": 20.02,
+    "model_answer": "In Figure SPM.6, development pathways with lower climate resilient development (red/orange) are characterised by high emissions, entrenched systems, adaptation limits, maladaptation, increasing climate risk, reduced options for development, and ecosystem degradation [C2].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p41:diagram:0.1",
+        "page": 41,
+        "printed_page": "25",
+        "kind": "diagram",
+        "region": "Figure SPM.6",
+        "bbox": [
+          80.2,
+          111.7,
+          537.3,
+          373.0
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad09",
+    "split": "dev",
+    "group": "chart",
+    "question": "In Figure 4.6, by what factor must yearly mitigation investment flows for energy efficiency increase to meet average annual needs until 2030?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In Figure 4.6, yearly mitigation investment flows for energy efficiency must increase by a factor of 2 (lower range) to 7 (upper range) to meet average annual needs until 2030 [ipcc-ar6-syr-2023:p129:chart:0.1].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p129:chart:0.1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Figure 4.6 mitigation investment flows energy efficiency increase factor 2030",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p129:text:4",
+            "page": 129,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 2,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p129:text:2",
+            "page": 129,
+            "rank": 3,
+            "score": 0.031754032258064516,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p78:text:3",
+            "page": 78,
+            "rank": 4,
+            "score": 0.030776515151515152,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p49:text:2",
+            "page": 49,
+            "rank": 5,
+            "score": 0.030090497737556562,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 87.9
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+        "page": 129,
+        "region": "Figure 4.6",
+        "zoom": null,
+        "bytes": 84631
+      },
+      {
+        "event": "search",
+        "query": "\"Energy efficiency\" multiplication factors Figure 4.6",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p129:text:2",
+            "page": 129,
+            "rank": 1,
+            "score": 0.03225806451612903,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 2,
+            "score": 0.03125763125763126,
+            "new": false
+          },
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p129:text:4",
+            "page": 129,
+            "rank": 3,
+            "score": 0.030886196246139225,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 4,
+            "score": 0.029906956136464335,
+            "new": true
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p181:text:5",
+            "page": 181,
+            "rank": 5,
+            "score": 0.02862400327131466,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 85.2
+      },
+      {
+        "event": "search",
+        "query": "\"Energy efficiency\" \"x2\" \"x7\" Figure 4.6",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C8",
+            "id": "ipcc-ar6-syr-2023:p44:text:5",
+            "page": 44,
+            "rank": 1,
+            "score": 0.0293236301369863,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.3",
+            "rank": 2,
+            "score": 0.028577260665441927,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p119:chart:0.2",
+            "rank": 3,
+            "score": 0.028381642512077296,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 4,
+            "score": 0.028298204527712725,
+            "new": false
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p181:text:5",
+            "page": 181,
+            "rank": 5,
+            "score": 0.02813852813852814,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 111.2
+      },
+      {
+        "event": "search",
+        "query": "\"Energy efficiency\" \"Multiplication factors\" Figure 4.6",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p129:text:2",
+            "page": 129,
+            "rank": 1,
+            "score": 0.03225806451612903,
+            "new": false
+          },
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p129:text:4",
+            "page": 129,
+            "rank": 2,
+            "score": 0.03131881575727918,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 3,
+            "score": 0.031024531024531024,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 4,
+            "score": 0.029906956136464335,
+            "new": false
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p181:text:5",
+            "page": 181,
+            "rank": 5,
+            "score": 0.028814262023217248,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 74.1
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p129:text:4",
+      "ipcc-ar6-syr-2023:p129:chart:0.1",
+      "ipcc-ar6-syr-2023:p129:text:2",
+      "ipcc-ar6-syr-2023:p78:text:3",
+      "ipcc-ar6-syr-2023:p49:text:2",
+      "ipcc-ar6-syr-2023:p70:text:1",
+      "ipcc-ar6-syr-2023:p181:text:5",
+      "ipcc-ar6-syr-2023:p44:text:5"
+    ],
+    "context_chars": 11933,
+    "llm_calls": 6,
+    "searches": 4,
+    "usage": {
+      "input": 25352,
+      "output": 194,
+      "thinking": 0
+    },
+    "elapsed_s": 15.7,
+    "model_answer": "In Figure 4.6, yearly mitigation investment flows for energy efficiency must increase by a factor of 2 (lower range) to 7 (upper range) to meet average annual needs until 2030 [C2].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+        "page": 129,
+        "printed_page": "113",
+        "kind": "chart",
+        "region": "Figure 4.6",
+        "bbox": [
+          182.4,
+          48.3,
+          572.8,
+          472.8
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad10",
+    "split": "dev",
+    "group": "chart",
+    "question": "According to Figure SPM.7 panel b, what share of total GHG emissions in the food end-use sector could demand-side mitigation options reduce by 2050?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "According to Figure SPM.7 panel b, demand-side mitigation options could reduce total GHG emissions in the food end-use sector by 44% by 2050 [ipcc-ar6-syr-2023:p43:chart:1].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p43:chart:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Figure SPM.7 panel b food end-use sector GHG emissions reduction demand-side mitigation options 2050",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p43:chart:1",
+            "page": 43,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p119:chart:1",
+            "page": 119,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p44:text:1",
+            "page": 44,
+            "rank": 3,
+            "score": 0.03125763125763126,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p118:text:5",
+            "page": 118,
+            "rank": 4,
+            "score": 0.031009615384615385,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p43:text:4",
+            "page": 43,
+            "rank": 5,
+            "score": 0.029138513513513514,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 96.0
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p43:chart:1",
+        "page": 43,
+        "region": "Figure SPM.7 panel b",
+        "zoom": null,
+        "bytes": 43267
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p43:chart:1",
+      "ipcc-ar6-syr-2023:p119:chart:1",
+      "ipcc-ar6-syr-2023:p44:text:1",
+      "ipcc-ar6-syr-2023:p118:text:5",
+      "ipcc-ar6-syr-2023:p43:text:4"
+    ],
+    "context_chars": 8770,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 8682,
+      "output": 113,
+      "thinking": 0
+    },
+    "elapsed_s": 12.67,
+    "model_answer": "According to Figure SPM.7 panel b, demand-side mitigation options could reduce total GHG emissions in the food end-use sector by 44% by 2050 [C1].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p43:chart:1",
+        "page": 43,
+        "printed_page": "27",
+        "kind": "chart",
+        "region": "Figure SPM.7 panel b",
+        "bbox": [
+          80.2,
+          582.1,
+          536.1,
+          681.9
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad11",
+    "split": "dev",
+    "group": "chart",
+    "question": "In Figure 2.4, which technology's adoption is measured in millions of vehicles, and approximately how many had been adopted by 2020?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In Figure 2.4, the adoption of passenger electric vehicles is measured in millions of vehicles (or millions of EVs), and approximately 7 million vehicles (ranging between roughly 6.5 and 7 million) had been adopted by 2020 [ipcc-ar6-syr-2023:p70:chart:1][ipcc-ar6-syr-2023:p70:text:1][ipcc-ar6-syr-2023:p70:text:0].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p70:chart:1",
+      "ipcc-ar6-syr-2023:p70:text:1",
+      "ipcc-ar6-syr-2023:p70:text:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Figure 2.4 millions of vehicles adopted by 2020 technology",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:chart:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.03252247488101534,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 2,
+            "score": 0.032266458495966696,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p69:text:2",
+            "page": 69,
+            "rank": 3,
+            "score": 0.031024531024531024,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p70:text:0",
+            "page": 70,
+            "rank": 4,
+            "score": 0.030776515151515152,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p27:text:2",
+            "page": 27,
+            "rank": 5,
+            "score": 0.029631255487269532,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 79.6
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p70:chart:1",
+        "page": 70,
+        "region": "Figure 2.4 panel b",
+        "zoom": null,
+        "bytes": 27476
+      },
+      {
+        "event": "search",
+        "query": "Passenger electric vehicle million vehicles 2020 Figure 2.4",
+        "filter": {
+          "chapter": "section_2"
+        },
+        "model_chapter": "section_2",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:chart:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p70:chart:0",
+            "page": 70,
+            "rank": 2,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p70:text:0",
+            "page": 70,
+            "rank": 3,
+            "score": 0.03200204813108039,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p69:text:2",
+            "page": 69,
+            "rank": 4,
+            "score": 0.031009615384615385,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 5,
+            "score": 0.031009615384615385,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 63.9
+      },
+      {
+        "event": "search",
+        "query": "Passenger electric vehicle cumulative global adoption 2020 millions of vehicles Figure 2.4",
+        "filter": {
+          "chapter": "section_2"
+        },
+        "model_chapter": "section_2",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:chart:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p70:text:0",
+            "page": 70,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 3,
+            "score": 0.031746031746031744,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p70:chart:0",
+            "page": 70,
+            "rank": 4,
+            "score": 0.031009615384615385,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p69:text:2",
+            "page": 69,
+            "rank": 5,
+            "score": 0.030776515151515152,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 69.9
+      },
+      {
+        "event": "search",
+        "query": "\"passenger electric vehicle\" \"millions of EVs\" OR \"million\" 2020 Figure 2.4",
+        "filter": {
+          "chapter": "section_2"
+        },
+        "model_chapter": "section_2",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:chart:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p70:text:0",
+            "page": 70,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p70:chart:0",
+            "page": 70,
+            "rank": 3,
+            "score": 0.031746031746031744,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p69:text:2",
+            "page": 69,
+            "rank": 4,
+            "score": 0.031009615384615385,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 5,
+            "score": 0.031009615384615385,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 83.5
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C2",
+          "C4"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p70:chart:1",
+      "ipcc-ar6-syr-2023:p70:text:1",
+      "ipcc-ar6-syr-2023:p69:text:2",
+      "ipcc-ar6-syr-2023:p70:text:0",
+      "ipcc-ar6-syr-2023:p27:text:2",
+      "ipcc-ar6-syr-2023:p70:chart:0"
+    ],
+    "context_chars": 8122,
+    "llm_calls": 6,
+    "searches": 4,
+    "usage": {
+      "input": 22492,
+      "output": 259,
+      "thinking": 0
+    },
+    "elapsed_s": 67.75,
+    "model_answer": "In Figure 2.4, the adoption of passenger electric vehicles is measured in millions of vehicles (or millions of EVs), and approximately 7 million vehicles (ranging between roughly 6.5 and 7 million) had been adopted by 2020 [C1, C2, C4].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p70:chart:1",
+        "page": 70,
+        "printed_page": "54",
+        "kind": "chart",
+        "region": "Figure 2.4 panel b",
+        "bbox": [
+          203.2,
+          305.7,
+          552.6,
+          425.3
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p70:text:1",
+        "page": 70,
+        "printed_page": "54",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          39.7,
+          519.8,
+          563.0,
+          634.9
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p70:text:0",
+        "page": 70,
+        "printed_page": "54",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          0.3,
+          58.2,
+          552.7,
+          763.8
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad12",
+    "split": "dev",
+    "group": "multihop",
+    "question": "Which SSP scenario corresponds to WGIII category C6, and what median global warming in 2100 does Table 3.1 project for that category?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "WGIII category C6 corresponds to the intermediate GHG emissions scenario (SSP2-4.5) [ipcc-ar6-syr-2023:p26:text:0][ipcc-ar6-syr-2023:p81:table:1.1]. Table 3.1 projects a median global warming in 2100 of 2.7°C (with a [5–95th] percentile range of [2.4–2.9]°C) for category C6.",
+    "citations": [
+      "ipcc-ar6-syr-2023:p26:text:0",
+      "ipcc-ar6-syr-2023:p81:table:1.1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "WGIII category C6 SSP scenario median global warming 2100 Table 3.1",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p26:text:0",
+            "page": 26,
+            "rank": 1,
+            "score": 0.030679156908665108,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p100:text:6",
+            "page": 100,
+            "rank": 2,
+            "score": 0.03047794966520434,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p81:table:1.1",
+            "page": 81,
+            "rank": 3,
+            "score": 0.030330882352941176,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p26:table:0.1",
+            "page": 26,
+            "rank": 4,
+            "score": 0.030117753623188408,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p84:text:5",
+            "page": 84,
+            "rank": 5,
+            "score": 0.029877369007803793,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 86.0
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 C6 median global warming 2100",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "rank": 1,
+            "score": 0.032018442622950824,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "rank": 2,
+            "score": 0.03200204813108039,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+            "rank": 3,
+            "score": 0.03200204813108039,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p84:text:5",
+            "page": 84,
+            "rank": 4,
+            "score": 0.029850746268656716,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p84:text:2",
+            "page": 84,
+            "rank": 5,
+            "score": 0.02946912242686891,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 81.2
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 C6",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "rank": 2,
+            "score": 0.028169014084507043,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p100:text:6",
+            "page": 100,
+            "rank": 3,
+            "score": 0.026785714285714288,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+            "rank": 4,
+            "score": 0.026470588235294117,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p99:text:2",
+            "rank": 5,
+            "score": 0.024056467876692595,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 58.7
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 C1 C2 C3 C4 C5 C6 C7 C8",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "rank": 1,
+            "score": 0.03252247488101534,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p102:text:1",
+            "rank": 2,
+            "score": 0.029386529386529386,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "rank": 3,
+            "score": 0.028373015873015873,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p84:text:4",
+            "page": 84,
+            "rank": 4,
+            "score": 0.028370221327967807,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p100:text:6",
+            "page": 100,
+            "rank": 5,
+            "score": 0.028205128205128206,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 65.6
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p100:text:6",
+        "page": 100,
+        "region": null,
+        "zoom": null,
+        "bytes": 358989
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C3"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p26:text:0",
+      "ipcc-ar6-syr-2023:p100:text:6",
+      "ipcc-ar6-syr-2023:p81:table:1.1",
+      "ipcc-ar6-syr-2023:p26:table:0.1",
+      "ipcc-ar6-syr-2023:p84:text:5",
+      "ipcc-ar6-syr-2023:p84:text:2",
+      "ipcc-ar6-syr-2023:p84:text:4"
+    ],
+    "context_chars": 11395,
+    "llm_calls": 6,
+    "searches": 4,
+    "usage": {
+      "input": 26840,
+      "output": 259,
+      "thinking": 0
+    },
+    "elapsed_s": 30.08,
+    "model_answer": "WGIII category C6 corresponds to the intermediate GHG emissions scenario (SSP2-4.5) [C1, C3]. Table 3.1 projects a median global warming in 2100 of 2.7°C (with a [5–95th] percentile range of [2.4–2.9]°C) for category C6.",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p26:text:0",
+        "page": 26,
+        "printed_page": "10",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          6.2,
+          57.7,
+          528.6,
+          763.8
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p81:table:1.1",
+        "page": 81,
+        "printed_page": "65",
+        "kind": "table",
+        "region": "Cross-Section Box.2 Figure 1 panel b",
+        "bbox": [
+          67.9,
+          439.6,
+          392.9,
+          581.3
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ad13",
+    "split": "dev",
+    "group": "multihop",
+    "question": "How do the 2030 global emissions implied by policies implemented by the end of 2020 (Table 2.2) compare with the estimated global net anthropogenic GHG emissions in 2019?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "The 2030 global emissions implied by policies implemented by the end of 2020 are projected to be 57 [52–60] GtCO2-eq/yr (Table 2.2) [ipcc-ar6-syr-2023:p74:table:0]. This is lower than the estimated global net anthropogenic GHG emissions in 2019, which were 59 [±6.6] GtCO2-eq (or 59 GtCO2-eq) [ipcc-ar6-syr-2023:p60:text:1][ipcc-ar6-syr-2023:p61:chart:2].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p74:table:0",
+      "ipcc-ar6-syr-2023:p61:chart:2",
+      "ipcc-ar6-syr-2023:p60:text:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "2030 global emissions implied by policies implemented by the end of 2020 Table 2.2 anthropogenic GHG emissions in 2019",
+        "filter": {
+          "chapter": "section_2"
+        },
+        "model_chapter": "section_2",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p73:text:7",
+            "page": 73,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p74:table:0",
+            "page": 74,
+            "rank": 2,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p73:text:6",
+            "page": 73,
+            "rank": 3,
+            "score": 0.030776515151515152,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p75:text:1",
+            "page": 75,
+            "rank": 4,
+            "score": 0.030776515151515152,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p74:text:2",
+            "page": 74,
+            "rank": 5,
+            "score": 0.030621785881252923,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 93.5
+      },
+      {
+        "event": "search",
+        "query": "estimated global net anthropogenic GHG emissions in 2019",
+        "filter": {
+          "chapter": "section_2"
+        },
+        "model_chapter": "section_2",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p61:chart:2",
+            "page": 61,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": true
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p60:text:1",
+            "page": 60,
+            "rank": 2,
+            "score": 0.032018442622950824,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ipcc-ar6-syr-2023:p61:text:2",
+            "page": 61,
+            "rank": 3,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "ref": "C9",
+            "id": "ipcc-ar6-syr-2023:p60:text:3",
+            "page": 60,
+            "rank": 4,
+            "score": 0.03128054740957967,
+            "new": true
+          },
+          {
+            "ref": "C10",
+            "id": "ipcc-ar6-syr-2023:p62:text:1",
+            "page": 62,
+            "rank": 5,
+            "score": 0.030776515151515152,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 88.7
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2",
+          "C6",
+          "C7"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p73:text:7",
+      "ipcc-ar6-syr-2023:p74:table:0",
+      "ipcc-ar6-syr-2023:p73:text:6",
+      "ipcc-ar6-syr-2023:p75:text:1",
+      "ipcc-ar6-syr-2023:p74:text:2",
+      "ipcc-ar6-syr-2023:p61:chart:2",
+      "ipcc-ar6-syr-2023:p60:text:1",
+      "ipcc-ar6-syr-2023:p61:text:2",
+      "ipcc-ar6-syr-2023:p60:text:3",
+      "ipcc-ar6-syr-2023:p62:text:1"
+    ],
+    "context_chars": 10357,
+    "llm_calls": 3,
+    "searches": 2,
+    "usage": {
+      "input": 7952,
+      "output": 225,
+      "thinking": 0
+    },
+    "elapsed_s": 7.37,
+    "model_answer": "The 2030 global emissions implied by policies implemented by the end of 2020 are projected to be 57 [52–60] GtCO2-eq/yr (Table 2.2) [C2]. This is lower than the estimated global net anthropogenic GHG emissions in 2019, which were 59 [±6.6] GtCO2-eq (or 59 GtCO2-eq) [C7, C6].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p74:table:0",
+        "page": 74,
+        "printed_page": "58",
+        "kind": "table",
+        "region": "Table 2.2",
+        "bbox": [
+          40.4,
+          386.5,
+          527.5,
+          578.2
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p61:chart:2",
+        "page": 61,
+        "printed_page": "45",
+        "kind": "chart",
+        "region": "Figure 2.2 c",
+        "bbox": [
+          50.8,
+          373.0,
+          555.7,
+          571.8
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p60:text:1",
+        "page": 60,
+        "printed_page": "44",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          39.7,
+          46.4,
+          296.8,
+          225.7
+        ]
+      }
+    ],
+    "views": 0
+  },
+  {
+    "query_id": "ad14",
+    "split": "dev",
+    "group": "multihop",
+    "question": "How does the required increase in mitigation investment for Eastern Asia (Figure 4.6) compare with the global factor by which current mitigation flows fall short?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "According to Figure 4.6, the required mitigation investment increase for Eastern Asia is a factor of 2 (lower range) to 4 (upper range), which is slightly lower than the global factor by which current mitigation financial flows fall short (a factor of three to six below average levels up to 2030) [ipcc-ar6-syr-2023:p129:chart:0.1][ipcc-ar6-syr-2023:p49:text:2].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p129:chart:0.1",
+      "ipcc-ar6-syr-2023:p49:text:2"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "mitigation investment Eastern Asia Figure 4.6 global factor current mitigation flows fall short",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p129:text:4",
+            "page": 129,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p129:text:2",
+            "page": 129,
+            "rank": 3,
+            "score": 0.03177805800756621,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p49:text:2",
+            "page": 49,
+            "rank": 4,
+            "score": 0.031024531024531024,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p78:text:3",
+            "page": 78,
+            "rank": 5,
+            "score": 0.03007688828584351,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 95.7
+      },
+      {
+        "event": "view",
+        "ref": "C2",
+        "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+        "page": 129,
+        "region": "Figure 4.6",
+        "zoom": null,
+        "bytes": 84631
+      },
+      {
+        "event": "search",
+        "query": "Eastern Asia multiplication factors Figure 4.6",
+        "filter": {
+          "chapter": "section_4"
+        },
+        "model_chapter": "section_4",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p129:text:2",
+            "page": 129,
+            "rank": 1,
+            "score": 0.03252247488101534,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p129:text:3",
+            "page": 129,
+            "rank": 2,
+            "score": 0.032018442622950824,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 3,
+            "score": 0.03200204813108039,
+            "new": false
+          },
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p129:text:4",
+            "page": 129,
+            "rank": 4,
+            "score": 0.03125763125763126,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p116:map:0.3",
+            "rank": 5,
+            "score": 0.03007688828584351,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 59.4
+      },
+      {
+        "event": "search",
+        "query": "Eastern Asia x2 x4 Figure 4.6",
+        "filter": {
+          "chapter": "section_4"
+        },
+        "model_chapter": "section_4",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p129:text:3",
+            "page": 129,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p116:map:0.3",
+            "rank": 2,
+            "score": 0.0315136476426799,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 3,
+            "score": 0.0315136476426799,
+            "new": false
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.2",
+            "page": 129,
+            "rank": 4,
+            "score": 0.02797067901234568,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ipcc-ar6-syr-2023:p131:text:0",
+            "page": 131,
+            "rank": 5,
+            "score": 0.02786377708978328,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 62.2
+      },
+      {
+        "event": "view",
+        "ref": "C7",
+        "id": "ipcc-ar6-syr-2023:p129:chart:0.2",
+        "page": 129,
+        "region": "Figure 4.6",
+        "zoom": null,
+        "bytes": 84631
+      },
+      {
+        "event": "search",
+        "query": "Eastern Asia lower range upper range multiplication factors Figure 4.6",
+        "filter": {
+          "chapter": "section_4"
+        },
+        "model_chapter": "section_4",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+            "page": 129,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p129:text:3",
+            "page": 129,
+            "rank": 2,
+            "score": 0.032266458495966696,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p129:text:2",
+            "page": 129,
+            "rank": 3,
+            "score": 0.031754032258064516,
+            "new": false
+          },
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p129:text:4",
+            "page": 129,
+            "rank": 4,
+            "score": 0.031054405392392875,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p116:map:0.3",
+            "rank": 5,
+            "score": 0.029877369007803793,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 78.1
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2",
+          "C4"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p129:text:4",
+      "ipcc-ar6-syr-2023:p129:chart:0.1",
+      "ipcc-ar6-syr-2023:p129:text:2",
+      "ipcc-ar6-syr-2023:p49:text:2",
+      "ipcc-ar6-syr-2023:p78:text:3",
+      "ipcc-ar6-syr-2023:p129:text:3",
+      "ipcc-ar6-syr-2023:p129:chart:0.2",
+      "ipcc-ar6-syr-2023:p131:text:0"
+    ],
+    "context_chars": 9689,
+    "llm_calls": 7,
+    "searches": 4,
+    "usage": {
+      "input": 31969,
+      "output": 255,
+      "thinking": 0
+    },
+    "elapsed_s": 12.28,
+    "model_answer": "According to Figure 4.6, the required mitigation investment increase for Eastern Asia is a factor of 2 (lower range) to 4 (upper range), which is slightly lower than the global factor by which current mitigation financial flows fall short (a factor of three to six below average levels up to 2030) [C2, C4].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p129:chart:0.1",
+        "page": 129,
+        "printed_page": "113",
+        "kind": "chart",
+        "region": "Figure 4.6",
+        "bbox": [
+          182.4,
+          48.3,
+          572.8,
+          472.8
+        ]
+      },
+      {
+        "id": "ipcc-ar6-syr-2023:p49:text:2",
+        "page": 49,
+        "printed_page": "33",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          85.0,
+          267.4,
+          540.2,
+          374.6
+        ]
+      }
+    ],
+    "views": 2
+  },
+  {
+    "query_id": "ad15",
+    "split": "dev",
+    "group": "text",
+    "question": "When are global net zero CO2 emissions reached in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, and in those that limit warming to 2°C (>67%)?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Global net zero CO2 emissions are reached in the early 2050s in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, and around the early 2070s in pathways that limit warming to 2°C (>67%) [ipcc-ar6-syr-2023:p101:text:2].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p101:text:2"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "global net zero CO2 emissions pathways limit warming 1.5C no or limited overshoot 2C",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p36:text:3",
+            "page": 36,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p101:text:2",
+            "page": 101,
+            "rank": 2,
+            "score": 0.031009615384615385,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p36:text:2",
+            "page": 36,
+            "rank": 3,
+            "score": 0.030679156908665108,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p102:chart:0",
+            "page": 102,
+            "rank": 4,
+            "score": 0.02919863597612958,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p103:text:5",
+            "page": 103,
+            "rank": 5,
+            "score": 0.028958333333333336,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 85.4
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 net zero CO2 emissions 1.5°C 2°C",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "page": 100,
+            "rank": 1,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+            "rank": 3,
+            "score": 0.030117753623188408,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p101:text:2",
+            "page": 101,
+            "rank": 4,
+            "score": 0.03007688828584351,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p102:chart:0",
+            "page": 102,
+            "rank": 5,
+            "score": 0.029726775956284153,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 70.7
+      },
+      {
+        "event": "search",
+        "query": "Table 3.1 C3 limit warming to 2C net zero CO2",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p102:text:1",
+            "page": 102,
+            "rank": 1,
+            "score": 0.03177805800756621,
+            "new": true
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "page": 100,
+            "rank": 2,
+            "score": 0.03128054740957967,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p102:chart:0",
+            "page": 102,
+            "rank": 3,
+            "score": 0.03047794966520434,
+            "new": false
+          },
+          {
+            "ref": "C8",
+            "id": "ipcc-ar6-syr-2023:p102:diagram:2",
+            "page": 102,
+            "rank": 4,
+            "score": 0.030309988518943745,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "rank": 5,
+            "score": 0.02919863597612958,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 90.1
+      },
+      {
+        "event": "search",
+        "query": "\"early 2050s\" \"early 2070s\" net zero CO2",
+        "filter": {
+          "chapter": "section_3"
+        },
+        "model_chapter": "section_3",
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p101:text:2",
+            "page": 101,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p102:text:0",
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C8",
+            "id": "ipcc-ar6-syr-2023:p102:diagram:2",
+            "page": 102,
+            "rank": 3,
+            "score": 0.03125,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:text:0",
+            "rank": 4,
+            "score": 0.030886196246139225,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p102:chart:0",
+            "page": 102,
+            "rank": 5,
+            "score": 0.030536130536130537,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 91.8
+      },
+      {
+        "event": "invalid_answer",
+        "problem": "refs ['C2'] not marked in answer text",
+        "args": {
+          "answer": "Global net zero $\\text{CO}_2$ emissions are reached in the early 2050s in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, and around the early 2070s in pathways that limit warming to 2°C (>67%).",
+          "citations": [
+            "C2"
+          ]
+        }
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p36:text:3",
+      "ipcc-ar6-syr-2023:p101:text:2",
+      "ipcc-ar6-syr-2023:p36:text:2",
+      "ipcc-ar6-syr-2023:p102:chart:0",
+      "ipcc-ar6-syr-2023:p103:text:5",
+      "ipcc-ar6-syr-2023:p100:table:0.1",
+      "ipcc-ar6-syr-2023:p102:text:1",
+      "ipcc-ar6-syr-2023:p102:diagram:2"
+    ],
+    "context_chars": 11622,
+    "llm_calls": 6,
+    "searches": 4,
+    "usage": {
+      "input": 25156,
+      "output": 331,
+      "thinking": 0
+    },
+    "elapsed_s": 23.51,
+    "model_answer": "Global net zero CO2 emissions are reached in the early 2050s in pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, and around the early 2070s in pathways that limit warming to 2°C (>67%) [C2].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p101:text:2",
+        "page": 101,
+        "printed_page": "85",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          51.0,
+          572.7,
+          333.2,
+          745.8
+        ]
+      }
+    ],
+    "views": 0
+  },
+  {
+    "query_id": "ad16",
+    "split": "dev",
+    "group": "text",
+    "question": "How many people live in contexts that are highly vulnerable to climate change?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Approximately 3.3 to 3.6 billion people live in contexts that are highly vulnerable to climate change [ipcc-ar6-syr-2023:p21:text:4].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p21:text:4"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "people live in contexts highly vulnerable to climate change",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p21:text:4",
+            "page": 21,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p117:text:4",
+            "page": 117,
+            "rank": 2,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p67:text:5",
+            "page": 67,
+            "rank": 3,
+            "score": 0.03200204813108039,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p47:text:4",
+            "page": 47,
+            "rank": 4,
+            "score": 0.03076923076923077,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p21:text:2",
+            "page": 21,
+            "rank": 5,
+            "score": 0.027425373134328357,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 77.6
+      },
+      {
+        "event": "invalid_answer",
+        "problem": "refs ['C1'] not marked in answer text",
+        "args": {
+          "citations": [
+            "C1"
+          ],
+          "answer": "Approximately 3.3 to 3.6 billion people live in contexts that are highly vulnerable to climate change (high confidence)."
+        }
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p21:text:4",
+      "ipcc-ar6-syr-2023:p117:text:4",
+      "ipcc-ar6-syr-2023:p67:text:5",
+      "ipcc-ar6-syr-2023:p47:text:4",
+      "ipcc-ar6-syr-2023:p21:text:2"
+    ],
+    "context_chars": 5649,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 5151,
+      "output": 114,
+      "thinking": 0
+    },
+    "elapsed_s": 7.22,
+    "model_answer": "Approximately 3.3 to 3.6 billion people live in contexts that are highly vulnerable to climate change [C1].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p21:text:4",
+        "page": 21,
+        "printed_page": "5",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          85.0,
+          466.5,
+          540.2,
+          561.7
+        ]
+      }
+    ],
+    "views": 0
+  },
+  {
+    "query_id": "ad17",
+    "split": "dev",
+    "group": "text",
+    "question": "In pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, by how much are global methane emissions reduced below 2019 levels in 2040?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, global methane ($\\text{CH}_4$) emissions are reduced by 44 [31 to 63]% below 2019 levels in 2040 [ipcc-ar6-syr-2023:p109:text:0].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p109:text:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "pathways limit warming to 1.5C no or limited overshoot global methane emissions reduced below 2019 levels in 2040",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p109:text:0",
+            "page": 109,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p108:text:4",
+            "page": 108,
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p36:text:3",
+            "page": 36,
+            "rank": 3,
+            "score": 0.031746031746031744,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p37:text:1",
+            "page": 37,
+            "rank": 4,
+            "score": 0.029631255487269532,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p39:text:1",
+            "page": 39,
+            "rank": 5,
+            "score": 0.028790389395194696,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 74.8
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p109:text:0",
+      "ipcc-ar6-syr-2023:p108:text:4",
+      "ipcc-ar6-syr-2023:p36:text:3",
+      "ipcc-ar6-syr-2023:p37:text:1",
+      "ipcc-ar6-syr-2023:p39:text:1"
+    ],
+    "context_chars": 6069,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 3620,
+      "output": 127,
+      "thinking": 0
+    },
+    "elapsed_s": 2.98,
+    "model_answer": "In pathways that limit warming to 1.5°C (>50%) with no or limited overshoot, global methane ($\\text{CH}_4$) emissions are reduced by 44 [31 to 63]% below 2019 levels in 2040 [C1].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p109:text:0",
+        "page": 109,
+        "printed_page": "93",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          51.0,
+          46.4,
+          605.8,
+          763.8
+        ]
+      }
+    ],
+    "views": 0
+  },
+  {
+    "query_id": "ad18",
+    "split": "dev",
+    "group": "text",
+    "question": "What collective climate finance goal under the UNFCCC and Paris Agreement were developed-to-developing country flows compared against, and were 2018 flows meeting it?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In 2018, public and publicly mobilised private climate finance flows from developed to developing countries were compared against the collective goal under the UNFCCC and Paris Agreement to mobilise USD 100 billion per year by 2020 in the context of meaningful mitigation action and transparency on implementation, and these 2018 flows were below that goal [ipcc-ar6-syr-2023:p27:text:3].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p27:text:3"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "collective climate finance goal UNFCCC Paris Agreement 2018 flows",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p27:text:3",
+            "page": 27,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p78:text:3",
+            "page": 78,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p68:text:2",
+            "page": 68,
+            "rank": 3,
+            "score": 0.03177805800756621,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p128:text:3",
+            "page": 128,
+            "rank": 4,
+            "score": 0.030776515151515152,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p128:text:5",
+            "page": 128,
+            "rank": 5,
+            "score": 0.030776515151515152,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 84.4
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p27:text:3",
+      "ipcc-ar6-syr-2023:p78:text:3",
+      "ipcc-ar6-syr-2023:p68:text:2",
+      "ipcc-ar6-syr-2023:p128:text:3",
+      "ipcc-ar6-syr-2023:p128:text:5"
+    ],
+    "context_chars": 7007,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 3238,
+      "output": 125,
+      "thinking": 0
+    },
+    "elapsed_s": 4.63,
+    "model_answer": "In 2018, public and publicly mobilised private climate finance flows from developed to developing countries were compared against the collective goal under the UNFCCC and Paris Agreement to mobilise USD 100 billion per year by 2020 in the context of meaningful mitigation action and transparency on implementation, and these 2018 flows were below that goal [C1].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p27:text:3",
+        "page": 27,
+        "printed_page": "11",
+        "kind": "text",
+        "region": null,
+        "bbox": [
+          113.4,
+          364.1,
+          540.3,
+          490.5
+        ]
+      }
+    ],
+    "views": 0
+  },
+  {
+    "query_id": "ad19",
+    "split": "dev",
+    "group": "table",
+    "question": "In Table 3.1, what is the median likelihood that peak global warming stays below 1.5°C for pathways in category C3 (limit warming to 2°C, >67%)?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "For pathways in category C3 (limit warming to 2°C, >67%), the median likelihood that peak global warming stays below 1.5°C is 20% [13-41]% [ipcc-ar6-syr-2023:p100:table:0.2].",
+    "citations": [
+      "ipcc-ar6-syr-2023:p100:table:0.2"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Table 3.1 category C3 median likelihood peak global warming stays below 1.5°C",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+            "page": 100,
+            "rank": 1,
+            "score": 0.030886196246139225,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.1",
+            "page": 100,
+            "rank": 2,
+            "score": 0.030158730158730156,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p100:text:1",
+            "page": 100,
+            "rank": 3,
+            "score": 0.03009207275993712,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p100:table:0.3",
+            "page": 100,
+            "rank": 4,
+            "score": 0.029827662395050816,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p100:text:6",
+            "rank": 5,
+            "score": 0.02854251012145749,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 71.1
+      },
+      {
+        "event": "view",
+        "ref": "C1",
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "region": "Table 3.1",
+        "zoom": null,
+        "bytes": 308575
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p100:table:0.2",
+      "ipcc-ar6-syr-2023:p100:table:0.1",
+      "ipcc-ar6-syr-2023:p100:text:1",
+      "ipcc-ar6-syr-2023:p100:table:0.3"
+    ],
+    "context_chars": 11636,
+    "llm_calls": 3,
+    "searches": 1,
+    "usage": {
+      "input": 14555,
+      "output": 119,
+      "thinking": 0
+    },
+    "elapsed_s": 4.65,
+    "model_answer": "For pathways in category C3 (limit warming to 2°C, >67%), the median likelihood that peak global warming stays below 1.5°C is 20% [13-41]% [C1].",
+    "citations_detail": [
+      {
+        "id": "ipcc-ar6-syr-2023:p100:table:0.2",
+        "page": 100,
+        "printed_page": "84",
+        "kind": "table",
+        "region": "Table 3.1",
+        "bbox": [
+          45.3,
+          85.5,
+          555.7,
+          622.5
+        ]
+      }
+    ],
+    "views": 1
+  },
+  {
+    "query_id": "ud01",
+    "split": "dev",
+    "group": "unanswerable",
+    "question": "How much money was pledged to the Loss and Damage fund agreed at COP27?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Loss and Damage fund COP27 pledged money",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p68:text:3",
+            "page": 68,
+            "rank": 1,
+            "score": 0.03252247488101534,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p149:text:1",
+            "page": 149,
+            "rank": 2,
+            "score": 0.02871794871794872,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p10:text:8",
+            "page": 10,
+            "rank": 3,
+            "score": 0.027783137179239824,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p91:chart:2",
+            "page": 91,
+            "rank": 4,
+            "score": 0.01639344262295082,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p78:text:6",
+            "page": 78,
+            "rank": 5,
+            "score": 0.016129032258064516,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 94.6
+      },
+      {
+        "event": "search",
+        "query": "COP27 Loss and Damage fund pledged",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p68:text:3",
+            "page": 68,
+            "rank": 1,
+            "score": 0.03252247488101534,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p149:text:1",
+            "page": 149,
+            "rank": 2,
+            "score": 0.02854251012145749,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p10:text:8",
+            "page": 10,
+            "rank": 3,
+            "score": 0.027984344422700584,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p91:chart:2",
+            "page": 91,
+            "rank": 4,
+            "score": 0.01639344262295082,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p78:text:6",
+            "page": 78,
+            "rank": 5,
+            "score": 0.016129032258064516,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 90.6
+      },
+      {
+        "event": "search",
+        "query": "COP27",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p73:text:4",
+            "page": 73,
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "new": true
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p147:text:0",
+            "page": 147,
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ipcc-ar6-syr-2023:p10:text:2",
+            "page": 10,
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "new": true
+          },
+          {
+            "ref": "C9",
+            "id": "ipcc-ar6-syr-2023:p162:text:1",
+            "page": 162,
+            "rank": 4,
+            "score": 0.015625,
+            "new": true
+          },
+          {
+            "ref": "C10",
+            "id": "ipcc-ar6-syr-2023:p37:text:4",
+            "page": 37,
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 75.8
+      },
+      {
+        "event": "search",
+        "query": "COP27 fund",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p10:text:8",
+            "page": 10,
+            "rank": 1,
+            "score": 0.031009615384615385,
+            "new": false
+          },
+          {
+            "ref": "C11",
+            "id": "ipcc-ar6-syr-2023:p138:text:3",
+            "page": 138,
+            "rank": 2,
+            "score": 0.01639344262295082,
+            "new": true
+          },
+          {
+            "ref": "C12",
+            "id": "ipcc-ar6-syr-2023:p169:text:1",
+            "page": 169,
+            "rank": 3,
+            "score": 0.01639344262295082,
+            "new": true
+          },
+          {
+            "ref": "C13",
+            "id": "ipcc-ar6-syr-2023:p172:text:1",
+            "page": 172,
+            "rank": 4,
+            "score": 0.016129032258064516,
+            "new": true
+          },
+          {
+            "ref": "C14",
+            "id": "ipcc-ar6-syr-2023:p78:text:3",
+            "page": 78,
+            "rank": 5,
+            "score": 0.016129032258064516,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 114.0
+      },
+      {
+        "event": "abstain",
+        "reason": "The provided IPCC AR6 Synthesis Report text does not contain information about the amount of money pledged to the Loss and Damage fund agreed at COP27."
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p68:text:3",
+      "ipcc-ar6-syr-2023:p149:text:1",
+      "ipcc-ar6-syr-2023:p10:text:8",
+      "ipcc-ar6-syr-2023:p91:chart:2",
+      "ipcc-ar6-syr-2023:p78:text:6",
+      "ipcc-ar6-syr-2023:p73:text:4",
+      "ipcc-ar6-syr-2023:p147:text:0",
+      "ipcc-ar6-syr-2023:p10:text:2",
+      "ipcc-ar6-syr-2023:p162:text:1",
+      "ipcc-ar6-syr-2023:p37:text:4",
+      "ipcc-ar6-syr-2023:p138:text:3",
+      "ipcc-ar6-syr-2023:p169:text:1",
+      "ipcc-ar6-syr-2023:p172:text:1",
+      "ipcc-ar6-syr-2023:p78:text:3"
+    ],
+    "context_chars": 10205,
+    "llm_calls": 5,
+    "searches": 4,
+    "usage": {
+      "input": 11555,
+      "output": 120,
+      "thinking": 0
+    },
+    "elapsed_s": 37.13,
+    "model_answer": "The provided IPCC AR6 Synthesis Report text does not contain information about the amount of money pledged to the Loss and Damage fund agreed at COP27.",
+    "views": 0
+  },
+  {
+    "query_id": "ud02",
+    "split": "dev",
+    "group": "unanswerable",
+    "question": "What flooding projection does the report give for the Mekong Delta or Ho Chi Minh City by 2050?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Mekong Delta Ho Chi Minh City flooding projection 2050",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p96:chart:0.1",
+            "page": 96,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p96:text:1",
+            "page": 96,
+            "rank": 2,
+            "score": 0.030117753623188408,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p116:map:0.3",
+            "page": 116,
+            "rank": 3,
+            "score": 0.02964426877470356,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p97:text:1",
+            "page": 97,
+            "rank": 4,
+            "score": 0.029437229437229435,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p117:text:1",
+            "rank": 5,
+            "score": 0.029030910609857977,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 97.8
+      },
+      {
+        "event": "search",
+        "query": "\"Mekong Delta\" OR \"Ho Chi Minh City\" flooding projection 2050",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p96:chart:0.1",
+            "page": 96,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p117:text:1",
+            "rank": 2,
+            "score": 0.0304147465437788,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p96:text:1",
+            "page": 96,
+            "rank": 3,
+            "score": 0.029877369007803793,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p97:text:1",
+            "page": 97,
+            "rank": 4,
+            "score": 0.02919863597612958,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p96:text:0",
+            "page": 96,
+            "rank": 5,
+            "score": 0.02813852813852814,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 80.3
+      },
+      {
+        "event": "search",
+        "query": "Mekong Delta",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "id": "ipcc-ar6-syr-2023:p148:text:2",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p145:text:0",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p136:text:6",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p85:text:4",
+            "rank": 4,
+            "score": 0.015625,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p4:text:5",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 70.1
+      },
+      {
+        "event": "search",
+        "query": "Ho Chi Minh",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "id": "ipcc-ar6-syr-2023:p4:text:4",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p3:text:1",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p11:text:0",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p10:text:7",
+            "rank": 4,
+            "score": 0.015625,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p145:text:0",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 67.8
+      },
+      {
+        "event": "abstain",
+        "reason": "The IPCC AR6 Synthesis Report does not contain specific flooding projections for the Mekong Delta or Ho Chi Minh City by 2050 in the retrieved text."
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p96:chart:0.1",
+      "ipcc-ar6-syr-2023:p96:text:1",
+      "ipcc-ar6-syr-2023:p116:map:0.3",
+      "ipcc-ar6-syr-2023:p97:text:1",
+      "ipcc-ar6-syr-2023:p96:text:0"
+    ],
+    "context_chars": 11949,
+    "llm_calls": 5,
+    "searches": 4,
+    "usage": {
+      "input": 19745,
+      "output": 140,
+      "thinking": 0
+    },
+    "elapsed_s": 9.7,
+    "model_answer": "The IPCC AR6 Synthesis Report does not contain specific flooding projections for the Mekong Delta or Ho Chi Minh City by 2050 in the retrieved text.",
+    "views": 0
+  },
+  {
+    "query_id": "ud03",
+    "split": "dev",
+    "group": "unanswerable",
+    "question": "What was the minimum Arctic sea ice extent in 2012, in million square kilometres, according to the report?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Arctic sea ice extent 2012 million square kilometres",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p33:chart:2",
+            "page": 33,
+            "rank": 1,
+            "score": 0.031054405392392875,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p93:text:6",
+            "page": 93,
+            "rank": 2,
+            "score": 0.03028233151183971,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.3",
+            "page": 63,
+            "rank": 3,
+            "score": 0.029418126757516764,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p91:text:1",
+            "page": 91,
+            "rank": 4,
+            "score": 0.028531243721117136,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p91:chart:4",
+            "page": 91,
+            "rank": 5,
+            "score": 0.02821869488536155,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 84.2
+      },
+      {
+        "event": "search",
+        "query": "\"2012\" sea ice extent million square kilometres",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p93:text:6",
+            "page": 93,
+            "rank": 1,
+            "score": 0.032018442622950824,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p91:chart:4",
+            "page": 91,
+            "rank": 2,
+            "score": 0.0304147465437788,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p116:map:0.1",
+            "page": 116,
+            "rank": 3,
+            "score": 0.03036576949620428,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p116:text:1",
+            "rank": 4,
+            "score": 0.03028233151183971,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p97:text:1",
+            "rank": 5,
+            "score": 0.029386529386529386,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 87.3
+      },
+      {
+        "event": "search",
+        "query": "Arctic sea ice minimum 2012",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p33:chart:2",
+            "page": 33,
+            "rank": 1,
+            "score": 0.03149801587301587,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p91:chart:4",
+            "page": 91,
+            "rank": 2,
+            "score": 0.02964254577157803,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p93:text:6",
+            "page": 93,
+            "rank": 3,
+            "score": 0.02844163539403516,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p92:chart:0",
+            "rank": 4,
+            "score": 0.0277569392348087,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p58:text:5",
+            "rank": 5,
+            "score": 0.027242401779095628,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 83.4
+      },
+      {
+        "event": "search",
+        "query": "million square kilometres Arctic sea ice",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p33:chart:2",
+            "page": 33,
+            "rank": 1,
+            "score": 0.031054405392392875,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p93:text:6",
+            "page": 93,
+            "rank": 2,
+            "score": 0.03028233151183971,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p91:text:1",
+            "page": 91,
+            "rank": 3,
+            "score": 0.028693528693528692,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p91:chart:4",
+            "page": 91,
+            "rank": 4,
+            "score": 0.028125,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p63:table:0.3",
+            "page": 63,
+            "rank": 5,
+            "score": 0.027650648360030512,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 76.7
+      },
+      {
+        "event": "abstain",
+        "reason": "The retrieved report chunks do not contain information about the minimum Arctic sea ice extent in 2012 in million square kilometres."
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p33:chart:2",
+      "ipcc-ar6-syr-2023:p93:text:6",
+      "ipcc-ar6-syr-2023:p63:table:0.3",
+      "ipcc-ar6-syr-2023:p91:text:1",
+      "ipcc-ar6-syr-2023:p91:chart:4",
+      "ipcc-ar6-syr-2023:p116:map:0.1"
+    ],
+    "context_chars": 11331,
+    "llm_calls": 5,
+    "searches": 4,
+    "usage": {
+      "input": 18800,
+      "output": 131,
+      "thinking": 0
+    },
+    "elapsed_s": 9.73,
+    "model_answer": "The retrieved report chunks do not contain information about the minimum Arctic sea ice extent in 2012 in million square kilometres.",
+    "views": 0
+  },
+  {
+    "query_id": "ud04",
+    "split": "dev",
+    "group": "unanswerable",
+    "question": "According to the report, what was the levelised cost of electricity from nuclear power in 2020?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "levelised cost of electricity nuclear power 2020",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p70:text:0",
+            "page": 70,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p70:chart:0",
+            "page": 70,
+            "rank": 3,
+            "score": 0.03125763125763126,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p69:text:2",
+            "page": 69,
+            "rank": 4,
+            "score": 0.029910714285714284,
+            "new": true
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p44:text:1",
+            "page": 44,
+            "rank": 5,
+            "score": 0.02964426877470356,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 68.1
+      },
+      {
+        "event": "search",
+        "query": "nuclear power levelised cost 2020",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.032266458495966696,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p70:text:0",
+            "page": 70,
+            "rank": 2,
+            "score": 0.0315136476426799,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p70:chart:0",
+            "page": 70,
+            "rank": 3,
+            "score": 0.03149801587301587,
+            "new": false
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p43:chart:0.2",
+            "rank": 4,
+            "score": 0.03007688828584351,
+            "dropped": "budget"
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p119:chart:0.1",
+            "rank": 5,
+            "score": 0.028484848484848488,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 65.5
+      },
+      {
+        "event": "search",
+        "query": "nuclear LCOE 2020",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ipcc-ar6-syr-2023:p102:text:0",
+            "page": 102,
+            "rank": 2,
+            "score": 0.02877846790890269,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p102:chart:0",
+            "rank": 3,
+            "score": 0.027809742999616416,
+            "dropped": "budget"
+          },
+          {
+            "ref": "C7",
+            "id": "ipcc-ar6-syr-2023:p100:text:0",
+            "page": 100,
+            "rank": 4,
+            "score": 0.016129032258064516,
+            "new": true
+          },
+          {
+            "id": "ipcc-ar6-syr-2023:p119:chart:0.2",
+            "rank": 5,
+            "score": 0.016129032258064516,
+            "dropped": "budget"
+          }
+        ],
+        "elapsed_ms": 79.5
+      },
+      {
+        "event": "search",
+        "query": "\"nuclear\" levelised cost electricity",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "hybrid",
+        "top_k": 5,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ipcc-ar6-syr-2023:p70:text:1",
+            "page": 70,
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ipcc-ar6-syr-2023:p70:text:0",
+            "page": 70,
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "new": false
+          },
+          {
+            "ref": "C4",
+            "id": "ipcc-ar6-syr-2023:p69:text:2",
+            "page": 69,
+            "rank": 3,
+            "score": 0.031009615384615385,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ipcc-ar6-syr-2023:p70:chart:0",
+            "page": 70,
+            "rank": 4,
+            "score": 0.029957522915269395,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ipcc-ar6-syr-2023:p44:text:1",
+            "page": 44,
+            "rank": 5,
+            "score": 0.029236022193768675,
+            "new": false
+          }
+        ],
+        "elapsed_ms": 68.5
+      },
+      {
+        "event": "abstain",
+        "reason": "The retrieved report sections do not contain information about the levelised cost of electricity from nuclear power in 2020."
+      }
+    ],
+    "context_ids": [
+      "ipcc-ar6-syr-2023:p70:text:1",
+      "ipcc-ar6-syr-2023:p70:text:0",
+      "ipcc-ar6-syr-2023:p70:chart:0",
+      "ipcc-ar6-syr-2023:p69:text:2",
+      "ipcc-ar6-syr-2023:p44:text:1",
+      "ipcc-ar6-syr-2023:p102:text:0",
+      "ipcc-ar6-syr-2023:p100:text:0"
+    ],
+    "context_chars": 11743,
+    "llm_calls": 5,
+    "searches": 4,
+    "usage": {
+      "input": 18588,
+      "output": 129,
+      "thinking": 0
+    },
+    "elapsed_s": 10.47,
+    "model_answer": "The retrieved report sections do not contain information about the levelised cost of electricity from nuclear power in 2020.",
+    "views": 0
+  }
+]

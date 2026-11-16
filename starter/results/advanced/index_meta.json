@@ -2,8 +2,8 @@
   "source_id": "ipcc-ar6-syr-2023",
   "pdf_pages": 186,
   "text_chunks": 804,
-  "visual_chunks": 107,
-  "rows_in_pgvector": 911,
+  "visual_chunks": 155,
+  "rows_in_pgvector": 959,
   "pgvector_strategy": "ipcc",
   "pages_without_text_chunks": [
     {
@@ -110,13 +110,221 @@
       "input": 75605,
       "output": 31046,
       "thinking": 0
-    }
+    },
+    "colour_regions": 53,
+    "relabelled": [
+      {
+        "page": 33,
+        "vision": "Figure SPM.9 panel a",
+        "fixed": "Figure SPM.4 panel a"
+      },
+      {
+        "page": 33,
+        "vision": "Figure SPM.9 panel b",
+        "fixed": "Figure SPM.4 panel b"
+      },
+      {
+        "page": 33,
+        "vision": "Figure SPM.9 panel c",
+        "fixed": "Figure SPM.4 panel c"
+      },
+      {
+        "page": 33,
+        "vision": "Figure SPM.9 panel d",
+        "fixed": "Figure SPM.4 panel d"
+      },
+      {
+        "page": 61,
+        "vision": "Figure a",
+        "fixed": "Figure 2.2 a"
+      },
+      {
+        "page": 61,
+        "vision": "Figure b",
+        "fixed": "Figure 2.2 b"
+      },
+      {
+        "page": 61,
+        "vision": "Figure c",
+        "fixed": "Figure 2.2 c"
+      },
+      {
+        "page": 61,
+        "vision": "Figure d",
+        "fixed": "Figure 2.2 d"
+      },
+      {
+        "page": 64,
+        "vision": "Figure SPM.3 panel a (top)",
+        "fixed": "Figure 2.3 panel a (top)"
+      },
+      {
+        "page": 64,
+        "vision": "Figure SPM.3 panel a (middle)",
+        "fixed": "Figure 2.3 panel a (middle)"
+      },
+      {
+        "page": 64,
+        "vision": "Figure SPM.3 panel a (bottom)",
+        "fixed": "Figure 2.3 panel a (bottom)"
+      },
+      {
+        "page": 65,
+        "vision": "Figure SPM.2 panel b",
+        "fixed": "Figure 2.3 panel b"
+      },
+      {
+        "page": 65,
+        "vision": "Figure SPM.2 panel c",
+        "fixed": "Figure 2.3 panel c"
+      },
+      {
+        "page": 81,
+        "vision": "Figure SPM.3 panel a",
+        "fixed": "Cross-Section Box.2 Figure 1 panel a"
+      },
+      {
+        "page": 81,
+        "vision": "Figure SPM.3 panel b",
+        "fixed": "Cross-Section Box.2 Figure 1 panel b"
+      },
+      {
+        "page": 81,
+        "vision": "Figure SPM.3 panel c",
+        "fixed": "Cross-Section Box.2 Figure 1 panel c"
+      },
+      {
+        "page": 89,
+        "vision": "Figure SPM.3 panel a",
+        "fixed": "Figure 3.2 panel a"
+      },
+      {
+        "page": 89,
+        "vision": "Figure SPM.3 panel b",
+        "fixed": "Figure 3.2 panel b"
+      },
+      {
+        "page": 89,
+        "vision": "Figure SPM.3 panel c1",
+        "fixed": "Figure 3.2 panel c1"
+      },
+      {
+        "page": 89,
+        "vision": "Figure SPM.3 panel c2",
+        "fixed": "Figure 3.2 panel c2"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel a (left chart)",
+        "fixed": "Figure 3.3 panel a (left chart)"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel a (right chart)",
+        "fixed": "Figure 3.3 panel a (right chart)"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel b (Land-based systems)",
+        "fixed": "Figure 3.3 panel b (Land-based systems)"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel b (Ocean/coastal ecosystems)",
+        "fixed": "Figure 3.3 panel b (Ocean/coastal ecosystems)"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel c (left chart)",
+        "fixed": "Figure 3.3 panel c (left chart)"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel c (right chart)",
+        "fixed": "Figure 3.3 panel c (right chart)"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel d (Heat-related morbidity and mortality)",
+        "fixed": "Figure 3.3 panel d (Heat-related morbidity and mortality)"
+      },
+      {
+        "page": 91,
+        "vision": "Figure SPM.7 panel d (Food insecurity)",
+        "fixed": "Figure 3.3 panel d (Food insecurity)"
+      },
+      {
+        "page": 92,
+        "vision": "Figure SPM.3",
+        "fixed": "Figure 3.3"
+      },
+      {
+        "page": 96,
+        "vision": "Figure a",
+        "fixed": "Figure 3.4 a"
+      },
+      {
+        "page": 96,
+        "vision": "Figure b",
+        "fixed": "Figure 3.4 b"
+      },
+      {
+        "page": 102,
+        "vision": "Figure SPM.7 panel a",
+        "fixed": "Figure 3.6 panel a"
+      },
+      {
+        "page": 102,
+        "vision": "Figure SPM.7 panel b",
+        "fixed": "Figure 3.6 panel b"
+      },
+      {
+        "page": 102,
+        "vision": "Figure SPM.7 panel c",
+        "fixed": "Figure 3.6 panel c"
+      },
+      {
+        "page": 110,
+        "vision": "Figure a",
+        "fixed": "Figure 4.1 a"
+      },
+      {
+        "page": 110,
+        "vision": "Figure b",
+        "fixed": "Figure 4.1 b"
+      },
+      {
+        "page": 116,
+        "vision": "Figure SPM.X panel a",
+        "fixed": "Figure 4.3 SPM.X panel a"
+      },
+      {
+        "page": 116,
+        "vision": "Figure SPM.X panel b",
+        "fixed": "Figure 4.3 SPM.X panel b"
+      },
+      {
+        "page": 116,
+        "vision": "Figure SPM.X panel c",
+        "fixed": "Figure 4.3 SPM.X panel c"
+      },
+      {
+        "page": 119,
+        "vision": "Figure SPM.7 panel a",
+        "fixed": "Figure 4.4 panel a"
+      },
+      {
+        "page": 119,
+        "vision": "Figure SPM.7 panel b",
+        "fixed": "Figure 4.4 panel b"
+      }
+    ]
   },
   "embedding_model": "nomic-embed-text",
   "dimensions": 768,
   "seconds": {
-    "total": 19.9,
-    "embed": 13.2
+    "total": 44.6,
+    "embed": 18.7
   },
   "cost_usd": 0,
   "billing": "Gemini free tier + local embedding"

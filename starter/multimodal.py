@@ -50,7 +50,8 @@ SYSTEM_PROMPT = """You answer questions about the IPCC AR6 Synthesis Report "Cli
 
 Tools:
 - search: hybrid text + visual index. Each result has a ref, page, kind (text, table, chart, diagram, map, image) and for visuals a label such as "Table 3.1" or "Figure SPM.7 panel a". Visual descriptions were generated automatically and can contain reading errors.
-- view: shows the original page image of a retrieved ref. Before answering any question about a table cell, chart value, colour, symbol, map or diagram, view the relevant ref and read the value from the image.
+- view: shows the original page image of a retrieved ref. Before answering any question about a table cell, chart value, colour, symbol, map or diagram, view the relevant ref and read the value from the image. Viewing is limited: after viewing the relevant image, answer from it.
+- When colours encode categories (confidence levels, feasibility, risk) and the chunk lists "Exact colour fills from the PDF vector graphics", find the cell's row/column there and map its hex colour to the colour key by exact match; these values are exact, whereas judging similar shades by eye (orange vs red-orange, light vs medium purple) is error-prone. If the generated description or your own view names a different colour/category, the exact fills win.
 
 Rules:
 1. Always search before answering; you may search up to {max_searches} times. For multi-part or multi-hop questions search for each part separately.
@@ -147,6 +148,93 @@ def describe_page(client, doc, n: int, cache: Path) -> tuple[list[dict], dict]:
     return elements, usage
 
 
+def colour_cells(page, region, max_rects: int = 240) -> str:
+    # Colour-coded tables/matrices are vector graphics: read the exact fill of each small filled
+    # rectangle, label it with the row text on its left and the column text above, and list which
+    # legend text sits next to each colour, so categories are matched by exact colour, not by eye.
+    area = page.rect.width * page.rect.height
+    every = []
+    for d in page.get_drawings():
+        r, fill = d["rect"], d.get("fill")
+        if not fill or r.width < 4 or r.height < 4 or r.width * r.height > 0.03 * area:
+            continue
+        colour = "#%02x%02x%02x" % tuple(int(v * 255) for v in fill[:3])
+        if colour not in ("#f0f1f1", "#f2f3f4", "#d6d5d4", "#dbdcde"):
+            every.append((r, colour))
+    rects = [(r, c) for r, c in every if region.intersects(r) and c != "#ffffff"]
+    if not rects or len(rects) > max_rects or len({c for _, c in rects}) > 20:
+        return ""
+    page_words = page.get_text("words")
+    words = [w for w in page_words if region.intersects(pymupdf_rect(w))]
+
+    def text_where(cond, last=8):
+        picked = sorted((w for w in words if cond(w)), key=lambda w: (round(w[1]), w[0]))
+        return " ".join(w[4] for w in picked[-last:])
+
+    lines = []
+    for r, colour in sorted(rects, key=lambda x: (round(x[0].y0), x[0].x0)):
+        cy = (r.y0 + r.y1) / 2
+        inside = text_where(lambda w: r.x0 - 1 <= w[0] and w[2] <= r.x1 + 1 and r.y0 - 1 <= w[1] and w[3] <= r.y1 + 1)
+        row = text_where(lambda w: w[2] <= r.x0 + 1 and abs((w[1] + w[3]) / 2 - cy) < max(r.height / 2, 6) and r.x0 - w[2] < 260)
+        col = text_where(lambda w: w[3] <= r.y0 + 1 and r.y0 - w[3] < 60 and w[0] < r.x1 and w[2] > r.x0, last=6)
+        lines.append((row, col, inside, colour))
+    # Legend swatches may sit outside the region: search the whole page for small swatches of the
+    # same colours with a short label directly below or to the right.
+    legend, used = {}, {c for _, c in rects} | {"#ffffff"}
+    for r, colour in every:
+        if colour not in used or colour in legend or r.width > 60 or r.height > 25:
+            continue
+        cy = (r.y0 + r.y1) / 2
+        below = " ".join(w[4] for w in sorted((w for w in page_words if 0 <= w[1] - r.y1 < 22 and r.x0 - 2 <= (w[0] + w[2]) / 2 <= r.x1 + 2),
+                                              key=lambda w: (round(w[1]), w[0]))[:4])
+        right = " ".join(w[4] for w in sorted((w for w in page_words if 0 <= w[0] - r.x1 < 10 and abs((w[1] + w[3]) / 2 - cy) < 6),
+                                              key=lambda w: w[0])[:4])
+        label = right or below
+        if label and len(label) < 60:
+            legend[colour] = label
+    # Only colour-coded regions: at least two cell colours must be explained by a legend swatch
+    # (plain coloured headers, as in Table 3.1, would only add noise).
+    cell_colours = {c for _, c in rects}
+    if len(cell_colours & set(legend)) < 2:
+        return ""
+    key = ("NOTE: colour names in the generated description are visual guesses and can be wrong; when they disagree, "
+           "the exact fills below are authoritative. Colour key (swatch colour -> legend text): "
+           + "; ".join(f"{c} = {t}" for c, t in legend.items()))
+    cells = [f"- row '{row}' | column '{col}' | text '{inside}' -> {colour}" + (f" ({legend[colour]})" if colour in legend else "")
+             for row, col, inside, colour in lines[:max_rects]]
+    return (key + "\nExact colour fills from the PDF vector graphics (cell -> colour (legend meaning); cells of the same "
+            "row are listed left to right, i.e. first column first):\n" + "\n".join(cells))
+
+
+def pymupdf_rect(w):
+    import pymupdf
+    return pymupdf.Rect(w[:4])
+
+
+CAPTION_ID = re.compile(r"(?:^|\n)\s*((?:Table|Figure)\s+(?:(?:SPM|TS)\.)?\d+(?:\.\d+)?|Cross-Section Box\.\d Figure \d)\s*[:|]?")
+
+
+def page_captions(doc, n: int) -> list[str]:
+    if not 1 <= n <= doc.page_count:
+        return []
+    return [" ".join(m.group(1).split()) for m in CAPTION_ID.finditer(doc[n - 1].get_text())]
+
+
+def fix_label(doc, n: int, label: str) -> str:
+    # Vision often guesses labels (e.g. 'Figure SPM.3') for longer-report figures whose caption sits on a
+    # facing page. Keep the label when its id is printed on the page; otherwise use the nearest real caption.
+    rid = region_id(label)
+    if rid and rid.lower() in norm(doc[n - 1].get_text()):
+        return label
+    kind = "Table" if label.lower().startswith("table") else "Figure"
+    suffix = label[len(rid):] if rid and label.startswith(rid) else re.sub(r"^(Figure|Table)\s*", " ", label)
+    for m in (n, n + 1, n + 2, n - 1):
+        caps = [c for c in page_captions(doc, m) if c.startswith(kind) or "Box" in c]
+        if caps:
+            return (caps[0] + " " + suffix.strip()).strip()
+    return label
+
+
 def visual_chunks(doc, manifest, client, pages, max_chars: int = 3500) -> tuple[list[dict], dict]:
     import pymupdf
     cache, crops = OUT / "vision", OUT / "crops"
@@ -182,8 +270,16 @@ def visual_chunks(doc, manifest, client, pages, max_chars: int = 3500) -> tuple[
             crop = f"crops/p{n:03d}_{k}.png"
             page.get_pixmap(dpi=150, clip=rect).save(OUT / crop)
             pdf_text = " ".join(page.get_text("text", clip=rect).split())
-            label, title = str(e.get("label") or "").strip(), str(e.get("title") or "").strip()
+            vision_label, title = str(e.get("label") or "").strip(), str(e.get("title") or "").strip()
+            label = fix_label(doc, n, vision_label)
+            if label != vision_label:
+                stats.setdefault("relabelled", []).append({"page": n, "vision": vision_label, "fixed": label})
             body = str(e.get("description", "")).strip() + (f"\nPDF text in region: {pdf_text}" if pdf_text else "")
+            colours = colour_cells(page, rect)
+            key_line = colours.splitlines()[0] if colours else ""
+            if colours:
+                body += "\n" + colours
+                stats["colour_regions"] = stats.get("colour_regions", 0) + 1
             # Long descriptions (big tables) are split by line into parts that share label, bbox and crop.
             parts, cur = [], ""
             for line in body.splitlines():
@@ -193,11 +289,14 @@ def visual_chunks(doc, manifest, client, pages, max_chars: int = 3500) -> tuple[
                 cur += line[:max_chars] + "\n"
             parts.append(cur)
             for j, part in enumerate(parts):
+                if key_line and key_line not in part:
+                    part = key_line + "\n" + part  # every part with colour cells carries the key
                 tag = f" (part {j + 1}/{len(parts)})" if len(parts) > 1 else ""
                 cid = f"{SOURCE_ID}:p{n}:{kind}:{k}" + (f".{j + 1}" if len(parts) > 1 else "")
                 chunks.append(record(cid, f"{kind.upper()} | {label}{tag} | {title}\n{part.strip()}", n, doc, manifest,
                                      kind=kind, label=label or None, title=title or None,
                                      bbox=[rect.x0, rect.y0, rect.x1, rect.y1], crop=crop))
+                chunks[-1]["metadata"]["vision_label"] = vision_label or None
             stats["elements"][kind] += 1
             k += 1
         print(f"  [{i}/{len(pages)}] p{n}: {k} phần tử", flush=True)
@@ -330,9 +429,12 @@ def run_retrieval(args) -> None:
 
 def view_tool(doc, max_views: int):
     import pymupdf
+    # A 'zoom' argument was tried on dev and removed: the model zoomed repeatedly, exhausted the view
+    # budget and abstained (see report). The handler still accepts it for reproducibility.
     decl = {"name": "view", "description": "Show the original page image of a retrieved ref (its table/figure region, or the page for text).",
-            "parameters": {"type": "object", "properties": {"ref": {"type": "string", "description": "A ref returned by search, e.g. C3."}},
-                           "required": ["ref"]}}
+            "parameters": {"type": "object", "properties": {
+                "ref": {"type": "string", "description": "A ref returned by search, e.g. C3."}},
+                "required": ["ref"]}}
 
     def handler(args, refs, events, state):
         ref = str(args.get("ref", "")).strip().strip("[]")
@@ -344,12 +446,21 @@ def view_tool(doc, max_views: int):
         c = refs[ref]
         m = c["metadata"]
         page = doc[c["page"] - 1]
-        if m.get("crop") and (OUT / m["crop"]).exists():
+        base = pymupdf.Rect(*m["bbox"]) if m.get("bbox") and m.get("kind") != "text" else page.rect
+        zoom = args.get("zoom")
+        if isinstance(zoom, list) and len(zoom) == 4:
+            x0, y0, x1, y1 = [min(1000.0, max(0.0, float(v))) for v in zoom]
+            sub = pymupdf.Rect(base.x0 + base.width * x0 / 1000, base.y0 + base.height * y0 / 1000,
+                               base.x0 + base.width * x1 / 1000, base.y0 + base.height * y1 / 1000)
+            png = page.get_pixmap(dpi=300, clip=sub if not sub.is_empty else base).tobytes("png")
+        elif m.get("crop") and (OUT / m["crop"]).exists():
+            zoom = None
             png = (OUT / m["crop"]).read_bytes()
         else:
-            rect = pymupdf.Rect(*m["bbox"]) if m.get("bbox") else page.rect
-            png = page.get_pixmap(dpi=130, clip=rect if m.get("kind") != "text" else page.rect).tobytes("png")
-        events.append({"event": "view", "ref": ref, "id": c["id"], "page": c["page"], "region": m.get("label"), "bytes": len(png)})
+            zoom = None
+            png = page.get_pixmap(dpi=130, clip=base).tobytes("png")
+        events.append({"event": "view", "ref": ref, "id": c["id"], "page": c["page"], "region": m.get("label"),
+                       "zoom": zoom, "bytes": len(png)})
         return [{"functionResponse": {"name": "view", "response": {"ref": ref, "page": c["page"], "printed_page": m.get("printed_page"),
                                                                   "region": m.get("label") or "page text", "note": "image follows"}}},
                 {"inlineData": {"mimeType": "image/png", "data": base64.b64encode(png).decode()}}]
@@ -361,7 +472,8 @@ def run_agent(args) -> None:
     from agent import Agent, GeminiClient, chapters_of
     doc = pymupdf.open(PDF)
     retrievers = retrievers_for_advanced(candidates=args.candidates)
-    llm = GeminiClient(args.model)
+    # More retries than the basic agent: a system error counts as a failed test question.
+    llm = GeminiClient(args.model, max_retries=10)
     questions = load_questions(args.split)
     if args.ids:
         questions = [q for q in questions if q["id"] in args.ids]
@@ -369,13 +481,16 @@ def run_agent(args) -> None:
               "budget_chars": args.budget, "max_views": args.max_views, "candidates": args.candidates,
               "view_tool": args.max_views > 0, "temperature": 0}
     traces = []
+    out = args.output or RESULTS / "agent" / f"{args.split}-{args.method}"
+    out.mkdir(parents=True, exist_ok=True)
     try:
         retriever = retrievers.get(args.method)
         chapters = chapters_of(retrievers.chunks())
         for q in questions:
             tools = {"view": view_tool(doc, args.max_views)} if args.max_views > 0 else {}
             agent = Agent(llm, retriever, chapters=chapters, max_searches=args.max_searches, top_k=args.top_k,
-                          budget=args.budget, system_prompt=SYSTEM_PROMPT, extra_tools=tools)
+                          budget=args.budget, system_prompt=SYSTEM_PROMPT, extra_tools=tools,
+                          claim_citations=True)
             # Only the question text reaches the agent; answers, evidence and labels stay out.
             result = agent.run(q["question"])
             result["views"] = sum(e["event"] == "view" for e in result["events"])
@@ -383,11 +498,10 @@ def run_agent(args) -> None:
                            "answerable": q["answerable"], **result})
             print(f"{q['id']} {q['group']:12} {result['status']:8} s={result['searches']} v={result['views']} "
                   f"{result['elapsed_s']:5.1f}s | {result['answer'][:100]}", flush=True)
+            # Save after every question so an interrupted run keeps its finished traces.
+            (out / "traces.json").write_text(json.dumps(traces, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     finally:
         retrievers.close()
-    out = args.output or RESULTS / "agent" / f"{args.split}-{args.method}"
-    out.mkdir(parents=True, exist_ok=True)
-    (out / "traces.json").write_text(json.dumps(traces, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     labels = out / "labels.json"
     if not labels.exists():
         labels.write_text(json.dumps([{"query_id": t["query_id"], "group": t["group"], "status": t["status"],

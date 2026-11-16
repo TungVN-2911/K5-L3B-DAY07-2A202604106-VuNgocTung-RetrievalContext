@@ -129,10 +129,12 @@ def function_calls(response: dict[str, Any]) -> tuple[dict[str, Any], list[dict[
 class Agent:
     def __init__(self, llm, retriever, *, chapters: list[str], max_searches: int = 3, top_k: int = 4,
                  budget: int = 6000, fixed_filter: dict[str, Any] | None = None, system_prompt: str | None = None,
-                 extra_tools: dict[str, tuple[dict[str, Any], Any]] | None = None) -> None:
+                 extra_tools: dict[str, tuple[dict[str, Any], Any]] | None = None, claim_citations: bool = False) -> None:
         if max_searches < 1 or top_k < 1 or budget < 1:
             raise ValueError("max_searches, top_k, budget phải >= 1")
         self.llm, self.retriever, self.chapters = llm, retriever, chapters
+        # claim_citations: every sentence that states a number must carry its own [C#] marker.
+        self.claim_citations = claim_citations
         self.max_searches, self.top_k, self.budget, self.fixed_filter = max_searches, top_k, budget, fixed_filter
         # extra_tools: name -> (function declaration, handler(args, refs, events, state) -> list of reply parts)
         self.extra_tools = extra_tools or {}
@@ -228,8 +230,15 @@ class Agent:
         return {"functionResponse": {"name": "search", "response": {"results": shown} if shown else
                                      {"results": [], "note": "no matching chunks"}}}
 
+    def _check_answer(self, args, refs) -> str | None:
+        problem = self._check_refs(args, refs)
+        if problem or not self.claim_citations:
+            return problem
+        uncited = [s for s in re.split(r"(?<=[.!?])\s+", args["answer"].strip()) if re.search(r"\d", s) and not REF.search(s)]
+        return f"sentence states figures without a [C#] citation: {uncited[0][:120]!r}" if uncited else None
+
     @staticmethod
-    def _check_answer(args, refs) -> str | None:
+    def _check_refs(args, refs) -> str | None:
         answer, citations = args.get("answer"), args.get("citations")
         if not isinstance(answer, str) or not answer.strip():
             return "empty answer"
