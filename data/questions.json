@@ -1,0 +1,471 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "question": "How does the book formally define a large language model?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "A Transformer-based neural network trained on massive text corpora to predict the next token in a sequence, through which it learns to understand, generate and reason with human language.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 10,
+        "evidence": "a large language model is a Transformer-based neural network trained on massive text corpora to predict the next token in a sequence and through this process acquires the ability to understand, generate and reason with human language."
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "direct",
+    "question": "What effect do low and high temperature values have on LLM generation?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Low temperature (~0) makes the model deterministic; higher temperature (0.7–1.0) increases creativity and diversity but also noise.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 31,
+        "evidence": "Low temperature (~0) makes the model deterministic. Higher temperature (0.7–1.0) boosts creativity, diversity, but also noise."
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Which sampling setting only considers the smallest group of tokens whose combined probability reaches a chosen threshold?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Top-p (nucleus sampling), e.g. top_p=0.9 keeps the smallest set of tokens covering 90% of the probability.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 32,
+        "evidence": "top_p=0.9 → only the smallest set of tokens covering 90% probability are considered."
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "type": "direct",
+    "question": "According to the book, what hidden flaw in human preference data causes mode collapse?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Typicality bias.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 59,
+        "evidence": "mode collapse happens because the human preference data used to train the LLM has a hidden flaw called typicality bias."
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "type": "condition",
+    "question": "Does prompt engineering change the model's learned parameters?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "No. It does not change the weights; it only changes the instructions given to the model.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 51,
+        "evidence": "You’re not changing weights (the learned parameters inside the model). You’re changing instructions and that changes everything."
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "type": "direct",
+    "question": "What does fine-tuning mean?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Adjusting the weights of a pre-trained model on a new dataset for better performance.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 68,
+        "evidence": "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset for better performance."
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "condition",
+    "question": "Why is traditional fine-tuning on a single GPU impossible for GPT-3?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "GPT-3 has 175B parameters, which need 350GB of memory just to store the weights in float16.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 69,
+        "evidence": "But it's impossible with GPT-3, which has 175B parameters. That's 350GB of memory just to store model weights (float16 precision)."
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What shared limitation of prompt engineering and fine-tuning motivates RAG?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "The model can only use the knowledge it already contains.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 107,
+        "evidence": "Both approaches are powerful, but they share one fundamental limitation: the model can only use the knowledge it already contains."
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "type": "direct",
+    "question": "What does a vector database store?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Unstructured data (text, images, audio, video, etc.) in the form of vector embeddings.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 108,
+        "evidence": "a vector database stores unstructured data (text, images, audio, video, etc.) in the form of vector embeddings."
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "condition",
+    "question": "Why is overlap recommended in fixed-size chunking, and what is its main drawback?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "A direct split can disrupt the semantic flow, so overlap is kept between consecutive chunks; but fixed-size chunking usually breaks sentences or ideas in between.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 121,
+        "evidence": "Since a direct split can disrupt the semantic flow, it is recommended to maintain some overlap between two consecutive chunks (the blue part above). This is simple to implement. Also, since all chunks are of equal size, it simplifies batch processing. But this usually breaks sentences (or ideas) in between."
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What problem with traditional RAG retrieval does HyDE address?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Questions are not semantically similar to their answers, so irrelevant contexts get retrieved because of higher cosine similarity than the documents that contain the answer.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 132,
+        "evidence": "questions are not semantically similar to their answers. As a result, several irrelevant contexts get retrieved during the retrieval step due to a higher cosine similarity than the documents actually containing the answer."
+      }
+    ],
+    "note": "Day 6 ghi trang [132, 133]; evidence chỉ nằm ở p132."
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "filter",
+    "question": "In the RAG chapter, how does Cache-Augmented Generation avoid re-fetching the same context?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "It caches stable information directly in the model's key-value memory so the model can “remember” it.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 143,
+        "evidence": "It lets the model “remember” stable information by caching it directly in the model’s key-value memory."
+      }
+    ],
+    "filter": {
+      "chapter": "rag"
+    }
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Why can a RAG system fail even when it uses the best available LLM?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Because retrieval quality dominates: bad retrieval can never work even with the best LLMs (good retrieval can still work with a weak LLM).",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 148,
+        "evidence": "But bad retrieval can NEVER work even with the best of LLMs."
+      }
+    ],
+    "note": "Evidence Day 6 vắt qua hai chunk fixed500-50 (p148 c0/c1); rút về câu cốt lõi nằm trọn trong p148 c1."
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "filter_disambiguation",
+    "question": "In the context engineering chapter, how should short-term and long-term memory be managed?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Short-term: summarize long conversations; long-term: remember user preferences across sessions.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 150,
+        "evidence": "Memory management: ● Short-term: Summarize long conversations ● Long-term: Remember user preferences across sessions"
+      }
+    ],
+    "filter": {
+      "chapter": "context_engineering"
+    }
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "type": "filter_disambiguation",
+    "question": "In the AI agents chapter, what kinds of long-term memory can an agent have?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Semantic (facts and knowledge), episodic (past experiences or task completions) and procedural (how to do things).",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 196,
+        "evidence": "long-term memory in agents can be: ● Semantic → Stores facts and knowledge ● Episodic → Recalls past experiences or task completions ● Procedural → Learns how to do things"
+      }
+    ],
+    "filter": {
+      "chapter": "ai_agents"
+    }
+  },
+  {
+    "id": "u01",
+    "split": "dev",
+    "type": "unanswerable",
+    "question": "Which values of the BM25 parameters k1 and b does the book recommend when adding keyword search to vector search in a hybrid retrieval setup?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Sách chỉ nhắc \"hybrid search\" một lần (p176) mà không nêu thuật toán hay tham số; không có BM25, k1 hoặc keyword search.",
+    "absence_check": {
+      "absent_patterns": [
+        "BM25",
+        "\\bk1\\b",
+        "keyword search",
+        "lexical"
+      ],
+      "related_pages": [
+        129,
+        176
+      ],
+      "scope": "text trích xuất (NFKC) của toàn bộ 384 trang PDF; chữ nằm trong ảnh chưa OCR nên không kiểm được tự động"
+    }
+  },
+  {
+    "id": "u02",
+    "split": "dev",
+    "type": "unanswerable",
+    "question": "Which HNSW index parameters, such as M or ef_search, does the book recommend tuning in a vector database?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Sách mô tả vector database và approximate nearest neighbor (p108–117) nhưng không nhắc HNSW hay tham số index.",
+    "absence_check": {
+      "absent_patterns": [
+        "HNSW",
+        "ef_search",
+        "ef_construction"
+      ],
+      "related_pages": [
+        108,
+        113,
+        117
+      ],
+      "scope": "text trích xuất (NFKC) của toàn bộ 384 trang PDF; chữ nằm trong ảnh chưa OCR nên không kiểm được tự động"
+    }
+  },
+  {
+    "id": "u03",
+    "split": "dev",
+    "type": "unanswerable",
+    "question": "What MMLU benchmark score does the book report for the Llama 3 model?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Llama 3 xuất hiện khi nói về KV cache (p331, Llama3-70B) và deploy LitServe (p367–368); sách không báo điểm MMLU nào.",
+    "absence_check": {
+      "absent_patterns": [
+        "MMLU"
+      ],
+      "related_pages": [
+        331,
+        367,
+        368
+      ],
+      "scope": "text trích xuất (NFKC) của toàn bộ 384 trang PDF; chữ nằm trong ảnh chưa OCR nên không kiểm được tự động"
+    }
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "type": "filter_disambiguation",
+    "question": "In the observability chapter, when is evaluation typically carried out?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Before deployment, or as part of a periodic offline benchmarking process.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 373,
+        "evidence": "It is typically done before deployment, or as part of a periodic offline benchmarking process."
+      }
+    ],
+    "filter": {
+      "chapter": "llm_observability"
+    }
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "type": "condition",
+    "question": "When do tool-name hallucinations usually happen in MCP agents?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "When the tool list is large or poorly named; the model may invent a tool that does not exist.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 288,
+        "evidence": "The model may invent a tool that does not exist. This usually happens when the tool list is large or poorly named."
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "type": "filter_disambiguation",
+    "question": "In the LLM deployment chapter, how does vLLM handle LoRA adapters?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Because LoRA adapters are lightweight, vLLM loads them once and applies them per request without duplicating memory.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 362,
+        "evidence": "Because LoRA adapters are lightweight, vLLM loads them once and applies them per-request without duplicating memory."
+      }
+    ],
+    "filter": {
+      "chapter": "llm_deployment"
+    }
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "type": "condition",
+    "question": "If you have no labelled data but the task's correctness can be checked automatically, which fine-tuning method should you use?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "RFT (reinforcement fine-tuning), because correctness can be automatically checked.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 94,
+        "evidence": "If verifiable, RFT works because correctness can be automatically checked."
+      }
+    ]
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "type": "paraphrase",
+    "question": "In the book's example, how much slower is generation without caching attention keys and values?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "About 4.5x slower (40 seconds vs 9 seconds), and the gap grows as more tokens are produced.",
+    "gold": [
+      {
+        "source_id": "ai-engineering-2025",
+        "page": 327,
+        "evidence": "with KV caching → 9 seconds ● without KV caching → 40 seconds (~4.5x slower, and this gap grows as more tokens are produced)."
+      }
+    ]
+  },
+  {
+    "id": "u04",
+    "split": "test",
+    "type": "unanswerable",
+    "question": "According to the book, how much does it cost per hour to rent a GPU for fine-tuning an LLM?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Sách bàn về bộ nhớ GPU (p18, p69, p320–327) và chi phí ở mức khái niệm, không có giá tiền, đơn vị tiền tệ hay giá thuê theo giờ.",
+    "absence_check": {
+      "absent_patterns": [
+        "\\$",
+        "\\bUSD\\b",
+        "dollar",
+        "per hour",
+        "H100"
+      ],
+      "related_pages": [
+        69,
+        320,
+        360
+      ],
+      "scope": "text trích xuất (NFKC) của toàn bộ 384 trang PDF; chữ nằm trong ảnh chưa OCR nên không kiểm được tự động"
+    }
+  },
+  {
+    "id": "u05",
+    "split": "test",
+    "type": "unanswerable",
+    "question": "How does the book recommend setting up Langfuse to trace LLM calls in production?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Phần observability dùng Opik để tracing (p374–379); Langfuse không xuất hiện trong sách.",
+    "absence_check": {
+      "absent_patterns": [
+        "Langfuse"
+      ],
+      "related_pages": [
+        374,
+        375,
+        376
+      ],
+      "scope": "text trích xuất (NFKC) của toàn bộ 384 trang PDF; chữ nằm trong ảnh chưa OCR nên không kiểm được tự động"
+    }
+  },
+  {
+    "id": "u06",
+    "split": "test",
+    "type": "unanswerable",
+    "question": "What is the maximum context window of GPT-4, in tokens, according to the book?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "GPT-4 được nhắc ở p25, p181, p253 (GPT-4o p260, GPT-4.1 p62) và context window được giải thích ở p112, p125, p153 nhưng không nêu kích thước context của GPT-4. Bẫy: p331 ghi \"max output size = 4k\" của Llama3-70B.",
+    "absence_check": {
+      "absent_patterns": [
+        "GPT-4\\S*[^.]{0,200}?\\d+\\s?[kK]\\b",
+        "\\d+\\s?[kK]\\s+context",
+        "context window of"
+      ],
+      "related_pages": [
+        25,
+        112,
+        181,
+        253,
+        331
+      ],
+      "scope": "text trích xuất (NFKC) của toàn bộ 384 trang PDF; chữ nằm trong ảnh chưa OCR nên không kiểm được tự động"
+    }
+  }
+]
