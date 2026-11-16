@@ -3,28 +3,32 @@
     "query_id": "ud01",
     "group": "unanswerable",
     "status": "abstain",
-    "passed": null,
-    "reason": ""
+    "passed": true,
+    "reason": "Từ chối, không đưa số liệu suy đoán.",
+    "labeled_by": "Claude: chấm theo tiêu chí ADVANCED.md (đúng, đủ, citation đúng trang/vùng, không thêm khẳng định sai; câu so sánh phải nêu quan hệ); không có người chấm độc lập"
   },
   {
     "query_id": "ud02",
     "group": "unanswerable",
     "status": "abstain",
-    "passed": null,
-    "reason": ""
+    "passed": true,
+    "reason": "Từ chối, không đưa số liệu suy đoán.",
+    "labeled_by": "Claude: chấm theo tiêu chí ADVANCED.md (đúng, đủ, citation đúng trang/vùng, không thêm khẳng định sai; câu so sánh phải nêu quan hệ); không có người chấm độc lập"
   },
   {
     "query_id": "ud03",
     "group": "unanswerable",
     "status": "abstain",
-    "passed": null,
-    "reason": ""
+    "passed": true,
+    "reason": "Từ chối, không đưa số liệu suy đoán.",
+    "labeled_by": "Claude: chấm theo tiêu chí ADVANCED.md (đúng, đủ, citation đúng trang/vùng, không thêm khẳng định sai; câu so sánh phải nêu quan hệ); không có người chấm độc lập"
   },
   {
     "query_id": "ud04",
     "group": "unanswerable",
     "status": "abstain",
-    "passed": null,
-    "reason": ""
+    "passed": true,
+    "reason": "Từ chối, không đưa số liệu suy đoán.",
+    "labeled_by": "Claude: chấm theo tiêu chí ADVANCED.md (đúng, đủ, citation đúng trang/vùng, không thêm khẳng định sai; câu so sánh phải nêu quan hệ); không có người chấm độc lập"
   }
 ]

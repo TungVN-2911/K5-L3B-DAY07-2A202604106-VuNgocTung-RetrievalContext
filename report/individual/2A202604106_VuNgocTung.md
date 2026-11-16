@@ -105,7 +105,7 @@ Nhãn dev và test do Claude soạn nháp sau khi đọc đối chiếu chunk đ
 
 ## Thử thách nâng cao (nếu thực hiện)
 
-> **Kết quả:** cấu hình chốt trên dev (v7, dev 22/23) chạy **một lần** trên test: **27/30 = 90,0%**, 0 lỗi hệ thống. Kết quả đạt đúng ngưỡng nhưng **phụ thuộc vào câu biên at16** (xem bảng test). Nhãn do Claude chấm rồi tự kiểm lại lần 2 (số liệu cốt lõi, trang cite, nguyên văn chunk được cite) theo yêu cầu của người làm bài; lần kiểm lại không đổi nhãn nào. Không có người chấm độc lập, nên người chấm cần đối chiếu lại, nhất là at16 và at02.
+> **Kết quả:** cấu hình chốt trên dev (v7, dev 21/23) chạy **một lần** trên test: **27/30 = 90,0%**, 0 lỗi hệ thống. Kết quả đạt đúng ngưỡng nhưng **phụ thuộc vào câu biên at16** (xem bảng test). Nhãn do Claude chấm rồi tự kiểm lại lần 2 (số liệu cốt lõi, trang cite, nguyên văn chunk được cite) theo yêu cầu của người làm bài; lần kiểm lại không đổi nhãn nào. Không có người chấm độc lập, nên người chấm cần đối chiếu lại, nhất là at16 và at02.
 
 - **Tài liệu, nguồn, quyền sử dụng, số trang và phiên bản:**
   - *IPCC AR6 Synthesis Report: Climate Change 2023* (Full Volume), 186 trang PDF, ISBN 978-92-9169-164-7, DOI 10.59327/IPCC/AR6-9789291691647.
@@ -154,9 +154,9 @@ Rerank kém và chậm vì chunk bảng/hình dài, MiniLM chỉ đọc khoảng
 | v4 | + ghi chú "tên màu trong mô tả là đoán" | 20/23 | ad02 lỗi 503; ad04; ad12 thiếu citation cho một ý |
 | v5 | Dòng màu ghi thẳng ý nghĩa chú giải; kiểm tra citation theo từng câu có số; retry 10 lần | 19/23 | ad04, ad05; ad13, ad14 không nêu quan hệ |
 | v6 | + mở rộng part anh em có màu; + quy tắc nêu quan hệ so sánh | 20/23 | ad02 thêm giá trị sai cho C1b; ad04, ad05 |
-| **v7 (chốt)** | + trả màu chính xác kèm ảnh khi `view`; + "chỉ trả lời phần được hỏi" | **22/23** (18/19 có đáp án, 4/4 thiếu evidence) | ad05 (feasibility Low đọc thành Medium). 4 câu thiếu evidence chạy riêng (`dev-hybrid-v7-unanswerable`) sau khi lượt chính bị dừng |
+| **v7 (chốt)** | + trả màu chính xác kèm ảnh khi `view`; + "chỉ trả lời phần được hỏi" | **21/23** (17/19 có đáp án, 4/4 thiếu evidence) | ad05 (feasibility Low đọc thành Medium); ad13 chưa nêu quan hệ so sánh. 4 câu thiếu evidence chạy riêng (`dev-hybrid-v7-unanswerable`) sau khi lượt chính bị dừng |
 
-Bốn câu thiếu evidence của dev được từ chối đúng ở mọi lượt đã chạy đủ (v1, v3–v7). Lỗi còn lại chủ yếu là đọc ký hiệu và màu trong ma trận SPM.7.
+Bốn câu thiếu evidence của dev được từ chối đúng ở mọi lượt đã chạy đủ (v1, v3–v7). Nhãn và lý do từng câu được lưu cho lượt chốt v7 (`dev-hybrid-v7-partial/labels.json`, `dev-hybrid-v7-unanswerable/labels.json`) và cho test; với v1–v6 báo cáo chỉ tóm tắt các câu sai trong bảng trên, file `labels.json` của các lượt đó là mẫu trống. Lỗi còn lại chủ yếu là đọc ký hiệu và màu trong ma trận SPM.7.
 
 - **Cấu hình đã chốt (v7, trước khi chạy test):** `gemini-3.5-flash-lite`, hybrid RRF (dense + BM25, 30 candidate) → top-5, tối đa 4 search, 3 lượt `view` (ảnh crop vùng gốc, kèm màu vector khi có), budget 12000 ký tự, mở rộng part anh em có màu, kiểm tra citation theo từng câu có số, retry 10 lần, temperature 0. Test chạy **một lần**, không chỉnh gì sau đó ([test-hybrid](../../starter/results/advanced/agent/test-hybrid/)).
 
