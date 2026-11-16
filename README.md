@@ -1,5 +1,36 @@
 # Day 7 — Agentic RAG
 
+## Bài làm: Vũ Ngọc Tùng (2A202604106)
+
+| Thành phần | Lựa chọn |
+|---|---|
+| Corpus | *AI Engineering Guidebook* (2025), 343/384 trang, 621 chunk; nguồn và quyền dùng ở [data/manifest.json](data/manifest.json) (PDF không commit) |
+| Vector store | PostgreSQL 16 + pgvector 0.8.7 của Day 6, `nomic-embed-text` 768 chiều (Ollama) |
+| Retrieval | `dense`, `bm25`, `hybrid` (RRF), `rerank` (hybrid → cross-encoder MiniLM-L-12), `tfidf` (starter) |
+| Agent | `gemini-3.5-flash-lite`, function calling `search` / `answer` / `abstain` ([starter/agent.py](starter/agent.py)) |
+| Benchmark | 26 câu: dev 15 + 3 thiếu evidence, test 5 + 3 ([data/questions.json](data/questions.json)) |
+| Báo cáo | [report/individual/2A202604106_VuNgocTung.md](report/individual/2A202604106_VuNgocTung.md) |
+| Kết quả | [starter/results/](starter/results/): retrieval (`dev`, `test`, thử nghiệm), agent (trace, nhãn, metrics) |
+
+Chạy từ thư mục gốc (Windows, Python 3.12):
+
+```bash
+py -3.12 -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
+cp starter/.env.example starter/.env          # điền GEMINI_API_KEY
+cd starter && docker compose -p day6_student_starter up -d --wait && cd ..
+ollama pull nomic-embed-text
+.venv/Scripts/python starter/ingest.py        # --reindex nếu volume rỗng (cần PDF tại data/)
+.venv/Scripts/python -m unittest discover -s tests -v
+.venv/Scripts/python starter/benchmark.py check
+.venv/Scripts/python starter/benchmark.py retrieval --split dev --methods tfidf bm25 dense hybrid rerank
+.venv/Scripts/python starter/agent.py --split dev --method rerank
+.venv/Scripts/python starter/benchmark.py agent starter/results/agent/dev-dense starter/results/agent/dev-rerank
+```
+
+Chi tiết từng file và thiết kế agent ở [starter/README.md](starter/README.md).
+
+---
+
 **Bài cá nhân · Python 3.11+ · tiếp nối Day 6**
 
 Dùng embedding và vector store từ Day 6 để xây một agent biết tìm bằng chứng, trả lời có nguồn và nhận biết khi không đủ thông tin. Bạn tự chọn kiến trúc, số tool và cách tổ chức retrieval.

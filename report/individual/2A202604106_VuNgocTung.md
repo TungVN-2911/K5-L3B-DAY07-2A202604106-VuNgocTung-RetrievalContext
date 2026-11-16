@@ -12,7 +12,7 @@
 
 ## Retrieval và thử nghiệm
 
-Corpus, index, câu hỏi và nhãn giống nhau cho mọi cấu hình. Query là câu hỏi gốc, không viết lại; không dùng filter trừ khi ghi rõ. Thống kê trên 15 câu dev có đáp án. Context lấy top-3, budget 2000 ký tự (gồm header nguồn). Thời gian là trung vị mỗi query, chi phí 0 USD vì chạy local.
+Corpus, index, câu hỏi và nhãn giống nhau cho mọi cấu hình. Query là câu hỏi gốc, không viết lại; không dùng filter trừ khi ghi rõ. Bảng retrieval dưới đây dùng query gốc. Trong agent, model tự viết lại query (ví dụ q01: "formally define a large language model") và có thể search nhiều lượt; kết quả của pipeline này được báo riêng ở Context Evidence của agent, từng bước ghi trong `events` của trace. Thống kê trên 15 câu dev có đáp án. Context lấy top-3, budget 2000 ký tự (gồm header nguồn). Thời gian là trung vị mỗi query, chi phí 0 USD vì chạy local.
 
 | Cấu hình | Phương pháp, top-k, filter, rerank, context budget | Giả thuyết / thay đổi | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate | Thời gian / chi phí |
 |---|---|---|---|---|---|---|---|

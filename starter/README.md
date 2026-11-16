@@ -51,6 +51,8 @@ Starter **chưa phải solution hoàn chỉnh**. Bạn phải nối model và ve
 
 ## 1. Kết nối agent
 
+> Bài làm dùng [agent.py](agent.py) (Gemini, nhiều tool) thay cho khung `agentic.py`; phần dưới là hướng dẫn gốc của starter.
+
 Trong `agentic.py`, hiện thực:
 
 - `Controller.decide`: gọi model thật và trả `{action: "search", query: "..."}` hoặc `{action: "answer", answer: "... [chunk-id]", citations: ["chunk-id"]}`.
