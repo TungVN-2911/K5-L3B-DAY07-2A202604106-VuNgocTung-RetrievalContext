@@ -1,0 +1,963 @@
+[
+  {
+    "query_id": "q16",
+    "split": "test",
+    "type": "filter_disambiguation",
+    "question": "In the observability chapter, when is evaluation typically carried out?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In the observability chapter, evaluation is typically carried out before deployment, or as part of a periodic offline benchmarking process [ai-engineering-2025:p373:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p373:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "evaluation typically carried out",
+        "filter": {
+          "chapter": "llm_observability"
+        },
+        "model_chapter": "llm_observability",
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p373:fixed500-50:0",
+            "page": 373,
+            "rank": 1,
+            "score": 2.3004090785980225,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p374:fixed500-50:0",
+            "page": 374,
+            "rank": 2,
+            "score": -2.7491188049316406,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p374:fixed500-50:1",
+            "page": 374,
+            "rank": 3,
+            "score": -4.614291191101074,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p372:fixed500-50:1",
+            "page": 372,
+            "rank": 4,
+            "score": -7.473067283630371,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 570.5
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p373:fixed500-50:0",
+      "ai-engineering-2025:p374:fixed500-50:0",
+      "ai-engineering-2025:p374:fixed500-50:1",
+      "ai-engineering-2025:p372:fixed500-50:1"
+    ],
+    "context_chars": 1757,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1511,
+      "output": 73,
+      "thinking": 0
+    },
+    "elapsed_s": 32.33,
+    "model_answer": "In the observability chapter, evaluation is typically carried out before deployment, or as part of a periodic offline benchmarking process [C1].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q17",
+    "split": "test",
+    "type": "condition",
+    "question": "When do tool-name hallucinations usually happen in MCP agents?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Tool-name hallucinations in MCP agents usually happen when the tool list is large or poorly named [ai-engineering-2025:p288:fixed500-50:0].",
+    "citations": [
+      "ai-engineering-2025:p288:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "tool-name hallucinations",
+        "filter": {
+          "chapter": "mcp"
+        },
+        "model_chapter": "mcp",
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p289:fixed500-50:0",
+            "page": 289,
+            "rank": 1,
+            "score": 6.781494140625,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p288:fixed500-50:0",
+            "page": 288,
+            "rank": 2,
+            "score": 6.299829959869385,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p275:fixed500-50:0",
+            "page": 275,
+            "rank": 3,
+            "score": -9.854080200195312,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p294:fixed500-50:0",
+            "page": 294,
+            "rank": 4,
+            "score": -9.909988403320312,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 673.7
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p289:fixed500-50:0",
+      "ai-engineering-2025:p288:fixed500-50:0",
+      "ai-engineering-2025:p275:fixed500-50:0",
+      "ai-engineering-2025:p294:fixed500-50:0"
+    ],
+    "context_chars": 2000,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1575,
+      "output": 66,
+      "thinking": 0
+    },
+    "elapsed_s": 26.0,
+    "model_answer": "Tool-name hallucinations in MCP agents usually happen when the tool list is large or poorly named [C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "type": "filter_disambiguation",
+    "question": "In the LLM deployment chapter, how does vLLM handle LoRA adapters?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Because LoRA adapters are lightweight, vLLM loads them once and applies them per-request without duplicating memory, allowing multiple fine-tuned LoRA variants to be served from the same base model. [ai-engineering-2025:p362:fixed500-50:0][ai-engineering-2025:p365:fixed500-50:0]",
+    "citations": [
+      "ai-engineering-2025:p362:fixed500-50:0",
+      "ai-engineering-2025:p365:fixed500-50:0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "vLLM LoRA adapters",
+        "filter": {
+          "chapter": "llm_deployment"
+        },
+        "model_chapter": "llm_deployment",
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p362:fixed500-50:0",
+            "page": 362,
+            "rank": 1,
+            "score": 6.768667697906494,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p365:fixed500-50:0",
+            "page": 365,
+            "rank": 2,
+            "score": 6.539549827575684,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p361:fixed500-50:0",
+            "page": 361,
+            "rank": 3,
+            "score": -2.9808189868927,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p362:fixed500-50:2",
+            "page": 362,
+            "rank": 4,
+            "score": -3.5577306747436523,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 556.8
+      },
+      {
+        "event": "search",
+        "query": "vLLM load LoRA adapters per-request memory",
+        "filter": {
+          "chapter": "llm_deployment"
+        },
+        "model_chapter": "llm_deployment",
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p362:fixed500-50:0",
+            "page": 362,
+            "rank": 1,
+            "score": 8.193117141723633,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p365:fixed500-50:0",
+            "page": 365,
+            "rank": 2,
+            "score": 5.241014003753662,
+            "new": false
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p361:fixed500-50:0",
+            "page": 361,
+            "rank": 3,
+            "score": -0.1072799488902092,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p363:fixed500-50:1",
+            "page": 363,
+            "rank": 4,
+            "score": -1.2368663549423218,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 705.0
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p362:fixed500-50:0",
+      "ai-engineering-2025:p365:fixed500-50:0",
+      "ai-engineering-2025:p361:fixed500-50:0",
+      "ai-engineering-2025:p362:fixed500-50:2",
+      "ai-engineering-2025:p363:fixed500-50:1"
+    ],
+    "context_chars": 2131,
+    "llm_calls": 3,
+    "searches": 2,
+    "usage": {
+      "input": 2847,
+      "output": 133,
+      "thinking": 0
+    },
+    "elapsed_s": 22.22,
+    "model_answer": "Because LoRA adapters are lightweight, vLLM loads them once and applies them per-request without duplicating memory, allowing multiple fine-tuned LoRA variants to be served from the same base model. [C1, C2]",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "type": "condition",
+    "question": "If you have no labelled data but the task's correctness can be checked automatically, which fine-tuning method should you use?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "If you have no labelled data but the task's correctness can be checked automatically (verifiable), you should use RFT (Reasoning Fine-Tuning), as a reward function can score correctness and guide the model using methods like GRPO [ai-engineering-2025:p94:fixed500-50:0][ai-engineering-2025:p94:fixed500-50:1].",
+    "citations": [
+      "ai-engineering-2025:p94:fixed500-50:0",
+      "ai-engineering-2025:p94:fixed500-50:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "no labelled data task correctness checked automatically fine-tuning method",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p94:fixed500-50:0",
+            "page": 94,
+            "rank": 1,
+            "score": 4.621298789978027,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p94:fixed500-50:1",
+            "page": 94,
+            "rank": 2,
+            "score": 3.8267698287963867,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p23:fixed500-50:0",
+            "page": 23,
+            "rank": 3,
+            "score": -1.406716227531433,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p68:fixed500-50:0",
+            "page": 68,
+            "rank": 4,
+            "score": -1.6732776165008545,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 622.6
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C1",
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p94:fixed500-50:0",
+      "ai-engineering-2025:p94:fixed500-50:1",
+      "ai-engineering-2025:p23:fixed500-50:0",
+      "ai-engineering-2025:p68:fixed500-50:0"
+    ],
+    "context_chars": 1883,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1611,
+      "output": 105,
+      "thinking": 0
+    },
+    "elapsed_s": 41.9,
+    "model_answer": "If you have no labelled data but the task's correctness can be checked automatically (verifiable), you should use RFT (Reasoning Fine-Tuning), as a reward function can score correctness and guide the model using methods like GRPO [C1, C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "type": "paraphrase",
+    "question": "In the book's example, how much slower is generation without caching attention keys and values?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "In the book's example, generation without KV caching takes 40 seconds compared to 9 seconds with caching, making it approximately 4.5 times slower [ai-engineering-2025:p327:fixed500-50:1].",
+    "citations": [
+      "ai-engineering-2025:p327:fixed500-50:1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "caching attention keys and values slower",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p143:fixed500-50:0",
+            "page": 143,
+            "rank": 1,
+            "score": 0.5106712579727173,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p327:fixed500-50:1",
+            "page": 327,
+            "rank": 2,
+            "score": -1.4779949188232422,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p322:fixed500-50:0",
+            "page": 322,
+            "rank": 3,
+            "score": -6.636022567749023,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p329:fixed500-50:0",
+            "page": 329,
+            "rank": 4,
+            "score": -7.1549177169799805,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 613.9
+      },
+      {
+        "event": "answer",
+        "refs": [
+          "C2"
+        ]
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p143:fixed500-50:0",
+      "ai-engineering-2025:p327:fixed500-50:1",
+      "ai-engineering-2025:p322:fixed500-50:0",
+      "ai-engineering-2025:p329:fixed500-50:0"
+    ],
+    "context_chars": 1692,
+    "llm_calls": 2,
+    "searches": 1,
+    "usage": {
+      "input": 1556,
+      "output": 77,
+      "thinking": 0
+    },
+    "elapsed_s": 6.92,
+    "model_answer": "In the book's example, generation without KV caching takes 40 seconds compared to 9 seconds with caching, making it approximately 4.5 times slower [C2].",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "u04",
+    "split": "test",
+    "type": "unanswerable",
+    "question": "According to the book, how much does it cost per hour to rent a GPU for fine-tuning an LLM?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "GPU cost per hour fine-tuning LLM",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p136:fixed500-50:0",
+            "page": 136,
+            "rank": 1,
+            "score": -1.3519374132156372,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p135:fixed500-50:0",
+            "page": 135,
+            "rank": 2,
+            "score": -3.458056926727295,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p71:fixed500-50:0",
+            "page": 71,
+            "rank": 3,
+            "score": -3.685558795928955,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p87:fixed500-50:1",
+            "page": 87,
+            "rank": 4,
+            "score": -4.153858184814453,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 688.7
+      },
+      {
+        "event": "search",
+        "query": "GPU cost per hour",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p320:fixed500-50:0",
+            "page": 320,
+            "rank": 1,
+            "score": -8.314674377441406,
+            "new": true
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p327:fixed500-50:0",
+            "page": 327,
+            "rank": 2,
+            "score": -9.682632446289062,
+            "new": true
+          },
+          {
+            "ref": "C7",
+            "id": "ai-engineering-2025:p321:fixed500-50:0",
+            "page": 321,
+            "rank": 3,
+            "score": -9.905664443969727,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ai-engineering-2025:p365:fixed500-50:0",
+            "page": 365,
+            "rank": 4,
+            "score": -10.341703414916992,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 559.7
+      },
+      {
+        "event": "search",
+        "query": "cost hour rent GPU",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p320:fixed500-50:0",
+            "page": 320,
+            "rank": 1,
+            "score": -10.481086730957031,
+            "new": false
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p327:fixed500-50:0",
+            "page": 327,
+            "rank": 2,
+            "score": -10.785157203674316,
+            "new": false
+          },
+          {
+            "ref": "C7",
+            "id": "ai-engineering-2025:p321:fixed500-50:0",
+            "page": 321,
+            "rank": 3,
+            "score": -10.87411880493164,
+            "new": false
+          },
+          {
+            "ref": "C9",
+            "id": "ai-engineering-2025:p361:fixed500-50:0",
+            "page": 361,
+            "rank": 4,
+            "score": -10.997523307800293,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 596.4
+      },
+      {
+        "event": "abstain",
+        "reason": "The provided book text does not contain information about the cost per hour to rent a GPU for fine-tuning an LLM."
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p136:fixed500-50:0",
+      "ai-engineering-2025:p135:fixed500-50:0",
+      "ai-engineering-2025:p71:fixed500-50:0",
+      "ai-engineering-2025:p87:fixed500-50:1",
+      "ai-engineering-2025:p320:fixed500-50:0",
+      "ai-engineering-2025:p327:fixed500-50:0",
+      "ai-engineering-2025:p321:fixed500-50:0",
+      "ai-engineering-2025:p365:fixed500-50:0",
+      "ai-engineering-2025:p361:fixed500-50:0"
+    ],
+    "context_chars": 4202,
+    "llm_calls": 4,
+    "searches": 3,
+    "usage": {
+      "input": 4938,
+      "output": 95,
+      "thinking": 0
+    },
+    "elapsed_s": 23.1,
+    "model_answer": "The provided book text does not contain information about the cost per hour to rent a GPU for fine-tuning an LLM.",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "u05",
+    "split": "test",
+    "type": "unanswerable",
+    "question": "How does the book recommend setting up Langfuse to trace LLM calls in production?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Langfuse trace LLM calls production",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p350:fixed500-50:0",
+            "page": 350,
+            "rank": 1,
+            "score": -3.5116629600524902,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p157:fixed500-50:0",
+            "page": 157,
+            "rank": 2,
+            "score": -6.049811363220215,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p360:fixed500-50:0",
+            "page": 360,
+            "rank": 3,
+            "score": -6.1131486892700195,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p333:fixed500-50:1",
+            "page": 333,
+            "rank": 4,
+            "score": -6.821773529052734,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 904.4
+      },
+      {
+        "event": "search",
+        "query": "Langfuse",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p251:fixed500-50:1",
+            "page": 251,
+            "rank": 1,
+            "score": -5.534005165100098,
+            "new": true
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p204:fixed500-50:1",
+            "page": 204,
+            "rank": 2,
+            "score": -11.047969818115234,
+            "new": true
+          },
+          {
+            "ref": "C7",
+            "id": "ai-engineering-2025:p39:fixed500-50:0",
+            "page": 39,
+            "rank": 3,
+            "score": -11.17081356048584,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ai-engineering-2025:p59:fixed500-50:0",
+            "page": 59,
+            "rank": 4,
+            "score": -11.186955451965332,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 907.6
+      },
+      {
+        "event": "search",
+        "query": "llm_observability langfuse",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C9",
+            "id": "ai-engineering-2025:p373:fixed500-50:0",
+            "page": 373,
+            "rank": 1,
+            "score": 1.4590834379196167,
+            "new": true
+          },
+          {
+            "ref": "C10",
+            "id": "ai-engineering-2025:p374:fixed500-50:1",
+            "page": 374,
+            "rank": 2,
+            "score": 0.5776781439781189,
+            "new": true
+          },
+          {
+            "ref": "C11",
+            "id": "ai-engineering-2025:p370:fixed500-50:0",
+            "page": 370,
+            "rank": 3,
+            "score": -2.2706291675567627,
+            "new": true
+          },
+          {
+            "ref": "C12",
+            "id": "ai-engineering-2025:p334:fixed500-50:0",
+            "page": 334,
+            "rank": 4,
+            "score": -6.290923118591309,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 593.7
+      },
+      {
+        "event": "abstain",
+        "reason": "The retrieved text does not contain recommendations or details on setting up Langfuse for tracing LLM calls."
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p350:fixed500-50:0",
+      "ai-engineering-2025:p157:fixed500-50:0",
+      "ai-engineering-2025:p360:fixed500-50:0",
+      "ai-engineering-2025:p333:fixed500-50:1",
+      "ai-engineering-2025:p251:fixed500-50:1",
+      "ai-engineering-2025:p204:fixed500-50:1",
+      "ai-engineering-2025:p39:fixed500-50:0",
+      "ai-engineering-2025:p59:fixed500-50:0",
+      "ai-engineering-2025:p373:fixed500-50:0",
+      "ai-engineering-2025:p374:fixed500-50:1",
+      "ai-engineering-2025:p370:fixed500-50:0",
+      "ai-engineering-2025:p334:fixed500-50:0"
+    ],
+    "context_chars": 5545,
+    "llm_calls": 4,
+    "searches": 3,
+    "usage": {
+      "input": 5292,
+      "output": 89,
+      "thinking": 0
+    },
+    "elapsed_s": 15.09,
+    "model_answer": "The retrieved text does not contain recommendations or details on setting up Langfuse for tracing LLM calls.",
+    "cost_usd_list_price": null
+  },
+  {
+    "query_id": "u06",
+    "split": "test",
+    "type": "unanswerable",
+    "question": "What is the maximum context window of GPT-4, in tokens, according to the book?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "GPT-4 maximum context window tokens",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p380:fixed500-50:0",
+            "page": 380,
+            "rank": 1,
+            "score": 1.340296745300293,
+            "new": true
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p142:fixed500-50:1",
+            "page": 142,
+            "rank": 2,
+            "score": -1.589306116104126,
+            "new": true
+          },
+          {
+            "ref": "C3",
+            "id": "ai-engineering-2025:p112:fixed500-50:0",
+            "page": 112,
+            "rank": 3,
+            "score": -1.9212067127227783,
+            "new": true
+          },
+          {
+            "ref": "C4",
+            "id": "ai-engineering-2025:p238:fixed500-50:2",
+            "page": 238,
+            "rank": 4,
+            "score": -3.259363889694214,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 620.2
+      },
+      {
+        "event": "search",
+        "query": "GPT-4 tokens context window",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C1",
+            "id": "ai-engineering-2025:p380:fixed500-50:0",
+            "page": 380,
+            "rank": 1,
+            "score": 0.137554332613945,
+            "new": false
+          },
+          {
+            "ref": "C2",
+            "id": "ai-engineering-2025:p142:fixed500-50:1",
+            "page": 142,
+            "rank": 2,
+            "score": -0.7217193245887756,
+            "new": false
+          },
+          {
+            "ref": "C5",
+            "id": "ai-engineering-2025:p155:fixed500-50:0",
+            "page": 155,
+            "rank": 3,
+            "score": -1.3280271291732788,
+            "new": true
+          },
+          {
+            "ref": "C6",
+            "id": "ai-engineering-2025:p153:fixed500-50:0",
+            "page": 153,
+            "rank": 4,
+            "score": -2.797757148742676,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 604.0
+      },
+      {
+        "event": "search",
+        "query": "GPT-4 context",
+        "filter": null,
+        "model_chapter": null,
+        "retriever": "rerank",
+        "top_k": 4,
+        "results": [
+          {
+            "ref": "C7",
+            "id": "ai-engineering-2025:p181:fixed500-50:0",
+            "page": 181,
+            "rank": 1,
+            "score": 1.4510453939437866,
+            "new": true
+          },
+          {
+            "ref": "C8",
+            "id": "ai-engineering-2025:p62:fixed500-50:0",
+            "page": 62,
+            "rank": 2,
+            "score": 0.8567399978637695,
+            "new": true
+          },
+          {
+            "ref": "C9",
+            "id": "ai-engineering-2025:p25:fixed500-50:0",
+            "page": 25,
+            "rank": 3,
+            "score": 0.31796929240226746,
+            "new": true
+          },
+          {
+            "ref": "C10",
+            "id": "ai-engineering-2025:p253:fixed500-50:1",
+            "page": 253,
+            "rank": 4,
+            "score": -0.6089029312133789,
+            "new": true
+          }
+        ],
+        "elapsed_ms": 834.3
+      },
+      {
+        "event": "abstain",
+        "reason": "The retrieved chunks do not contain information about the maximum context window of GPT-4 in tokens."
+      }
+    ],
+    "context_ids": [
+      "ai-engineering-2025:p380:fixed500-50:0",
+      "ai-engineering-2025:p142:fixed500-50:1",
+      "ai-engineering-2025:p112:fixed500-50:0",
+      "ai-engineering-2025:p238:fixed500-50:2",
+      "ai-engineering-2025:p155:fixed500-50:0",
+      "ai-engineering-2025:p153:fixed500-50:0",
+      "ai-engineering-2025:p181:fixed500-50:0",
+      "ai-engineering-2025:p62:fixed500-50:0",
+      "ai-engineering-2025:p25:fixed500-50:0",
+      "ai-engineering-2025:p253:fixed500-50:1"
+    ],
+    "context_chars": 4228,
+    "llm_calls": 4,
+    "searches": 3,
+    "usage": {
+      "input": 4790,
+      "output": 89,
+      "thinking": 0
+    },
+    "elapsed_s": 49.71,
+    "model_answer": "The retrieved chunks do not contain information about the maximum context window of GPT-4 in tokens.",
+    "cost_usd_list_price": null
+  }
+]

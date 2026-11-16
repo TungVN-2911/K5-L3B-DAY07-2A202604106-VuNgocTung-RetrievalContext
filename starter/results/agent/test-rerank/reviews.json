@@ -1,0 +1,98 @@
+[
+  {
+    "query_id": "q16",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p373:fixed500-50:0"
+    ],
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "Khớp p373 (filter llm_observability do model đặt theo câu hỏi).",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "query_id": "q17",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p288:fixed500-50:0"
+    ],
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "Tool list large or poorly named (p288). Không nêu 'invent a tool' nhưng câu hỏi chỉ hỏi khi nào.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "query_id": "q18",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p362:fixed500-50:0",
+      "ai-engineering-2025:p365:fixed500-50:0"
+    ],
+    "citation_support": [
+      true,
+      true
+    ],
+    "answer_grade": 2,
+    "note": "p362 khớp nguyên văn; p365 hỗ trợ ý nhiều LoRA trên cùng base model.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "query_id": "q19",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p94:fixed500-50:0",
+      "ai-engineering-2025:p94:fixed500-50:1"
+    ],
+    "citation_support": [
+      true,
+      true
+    ],
+    "answer_grade": 1,
+    "note": "Chọn đúng RFT và đúng điều kiện (p94), nhưng tự diễn giải RFT là 'Reasoning Fine-Tuning'. Sách ghi Reinforcement Fine-Tuning (p92); p92 không có trong context, nên đây là khẳng định sai và không có căn cứ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "query_id": "q20",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p327:fixed500-50:1"
+    ],
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "40 s so với 9 s, ~4.5x (p327).",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "query_id": "u04",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "note": "3 search về giá GPU, từ chối, không đưa con số.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "query_id": "u05",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "note": "3 search Langfuse, từ chối.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "query_id": "u06",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "note": "3 search GPT-4 context window, từ chối, không lấy nhầm '4k' của Llama3-70B (p331).",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  }
+]

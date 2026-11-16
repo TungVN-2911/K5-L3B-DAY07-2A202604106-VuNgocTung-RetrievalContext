@@ -1,0 +1,152 @@
+[
+  {
+    "method": "dense",
+    "query_id": "q16",
+    "context_ids": [
+      "ai-engineering-2025:p373:fixed500-50:0",
+      "ai-engineering-2025:p374:fixed500-50:0",
+      "ai-engineering-2025:p374:fixed500-50:1"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p373:fixed500-50:0"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p373 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "dense",
+    "query_id": "q17",
+    "context_ids": [
+      "ai-engineering-2025:p288:fixed500-50:0",
+      "ai-engineering-2025:p288:fixed500-50:1",
+      "ai-engineering-2025:p192:fixed500-50:1"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p288:fixed500-50:0"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p288 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "dense",
+    "query_id": "q18",
+    "context_ids": [
+      "ai-engineering-2025:p362:fixed500-50:0",
+      "ai-engineering-2025:p365:fixed500-50:0",
+      "ai-engineering-2025:p76:fixed500-50:0"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p362:fixed500-50:0"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p362 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "dense",
+    "query_id": "q19",
+    "context_ids": [
+      "ai-engineering-2025:p94:fixed500-50:1",
+      "ai-engineering-2025:p23:fixed500-50:1",
+      "ai-engineering-2025:p136:fixed500-50:0"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p94:fixed500-50:1"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p94 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "dense",
+    "query_id": "q20",
+    "context_ids": [
+      "ai-engineering-2025:p323:fixed500-50:0",
+      "ai-engineering-2025:p143:fixed500-50:0",
+      "ai-engineering-2025:p327:fixed500-50:1"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p327:fixed500-50:1"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p327 (hạng 3) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "rerank",
+    "query_id": "q16",
+    "context_ids": [
+      "ai-engineering-2025:p373:fixed500-50:0",
+      "ai-engineering-2025:p374:fixed500-50:0",
+      "ai-engineering-2025:p374:fixed500-50:1"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p373:fixed500-50:0"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p373 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "rerank",
+    "query_id": "q17",
+    "context_ids": [
+      "ai-engineering-2025:p289:fixed500-50:0",
+      "ai-engineering-2025:p288:fixed500-50:0",
+      "ai-engineering-2025:p288:fixed500-50:1"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p288:fixed500-50:0"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p288 (hạng 2) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "rerank",
+    "query_id": "q18",
+    "context_ids": [
+      "ai-engineering-2025:p365:fixed500-50:0",
+      "ai-engineering-2025:p362:fixed500-50:0",
+      "ai-engineering-2025:p366:fixed500-50:0"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p362:fixed500-50:0"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p362 (hạng 2) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "rerank",
+    "query_id": "q19",
+    "context_ids": [
+      "ai-engineering-2025:p94:fixed500-50:1",
+      "ai-engineering-2025:p94:fixed500-50:0",
+      "ai-engineering-2025:p23:fixed500-50:0"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p94:fixed500-50:1"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p94 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  },
+  {
+    "method": "rerank",
+    "query_id": "q20",
+    "context_ids": [
+      "ai-engineering-2025:p327:fixed500-50:1",
+      "ai-engineering-2025:p143:fixed500-50:0",
+      "ai-engineering-2025:p322:fixed500-50:0"
+    ],
+    "gold_in_context": [
+      "ai-engineering-2025:p327:fixed500-50:1"
+    ],
+    "context_score": 2,
+    "reason": "Top-3 context có chunk p327 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
+    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+  }
+]
