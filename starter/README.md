@@ -7,6 +7,24 @@
 | `convert_day6.py` | Chuyển một số trường JSON từ Day 6 |
 | `agent_metrics.py` | Tổng hợp nhãn đánh giá do bạn tự chấm |
 
+| `store.py` | Đọc `.env`, embedder Ollama `nomic-embed-text`, pgvector store (dùng lại index Day 6) |
+| `ingest.py` | Đọc PDF, chunking (fixed / paragraph), embed + upsert, xuất `starter/data/chunks.json` |
+| `retrievers.py` | `DenseRetriever` trả schema Day 7 (`id`, `source_id`, `score`, `rank`); chạy trực tiếp để smoke check |
+
+## 0. Kết nối dữ liệu và vector store Day 6
+
+Corpus: *AI Engineering Guidebook* (2025), 343/384 trang, strategy A = fixed 500/50, 621 chunk; `nomic-embed-text` 768 chiều, cosine, exact search. Nguồn, quyền dùng và sha256 trong [data/manifest.json](../data/manifest.json); benchmark gốc Day 6 ở `data/source_questions.jsonl`. PDF không commit, đặt tại `data/AI Engineering Guidebook.pdf`.
+
+```bash
+py -3.12 -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
+cp starter/.env.example starter/.env
+cd starter && docker compose -p day6_student_starter up -d --wait && cd ..   # dùng lại volume Day 6
+ollama pull nomic-embed-text
+.venv/Scripts/python starter/ingest.py              # xuất chunks.json từ index có sẵn
+.venv/Scripts/python starter/ingest.py --reindex    # khi volume rỗng: đọc PDF + embed lại (~80 s, 0 USD)
+.venv/Scripts/python starter/retrievers.py          # smoke check dense
+```
+
 Starter **chưa phải solution hoàn chỉnh**. Bạn phải nối model và vector store thật, triển khai ít nhất 3 phương pháp retrieval do bạn chọn, gồm dense trên vector store Day 6. Mock chỉ dùng để test code.
 
 ## 1. Kết nối agent

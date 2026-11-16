@@ -1,0 +1,4 @@
+# Day 6 connection: pgvector client, PDF loader (re-ingest), .env loader.
+psycopg[binary]==3.3.8
+pypdf>=5,<7
+python-dotenv>=1,<2

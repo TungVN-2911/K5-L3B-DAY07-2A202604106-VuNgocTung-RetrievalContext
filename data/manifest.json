@@ -1,0 +1,2769 @@
+{
+  "sources": [
+    {
+      "source_id": "ai-engineering-2025",
+      "title": "AI Engineering — System Design Patterns for LLMs, RAG and Agents (2025 Edition)",
+      "authors": "Akshay Pachaar, Avi Chawla",
+      "publisher": "Daily Dose of Data Science (DailyDoseofDS.com)",
+      "version": "2025 Edition; PDF CreationDate D:20251225185846Z",
+      "source_path_or_url": "data/AI Engineering Guidebook.pdf",
+      "committed_to_repo": false,
+      "original_url": "https://dailydoseofds.github.io/ai-engg-book/",
+      "how_to_obtain": "Đăng ký email trên trang original_url để nhận PDF miễn phí; đối chiếu sha256 bên dưới.",
+      "license_or_permission": "Không có giấy phép mở: trang phát hành ghi 'Daily Dose of Data Science © 2025 All rights reserved'; PDF không có điều khoản giấy phép, bìa chỉ ghi 'FREE' (miễn phí để đọc). Giảng viên đã đồng ý cho dùng tài liệu này trong bài lab (phi thương mại). Không commit PDF lên repo; trace chỉ chứa trích đoạn chunk phục vụ chấm bài.",
+      "accessed_at": "2026-09-03",
+      "snapshot": {
+        "sha256": "1273e50aceb06a003d5440c3713a9902c9dc0c8b4c86694ce64d324ae79eae2c",
+        "bytes": 95382738
+      },
+      "physical_pages": 384,
+      "counted_content_pages": 343,
+      "counted_chars": 221529,
+      "counting_rule": "Đếm theo trang PDF vật lý (1-based). Loại p1–6 (front matter), trang bìa mỗi chương và trang dưới 200 ký tự sau chuẩn hóa. printed_page = pdf_page - 1. gold_page trong benchmark dùng pdf_page.",
+      "extraction": {
+        "tool": "pypdf 6.21.4",
+        "normalization": "starter/src/ingestion.py:normalize_text (NFKC, bỏ header 'DailyDoseofDS.com' và số trang cuối, ghép gạch nối, gộp khoảng trắng)",
+        "ocr": "không dùng",
+        "known_issues": [
+          "nhiều sơ đồ và ảnh chụp code là hình: nội dung trong hình bị mất (không OCR)",
+          "trung bình khoảng 650 ký tự/trang, thấp hơn sách thông thường",
+          "pypdf báo 'Ignoring wrong pointing object' khi đọc file (không ảnh hưởng text)"
+        ]
+      },
+      "filter_fields": {
+        "chapter": "slug tên chương lấy từ outline (bookmark) cấp cao nhất của PDF: llms (p7), prompt_engineering (p50), fine_tuning (p67), rag (p106), context_engineering (p147), ai_agents (p177), mcp (p265), llm_optimization (p305), llm_evaluation (p332), llm_deployment (p359), llm_observability (p371)"
+      },
+      "pages": [
+        {
+          "pdf_page": 1,
+          "printed_page": null,
+          "chars": 153,
+          "chapter": "front_matter",
+          "excluded_reason": "front matter (bìa, quảng bá, tiêu đề, mục lục)",
+          "counted": false
+        },
+        {
+          "pdf_page": 2,
+          "printed_page": 1,
+          "chars": 406,
+          "chapter": "front_matter",
+          "excluded_reason": "front matter (bìa, quảng bá, tiêu đề, mục lục)",
+          "counted": false
+        },
+        {
+          "pdf_page": 3,
+          "printed_page": 2,
+          "chars": 14,
+          "chapter": "front_matter",
+          "excluded_reason": "front matter (bìa, quảng bá, tiêu đề, mục lục)",
+          "counted": false
+        },
+        {
+          "pdf_page": 4,
+          "printed_page": 3,
+          "chars": 4101,
+          "chapter": "front_matter",
+          "excluded_reason": "front matter (bìa, quảng bá, tiêu đề, mục lục)",
+          "counted": false
+        },
+        {
+          "pdf_page": 5,
+          "printed_page": 4,
+          "chars": 4859,
+          "chapter": "front_matter",
+          "excluded_reason": "front matter (bìa, quảng bá, tiêu đề, mục lục)",
+          "counted": false
+        },
+        {
+          "pdf_page": 6,
+          "printed_page": 5,
+          "chars": 4679,
+          "chapter": "front_matter",
+          "excluded_reason": "front matter (bìa, quảng bá, tiêu đề, mục lục)",
+          "counted": false
+        },
+        {
+          "pdf_page": 7,
+          "printed_page": 6,
+          "chars": 4,
+          "chapter": "llms",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 8,
+          "printed_page": 7,
+          "chars": 426,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 9,
+          "printed_page": 8,
+          "chars": 566,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 10,
+          "printed_page": 9,
+          "chars": 248,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 11,
+          "printed_page": 10,
+          "chars": 509,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 12,
+          "printed_page": 11,
+          "chars": 367,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 13,
+          "printed_page": 12,
+          "chars": 551,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 14,
+          "printed_page": 13,
+          "chars": 663,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 15,
+          "printed_page": 14,
+          "chars": 637,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 16,
+          "printed_page": 15,
+          "chars": 385,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 17,
+          "printed_page": 16,
+          "chars": 841,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 18,
+          "printed_page": 17,
+          "chars": 264,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 19,
+          "printed_page": 18,
+          "chars": 342,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 20,
+          "printed_page": 19,
+          "chars": 663,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 21,
+          "printed_page": 20,
+          "chars": 443,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 22,
+          "printed_page": 21,
+          "chars": 314,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 23,
+          "printed_page": 22,
+          "chars": 1046,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 24,
+          "printed_page": 23,
+          "chars": 384,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 25,
+          "printed_page": 24,
+          "chars": 483,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 26,
+          "printed_page": 25,
+          "chars": 339,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 27,
+          "printed_page": 26,
+          "chars": 375,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 28,
+          "printed_page": 27,
+          "chars": 315,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 29,
+          "printed_page": 28,
+          "chars": 371,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 30,
+          "printed_page": 29,
+          "chars": 287,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 31,
+          "printed_page": 30,
+          "chars": 745,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 32,
+          "printed_page": 31,
+          "chars": 757,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 33,
+          "printed_page": 32,
+          "chars": 961,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 34,
+          "printed_page": 33,
+          "chars": 442,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 35,
+          "printed_page": 34,
+          "chars": 875,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 36,
+          "printed_page": 35,
+          "chars": 960,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 37,
+          "printed_page": 36,
+          "chars": 789,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 38,
+          "printed_page": 37,
+          "chars": 555,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 39,
+          "printed_page": 38,
+          "chars": 861,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 40,
+          "printed_page": 39,
+          "chars": 880,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 41,
+          "printed_page": 40,
+          "chars": 849,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 42,
+          "printed_page": 41,
+          "chars": 282,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 43,
+          "printed_page": 42,
+          "chars": 581,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 44,
+          "printed_page": 43,
+          "chars": 83,
+          "chapter": "llms",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 45,
+          "printed_page": 44,
+          "chars": 833,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 46,
+          "printed_page": 45,
+          "chars": 87,
+          "chapter": "llms",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 47,
+          "printed_page": 46,
+          "chars": 689,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 48,
+          "printed_page": 47,
+          "chars": 452,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 49,
+          "printed_page": 48,
+          "chars": 744,
+          "chapter": "llms",
+          "counted": true
+        },
+        {
+          "pdf_page": 50,
+          "printed_page": 49,
+          "chars": 18,
+          "chapter": "prompt_engineering",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 51,
+          "printed_page": 50,
+          "chars": 673,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 52,
+          "printed_page": 51,
+          "chars": 443,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 53,
+          "printed_page": 52,
+          "chars": 803,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 54,
+          "printed_page": 53,
+          "chars": 664,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 55,
+          "printed_page": 54,
+          "chars": 1238,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 56,
+          "printed_page": 55,
+          "chars": 538,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 57,
+          "printed_page": 56,
+          "chars": 537,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 58,
+          "printed_page": 57,
+          "chars": 997,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 59,
+          "printed_page": 58,
+          "chars": 671,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 60,
+          "printed_page": 59,
+          "chars": 1095,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 61,
+          "printed_page": 60,
+          "chars": 1021,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 62,
+          "printed_page": 61,
+          "chars": 1269,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 63,
+          "printed_page": 62,
+          "chars": 248,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 64,
+          "printed_page": 63,
+          "chars": 508,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 65,
+          "printed_page": 64,
+          "chars": 464,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 66,
+          "printed_page": 65,
+          "chars": 560,
+          "chapter": "prompt_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 67,
+          "printed_page": 66,
+          "chars": 11,
+          "chapter": "fine_tuning",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 68,
+          "printed_page": 67,
+          "chars": 1124,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 69,
+          "printed_page": 68,
+          "chars": 808,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 70,
+          "printed_page": 69,
+          "chars": 600,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 71,
+          "printed_page": 70,
+          "chars": 517,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 72,
+          "printed_page": 71,
+          "chars": 205,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 73,
+          "printed_page": 72,
+          "chars": 578,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 74,
+          "printed_page": 73,
+          "chars": 442,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 75,
+          "printed_page": 74,
+          "chars": 351,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 76,
+          "printed_page": 75,
+          "chars": 620,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 77,
+          "printed_page": 76,
+          "chars": 782,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 78,
+          "printed_page": 77,
+          "chars": 1141,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 79,
+          "printed_page": 78,
+          "chars": 577,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 80,
+          "printed_page": 79,
+          "chars": 1217,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 81,
+          "printed_page": 80,
+          "chars": 761,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 82,
+          "printed_page": 81,
+          "chars": 857,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 83,
+          "printed_page": 82,
+          "chars": 954,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 84,
+          "printed_page": 83,
+          "chars": 1008,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 85,
+          "printed_page": 84,
+          "chars": 1084,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 86,
+          "printed_page": 85,
+          "chars": 906,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 87,
+          "printed_page": 86,
+          "chars": 1098,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 88,
+          "printed_page": 87,
+          "chars": 450,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 89,
+          "printed_page": 88,
+          "chars": 250,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 90,
+          "printed_page": 89,
+          "chars": 88,
+          "chapter": "fine_tuning",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 91,
+          "printed_page": 90,
+          "chars": 619,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 92,
+          "printed_page": 91,
+          "chars": 585,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 93,
+          "printed_page": 92,
+          "chars": 345,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 94,
+          "printed_page": 93,
+          "chars": 833,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 95,
+          "printed_page": 94,
+          "chars": 795,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 96,
+          "printed_page": 95,
+          "chars": 629,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 97,
+          "printed_page": 96,
+          "chars": 329,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 98,
+          "printed_page": 97,
+          "chars": 309,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 99,
+          "printed_page": 98,
+          "chars": 302,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 100,
+          "printed_page": 99,
+          "chars": 333,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 101,
+          "printed_page": 100,
+          "chars": 286,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 102,
+          "printed_page": 101,
+          "chars": 1132,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 103,
+          "printed_page": 102,
+          "chars": 916,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 104,
+          "printed_page": 103,
+          "chars": 822,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 105,
+          "printed_page": 104,
+          "chars": 1071,
+          "chapter": "fine_tuning",
+          "counted": true
+        },
+        {
+          "pdf_page": 106,
+          "printed_page": 105,
+          "chars": 3,
+          "chapter": "rag",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 107,
+          "printed_page": 106,
+          "chars": 963,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 108,
+          "printed_page": 107,
+          "chars": 1096,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 109,
+          "printed_page": 108,
+          "chars": 885,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 110,
+          "printed_page": 109,
+          "chars": 827,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 111,
+          "printed_page": 110,
+          "chars": 857,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 112,
+          "printed_page": 111,
+          "chars": 745,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 113,
+          "printed_page": 112,
+          "chars": 542,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 114,
+          "printed_page": 113,
+          "chars": 473,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 115,
+          "printed_page": 114,
+          "chars": 674,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 116,
+          "printed_page": 115,
+          "chars": 693,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 117,
+          "printed_page": 116,
+          "chars": 507,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 118,
+          "printed_page": 117,
+          "chars": 799,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 119,
+          "printed_page": 118,
+          "chars": 622,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 120,
+          "printed_page": 119,
+          "chars": 325,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 121,
+          "printed_page": 120,
+          "chars": 824,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 122,
+          "printed_page": 121,
+          "chars": 852,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 123,
+          "printed_page": 122,
+          "chars": 628,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 124,
+          "printed_page": 123,
+          "chars": 570,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 125,
+          "printed_page": 124,
+          "chars": 731,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 126,
+          "printed_page": 125,
+          "chars": 936,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 127,
+          "printed_page": 126,
+          "chars": 279,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 128,
+          "printed_page": 127,
+          "chars": 1041,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 129,
+          "printed_page": 128,
+          "chars": 708,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 130,
+          "printed_page": 129,
+          "chars": 943,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 131,
+          "printed_page": 130,
+          "chars": 1373,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 132,
+          "printed_page": 131,
+          "chars": 404,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 133,
+          "printed_page": 132,
+          "chars": 207,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 134,
+          "printed_page": 133,
+          "chars": 1032,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 135,
+          "printed_page": 134,
+          "chars": 225,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 136,
+          "printed_page": 135,
+          "chars": 774,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 137,
+          "printed_page": 136,
+          "chars": 546,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 138,
+          "printed_page": 137,
+          "chars": 515,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 139,
+          "printed_page": 138,
+          "chars": 822,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 140,
+          "printed_page": 139,
+          "chars": 1227,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 141,
+          "printed_page": 140,
+          "chars": 506,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 142,
+          "printed_page": 141,
+          "chars": 1190,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 143,
+          "printed_page": 142,
+          "chars": 710,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 144,
+          "printed_page": 143,
+          "chars": 938,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 145,
+          "printed_page": 144,
+          "chars": 423,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 146,
+          "printed_page": 145,
+          "chars": 673,
+          "chapter": "rag",
+          "counted": true
+        },
+        {
+          "pdf_page": 147,
+          "printed_page": 146,
+          "chars": 19,
+          "chapter": "context_engineering",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 148,
+          "printed_page": 147,
+          "chars": 699,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 149,
+          "printed_page": 148,
+          "chars": 697,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 150,
+          "printed_page": 149,
+          "chars": 850,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 151,
+          "printed_page": 150,
+          "chars": 255,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 152,
+          "printed_page": 151,
+          "chars": 195,
+          "chapter": "context_engineering",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 153,
+          "printed_page": 152,
+          "chars": 223,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 154,
+          "printed_page": 153,
+          "chars": 227,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 155,
+          "printed_page": 154,
+          "chars": 430,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 156,
+          "printed_page": 155,
+          "chars": 702,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 157,
+          "printed_page": 156,
+          "chars": 539,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 158,
+          "printed_page": 157,
+          "chars": 1013,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 159,
+          "printed_page": 158,
+          "chars": 454,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 160,
+          "printed_page": 159,
+          "chars": 457,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 161,
+          "printed_page": 160,
+          "chars": 395,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 162,
+          "printed_page": 161,
+          "chars": 395,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 163,
+          "printed_page": 162,
+          "chars": 238,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 164,
+          "printed_page": 163,
+          "chars": 253,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 165,
+          "printed_page": 164,
+          "chars": 159,
+          "chapter": "context_engineering",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 166,
+          "printed_page": 165,
+          "chars": 218,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 167,
+          "printed_page": 166,
+          "chars": 230,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 168,
+          "printed_page": 167,
+          "chars": 59,
+          "chapter": "context_engineering",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 169,
+          "printed_page": 168,
+          "chars": 851,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 170,
+          "printed_page": 169,
+          "chars": 636,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 171,
+          "printed_page": 170,
+          "chars": 1365,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 172,
+          "printed_page": 171,
+          "chars": 874,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 173,
+          "printed_page": 172,
+          "chars": 697,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 174,
+          "printed_page": 173,
+          "chars": 917,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 175,
+          "printed_page": 174,
+          "chars": 571,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 176,
+          "printed_page": 175,
+          "chars": 459,
+          "chapter": "context_engineering",
+          "counted": true
+        },
+        {
+          "pdf_page": 177,
+          "printed_page": 176,
+          "chars": 9,
+          "chapter": "ai_agents",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 178,
+          "printed_page": 177,
+          "chars": 704,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 179,
+          "printed_page": 178,
+          "chars": 333,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 180,
+          "printed_page": 179,
+          "chars": 460,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 181,
+          "printed_page": 180,
+          "chars": 486,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 182,
+          "printed_page": 181,
+          "chars": 653,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 183,
+          "printed_page": 182,
+          "chars": 863,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 184,
+          "printed_page": 183,
+          "chars": 525,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 185,
+          "printed_page": 184,
+          "chars": 806,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 186,
+          "printed_page": 185,
+          "chars": 519,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 187,
+          "printed_page": 186,
+          "chars": 333,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 188,
+          "printed_page": 187,
+          "chars": 514,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 189,
+          "printed_page": 188,
+          "chars": 205,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 190,
+          "printed_page": 189,
+          "chars": 450,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 191,
+          "printed_page": 190,
+          "chars": 296,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 192,
+          "printed_page": 191,
+          "chars": 654,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 193,
+          "printed_page": 192,
+          "chars": 147,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 194,
+          "printed_page": 193,
+          "chars": 663,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 195,
+          "printed_page": 194,
+          "chars": 893,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 196,
+          "printed_page": 195,
+          "chars": 832,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 197,
+          "printed_page": 196,
+          "chars": 396,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 198,
+          "printed_page": 197,
+          "chars": 509,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 199,
+          "printed_page": 198,
+          "chars": 478,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 200,
+          "printed_page": 199,
+          "chars": 584,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 201,
+          "printed_page": 200,
+          "chars": 21,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 202,
+          "printed_page": 201,
+          "chars": 218,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 203,
+          "printed_page": 202,
+          "chars": 436,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 204,
+          "printed_page": 203,
+          "chars": 762,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 205,
+          "printed_page": 204,
+          "chars": 264,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 206,
+          "printed_page": 205,
+          "chars": 1176,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 207,
+          "printed_page": 206,
+          "chars": 957,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 208,
+          "printed_page": 207,
+          "chars": 675,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 209,
+          "printed_page": 208,
+          "chars": 513,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 210,
+          "printed_page": 209,
+          "chars": 505,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 211,
+          "printed_page": 210,
+          "chars": 3,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 212,
+          "printed_page": 211,
+          "chars": 1464,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 213,
+          "printed_page": 212,
+          "chars": 918,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 214,
+          "printed_page": 213,
+          "chars": 886,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 215,
+          "printed_page": 214,
+          "chars": 461,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 216,
+          "printed_page": 215,
+          "chars": 433,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 217,
+          "printed_page": 216,
+          "chars": 426,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 218,
+          "printed_page": 217,
+          "chars": 312,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 219,
+          "printed_page": 218,
+          "chars": 322,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 220,
+          "printed_page": 219,
+          "chars": 518,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 221,
+          "printed_page": 220,
+          "chars": 808,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 222,
+          "printed_page": 221,
+          "chars": 136,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 223,
+          "printed_page": 222,
+          "chars": 419,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 224,
+          "printed_page": 223,
+          "chars": 318,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 225,
+          "printed_page": 224,
+          "chars": 77,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 226,
+          "printed_page": 225,
+          "chars": 421,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 227,
+          "printed_page": 226,
+          "chars": 125,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 228,
+          "printed_page": 227,
+          "chars": 128,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 229,
+          "printed_page": 228,
+          "chars": 191,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 230,
+          "printed_page": 229,
+          "chars": 325,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 231,
+          "printed_page": 230,
+          "chars": 557,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 232,
+          "printed_page": 231,
+          "chars": 1013,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 233,
+          "printed_page": 232,
+          "chars": 18,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 234,
+          "printed_page": 233,
+          "chars": 322,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 235,
+          "printed_page": 234,
+          "chars": 400,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 236,
+          "printed_page": 235,
+          "chars": 537,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 237,
+          "printed_page": 236,
+          "chars": 631,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 238,
+          "printed_page": 237,
+          "chars": 1103,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 239,
+          "printed_page": 238,
+          "chars": 1100,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 240,
+          "printed_page": 239,
+          "chars": 360,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 241,
+          "printed_page": 240,
+          "chars": 457,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 242,
+          "printed_page": 241,
+          "chars": 1279,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 243,
+          "printed_page": 242,
+          "chars": 1295,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 244,
+          "printed_page": 243,
+          "chars": 376,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 245,
+          "printed_page": 244,
+          "chars": 1224,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 246,
+          "printed_page": 245,
+          "chars": 637,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 247,
+          "printed_page": 246,
+          "chars": 895,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 248,
+          "printed_page": 247,
+          "chars": 416,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 249,
+          "printed_page": 248,
+          "chars": 414,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 250,
+          "printed_page": 249,
+          "chars": 503,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 251,
+          "printed_page": 250,
+          "chars": 894,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 252,
+          "printed_page": 251,
+          "chars": 348,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 253,
+          "printed_page": 252,
+          "chars": 917,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 254,
+          "printed_page": 253,
+          "chars": 877,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 255,
+          "printed_page": 254,
+          "chars": 439,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 256,
+          "printed_page": 255,
+          "chars": 515,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 257,
+          "printed_page": 256,
+          "chars": 503,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 258,
+          "printed_page": 257,
+          "chars": 239,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 259,
+          "printed_page": 258,
+          "chars": 398,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 260,
+          "printed_page": 259,
+          "chars": 490,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 261,
+          "printed_page": 260,
+          "chars": 312,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 262,
+          "printed_page": 261,
+          "chars": 825,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 263,
+          "printed_page": 262,
+          "chars": 914,
+          "chapter": "ai_agents",
+          "counted": true
+        },
+        {
+          "pdf_page": 264,
+          "printed_page": 263,
+          "chars": 157,
+          "chapter": "ai_agents",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 265,
+          "printed_page": 264,
+          "chars": 3,
+          "chapter": "mcp",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 266,
+          "printed_page": 265,
+          "chars": 299,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 267,
+          "printed_page": 266,
+          "chars": 762,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 268,
+          "printed_page": 267,
+          "chars": 701,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 269,
+          "printed_page": 268,
+          "chars": 930,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 270,
+          "printed_page": 269,
+          "chars": 514,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 271,
+          "printed_page": 270,
+          "chars": 511,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 272,
+          "printed_page": 271,
+          "chars": 289,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 273,
+          "printed_page": 272,
+          "chars": 666,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 274,
+          "printed_page": 273,
+          "chars": 994,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 275,
+          "printed_page": 274,
+          "chars": 1007,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 276,
+          "printed_page": 275,
+          "chars": 1126,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 277,
+          "printed_page": 276,
+          "chars": 1555,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 278,
+          "printed_page": 277,
+          "chars": 1208,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 279,
+          "printed_page": 278,
+          "chars": 1611,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 280,
+          "printed_page": 279,
+          "chars": 536,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 281,
+          "printed_page": 280,
+          "chars": 990,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 282,
+          "printed_page": 281,
+          "chars": 428,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 283,
+          "printed_page": 282,
+          "chars": 1219,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 284,
+          "printed_page": 283,
+          "chars": 693,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 285,
+          "printed_page": 284,
+          "chars": 883,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 286,
+          "printed_page": 285,
+          "chars": 692,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 287,
+          "printed_page": 286,
+          "chars": 748,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 288,
+          "printed_page": 287,
+          "chars": 856,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 289,
+          "printed_page": 288,
+          "chars": 657,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 290,
+          "printed_page": 289,
+          "chars": 1126,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 291,
+          "printed_page": 290,
+          "chars": 483,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 292,
+          "printed_page": 291,
+          "chars": 751,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 293,
+          "printed_page": 292,
+          "chars": 965,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 294,
+          "printed_page": 293,
+          "chars": 593,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 295,
+          "printed_page": 294,
+          "chars": 369,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 296,
+          "printed_page": 295,
+          "chars": 377,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 297,
+          "printed_page": 296,
+          "chars": 522,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 298,
+          "printed_page": 297,
+          "chars": 821,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 299,
+          "printed_page": 298,
+          "chars": 921,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 300,
+          "printed_page": 299,
+          "chars": 492,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 301,
+          "printed_page": 300,
+          "chars": 311,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 302,
+          "printed_page": 301,
+          "chars": 676,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 303,
+          "printed_page": 302,
+          "chars": 516,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 304,
+          "printed_page": 303,
+          "chars": 418,
+          "chapter": "mcp",
+          "counted": true
+        },
+        {
+          "pdf_page": 305,
+          "printed_page": 304,
+          "chars": 16,
+          "chapter": "llm_optimization",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 306,
+          "printed_page": 305,
+          "chars": 779,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 307,
+          "printed_page": 306,
+          "chars": 942,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 308,
+          "printed_page": 307,
+          "chars": 572,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 309,
+          "printed_page": 308,
+          "chars": 867,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 310,
+          "printed_page": 309,
+          "chars": 704,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 311,
+          "printed_page": 310,
+          "chars": 884,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 312,
+          "printed_page": 311,
+          "chars": 643,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 313,
+          "printed_page": 312,
+          "chars": 511,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 314,
+          "printed_page": 313,
+          "chars": 785,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 315,
+          "printed_page": 314,
+          "chars": 1047,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 316,
+          "printed_page": 315,
+          "chars": 606,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 317,
+          "printed_page": 316,
+          "chars": 600,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 318,
+          "printed_page": 317,
+          "chars": 1067,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 319,
+          "printed_page": 318,
+          "chars": 1209,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 320,
+          "printed_page": 319,
+          "chars": 477,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 321,
+          "printed_page": 320,
+          "chars": 632,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 322,
+          "printed_page": 321,
+          "chars": 276,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 323,
+          "printed_page": 322,
+          "chars": 869,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 324,
+          "printed_page": 323,
+          "chars": 686,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 325,
+          "printed_page": 324,
+          "chars": 248,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 326,
+          "printed_page": 325,
+          "chars": 195,
+          "chapter": "llm_optimization",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 327,
+          "printed_page": 326,
+          "chars": 866,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 328,
+          "printed_page": 327,
+          "chars": 532,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 329,
+          "printed_page": 328,
+          "chars": 526,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 330,
+          "printed_page": 329,
+          "chars": 411,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 331,
+          "printed_page": 330,
+          "chars": 673,
+          "chapter": "llm_optimization",
+          "counted": true
+        },
+        {
+          "pdf_page": 332,
+          "printed_page": 331,
+          "chars": 14,
+          "chapter": "llm_evaluation",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 333,
+          "printed_page": 332,
+          "chars": 857,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 334,
+          "printed_page": 333,
+          "chars": 576,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 335,
+          "printed_page": 334,
+          "chars": 317,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 336,
+          "printed_page": 335,
+          "chars": 999,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 337,
+          "printed_page": 336,
+          "chars": 528,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 338,
+          "printed_page": 337,
+          "chars": 818,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 339,
+          "printed_page": 338,
+          "chars": 335,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 340,
+          "printed_page": 339,
+          "chars": 394,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 341,
+          "printed_page": 340,
+          "chars": 187,
+          "chapter": "llm_evaluation",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 342,
+          "printed_page": 341,
+          "chars": 460,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 343,
+          "printed_page": 342,
+          "chars": 291,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 344,
+          "printed_page": 343,
+          "chars": 345,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 345,
+          "printed_page": 344,
+          "chars": 223,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 346,
+          "printed_page": 345,
+          "chars": 301,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 347,
+          "printed_page": 346,
+          "chars": 377,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 348,
+          "printed_page": 347,
+          "chars": 405,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 349,
+          "printed_page": 348,
+          "chars": 430,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 350,
+          "printed_page": 349,
+          "chars": 537,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 351,
+          "printed_page": 350,
+          "chars": 144,
+          "chapter": "llm_evaluation",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 352,
+          "printed_page": 351,
+          "chars": 198,
+          "chapter": "llm_evaluation",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 353,
+          "printed_page": 352,
+          "chars": 617,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 354,
+          "printed_page": 353,
+          "chars": 885,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 355,
+          "printed_page": 354,
+          "chars": 396,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 356,
+          "printed_page": 355,
+          "chars": 397,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 357,
+          "printed_page": 356,
+          "chars": 174,
+          "chapter": "llm_evaluation",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 358,
+          "printed_page": 357,
+          "chars": 531,
+          "chapter": "llm_evaluation",
+          "counted": true
+        },
+        {
+          "pdf_page": 359,
+          "printed_page": 358,
+          "chars": 14,
+          "chapter": "llm_deployment",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 360,
+          "printed_page": 359,
+          "chars": 969,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 361,
+          "printed_page": 360,
+          "chars": 1041,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 362,
+          "printed_page": 361,
+          "chars": 1123,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 363,
+          "printed_page": 362,
+          "chars": 858,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 364,
+          "printed_page": 363,
+          "chars": 352,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 365,
+          "printed_page": 364,
+          "chars": 523,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 366,
+          "printed_page": 365,
+          "chars": 858,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 367,
+          "printed_page": 366,
+          "chars": 506,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 368,
+          "printed_page": 367,
+          "chars": 277,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 369,
+          "printed_page": 368,
+          "chars": 287,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 370,
+          "printed_page": 369,
+          "chars": 452,
+          "chapter": "llm_deployment",
+          "counted": true
+        },
+        {
+          "pdf_page": 371,
+          "printed_page": 370,
+          "chars": 17,
+          "chapter": "llm_observability",
+          "excluded_reason": "trang bìa chương",
+          "counted": false
+        },
+        {
+          "pdf_page": 372,
+          "printed_page": 371,
+          "chars": 777,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 373,
+          "printed_page": 372,
+          "chars": 430,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 374,
+          "printed_page": 373,
+          "chars": 1038,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 375,
+          "printed_page": 374,
+          "chars": 360,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 376,
+          "printed_page": 375,
+          "chars": 572,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 377,
+          "printed_page": 376,
+          "chars": 331,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 378,
+          "printed_page": 377,
+          "chars": 498,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 379,
+          "printed_page": 378,
+          "chars": 558,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 380,
+          "printed_page": 379,
+          "chars": 436,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 381,
+          "printed_page": 380,
+          "chars": 183,
+          "chapter": "llm_observability",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 382,
+          "printed_page": 381,
+          "chars": 584,
+          "chapter": "llm_observability",
+          "counted": true
+        },
+        {
+          "pdf_page": 383,
+          "printed_page": 382,
+          "chars": 111,
+          "chapter": "llm_observability",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        },
+        {
+          "pdf_page": 384,
+          "printed_page": 383,
+          "chars": 192,
+          "chapter": "llm_observability",
+          "excluded_reason": "dưới 200 ký tự sau chuẩn hóa (chủ yếu là hình)",
+          "counted": false
+        }
+      ]
+    }
+  ]
+}
