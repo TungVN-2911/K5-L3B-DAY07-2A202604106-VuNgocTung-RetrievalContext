@@ -10,7 +10,7 @@
     ],
     "answer_grade": 2,
     "note": "Khớp nguyên văn định nghĩa p10.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q02",
@@ -25,7 +25,7 @@
     ],
     "answer_grade": 2,
     "note": "p29 hỗ trợ greedy/uniform/random, p31 hỗ trợ deterministic/creativity/diversity/noise. Không nêu ngưỡng ~0 và 0.7–1.0 nhưng câu hỏi không yêu cầu giá trị.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q03",
@@ -38,7 +38,7 @@
     ],
     "answer_grade": 2,
     "note": "Top-p, khớp p32.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q04",
@@ -53,7 +53,7 @@
     ],
     "answer_grade": 2,
     "note": "Typicality bias (p59); giải thích annotator ở p60 đúng.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q05",
@@ -68,7 +68,7 @@
     ],
     "answer_grade": 2,
     "note": "p51: không đổi weights, chỉ đổi instruction; p107: steers at inference time.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q06",
@@ -83,7 +83,7 @@
     ],
     "answer_grade": 2,
     "note": "Định nghĩa p68 c0; phần adapt distributions ở p68 c1.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q07",
@@ -96,7 +96,7 @@
     ],
     "answer_grade": 2,
     "note": "175B tham số, 350GB float16 (p69).",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q08",
@@ -109,7 +109,7 @@
     ],
     "answer_grade": 2,
     "note": "Khớp p107.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q09",
@@ -126,7 +126,7 @@
     ],
     "answer_grade": 2,
     "note": "p108 định nghĩa; p112 semantic information; p116 metadata và original content.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q10",
@@ -139,7 +139,7 @@
     ],
     "answer_grade": 2,
     "note": "Cả lý do overlap và nhược điểm đều ở p121.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q11",
@@ -152,7 +152,7 @@
     ],
     "answer_grade": 2,
     "note": "Khớp p132.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q12",
@@ -167,7 +167,7 @@
     ],
     "answer_grade": 2,
     "note": "KV memory, remember stable info (p143 c0); static data cached once (p143 c1).",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q13",
@@ -184,7 +184,7 @@
     ],
     "answer_grade": 2,
     "note": "Ý chính đúng (p148). Ý thêm về traditional RAG retrieve once được p130 hỗ trợ nhưng hơi lan man.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q14",
@@ -199,7 +199,7 @@
     ],
     "answer_grade": 2,
     "note": "Đúng p150; thêm danh sách memory ở p158 (cùng chương), không mâu thuẫn.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q15",
@@ -212,7 +212,7 @@
     ],
     "answer_grade": 2,
     "note": "Semantic/episodic/procedural (p196).",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "u01",
@@ -221,7 +221,7 @@
     "citation_support": [],
     "abstention_correct": true,
     "note": "Từ chối sau 3 lượt search (BM25, k1, b); không khẳng định thêm.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "u02",
@@ -230,7 +230,7 @@
     "citation_support": [],
     "abstention_correct": true,
     "note": "Từ chối sau 3 lượt search HNSW/ef_search.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "u03",
@@ -239,6 +239,6 @@
     "citation_support": [],
     "abstention_correct": true,
     "note": "Từ chối sau 3 lượt search MMLU; không bịa điểm.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   }
 ]

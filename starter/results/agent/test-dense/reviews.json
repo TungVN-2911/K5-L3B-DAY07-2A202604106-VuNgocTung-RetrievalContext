@@ -10,7 +10,7 @@
     ],
     "answer_grade": 2,
     "note": "Khớp p373.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q17",
@@ -25,7 +25,7 @@
     ],
     "answer_grade": 2,
     "note": "p288; p289 hỗ trợ ý expose nhiều tool cùng lúc.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q18",
@@ -40,7 +40,7 @@
     ],
     "answer_grade": 2,
     "note": "p362; p365.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q19",
@@ -53,7 +53,7 @@
     ],
     "answer_grade": 1,
     "note": "Chọn đúng RFT và đúng điều kiện (p94), nhưng tự diễn giải RFT là 'Reasoning Fine-Tuning'. Sách ghi Reinforcement Fine-Tuning (p92); p92 không có trong context, nên đây là khẳng định sai và không có căn cứ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "q20",
@@ -66,7 +66,7 @@
     ],
     "answer_grade": 2,
     "note": "p327.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "u04",
@@ -75,7 +75,7 @@
     "citation_support": [],
     "abstention_correct": true,
     "note": "Từ chối sau 3 search.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "u05",
@@ -84,7 +84,7 @@
     "citation_support": [],
     "abstention_correct": true,
     "note": "Lần đầu gọi answer không có citation (bị chặn), sau đó abstain. Từ chối đúng.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "query_id": "u06",
@@ -93,6 +93,6 @@
     "citation_support": [],
     "abstention_correct": true,
     "note": "Từ chối sau 3 search.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   }
 ]

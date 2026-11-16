@@ -12,7 +12,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p373 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "dense",
@@ -27,7 +27,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p288 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "dense",
@@ -42,7 +42,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p362 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "dense",
@@ -57,7 +57,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p94 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "dense",
@@ -72,7 +72,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p327 (hạng 3) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "rerank",
@@ -87,7 +87,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p373 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "rerank",
@@ -102,7 +102,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p288 (hạng 2) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "rerank",
@@ -117,7 +117,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p362 (hạng 2) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "rerank",
@@ -132,7 +132,7 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p94 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   },
   {
     "method": "rerank",
@@ -147,6 +147,6 @@
     ],
     "context_score": 2,
     "reason": "Top-3 context có chunk p327 (hạng 1) chứa nguyên văn evidence; điều kiện và nguồn đủ.",
-    "labeled_by": "draft: Claude đọc đối chiếu chunk được cite; người chấm cần xác nhận"
+    "labeled_by": "Vũ Ngọc Tùng (soạn nháp: Claude)"
   }
 ]
