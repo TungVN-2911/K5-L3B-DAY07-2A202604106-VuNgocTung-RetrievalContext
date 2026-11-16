@@ -1,0 +1,218 @@
+[
+  {
+    "query_id": "q01",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p10:fixed500-50:0"
+    ],
+    "citation_support": [
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q02",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p29:fixed500-50:0",
+      "ai-engineering-2025:p31:fixed500-50:0"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q03",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p32:fixed500-50:0",
+      "ai-engineering-2025:p31:fixed500-50:1"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q04",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p59:fixed500-50:0",
+      "ai-engineering-2025:p60:fixed500-50:0"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q05",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p51:fixed500-50:0",
+      "ai-engineering-2025:p107:fixed500-50:0"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q06",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p68:fixed500-50:0",
+      "ai-engineering-2025:p68:fixed500-50:1"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q07",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p69:fixed500-50:1"
+    ],
+    "citation_support": [
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q08",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p107:fixed500-50:0"
+    ],
+    "citation_support": [
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q09",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p108:fixed500-50:1",
+      "ai-engineering-2025:p116:fixed500-50:0"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q10",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q11",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p132:fixed500-50:0"
+    ],
+    "citation_support": [
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q12",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p143:fixed500-50:0"
+    ],
+    "citation_support": [
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q13",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p148:fixed500-50:1",
+      "ai-engineering-2025:p130:fixed500-50:0"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q14",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p150:fixed500-50:0",
+      "ai-engineering-2025:p158:fixed500-50:1"
+    ],
+    "citation_support": [
+      null,
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "q15",
+    "status": "answered",
+    "citations": [
+      "ai-engineering-2025:p196:fixed500-50:1"
+    ],
+    "citation_support": [
+      null
+    ],
+    "answer_grade": null,
+    "note": ""
+  },
+  {
+    "query_id": "u01",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": null,
+    "note": ""
+  },
+  {
+    "query_id": "u02",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": null,
+    "note": ""
+  },
+  {
+    "query_id": "u03",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": null,
+    "note": ""
+  }
+]

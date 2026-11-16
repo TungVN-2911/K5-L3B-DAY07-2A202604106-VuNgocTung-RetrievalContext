@@ -64,6 +64,20 @@ Trên test, cả hai cấu hình đều có 0 lỗi provider. Context Evidence c
 
 Nhãn dev và test do Claude soạn nháp sau khi đọc đối chiếu chunk được cite (trường `labeled_by` trong `reviews.json`); người làm bài cần xác nhận. Context Evidence của agent (context cuối có chứa evidence gold): 15/15 ở cả hai cấu hình sau khi sửa. Mọi câu thiếu evidence đều dùng hết 3 lượt search rồi mới từ chối.
 
+**Tác động của tham số agent** (dev, retriever rerank, mỗi lần đổi một tham số so với cấu hình chọn). Các thí nghiệm này **chạy sau khi đã chạy test**, chỉ để đo tác động theo GUIDE §3, không dùng để chọn hay đổi cấu hình. Chỉ số tự động lấy từ trace; grounded answer chưa chấm tay. Kết quả ở [starter/results/agent/ablation/](../../starter/results/agent/ablation/).
+
+| Cấu hình | Giả thuyết | Trả lời / từ chối | Context Evidence | Từ chối nhầm | Search {lượt: số câu} | Lượt LLM / citation bị chặn | Token in/out | Trung vị s |
+|---|---|---|---|---|---|---|---|---|
+| Chọn: top-4, 3 search, 6000 ký tự | | 15/3 | 15/15 | 0/15 | {1: 14, 2: 1, 3: 3} | 44 / 1 | 39 488 / 1 865 | 13.3 |
+| top-k = 2 | Ít chunk hơn thì tốn ít token hơn nhưng dễ thiếu evidence | 15/3 | 15/15 | 0/15 | {1: 13, 2: 2, 3: 3} | 48 / 4 | 36 097 / 1 874 | 26.5 |
+| max_searches = 1 | Câu có đáp án không đổi; câu thiếu evidence từ chối sớm hơn | 15/3 | 15/15 | 0/15 | {1: 18} | 45 / 9 | 38 091 / 2 145 | 5.9 |
+| budget = 1500 ký tự | Context bị cắt nên mất evidence ở câu cần nhiều chunk | 14/4 | 14/15 | **1/15 (q10)** | {1: 12, 2: 1, 3: 5} | 48 / 1 | 38 779 / 1 900 | 5.0 |
+
+- **top-k = 2:** token input giảm khoảng 9% mà Context Evidence không đổi, nhưng hai câu cần thêm một lượt search và citation bị chặn nhiều hơn (4 so với 1).
+- **max_searches = 1:** 3/3 câu thiếu evidence vẫn được từ chối đúng chỉ sau một lượt search, và tổng token gần như bằng cấu hình chọn. Tuy nhiên citation bị chặn tăng lên 9 lần: khi chỉ còn được gọi `answer`/`abstain`, model hay quên đánh dấu `[C#]`. Trên dev, tăng lên 3 search chủ yếu chỉ làm câu thiếu evidence tốn thêm token, nhưng giúp câu như q12 tìm lại với query khác.
+- **budget = 1500:** xác nhận giả thuyết. Ở q10, chunk evidence p121 đứng hạng 4 ngay lượt search đầu nhưng bị loại vì ba chunk trên đã dùng 1325/1500 ký tự; các lượt search sau cũng không thêm được vì budget đã gần hết, nên agent từ chối nhầm. Budget 6000 ký tự (khoảng 12 chunk) đủ cho cả 18 câu dev (trung bình context 2077 ký tự).
+- Thời gian trung vị dao động 5–27 s chủ yếu do retry 429 của free tier, nên không phản ánh chi phí tính toán của từng cấu hình.
+
 | Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
 |---|---|---|---|---|
 | q06 (rerank, dev) | Có evidence | `search("fine-tuning definition mean")` → C1 = p68 c0 (hạng 1, có gold), C3 = p68 c1 | "Fine-tuning means adjusting the weights of a pre-trained model on a new dataset … [p68 c0][p68 c1]" | 2, citation 2/2 đúng. Dense+BM25 (hybrid) để chunk này ở hạng 4; rerank kéo lên hạng 1 |
